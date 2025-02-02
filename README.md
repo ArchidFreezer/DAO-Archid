@@ -20,3 +20,29 @@ The repository has 4 main sections:
 | docs | Documentation for the project, this is both GitHub markdown and other documentation |
 | [package_override](docs/package_override.md) | Contents that should go in the `packages\core\override` folder and contains the vast majority of the mod files |
 | source | Contains source files that are used to generate the game files. These are typically spreadsheets for the `gda` and `tlk` files |
+
+## Usage
+The preferred method for deploying this repository in game is through the use of symbolic links, or junctions, to include the repository folders into the correct game location.
+
+There are 2 folders that need to be included: `addin` and `packages_override` which need to be linked to the `\%userprofile%\Documents\BioWare\Dragon Age` folder in the user documents folder.
+For Windows the following commands should be run from an Admin command prompt:
+
+```bat
+cd "C:\Users\<user>\Documents\BioWare\Dragon Age\packages\core\"
+mklink /j override <git_dir\package_override>
+
+cd "C:\Users\<user>\Documents\BioWare\Dragon Age\addins\"
+mklink /j archid <git_dir\addin>
+```
+
+You then need to tell the game about the mod, which is done by adding the following into your `\%userprofile%\Documents\BioWare\Dragon Age\Settings\addins.xml` file
+
+```xml
+  <AddInItem UID="af_archid" Name="Archid">
+    <Title DefaultText="Archid" />
+    <Description DefaultText="Archid mod that is a collection of multiple other mods merged together, plus additional custom content." />
+    <URL DefaultText="https://github.com/ArchidFreezer/DAO-Archid" />
+    <Version>0.1</Version>
+    <Publisher DefaultText="Archid" />
+  </AddInItem>
+```
