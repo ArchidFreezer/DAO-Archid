@@ -32,7 +32,7 @@ cd "C:\Users\<user>\Documents\BioWare\Dragon Age\packages\core\"
 mklink /j override <git_dir\package_override>
 
 cd "C:\Users\<user>\Documents\BioWare\Dragon Age\addins\"
-mklink /j archid <git_dir\addin>
+mklink /j af_archid <git_dir\addin>
 ```
 
 You then need to tell the game about the mod, which is done by adding the following into your `\%userprofile%\Documents\BioWare\Dragon Age\Settings\addins.xml` file
