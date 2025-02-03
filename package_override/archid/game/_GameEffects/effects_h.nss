@@ -179,16 +179,43 @@ int Effects_HandleApplyEffect()
     object oCreator = GetEffectCreator(eEffect);
     int nAbilityId = GetEffectAbilityID(eEffect);
 
+
+    // <Debug>
+    // -------------------------------------------------------------------------
+    // If logging is enabled, we also verify that the effect we are trying to
+    // apply here is applied with an allowed duration type. if not, fail it.
+    // -------------------------------------------------------------------------
+    /*if (LOG_ENABLED)
+    {
+        _VerifyDurationType(eEffect, nEffectType);
+        SetIsCurrentEffectValid(FALSE);
+        return FALSE;
+    }*/
+    //
+
+
+     string sTypeName = Log_GetEffectNameById(nEffectType);
+
+    #ifdef DEBUG
+    Log_Trace_Effects("effects_h.HandleApplyEffect",eEffect, "", OBJECT_SELF);
+    #endif
+
+    //</Debug>
+
     // -------------------------------------------------------------------------
     // Dead creatures no longer accept any other effect except for resurrection || death!
     // -------------------------------------------------------------------------
-    if (IsDead(OBJECT_SELF) && (nEffectType != EFFECT_TYPE_RESURRECTION && nEffectType != EFFECT_TYPE_DEATH))
+    if (IsDead(OBJECT_SELF) &&( nEffectType != EFFECT_TYPE_RESURRECTION && nEffectType != EFFECT_TYPE_DEATH) )
     {
+        #ifdef DEBUG
+        Log_Trace_Effects("effects_h.HandleApplyEffect",eEffect, "EFFECT_REJECTED - target is dead" ,OBJECT_SELF);
+        #endif
+
         nReturnValue = FALSE;
     }
     else
     {
-        if (GetObjectType(OBJECT_SELF) == OBJECT_TYPE_CREATURE)
+        if ( GetObjectType(OBJECT_SELF) == OBJECT_TYPE_CREATURE)
         {
 
             int nMessage = UI_MESSAGE_IMMUNE;
@@ -196,14 +223,36 @@ int Effects_HandleApplyEffect()
             // -----------------------------------------------------------------
             //  Knockdown and stun end grab
             // -----------------------------------------------------------------
-            if (nEffectType == EFFECT_TYPE_KNOCKDOWN || nEffectType == EFFECT_TYPE_STUN || nEffectType == EFFECT_TYPE_PARALYZE || nEffectType == EFFECT_TYPE_SLIP)
+            if (nEffectType == EFFECT_TYPE_KNOCKDOWN || nEffectType == EFFECT_TYPE_STUN || nEffectType == EFFECT_TYPE_PARALYZE || nEffectType == EFFECT_TYPE_SLIP )
             {
-                RemoveEffectsByParameters(OBJECT_SELF, EFFECT_TYPE_GRABBING, ABILITY_INVALID, OBJECT_SELF);
-                RemoveEffectsByParameters(OBJECT_SELF, EFFECT_TYPE_CONECASTING, ABILITY_INVALID, OBJECT_SELF);
+
+
+                effect[] aGrab = GetEffects(OBJECT_SELF, EFFECT_TYPE_GRABBING, 0, OBJECT_SELF);
+                if (RemoveEffectArray(OBJECT_SELF,aGrab)>0)
+                {
+                    #ifdef DEBUG
+                     Log_Trace_Effects("effects_h.HandleApply",eEffect,"any grabbing effect removed by other effect!", OBJECT_SELF);
+                    #endif
+                    nMessage = UI_MESSAGE_GRAB_BROKEN;
+                }
+                else
+                {
+                    #ifdef DEBUG
+                    Log_Trace_Effects("effects_h.HandleApply",eEffect,"conecasting effect removed by stun!", OBJECT_SELF);
+                    #endif
+                    effect[] aCast = GetEffects(OBJECT_SELF, EFFECT_TYPE_CONECASTING, 0, OBJECT_SELF);
+                    RemoveEffectArray(OBJECT_SELF,aCast);
+                }
+
+
             }
-            else if (nEffectType == EFFECT_TYPE_GRABBED)
+            if (nEffectType == EFFECT_TYPE_GRABBED || nEffectType == EFFECT_TYPE_PARALYZE)
             {
-                RemoveEffectsByParameters(OBJECT_SELF, EFFECT_TYPE_CONECASTING, ABILITY_INVALID, OBJECT_SELF);
+                #ifdef DEBUG
+                Log_Trace_Effects("effects_h.HandleApply",eEffect,"conecasting effect removed by grab or paralyze!", OBJECT_SELF);
+                #endif
+                effect[] aCast = GetEffects(OBJECT_SELF, EFFECT_TYPE_CONECASTING, 0, OBJECT_SELF);
+                RemoveEffectArray(OBJECT_SELF,aCast);
             }
 
             // -----------------------------------------------------------------
@@ -213,6 +262,9 @@ int Effects_HandleApplyEffect()
             {
                 if (GetHasEffects(OBJECT_SELF, EFFECT_TYPE_SPELL_WARD))
                 {
+                    #ifdef DEBUG
+                    Log_Trace_Effects("effects_h.HandleApply",eEffect,"spell effect not applied, creature has EFFECT_SPELL_WARD!", OBJECT_SELF);
+                    #endif
                     ApplyEffectVisualEffect(oCreator, OBJECT_SELF, 1556, EFFECT_DURATION_TYPE_INSTANT, 0.0f, nAbilityId);
                     UI_DisplayMessage(OBJECT_SELF,UI_MESSAGE_SPELL_IMMUNITY);
                     nReturnValue =  FALSE;
@@ -222,9 +274,19 @@ int Effects_HandleApplyEffect()
             if (nReturnValue == -1)
             {
                 int nImmune = IsImmuneToEffectType(OBJECT_SELF,nEffectType);
-                if (nImmune)
+                if (nImmune>0 )
                 {
-                    UI_DisplayMessage(OBJECT_SELF, nImmune == 1 ? UI_MESSAGE_IMMUNE : UI_MESSAGE_RESISTED);
+                    #ifdef DEBUG
+                    Log_Trace_Effects("effects_h.HandleApply",eEffect,"effect not applied, creature immune!", OBJECT_SELF);
+                    #endif
+                    if (nImmune == 1)
+                    {
+                        UI_DisplayMessage(OBJECT_SELF,nMessage);
+                    }
+                    else if (nImmune == 3)
+                    {
+                        UI_DisplayMessage(OBJECT_SELF,UI_MESSAGE_RESISTED);
+                    }
 
                     nReturnValue =  FALSE;
                 }
@@ -234,12 +296,15 @@ int Effects_HandleApplyEffect()
         // ---------------------------------------------------------------------
         // Georg: Invalidate hostile effects per target
         // ---------------------------------------------------------------------
-        if (nReturnValue != FALSE)
+        if (nReturnValue != FALSE )
         {
             if (IsEffectTypeHostile(nEffectType))
             {
                 if (IsHostileEffectAllowed(OBJECT_SELF,oCreator,nAbilityId) == FALSE)
                 {
+                    #ifdef DEBUG
+                    Log_Trace_Effects("effects_h.HandleApply",eEffect,"hostile effect NOT applied - not allowed on target", OBJECT_SELF);
+                    #endif
                     nReturnValue = FALSE;
                 }
             }
@@ -257,42 +322,30 @@ int Effects_HandleApplyEffect()
 
             switch (nEffectType)
             {
+                case EFFECT_TYPE_NULL:
+                case EFFECT_TYPE_HEAVY_IMPACT:
+                case EFFECT_TYPE_LIFE_WARD:
+                case EFFECT_TYPE_PETRIFY:
+                {
+                    nReturnValue = TRUE;
+                    break;
+                }
+
                 case EFFECT_TYPE_DAMAGE:
                 {
                     nReturnValue = Effects_HandleApplyEffectDamage(eEffect);
                     break;
                 }
-                case EFFECT_TYPE_MODIFY_PROPERTY:
-                case EFFECT_TYPE_DECREASE_PROPERTY:
-                {
-                    nReturnValue = Effects_HandleApplyEffectModifyProperty(eEffect);
-                    break;
-                }
-                case EFFECT_TYPE_STUN:
-                {
-                    nReturnValue = Effects_HandleApplyEffectStun(eEffect);
-                    break;
-                }
-                case EFFECT_TYPE_UPKEEP:
-                {
-                    nReturnValue = Effects_HandleApplyEffectUpkeep(eEffect);
-                    break;
-                }
-                case EFFECT_TYPE_DOT:
-                {
-                    nReturnValue = Effects_HandleApplyEffectDOT(eEffect);
-                    break;
-                }
+
                 case EFFECT_TYPE_DEATH:
                 {
                     nReturnValue = Effects_HandleApplyEffectDeath(eEffect);
                     break;
                 }
-                case EFFECT_TYPE_KNOCKDOWN:
-                {
-                    nReturnValue = Effects_HandleApplyEffectKnockdown(eEffect);
-                    break;
-                }
+
+
+
+
                 case EFFECT_TYPE_RESURRECTION:
                 {
                     nReturnValue = Effects_HandleApplyEffectResurrection(eEffect);
@@ -308,9 +361,30 @@ int Effects_HandleApplyEffect()
                     nReturnValue = Effects_HandleApplyEffectHeal(eEffect);
                     break;
                 }
-                case EFFECT_TYPE_STEALTH:
+                case EFFECT_TYPE_ROOT:
                 {
-                    nReturnValue = Effects_HandleApplyEffectStealth(eEffect);
+                    nReturnValue = Effects_HandleApplyEffectRoot(eEffect);
+                    AI_Threat_ClearEnemiesThreatToMe(OBJECT_SELF);
+                    break;
+                }
+                case EFFECT_TYPE_KNOCKDOWN:
+                {
+                    nReturnValue = Effects_HandleApplyEffectKnockdown(eEffect);
+                    break;
+                }
+                case EFFECT_TYPE_MODIFYATTRIBUTE:
+                {
+                    nReturnValue = Effects_HandleApplyEffectModifyAttribute(eEffect);
+                    break;
+                }
+               case EFFECT_TYPE_UPKEEP:
+                {
+                    nReturnValue = Effects_HandleApplyEffectUpkeep(eEffect);
+                    break;
+                }
+               case EFFECT_TYPE_DOT:
+                {
+                    nReturnValue = Effects_HandleApplyEffectDOT(eEffect);
                     break;
                 }
                 case EFFECT_TYPE_DAZE:
@@ -319,16 +393,11 @@ int Effects_HandleApplyEffect()
                     break;
 
                 }
-                case EFFECT_TYPE_ROOT:
+                case EFFECT_TYPE_DISEASE:
                 {
-                    nReturnValue = Effects_HandleApplyEffectRoot(eEffect);
-                    AI_Threat_ClearEnemiesThreatToMe(OBJECT_SELF);
+                    nReturnValue = Effects_HandleApplyEffectDisease(eEffect);
                     break;
-                }
-                case EFFECT_TYPE_MODIFYATTRIBUTE:
-                {
-                    nReturnValue = Effects_HandleApplyEffectModifyAttribute(eEffect);
-                    break;
+
                 }
                 case EFFECT_TYPE_DISPEL_MAGIC:
                 {
@@ -338,6 +407,12 @@ int Effects_HandleApplyEffect()
                 case EFFECT_TYPE_MODIFY_CRITCHANCE:
                 {
                     nReturnValue = Effects_HandleApplyEffectModifyCritChance(eEffect);
+                    break;
+                }
+                case EFFECT_TYPE_DECREASE_PROPERTY:
+                case EFFECT_TYPE_MODIFY_PROPERTY:
+                {
+                    nReturnValue = Effects_HandleApplyEffectModifyProperty(eEffect);
                     break;
                 }
                 case EFFECT_TYPE_AI_MODIFIER:
@@ -350,11 +425,17 @@ int Effects_HandleApplyEffect()
                     nReturnValue = Effects_HandleApplyEffectAddAbility(eEffect);
                     break;
                 }
-                case EFFECT_TYPE_HEAVY_IMPACT:
-                case EFFECT_TYPE_LIFE_WARD:
-                case EFFECT_TYPE_PETRIFY:
+
                 case EFFECT_TYPE_CONECASTING:
+                {
+                    nReturnValue = TRUE;
+                    break;
+                }
                 case EFFECT_TYPE_ROOTING:
+                {
+                    nReturnValue = TRUE;
+                    break;
+                }
                 case EFFECT_TYPE_GRABBING:
                 case EFFECT_TYPE_GRABBED:
                 case EFFECT_TYPE_OVERWHELMED:
@@ -369,6 +450,11 @@ int Effects_HandleApplyEffect()
                     nReturnValue = Effects_HandleApplyEffectRegeneration(eEffect);
                     break;
                 }
+                case EFFECT_TYPE_STUN:
+                {
+                    nReturnValue = Effects_HandleApplyEffectStun(eEffect);
+                    break;
+                }
                 case EFFECT_TYPE_CONFUSION:
                 {
                     nReturnValue = Effects_HandleApplyEffectConfusion(eEffect);
@@ -379,11 +465,22 @@ int Effects_HandleApplyEffect()
                     nReturnValue = Effects_HandleApplyEffectCharm(eEffect);
                     break;
                 }
+
                 case EFFECT_TYPE_SLEEP:
                 case EFFECT_TYPE_SLEEP_PLOT:
                 {
                     nReturnValue = Effects_HandleApplyEffectSleep(eEffect);
                     AI_Threat_ClearEnemiesThreatToMe(OBJECT_SELF);
+                    break;
+                }
+                case EFFECT_TYPE_STEALTH:
+                {
+                    nReturnValue = Effects_HandleApplyEffectStealth(eEffect);
+                    break;
+                }
+                case EFFECT_TYPE_TEST: // 11/15/07
+                {
+                    nReturnValue = Effects_HandleApplyEffectTest(eEffect);
                     break;
                 }
                 case EFFECT_TYPE_HEARTBEAT:
@@ -417,9 +514,73 @@ int Effects_HandleApplyEffect()
                     nReturnValue = Effects_HandleApplyEffectEnchantment(eEffect);
                     break;
                 }
+                case EFFECT_TYPE_LOCK_INVENTORY:
+                {
+                    nReturnValue = TRUE;
+                    break;
+                }
+                case EFFECT_TYPE_LOCK_QUICKBAR:
+                {
+                    nReturnValue = TRUE;
+
+                    break;
+                }
+                case EFFECT_TYPE_LOCK_CHARACTER:
+                {
+                    nReturnValue = TRUE;
+
+                    break;
+                }
                 case EFFECT_TYPE_FEIGN_DEATH:
                 {
                     nReturnValue = Effects_HandleApplyEffectFeignDeath(eEffect);
+                    break;
+                }
+
+
+                case EFFECT_TYPE_SIMULATE_DEATH:
+                {
+                    nReturnValue = TRUE;
+                    break;
+                }
+
+                case EFFECT_TYPE_FLANK_IMMUNITY:
+                {
+                    nReturnValue = TRUE;
+                    break;
+                }
+
+                case EFFECT_TYPE_FEAR:
+                {
+                    nReturnValue = TRUE;
+                    break;
+                }
+
+                case EFFECT_TYPE_MISDIRECTION_HEX:
+                {
+                    nReturnValue = TRUE;
+                    break;
+                }
+
+                case EFFECT_TYPE_DEATH_HEX:
+                {
+                    nReturnValue = TRUE;
+                    break;
+                }
+
+                case EFFECT_TYPE_CURSE_OF_MORTALITY:
+                {
+                    nReturnValue = TRUE;
+                    break;
+                }
+                case EFFECT_TYPE_SLIP:
+                {
+                    nReturnValue = TRUE;
+                    break;
+                }
+                case EFFECT_TYPE_SPELL_WARD:
+                {
+                    nReturnValue = TRUE;
                     break;
                 }
                 case EFFECT_TYPE_DAMAGE_WARD:
@@ -435,36 +596,18 @@ int Effects_HandleApplyEffect()
                 }
                 case EFFECT_TYPE_SWARM:
                 {
-                    nReturnValue = Effects_HandleApplyEffectSwarm(eEffect);
-                    break;
+                  nReturnValue = Effects_HandleApplyEffectSwarm(eEffect);
+                  break;
                 }
                 case EFFECT_TYPE_MABARI_DOMINANCE:
                 {
-                    nReturnValue = Effects_HandleApplyEffectMabariDominance(eEffect);
-                    break;
+                  nReturnValue = Effects_HandleApplyEffectMabariDominance(eEffect);
+                  break;
                 }
-                case EFFECT_TYPE_DISEASE:
-                {
-                    nReturnValue = Effects_HandleApplyEffectDisease(eEffect);
-                    break;
-                }
-                case EFFECT_TYPE_LOCK_INVENTORY:
-                case EFFECT_TYPE_LOCK_QUICKBAR:
-                case EFFECT_TYPE_LOCK_CHARACTER:
-                case EFFECT_TYPE_SIMULATE_DEATH:
-                case EFFECT_TYPE_FLANK_IMMUNITY:
-                case EFFECT_TYPE_FEAR:
-                case EFFECT_TYPE_MISDIRECTION_HEX:
-                case EFFECT_TYPE_DEATH_HEX:
-                case EFFECT_TYPE_CURSE_OF_MORTALITY:
-                case EFFECT_TYPE_SLIP:
-                case EFFECT_TYPE_SPELL_WARD:
-                case EFFECT_TYPE_NULL:
-                case EFFECT_TYPE_TEST:
-                {
-                    nReturnValue = TRUE;
-                    break;
-                }
+
+
+
+                /*switch*/
 
             } /* if nReturnValue == -1 */
         }
@@ -476,7 +619,24 @@ int Effects_HandleApplyEffect()
     // -------------------------------------------------------------------------
     if (nReturnValue == -1)
     {
+        #ifdef DEBUG
+        Warning("EFFECT_NOT_HANDLED! " + Log_GetEffectNameById(nEffectType) + ".  + Contact Georg");
+        Log_Trace_Scripting_Error("effects_h.HandleApplyEffect", "EFFECT_NOT_HANDLED! " + Log_GetEffectNameById(nEffectType) , OBJECT_SELF);
+        #endif
         nReturnValue = FALSE;
+    }
+
+    // -------------------------------------------------------------------------
+    // This notifies the engine on whether or not to go ahead with applying the
+    // effect. If this is false, the engine will discard the effect, firing a
+    // RemoveEffect event to rules_core, which will message it to Effects_HandleRemoveEffect
+    // below
+    // -------------------------------------------------------------------------
+    if (nReturnValue == 0)
+    {
+        #ifdef DEBUG
+        Log_Trace_Effects("effects_h.HandleApply",eEffect,"effect found not valid (FALSE reported back)", OBJECT_SELF);
+        #endif
     }
 
     if (nReturnValue == TRUE)
