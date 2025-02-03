@@ -4,9 +4,8 @@
     well, no comment, sorry
 */
 
-#include "eventmanager_h"
+#include "af_eventmanager_h"
 
-void main()
-{
+void main() {
     EventManager_Broadcast(GetCurrentEvent());
 }

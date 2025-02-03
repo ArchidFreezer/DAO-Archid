@@ -8,27 +8,24 @@
     See the end of this file for examples.
 */
 
-const int TABLE_EVENT_MANAGER = 100000;
+const int TABLE_EVENT_MANAGER = 6610000;
 
-/* This variable need to be an integer in the original var_module 2da table */
-const string EVENT_MANAGER_LOCK = "MODULE_COUNTER_3";
+/* This variable is an integer in the var_module_af 2da table */
+const string EVENT_MANAGER_LOCK = "EVENT_MANAGER";
 
 /**
 * @brief Get a lock for overriding an event.
 *
-* Each time an event is broadcasted, the lock is released. The first module that
-* override the event lock it.
+* Each time an event is broadcast, the lock is released. The first module that overrides the event locks it.
 *
-* @returns  A boolean. TRUE if you got the lock and can override the event. FALSE means an other module has already overrided this event.
+* @returns  A boolean. TRUE if you got the lock and can override the event. FALSE means another module has the lock.
 *
 * @author Anakin
 **/
-int EventManager_GetLock()
-{
+int EventManager_GetLock() {
     int nLock = GetLocalInt(GetModule(), EVENT_MANAGER_LOCK);
 
-    if (nLock == 0)
-    {
+    if (nLock == 0) {
         SetLocalInt(GetModule(), EVENT_MANAGER_LOCK, 1);
         return TRUE;
     }
@@ -37,29 +34,27 @@ int EventManager_GetLock()
 }
 
 /**
-* @brief This function release the override lock.
+* @brief Release the override lock.
 *
-* By releasing the lock, you allow other module to override the event. Do this
-* if you overrided an event and finally don't want to override it.
+* By releasing the lock, you allow other modules to override the event. Do this
+* if you override an event and want other override event handlers to trigger.
 *
 * @author Anakin
 **/
-void EventManager_ReleaseLock()
-{
+void EventManager_ReleaseLock() {
     SetLocalInt(GetModule(), EVENT_MANAGER_LOCK, 0);
 }
 
 /**
 * @brief Broadcast an event.
 *
-* The broadcasted events is send to all script defined in eventmanager 2DA table.
+* The broadcast events are send to all script defined in the eventmanager 2DA table.
 *
 * @param ev The event to broadcast
 *
 * @author Anakin
 **/
-void EventManager_Broadcast(event ev)
-{
+void EventManager_Broadcast(event ev) {
     int nCurrentEventType = GetEventType(ev);
 
     string[] arOverride;
@@ -69,22 +64,16 @@ void EventManager_Broadcast(event ev)
     int prei = 0;
     int posti = 0;
 
-    int nCurrentRow;
-    int nEventType;
-    int nMode;
-
     int nRows = GetM2DARows(TABLE_EVENT_MANAGER);
 
     int i;
-    for (i = 0; i < nRows; i++)
-    {
-        nCurrentRow = GetM2DARowIdFromRowIndex(TABLE_EVENT_MANAGER, i);
+    for (i = 0; i < nRows; i++) {
+        int nCurrentRow = GetM2DARowIdFromRowIndex(TABLE_EVENT_MANAGER, i);
 
-        nEventType = GetM2DAInt(TABLE_EVENT_MANAGER, "EventType", nCurrentRow);
+        int nEventType = GetM2DAInt(TABLE_EVENT_MANAGER, "EventType", nCurrentRow);
 
-        if (nEventType == nCurrentEventType)
-        {
-            nMode = GetM2DAInt(TABLE_EVENT_MANAGER, "Mode", nCurrentRow);
+        if (nEventType == nCurrentEventType) {
+            int nMode = GetM2DAInt(TABLE_EVENT_MANAGER, "Mode", nCurrentRow);
 
             if (nMode == 0)
                 arOverride[overi++] = GetM2DAString(TABLE_EVENT_MANAGER, "Script", nCurrentRow);
@@ -104,14 +93,11 @@ void EventManager_Broadcast(event ev)
 
     int nOverSize = GetArraySize(arOverride);
 
-    for (i = 0; i < nOverSize; i++)
-    {
-        if (EventManager_GetLock() == TRUE)
-            HandleEvent_String(ev, arOverride[i]);
+    for (i = 0; i < nOverSize; i++) {
+        if (EventManager_GetLock() == TRUE) HandleEvent_String(ev, arOverride[i]);
     }
 
-    if (EventManager_GetLock() == TRUE)
-        HandleEvent(ev);
+    if (EventManager_GetLock() == TRUE) HandleEvent(ev);
 
     int nPostSize = GetArraySize(arPostListeners);
 
@@ -125,10 +111,9 @@ void EventManager_Broadcast(event ev)
 
 /* # How to listen/override an event with the Event Manager ?
 
-You don't need to change your habits concerning overriding events in
-engineevents.GDA
+You don't need to change your habits concerning overriding events in engineevents.GDA
 So fill the engineevents.GDA with all events you want to listen or override.
-But redirect them to eventmanager.
+But redirect them to af_eventmanager.
 
 For example, we say that we want to override EVENT_TYPE_DYING and listen
 EVENT_TYPE_MEMBER_HIRED in a mod called my_mod
@@ -136,15 +121,13 @@ EVENT_TYPE_MEMBER_HIRED in a mod called my_mod
 So my .gda file will looks like this :
 
 ID    Label                                Script
-1023  EVENT_TYPE_DYING                     eventmanager
-1028  EVENT_TYPE_PARTY_MEMBER_HIRED        eventmanager
+1023  EVENT_TYPE_DYING                     af_eventmanager
+1028  EVENT_TYPE_PARTY_MEMBER_HIRED        af_eventmanager
 
 
 
-Then create a new .xls file following the example in the archive. Its name is
-eventmanager_my_mod.xls.
-It is a new M2DA table that need to be extend. Choose a random ID as big as you
-want for your mod.
+Then create a new .xls file following the example in the archive. Its name is eventmanager_my_mod.xls.
+It is a new M2DA table that need to be extend. Choose a random ID as big as you want for your mod.
 Here you have to enter what the name of the scripts that will handler the events.
 
 ID  EventType  Label                          Script        Mode
@@ -152,7 +135,7 @@ X   1023       EVENT_TYPE_DYING               my_mod_dying  0
 Y   1028       EVENT_TYPE_PARTY_MEMBER_HIRED  my_mod_pmh    1
 
 Look at comments in the xls file to know how to fill it properly. Mode are :
-0 : You override the event. Your script replace the default handler.
+0 : You override the event. Your script replaces the default handler.
 1 : You are listening for the event. The default handler is called before your script.
 2 : You are listening for the event. The default handler is called after your script.
 
@@ -180,8 +163,6 @@ for this event before or after your script. The default handler can be the origi
 a modified version by an other mod, you cannot be sure.
 Listener are called in a "random" order.
 If you listen an event, never, never, call HandleEvent(ev). It is already done.
-
-
 
 # About EventManager_ReleaseLock()
 
