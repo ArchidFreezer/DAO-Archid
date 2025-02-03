@@ -8,3 +8,4 @@ For mods where there are alternatives that provide similar functionality and one
 | Mod Name | Author | URL | Comment |
 | --- | --- | --- | --- |
 | Qwinn's Ultimate DAO Fixpack | Qwinn | https://www.nexusmods.com/dragonage/mods/4689 | This fixpack attempts to address ALL dialogue, quest, scripting, plot, and most item bugs in the base game of Dragon Age: Origins. It also restores much previously inaccessible content. |
+| Dain's Fixes | dainbramage | https://www.nexusmods.com/dragonage/mods/4384 | A collection of gameplay fixes, tweaks and quality of life changes. |
