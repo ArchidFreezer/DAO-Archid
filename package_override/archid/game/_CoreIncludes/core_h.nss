@@ -2721,6 +2721,8 @@ float DmgGetWeaponMaxDamage(object oWeapon)
     }
 
     float fMax  = DmgGetWeaponBaseDamage(oWeapon) *  MaxF(1.0, GetM2DAFloat(TABLE_ITEMSTATS,"DamageRange", nType ));
+    if (fMax == 0.0 && GetM2DAInt(TABLE_ITEMS,"Type",nType) == ITEM_TYPE_SHIELD)
+        fMax = 5.0;
     return fMax;
 }
 
