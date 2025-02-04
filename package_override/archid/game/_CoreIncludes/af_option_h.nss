@@ -3,7 +3,7 @@
 */
 
 const int AF_TABLE_OPTIONS = 6610003;
-const string AF_OPTIONS_ENABLED_COL = "Enabled";
+const string AF_OPTIONS_VALUE_COL = "Value";
 const string AF_OPTIONS_LABEL_COL = "Option";
 
 /**
@@ -15,7 +15,19 @@ const string AF_OPTIONS_LABEL_COL = "Option";
 * @return TRUE if the option is enabled; FALSE otherwise
 */
 int AF_IsOptionEnabled(int nOption) {
-    return (GetM2DAInt(AF_TABLE_OPTIONS, AF_OPTIONS_ENABLED_COL, nOption) > 0);
+    return (GetM2DAInt(AF_TABLE_OPTIONS, AF_OPTIONS_VALUE_COL, nOption) > 0);
+}
+
+/**
+* @brief gets an option value
+*
+* Reads the archid options m2da table and returns the value of an option.
+*
+* @param nOption   The option row number to check
+* @return value of the option
+*/
+int AF_IsOptionEnabled(int nOption) {
+    return GetM2DAInt(AF_TABLE_OPTIONS, AF_OPTIONS_VALUE_COL, nOption);
 }
 
 /**
