@@ -26,7 +26,7 @@ int AF_IsOptionEnabled(int nOption) {
 * @param nOption   The option row number to check
 * @return value of the option
 */
-int AF_IsOptionEnabled(int nOption) {
+int AF_GetOptionValue(int nOption) {
     return GetM2DAInt(AF_TABLE_OPTIONS, AF_OPTIONS_VALUE_COL, nOption);
 }
 
