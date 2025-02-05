@@ -39,5 +39,5 @@ int AF_GetOptionValue(int nOption) {
 * @return value of the Optyion column
 */
 string AF_GetOptionLabel(int nOption) {
-    return GetM2DAInt(AF_TABLE_OPTIONS, AF_OPTIONS_LABEL_COL, nOption);
+    return GetM2DAString(AF_TABLE_OPTIONS, AF_OPTIONS_LABEL_COL, nOption);
 }
