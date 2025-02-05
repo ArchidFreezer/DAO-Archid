@@ -17,7 +17,8 @@ const int AF_OPT_INVENTORY_DAMAGE = 8;
 const int AF_OPT_CRITS_IN_DAMAGE = 9;
 const int AF_OPT_ONHIT_IN_DAMAGE = 10;
 
-
+/* Custom effects */
+const int AF_EFFECT_TYPE_MESSY_KILLS = 6610000;
 
 /* The following colours are used by the game */
 const int AF_COLOUR_WHITE = 0xffffff;      // General

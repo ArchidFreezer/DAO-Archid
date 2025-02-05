@@ -2,7 +2,7 @@
 #include "events_h"
 #include "ai_main_h_2"
 #include "sys_soundset_h"
-#include "eventmanager_h"
+#include "af_eventmanager_h"
 // primarily taken from rules_core
 void main() {
     event ev = GetCurrentEvent();
