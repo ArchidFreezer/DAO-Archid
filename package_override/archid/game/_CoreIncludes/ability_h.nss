@@ -1382,87 +1382,18 @@ object [] Ability_GetTargetAllies(object oCaster)
 }
 
 
-void Ability_OnGameModeChange(int nNewGM)
+void Ability_OnGameModeChange(int nNewGM, int nOldGM)
 {
-    if (nNewGM == GM_EXPLORE)
-    {
+    if (nNewGM == GM_EXPLORE && nOldGM == GM_COMBAT) {
         object[] partyMembers = GetPartyList();
-        int      memberCount = GetArraySize(partyMembers);
-        int      i;
+        int i, memberCount = GetArraySize(partyMembers);
 
-        for (i =0; i<memberCount; i++)
-        {
-
-             // ----------------------------------------------------------------
-             // Feign Death ends automatically at the end of combat
-             // ----------------------------------------------------------------
-             if (IsModalAbilityActive(partyMembers[i],ABILITY_TALENT_FEIGN_DEATH))
-             {
+        for (i = 0; i < memberCount; i++) {
+            if (IsModalAbilityActive(partyMembers[i],ABILITY_TALENT_FEIGN_DEATH))
                 Ability_DeactivateModalAbility(partyMembers[i],ABILITY_TALENT_FEIGN_DEATH);
-             }
 
-             // ----------------------------------------------------------------
-             // Dueling ends automatically at the end of combat
-             // ----------------------------------------------------------------
-
-             // REMOVED PER EV 155600 -- yaron
-             /*if (IsModalAbilityActive(partyMembers[i],ABILITY_TALENT_DUELING))
-             {
-                Ability_DeactivateModalAbility(partyMembers[i],ABILITY_TALENT_DUELING);
-             }*/
-
-
-             /*
-             if (IsModalAbilityActive(partyMembers[i],ABILITY_TALENT_SHIELD_DEFENSE))
-             {
-                Ability_DeactivateModalAbility(partyMembers[i],ABILITY_TALENT_SHIELD_DEFENSE);
-             }
-
-             if (IsModalAbilityActive(partyMembers[i],ABILITY_TALENT_SHIELD_WALL))
-             {
-                Ability_DeactivateModalAbility(partyMembers[i],ABILITY_TALENT_SHIELD_WALL);
-             }
-
-             if (IsModalAbilityActive(partyMembers[i],ABILITY_SPELL_SPELL_SHIELD))
-             {
-                Ability_DeactivateModalAbility(partyMembers[i],ABILITY_SPELL_SPELL_SHIELD);
-             }
-
-             if (IsModalAbilityActive(partyMembers[i],ABILITY_TALENT_SHIELD_COVER))
-             {
-                Ability_DeactivateModalAbility(partyMembers[i],ABILITY_TALENT_SHIELD_COVER);
-             }
-
-             */
-             if (IsModalAbilityActive(partyMembers[i],ABILITY_SPELL_BLOOD_MAGIC))
-             {
-                Ability_DeactivateModalAbility(partyMembers[i],ABILITY_SPELL_BLOOD_MAGIC);
-             }
-
-             if (IsModalAbilityActive(partyMembers[i],ABILITY_TALENT_CAPTIVATE))
-             {
+            if (IsModalAbilityActive(partyMembers[i],ABILITY_TALENT_CAPTIVATE))
                 Ability_DeactivateModalAbility(partyMembers[i],ABILITY_TALENT_CAPTIVATE);
-             }
-
-             if (IsModalAbilityActive(partyMembers[i],ABILITY_TALENT_PAIN))
-             {
-                Ability_DeactivateModalAbility(partyMembers[i],ABILITY_TALENT_PAIN);
-             }
-
-             // EV 156479
-             /*if (IsModalAbilityActive(partyMembers[i],ABILITY_TALENT_BLOOD_FRENZY))
-             {
-                Ability_DeactivateModalAbility(partyMembers[i],ABILITY_TALENT_BLOOD_FRENZY);
-             }*/
-
-             if (IsModalAbilityActive(partyMembers[i],ABILITY_TALENT_BERSERK))
-             {
-                Ability_DeactivateModalAbility(partyMembers[i],ABILITY_TALENT_BERSERK);
-             }
         }
-
-
     }
-
-
 }
