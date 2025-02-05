@@ -17,6 +17,14 @@
 #include "effect_constants_h"
 #include "2da_data_h"
 #include "core_difficulty_h"
+#include "af_option_h"
+
+const int AF_OPT_NORMALISE_CRITS = 2;
+const int AF_OPT_DUAL_STRIKING_TIMING = 5;
+const int AF_OPT_RUNE_STACKING = 7;
+const int AF_OPT_INVENTORY_DAMAGE = 8;
+const int AF_OPT_CRITS_IN_DAMAGE = 9;
+const int AF_OPT_ONHIT_IN_DAMAGE = 10;
 
 const float AI_MELEE_RANGE = 3.5; // Any target within this range is considered a melee target
 const int   DA_LEVEL_CAP   = 25;  // Dragon Age level cap. Note: This is one of several values that control this (including max_val on properties.xls!)
@@ -2889,7 +2897,7 @@ float _GetAverageDamage(object oCreature, object oWeapon) {
     fDamage += IsObjectValid(oWeapon) ? 0.5 * (DmgGetWeaponBaseDamage(oWeapon) + DmgGetWeaponMaxDamage(oWeapon)) : COMBAT_DEFAULT_UNARMED_DAMAGE;
 
     // If including crits
-    if (GetM2DAInt(453215378, "enabled", 8)) {
+    if (AF_IsOptionEnabled(AF_OPT_CRITS_IN_DAMAGE)) {
         int nCritMod = IsUsingRangedWeapon(oCreature, oWeapon) ? CRITICAL_MODIFIER_RANGED : CRITICAL_MODIFIER_MELEE;
         float fCritChance = GetCreatureProperty(oCreature, nCritMod, PROPERTY_VALUE_TOTAL);
         fCritChance += GetItemStat(oWeapon, ITEM_STAT_CRIT_CHANCE_MODIFIER);
@@ -2903,7 +2911,7 @@ float _GetAverageDamage(object oCreature, object oWeapon) {
         neverCrit += IsModalAbilityActive(oCreature, ABILITY_TALENT_DUAL_WEAPON_DOUBLE_STRIKE);
         neverCrit += IsModalAbilityActive(oCreature, ABILITY_TALENT_RAPIDSHOT);
         if (autoCrit > 0 || neverCrit > 0) {
-            if (GetM2DAInt(453215378, "enabled", 1)) {
+            if (AF_IsOptionEnabled(AF_OPT_NORMALISE_CRITS)) {
                 if (autoCrit > neverCrit)
                     fCritChance = 100.0;
                 else if (autoCrit < neverCrit)
@@ -2917,7 +2925,7 @@ float _GetAverageDamage(object oCreature, object oWeapon) {
                     fCritChance = 0.0;
             }
         }
-        float fCritMod = COMBAT_CRITICAL_DAMAGE_MODIFIER + 0.01*GetCreatureProperty(oCreature, 54);        
+        float fCritMod = COMBAT_CRITICAL_DAMAGE_MODIFIER + 0.01*GetCreatureProperty(oCreature, 54);
         fDamage *= 1 + MinF(1.0, MaxF(0.0, 0.01*fCritChance))*(fCritMod-1);
     }
 
@@ -2931,7 +2939,7 @@ float _GetAverageDamage(object oCreature, object oWeapon) {
     fDamage = MaxF(1.0, fDamage);
 
     // on-hit effects
-    if (GetM2DAInt(453215378, "enabled", 9)) {
+    if (AF_IsOptionEnabled(AF_OPT_ONHIT_IN_DAMAGE)) {
         int[] arProps = GetItemProperties(oWeapon, TRUE);
         int i, nSize = GetArraySize(arProps);
         for (i = 0; i < nSize; i++) {
@@ -2956,7 +2964,7 @@ float _GetAttackLoopDuration(object oCreature) {
         int bSlow = nArmorType == BASE_ITEM_TYPE_ARMOR_MASSIVE || nArmorType == BASE_ITEM_TYPE_ARMOR_SUPERMASSIVE;
         bSlow |= nArmorType == BASE_ITEM_TYPE_ARMOR_HEAVY && !HasAbility(oCreature, ABILITY_TALENT_MASTER_ARCHER);
         int nBaseItemType = GetBaseItemType(oMain);
-        
+
         float fAimDuration = GetCreatureRangedDrawSpeed(OBJECT_SELF, oMain);
         float fAttackDuration = (nBaseItemType == BASE_ITEM_TYPE_STAFF) ? 0.3 : bSlow ? 1.5 : 0.8;
         float fResetDuration;
@@ -2978,9 +2986,9 @@ float _GetAttackLoopDuration(object oCreature) {
         if (nStyle == WEAPONSTYLE_DUAL) {
             object oOff = GetItemInEquipSlot(INVENTORY_SLOT_MAIN,oCreature);
             float fMainTime = BASE_TIMING_DUAL_WEAPONS + GetM2DAFloat(TABLE_ITEMSTATS,"dspeed",GetBaseItemType(oMain));
-            float fOffTime = BASE_TIMING_DUAL_WEAPONS + GetM2DAFloat(TABLE_ITEMSTATS,"dspeed",GetBaseItemType(oOff));            
+            float fOffTime = BASE_TIMING_DUAL_WEAPONS + GetM2DAFloat(TABLE_ITEMSTATS,"dspeed",GetBaseItemType(oOff));
             if (IsModalAbilityActive(oCreature, ABILITY_TALENT_DUAL_WEAPON_DOUBLE_STRIKE))
-                fTime = GetM2DAInt(453215378, "enabled", 4) ? 0.5 * (fMainTime + fOffTime) : fMainTime;
+                fTime = AF_IsOptionEnabled(AF_OPT_DUAL_STRIKING_TIMING) ? 0.5 * (fMainTime + fOffTime) : fMainTime;
             else
                 fTime = fMainTime + fOffTime;
         } else {
@@ -3022,7 +3030,7 @@ void _CrappyDefaultDisplayDamage(object oCreature, int nSlot= INVENTORY_SLOT_INV
         // ---------------------------------------------------------------------
         else
         {
-            fStat = GetM2DAInt(453215378, "enabled", 6) ? CalculateWeaponDamage(oCreature, OBJECT_INVALID) : DmgGetWeaponDamage(OBJECT_INVALID) +  Combat_Damage_GetAttributeBonus(oCreature, HAND_MAIN, OBJECT_INVALID, TRUE) + GetCreatureProperty(oCreature, PROPERTY_ATTRIBUTE_DAMAGE_BONUS);
+            fStat = AF_IsOptionEnabled(AF_OPT_RUNE_STACKING) ? CalculateWeaponDamage(oCreature, OBJECT_INVALID) : DmgGetWeaponDamage(OBJECT_INVALID) +  Combat_Damage_GetAttributeBonus(oCreature, HAND_MAIN, OBJECT_INVALID, TRUE) + GetCreatureProperty(oCreature, PROPERTY_ATTRIBUTE_DAMAGE_BONUS);
         }
         SetCreatureProperty(oCreature, 50, fStat);
     }
@@ -3077,7 +3085,7 @@ void _CrappyDefaultDisplayDamage(object oCreature, int nSlot= INVENTORY_SLOT_INV
 }
 
 void RecalculateDisplayDamage(object oCreature, int nSlot = INVENTORY_SLOT_INVALID) {
-    int nDisplayMode = GetM2DAInt(453215378, "enabled", 7);
+    int nDisplayMode = AF_GetOptionValue(AF_OPT_INVENTORY_DAMAGE);
     // If DPS
     if (nDisplayMode == 2) {
         object oMain = GetItemInEquipSlot(INVENTORY_SLOT_MAIN,oCreature);
@@ -3086,7 +3094,7 @@ void RecalculateDisplayDamage(object oCreature, int nSlot = INVENTORY_SLOT_INVAL
         float fDmg = _GetAverageDamage(oCreature, oMain);
         if (nStyle == WEAPONSTYLE_DUAL)
             fDmg += _GetAverageDamage(oCreature, oOff);
-        
+
         float fTime = _GetAttackLoopDuration(oCreature);
         float fSpeedMod = 1.0;
         if (IsUsingMeleeWeapon(oCreature, oMain)) {

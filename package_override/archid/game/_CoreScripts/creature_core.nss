@@ -149,7 +149,7 @@ void main()
                     UT_Surrender(oThis);
                 }
             }
-            
+
             // Added by Dain's Fixes to allow custom EVENT_TYPE_DAMAGED override handlers to pass
             //   events through to another script. This is used to have the rules_core event code
             //   applied via a custom af_rules_damaged script that contains the rules_core code
