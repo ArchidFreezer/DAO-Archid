@@ -33,18 +33,15 @@
 void _ApplyImpactDamageAndEffects(struct EventSpellScriptImpactStruct stEvent)
 {
     float fAttackBonus = ARROW_OF_SLAYING_ATTACK_BONUS;
-    if (HasAbility(stEvent.oCaster, ABILITY_TALENT_MASTER_ARCHER) == TRUE)
-    {
+    if (HasAbility(stEvent.oCaster, ABILITY_TALENT_MASTER_ARCHER) == TRUE) {
         fAttackBonus += MASTER_ARCHER_ARROW_OF_SLAYING_ATTACK_BONUS;
     }
 
     object oWeapon  = GetItemInEquipSlot(INVENTORY_SLOT_MAIN, stEvent.oCaster);
     int nResult     = Combat_GetAttackResult(stEvent.oCaster, stEvent.oTarget, oWeapon, fAttackBonus);
-    if (IsCombatHit(nResult) == TRUE)
-    {
+    if (IsCombatHit(nResult) == TRUE) {
         // always crit;
-        if (nResult == COMBAT_RESULT_HIT)
-        {
+        if (nResult == COMBAT_RESULT_HIT) {
             nResult = COMBAT_RESULT_CRITICALHIT;
         }
 
@@ -53,23 +50,17 @@ void _ApplyImpactDamageAndEffects(struct EventSpellScriptImpactStruct stEvent)
 
         // bonus damage if at least equal level.
         int nDifference = GetLevel(stEvent.oCaster) - GetLevel(stEvent.oTarget);
-        if (nDifference > 0)
-        {
+        if (nDifference > 0) {
             // elite bosses are immune to this
             int nRank = GetCreatureRank(stEvent.oTarget);
-            if (nRank != CREATURE_RANK_ELITE_BOSS)
-            {
+            if (nRank != CREATURE_RANK_ELITE_BOSS) {
                 // bosses and players take reduced damage
-                if (nRank == CREATURE_RANK_BOSS || nRank == CREATURE_RANK_PLAYER)
-                {
+                if (nRank == CREATURE_RANK_BOSS || nRank == CREATURE_RANK_PLAYER) {
                     float fBase = ARROW_OF_SLAYING_DAMAGE_BASE * pow(IntToFloat(nDifference),2.0f);
                     float fBonus = RandFF(fBase, fBase);
                     fBonus *= ARROW_OF_SLAYING_BOSS_DAMAGE_FACTOR;
                     fDamage += fBonus;
-                }
-                // Instant kill on elite and lower
-                else
-                {
+                } else {  // Instant kill on elite and lower
                     float fCurrentHealth = GetCurrentHealth(stEvent.oTarget);
                     fDamage = fCurrentHealth + 1.0f;
                 }
@@ -87,9 +78,6 @@ void _ApplyImpactDamageAndEffects(struct EventSpellScriptImpactStruct stEvent)
         ApplyEffectOnObject(EFFECT_DURATION_TYPE_TEMPORARY, eStrain, stEvent.oCaster, ARROW_OF_SLAYING_REGENERATION_PENALTY_DURATION, stEvent.oCaster, stEvent.nAbility);
 
     }
-
-
-
   }
 
 
@@ -187,12 +175,9 @@ void main()
             //--------------------------------------------------------------
             struct EventSpellScriptImpactStruct stEvent = Events_GetEventSpellScriptImpactParameters(ev);
 
-
-
             RemoveStackingEffects(stEvent.oCaster, stEvent.oCaster, stEvent.nAbility);
 
             _ApplyImpactDamageAndEffects(stEvent);
-
 
             //------------------------------------------------------------------
             // Tell the targeted creature that it has been cast at
