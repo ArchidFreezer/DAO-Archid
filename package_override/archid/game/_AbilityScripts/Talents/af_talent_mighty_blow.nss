@@ -9,8 +9,7 @@ void _HandleImpact(struct EventSpellScriptImpactStruct stEvent)
 
     // if the attack hit
     int nResult = Combat_GetAttackResult(stEvent.oCaster, stEvent.oTarget, oWeapon, 10.0f, stEvent.nAbility);
-    if (IsCombatHit(nResult) == TRUE)
-    {
+    if (IsCombatHit(nResult) == TRUE) {
         nResult = COMBAT_RESULT_CRITICALHIT;
         float fDamage = Combat_Damage_GetAttackDamage(stEvent.oCaster, stEvent.oTarget, oWeapon, nResult, 0.0f);
 
@@ -24,8 +23,7 @@ void _HandleImpact(struct EventSpellScriptImpactStruct stEvent)
         float fDuration = GetRankAdjustedEffectDuration(stEvent.oTarget, 5.0);
         ApplyEffectOnObject(EFFECT_DURATION_TYPE_TEMPORARY, eSlow, stEvent.oTarget, fDuration, stEvent.oCaster);
 
-        if (IsCreatureSpecialRank(stEvent.oTarget) == FALSE)
-        {
+        if (IsCreatureSpecialRank(stEvent.oTarget) == FALSE) {
             eEffect = Effect(EFFECT_TYPE_HEAVY_IMPACT);
             ApplyEffectOnObject(EFFECT_DURATION_TYPE_INSTANT, eEffect, stEvent.oTarget, 0.0f, stEvent.oCaster, stEvent.nAbility);
         }
@@ -39,21 +37,15 @@ void main()
 
     switch(nEventType)
     {
-        case EVENT_TYPE_SPELLSCRIPT_PENDING:
-        {
+        case EVENT_TYPE_SPELLSCRIPT_PENDING: {
             Ability_SetSpellscriptPendingEventResult(COMMAND_RESULT_SUCCESS);
 
             break;
         }
 
-        case EVENT_TYPE_SPELLSCRIPT_CAST:
-        {
+        case EVENT_TYPE_SPELLSCRIPT_CAST: {
             // Get a structure with the event parameters
             struct EventSpellScriptCastStruct stEvent = Events_GetEventSpellScriptCastParameters(ev);
-            #ifdef DEBUG
-            Log_Trace(LOG_CHANNEL_COMBAT_ABILITY, GetCurrentScriptName() + ".EVENT_TYPE_SPELLSCRIPT_CAST",Log_GetAbilityNameById(stEvent.nAbility));
-            #endif
-
             // we just hand this through to cast_impact
             int nTarget = PROJECTILE_TARGET_INVALID;
 
@@ -62,16 +54,11 @@ void main()
             break;
         }
 
-        case EVENT_TYPE_SPELLSCRIPT_IMPACT:
-        {
+        case EVENT_TYPE_SPELLSCRIPT_IMPACT: {
             //--------------------------------------------------------------
             // Get a structure with the event parameters
             //--------------------------------------------------------------
             struct EventSpellScriptImpactStruct stEvent = Events_GetEventSpellScriptImpactParameters(ev);
-
-            #ifdef DEBUG
-            Log_Trace(LOG_CHANNEL_COMBAT_ABILITY, GetCurrentScriptName() + ".EVENT_TYPE_SPELLSCRIPT_IMPACT",Log_GetAbilityNameById(stEvent.nAbility));
-            #endif
 
             _HandleImpact(stEvent);
 
