@@ -1,8 +1,8 @@
 // -----------------------------------------------------------------------------
-// talent_single_target.nss
+// af_mtalent_broodm_charge.nss
 // -----------------------------------------------------------------------------
 /*
-    Generic Ability Script for single target abilities
+    Script for ABILITY_TALENT_BROODMOTHER_CHARGE_LEFT & ABILITY_TALENT_BROODMOTHER_CHARGE_RIGHT talents
 */
 // -----------------------------------------------------------------------------
 // georg / petert
@@ -11,15 +11,7 @@
 #include "log_h"
 #include "abi_templates"
 #include "sys_traps_h"
-#include "monster_constants_h"
 #include "spell_constants_h"
-
-
-const int PRIDE_DEMON_MANA_WAVE_DISPEL_VFX = 1012;
-const float RAGE_DEMON_SLAM_ARMOR_PENATRATION = 5.0;
-const float ASHWRAITH_DRAIN_MANA_SLAM = 5.0;
-
-const resource SCRIPT_MONSTER_AOE_DURATION = R"monster_aoe_duration.ncs";
 
 void _HandleImpact(struct EventSpellScriptImpactStruct stEvent)
 {
@@ -300,43 +292,6 @@ void _HandleImpact(struct EventSpellScriptImpactStruct stEvent)
         case ABILITY_TALENT_BROODMOTHER_CHARGE_LEFT:
         case ABILITY_TALENT_BROODMOTHER_CHARGE_RIGHT:
         {
-            float fRange = CHARGE_LEFT_RANGE;
-            float fArcMin = CHARGE_LEFT_ARC_MIN;
-            float fArcMax = CHARGE_LEFT_ARC_MAX;
-            if (stEvent.nAbility == ABILITY_TALENT_BROODMOTHER_CHARGE_RIGHT) {
-                fRange = CHARGE_RIGHT_RANGE;
-                fArcMin = CHARGE_RIGHT_ARC_MIN;
-                fArcMax = CHARGE_RIGHT_ARC_MAX;
-            }
-
-            // get all creatures within range
-            object [] oTargets = GetObjectsInShape(OBJECT_TYPE_CREATURE, SHAPE_SPHERE, GetLocation(stEvent.oCaster), fRange);
-            object oWeapon = GetItemInEquipSlot(INVENTORY_SLOT_MAIN, stEvent.oCaster);
-
-            int i, nSize = GetArraySize(oTargets);
-            for (i = 0; i < nSize; i++)
-            {
-                object oTarget = oTargets[i];
-                int nAppearance = GetAppearanceType(oTarget);
-                // target isn't broodmother or tentacle
-                if (nAppearance != APPEARANCE_BROODMOTHER && nAppearance != APPEARANCE_BROODMOTHER_TENTACLE)
-                {
-                    float fAngle = GetAngleBetweenObjects(stEvent.oCaster, oTarget);
-                    if ((fAngle > fArcMin) && (fAngle <= fArcMax))
-                    {
-                        float fDamage = Combat_Damage_GetAttackDamage(stEvent.oCaster, oTarget, oWeapon, COMBAT_RESULT_HIT, 0.0);
-                        effect eImpactEffect = EffectImpact(fDamage, oWeapon, 0, stEvent.nAbility);
-                        Combat_HandleAttackImpact(stEvent.oCaster, oTarget, COMBAT_RESULT_HIT, eImpactEffect);
-
-                        // phyiscal resistance
-                        if (ResistanceCheck(stEvent.oCaster, oTarget, PROPERTY_ATTRIBUTE_STRENGTH, RESISTANCE_PHYSICAL) == FALSE)
-                        {
-                            effect eKnockdown = EffectKnockdown(stEvent.oCaster, 0, stEvent.nAbility);
-                            ApplyEffectOnObject(EFFECT_DURATION_TYPE_INSTANT, eKnockdown, oTarget, 0.0f, stEvent.oCaster, stEvent.nAbility);
-                        }
-                    }
-                }
-            }
 
             break;
         }
@@ -356,18 +311,6 @@ void main()
 
             Ability_SetSpellscriptPendingEventResult(COMMAND_RESULT_SUCCESS);
 
-            switch(stEvent.nAbility)
-            {
-                case ABILITY_TALENT_MONSTER_ABOMINATION_TRIPLESTRIKE_DESIRE:
-                case ABILITY_TALENT_MONSTER_ABOMINATION_TRIPLESTRIKE_SLOTH:
-                {
-                    effect eEffect = EffectVisualEffect(ABOMINATION_TRIPPLESTRIKE_VFX);
-                    ApplyEffectOnObject(EFFECT_DURATION_TYPE_TEMPORARY, eEffect, stEvent.oCaster, ABOMINATION_TRIPPLESTRIKE_DURATION, stEvent.oCaster, stEvent.nAbility);
-
-                    break;
-                }
-            }
-
             break;
         }
 
@@ -383,25 +326,6 @@ void main()
             // Hand this through to cast_impact
             SetAbilityResult(stEvent.oCaster, stEvent.nResistanceCheckResult);
 
-            switch(stEvent.nAbility)
-            {
-                case MONSTER_SUCCUBUS_DANCE:
-                case ABILITY_TALENT_MONSTER_STALKER_SCARE:
-                case ABILITY_TALENT_MONSTER_CANINE_HOWL:
-                {
-                    Ability_ApplyObjectImpactVFX(stEvent.nAbility, stEvent.oCaster);
-
-                    break;
-                }
-
-                case ABILITY_TALENT_MONSTER_OGRE_STOMP:
-                {
-                    PlaySoundSet(stEvent.oCaster, SS_COMBAT_ATTACK_GRUNT);
-
-                    break;
-                }
-            }
-
             break;
         }
 
@@ -412,20 +336,41 @@ void main()
 
             Log_Trace(LOG_CHANNEL_COMBAT_ABILITY, GetCurrentScriptName() + ".EVENT_TYPE_SPELLSCRIPT_IMPACT",Log_GetAbilityNameById(stEvent.nAbility));
 
-            // Handle impact
-            _HandleImpact(stEvent);
+            float fRange = CHARGE_LEFT_RANGE;
+            float fArcMin = CHARGE_LEFT_ARC_MIN;
+            float fArcMax = CHARGE_LEFT_ARC_MAX;
+            if (stEvent.nAbility == ABILITY_TALENT_BROODMOTHER_CHARGE_RIGHT) {
+                fRange = CHARGE_RIGHT_RANGE;
+                fArcMin = CHARGE_RIGHT_ARC_MIN;
+                fArcMax = CHARGE_RIGHT_ARC_MAX;
+            }
 
-            SendEventOnCastAt(stEvent.oTarget,stEvent.oCaster, stEvent.nAbility, TRUE);
+            // get all creatures within range
+            object [] oTargets = GetObjectsInShape(OBJECT_TYPE_CREATURE, SHAPE_SPHERE, GetLocation(stEvent.oCaster), fRange);
+            object oWeapon = GetItemInEquipSlot(INVENTORY_SLOT_MAIN, stEvent.oCaster);
 
-            switch(stEvent.nAbility)
-            {
-                case ABILITY_MONSTER_ARCANEHORROR_SWARM:
-                {
-                    Ability_ApplyObjectImpactVFX(stEvent.nAbility, stEvent.oCaster);
+            int i, nSize = GetArraySize(oTargets);
+            for (i = 0; i < nSize; i++) {
+                object oTarget = oTargets[i];
+                int nAppearance = GetAppearanceType(oTarget);
+                // target isn't broodmother or tentacle
+                if (nAppearance != APPEARANCE_BROODMOTHER && nAppearance != APPEARANCE_BROODMOTHER_TENTACLE) {
+                    float fAngle = GetAngleBetweenObjects(stEvent.oCaster, oTarget);
+                    if ((fAngle > fArcMin) && (fAngle <= fArcMax)) {
+                        float fDamage = Combat_Damage_GetAttackDamage(stEvent.oCaster, oTarget, oWeapon, COMBAT_RESULT_HIT, 0.0);
+                        effect eImpactEffect = EffectImpact(fDamage, oWeapon, 0, stEvent.nAbility);
+                        Combat_HandleAttackImpact(stEvent.oCaster, oTarget, COMBAT_RESULT_HIT, eImpactEffect);
 
-                    break;
+                        // phyiscal resistance
+                        if (ResistanceCheck(stEvent.oCaster, oTarget, PROPERTY_ATTRIBUTE_STRENGTH, RESISTANCE_PHYSICAL) == FALSE) {
+                            effect eKnockdown = EffectKnockdown(stEvent.oCaster, 0, stEvent.nAbility);
+                            ApplyEffectOnObject(EFFECT_DURATION_TYPE_INSTANT, eKnockdown, oTarget, 0.0f, stEvent.oCaster, stEvent.nAbility);
+                        }
+                    }
                 }
             }
+
+            SendEventOnCastAt(stEvent.oTarget,stEvent.oCaster, stEvent.nAbility, TRUE);
 
             break;
         }
