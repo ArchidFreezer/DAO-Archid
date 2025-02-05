@@ -1,17 +1,12 @@
 #include "core_h"
 #include "log_h"
-#include "af_constants_h"
 #include "af_option_h"
-                                
+
 /** Logging table constants */
 const int AF_TABLE_LOGGING = 6610004;         // 2DA table ID
 const int AF_LOGGROUP_GLOBAL = 0;             // 2DA row with the global log level
 const string AF_LOGGROUP_COL = "GroupName";
 const string AF_LOGLEVEL_COL = "LogLevel";
-           
-/** Options table constants */
-const int AF_INCLUDE_SCRIPT = 0; // 2DA row in options table with log script inclusion enabled
-const int AF_ALWAYS_PRINT = 1;
 
 // Defined log levels
 const int AF_LOG_NONE  = 0;
@@ -73,7 +68,7 @@ string _AF_GetLogMessage(string sMsg, int nLogLevel, int nLogGroup = 0) {
             break;
     }
     sReturn = sReturn + GetM2DAString(AF_TABLE_LOGGING, AF_LOGGROUP_COL, nLogGroup) + "] ";
-    if (AF_IsOptionEnabled(AF_INCLUDE_SCRIPT)) sReturn = sReturn + "[" + GetCurrentScriptName() + "] ";
+    if (AF_IsOptionEnabled(AF_OPT_INCLUDE_SCRIPT)) sReturn = sReturn + "[" + GetCurrentScriptName() + "] ";
     sReturn = sReturn + sMsg;
     return sReturn;
 }
@@ -159,7 +154,7 @@ void AF_LogDebug(string sMsg, int nLogGroup = 0) {
 void AF_LogFloaty(string sMsg, int nLogGroup = 0, int nLevel = AF_LOG_LOG, object oTarget = OBJECT_SELF, int nColour = AF_COLOUR_GREY, float fTime = 3.0f) {
     if (_AF_IsLoggingLevel(nLevel, nLogGroup)) {
         DisplayFloatyMessage(oTarget, sMsg, FLOATY_MESSAGE, nColour, fTime);
-        if (AF_IsOptionEnabled(AF_ALWAYS_PRINT)) PrintToLog(_AF_GetLogMessage(sMsg, nLevel, nLogGroup));
+        if (AF_IsOptionEnabled(AF_OPT_ALWAYS_PRINT)) PrintToLog(_AF_GetLogMessage(sMsg, nLevel, nLogGroup));
     }
 }
 
@@ -204,7 +199,7 @@ void AF_LogFloatyLog(string sMsg, int nLogGroup = 0, object oTarget = OBJECT_SEL
 void AF_LogFloatyWarn(string sMsg, int nLogGroup = 0, object oTarget = OBJECT_SELF, int nColour = AF_COLOUR_GREY, float fTime = 3.0f) {
     AF_LogFloaty(sMsg, nLogGroup, AF_LOG_WARN, oTarget, nColour, fTime);
 }
- 
+
 /**
 * @brief display a floaty message at DEBUG level
 *

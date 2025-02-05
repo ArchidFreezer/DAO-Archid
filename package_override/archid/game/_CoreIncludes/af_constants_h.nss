@@ -4,6 +4,21 @@
 * This file should not contain component specific values to reduce the need for recompilation
 */
 
+/** Options table constants */
+const int AF_OPT_INCLUDE_SCRIPT = 0;          // Should the script name be included in logging statements
+const int AF_OPT_ALWAYS_PRINT = 1;            // Should all logging be written to file
+const int AF_OPT_NORMALISE_CRITS = 2;
+const int AF_OPT_MISDIRECT_BACKSTABS = 3;     // Misdirect backstabs on critical rolls
+const int AF_OPT_MESSY_KILLS = 4;
+const int AF_OPT_DUAL_STRIKING_TIMING = 5;
+const int AF_OPT_REMOVE_EVASION_DODGE = 6;
+const int AF_OPT_RUNE_STACKING = 7;
+const int AF_OPT_INVENTORY_DAMAGE = 8;
+const int AF_OPT_CRITS_IN_DAMAGE = 9;
+const int AF_OPT_ONHIT_IN_DAMAGE = 10;
+
+
+
 /* The following colours are used by the game */
 const int AF_COLOUR_WHITE = 0xffffff;      // General
 const int AF_COLOUR_RED_BRIGHT = 0xff0000; // Death, traps, etc.

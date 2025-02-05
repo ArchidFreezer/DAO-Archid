@@ -19,13 +19,6 @@
 #include "core_difficulty_h"
 #include "af_option_h"
 
-const int AF_OPT_NORMALISE_CRITS = 2;
-const int AF_OPT_DUAL_STRIKING_TIMING = 5;
-const int AF_OPT_RUNE_STACKING = 7;
-const int AF_OPT_INVENTORY_DAMAGE = 8;
-const int AF_OPT_CRITS_IN_DAMAGE = 9;
-const int AF_OPT_ONHIT_IN_DAMAGE = 10;
-
 const float AI_MELEE_RANGE = 3.5; // Any target within this range is considered a melee target
 const int   DA_LEVEL_CAP   = 25;  // Dragon Age level cap. Note: This is one of several values that control this (including max_val on properties.xls!)
 

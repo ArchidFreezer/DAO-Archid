@@ -1,3 +1,5 @@
+#include "af_constants_h"
+
 /*
 * Set of functions for reading the archid mod options table
 */
