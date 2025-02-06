@@ -17,7 +17,7 @@
 #include "plt_tut_placeable_locked"
 
 #include "achievement_core_h"
-#include "autoloot_h"
+#include "af_autoloot_h"
 
 const string STRING_VAR_NONE  = "none";
 
