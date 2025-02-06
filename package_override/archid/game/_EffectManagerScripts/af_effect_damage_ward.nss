@@ -1,8 +1,7 @@
 #include "effect_constants_h"
 #include "ai_threat_h"
 
-void ResetThreat(object oTarget)
-{
+void ResetThreat(object oTarget) {
     object[] oCreatures = GetNearestObject(oTarget, OBJECT_TYPE_CREATURE, 30, TRUE, TRUE);
     int nSize = GetArraySize(oCreatures);
     int i;
