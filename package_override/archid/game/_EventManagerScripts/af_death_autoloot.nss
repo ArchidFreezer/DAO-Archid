@@ -1,4 +1,4 @@
-#include "autoloot_h"
+#include "af_autoloot_h"
 
 void main() {
     event ev = GetCurrentEvent();
@@ -11,7 +11,7 @@ void main() {
                     LootObject(OBJECT_SELF, oBag);
                     event evi = Event(EVENT_TYPE_INVALID);
                     evi = SetEventCreator(evi, oKiller);
-                    DelayEvent(1.0, oBag, evi, "death_autoloot_conservative");
+                    DelayEvent(1.0, oBag, evi, "af_death_autoloot");
                 }
             }
 
@@ -20,13 +20,12 @@ void main() {
 
         case EVENT_TYPE_INVALID: {
             if (GetGameMode() != GM_EXPLORE) {
-                DelayEvent(1.0, OBJECT_SELF, ev, "death_autoloot_conservative");
+                DelayEvent(1.0, OBJECT_SELF, ev, "af_death_autoloot");
                 return;
             }
             object oKiller = GetEventCreator(ev);
-            int bFull = LootObject(OBJECT_SELF, oKiller);
 
-            if (bFull)
+            if (LootObject(OBJECT_SELF, oKiller) == LOOT_RETURN_INV_FULL)
                 DisplayFloatyMessage(oKiller, "Inventory Full", FLOATY_MESSAGE, 0xff0000, 2.0);
 
             break;
