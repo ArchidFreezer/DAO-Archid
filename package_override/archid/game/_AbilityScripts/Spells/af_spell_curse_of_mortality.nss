@@ -58,12 +58,9 @@ void main()
 
             // Handle impact
             if (CheckSpellResistance(stEvent.oTarget, stEvent.oCaster, stEvent.nAbility) == FALSE)
-            {
                 _HandleImpact(stEvent);
-            } else
-            {
+            else
                 UI_DisplayMessage(stEvent.oTarget, UI_MESSAGE_RESISTED);
-            }
 
             break;
         }
