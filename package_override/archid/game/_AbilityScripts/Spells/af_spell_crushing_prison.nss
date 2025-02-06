@@ -18,10 +18,8 @@ void ForceExplosion(object oTarget, object oCaster)
     object[] oTargets = GetObjectsInShape(OBJECT_TYPE_CREATURE, SHAPE_SPHERE, lTarget, FORCE_EXPLOSION_RADIUS);
     int nCount = 0;
     int nMax = GetArraySize(oTargets);
-    for (nCount = 0; nCount < nMax; nCount++)
-    {
-        if (oTargets[nCount] != oTarget)
-        {
+    for (nCount = 0; nCount < nMax; nCount++) {
+        if (oTargets[nCount] != oTarget) {
             ApplyEffectOnObject(EFFECT_DURATION_TYPE_INSTANT, eKnockdown, oTargets[nCount], 0.0f, oCaster, ABILITY_SPELL_CRUSHING_PRISON);
             ApplyEffectOnObject(EFFECT_DURATION_TYPE_INSTANT, eEffect, oTargets[nCount], 0.0f, oCaster, ABILITY_SPELL_CRUSHING_PRISON);
             ApplyEffectOnObject(EFFECT_DURATION_TYPE_INSTANT, eVFX, oTargets[nCount], 0.0f, oCaster, ABILITY_SPELL_CRUSHING_PRISON);
@@ -46,9 +44,6 @@ void _HandleImpact(struct EventSpellScriptImpactStruct stEvent)
         float fFactor = fDuration / CRUSHING_PRISON_DURATION;
 
         effect eEffect = SetEffectEngineInteger(Effect(EFFECT_TYPE_DRAINING), EFFECT_INTEGER_VFX, Ability_GetImpactObjectVfxId(stEvent.nAbility));
-        /*effect eEffect = IsCreatureBossRank(stEvent.oTarget) ?
-            EffectVisualEffect(Ability_GetImpactObjectVfxId(stEvent.nAbility)) :
-            SetEffectEngineInteger(Effect(EFFECT_TYPE_DRAINING), EFFECT_INTEGER_VFX, Ability_GetImpactObjectVfxId(stEvent.nAbility));*/
 
         ApplyEffectOnObject(EFFECT_DURATION_TYPE_TEMPORARY, eEffect, stEvent.oTarget, fDuration, stEvent.oCaster, stEvent.nAbility);
 
