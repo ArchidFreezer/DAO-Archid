@@ -1,4 +1,4 @@
-#include "effect_lucky_h"
+#include "af_effect_lucky_h"
 
 void main() {
     event ev = GetCurrentEvent();
