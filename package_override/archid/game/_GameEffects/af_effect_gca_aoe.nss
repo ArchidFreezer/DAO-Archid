@@ -1,6 +1,10 @@
 #include "spell_constants_h"
 #include "ability_h"
 
+/*
+* AOE for the Generate cleansing aura item effect
+* Called from the af_effect_gen_clean_aura EffectManager script
+*/
 void _ApplySpellHeartbeatEffects(int nAbility, object oTarget, object oCreator)
 {
     // if target is not the caster
