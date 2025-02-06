@@ -16,6 +16,7 @@ const int AF_OPT_RUNE_STACKING = 7;
 const int AF_OPT_INVENTORY_DAMAGE = 8;
 const int AF_OPT_CRITS_IN_DAMAGE = 9;
 const int AF_OPT_ONHIT_IN_DAMAGE = 10;
+const int AF_OPT_FIX_DOT_DURATIONS = 11;
 
 /* Custom effects */
 const int AF_EFFECT_TYPE_MESSY_KILLS = 6610000;
