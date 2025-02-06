@@ -36,7 +36,7 @@ void _HandleImpact(struct EventSpellScriptImpactStruct stEvent)
                     evi = SetEventFloat(evi, 1, fDuration);
                     evi = SetEventInteger(evi, 0, 1);
                     evi = SetEventObject(evi, 0, stEvent.oCaster);
-                    DelayEvent(95.0/64.0, stEvent.oTarget, evi, "spell_blood_control");
+                    DelayEvent(95.0/64.0, stEvent.oTarget, evi, "af_spell_blood_control");
                 }
             }
         }
@@ -52,7 +52,7 @@ void _HandleImpact(struct EventSpellScriptImpactStruct stEvent)
 void _HandleHeartbeat(event ev) {
     if (GetHasEffects(OBJECT_SELF, EFFECT_TYPE_INVALID, ABILITY_SPELL_BLOOD_CONTROL)) {
         if (GetGameMode() == GM_COMBAT) {
-            DelayEvent(1.5, OBJECT_SELF, SetEventInteger(ev, 0, GetEventInteger(ev, 0) + 1), "spell_blood_control");
+            DelayEvent(1.5, OBJECT_SELF, SetEventInteger(ev, 0, GetEventInteger(ev, 0) + 1), "af_spell_blood_control");
         } else {
             float fTotalDamage = GetEventFloat(ev, 0);
             float fTotalDuration = GetEventFloat(ev, 1);
