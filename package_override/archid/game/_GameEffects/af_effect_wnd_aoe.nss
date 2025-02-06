@@ -2,6 +2,10 @@
 #include "monster_constants_h"
 #include "ability_h"
 
+/*
+* AOE for the Weaken nearby darkspawn item effect
+* Called from the af_effect_weaken_darkspawn EffectManager script
+*/
 void _ApplyEffects(object oCreator, object oTarget, int nAbility) {
     // physical resistance
     if (ResistanceCheck(oCreator, oTarget, PROPERTY_ATTRIBUTE_SPELLPOWER, RESISTANCE_PHYSICAL) == FALSE)
