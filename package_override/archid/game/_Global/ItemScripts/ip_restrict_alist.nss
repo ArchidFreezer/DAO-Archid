@@ -11,11 +11,7 @@ void main()
     Log_Trace(LOG_CHANNEL_EVENTS, GetCurrentScriptName(), "oTestCreator = " + ToString(oTestCreator));
 
     if(GetFollowerState(oTestCreator) != FOLLOWER_STATE_INVALID)
-    {
         SetCanUseItem(oTestCreator, (GetTag(oTestCreator) == "gen00fl_alistair"));
-    }
     else
-    {
         SetCanUseItem(oTestCreator, 1);
-    }
 }
