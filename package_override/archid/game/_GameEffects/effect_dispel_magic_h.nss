@@ -56,18 +56,15 @@ int Effects_HandleApplyEffectDispelMagic(effect eEffect)
 
     arSpell = GetEffects(OBJECT_SELF);
     nSize = GetArraySize (arSpell);
-    for (i = 0; i < nSize; i++) {
-        effect eSpell = arSpell[i];
-        int nAbility = GetEffectAbilityID(eSpell);
-        if (IsSpell(nAbility)) {
-            if (GetEffectDurationType(eSpell) != 3) {
-                RemoveEffect(OBJECT_SELF, eSpell);
-            } else {
-                object oCreator = GetEffectCreator(eSpell);
-                if (oCreator == OBJECT_SELF || !IsModalAbilityActive(oCreator, nAbility)) {
-                    RemoveEffect(OBJECT_SELF,eSpell);
-                }
-            }
+    for (i = 0; i < nSize; i++)
+    {
+        nId = GetEffectAbilityID(arSpell[i]);
+        // ---------------------------------------------------------------------
+        // We only dispell ABILITY_TYPE_SPELL!
+        // ---------------------------------------------------------------------
+        if (Ability_GetAbilityType(nId) == ABILITY_TYPE_SPELL)
+        {
+            RemoveEffect(OBJECT_SELF,arSpell[i]);
         }
     }
 
