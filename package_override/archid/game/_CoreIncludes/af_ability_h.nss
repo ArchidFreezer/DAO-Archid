@@ -311,14 +311,18 @@ const int AF_ABILITY_KILLING_BLOW = 300103;
 const int AF_ABILITY_STONEHEART = 300200;
 const int AF_ABILITY_BELLOW = 300201;
 const int AF_ABILITY_STONE_ROAR = 300202;
-const int AF_ABILITY_REGENERATING_BURST = 300203;
+const int AF_ABILITY_REGENERATING_BURST = 300203; 
+const int AF_ABILITY_REGENERATING_BURST_EFFECT1 = 300210;    // This is not selectable by the player
 const int AF_ABILITY_ROCK_MASTERY = 300300;
 const int AF_ABILITY_HURL_ROCK = 300301;
 const int AF_ABILITY_EARTHEN_GRASP = 300302;
 const int AF_ABILITY_ROCK_BARRAGE = 300303;
+const int AF_ABILITY_ROCK_MASTERY_EFFECT1 = 300310;         // This is not selectable by the player
 const int AF_ABILITY_STONE_AURA = 300400;
 const int AF_ABILITY_INNER_RESERVES = 300401;
 const int AF_ABILITY_RENEWED_ASSAULT = 300402;
+const int AF_ABILITY_STONE_AURA_EFFECT1 =300410;            // This is not selectable by the player
+const int AF_ABILITY_STONE_AURA_EFFECT2 =300411;            // This is not selectable by the player
 const int AF_ABILITY_SUPERNATURAL_RESILIENCE = 300403;
 
 /**

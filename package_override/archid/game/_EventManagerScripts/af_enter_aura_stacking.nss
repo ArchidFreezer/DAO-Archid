@@ -1,12 +1,13 @@
 #include "effect_constants_h"
-#include "eventmanager_h"
+#include "af_eventmanager_h"
+#include "af_ability_h"
 
 void main() {
     event ev = GetCurrentEvent();
     int nAbility = GetEventInteger(ev, 0);
     // Rock mastery is special (stone aura is too but you can't transistion areas with it active so...)
-    if (nAbility == 300300)
-        nAbility = 300310;
+    if (nAbility == AF_ABILITY_ROCK_MASTERY)
+        nAbility = AF_ABILITY_ROCK_MASTERY_EFFECT1;
     object oTarget = GetEventTarget(ev);
     object oCaster = GetEventCreator(ev);
     if (nAbility != 0 && oTarget != oCaster) {
