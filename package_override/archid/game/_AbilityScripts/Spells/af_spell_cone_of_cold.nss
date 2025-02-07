@@ -26,8 +26,7 @@ void _ApplySpellEffects(struct EventSpellScriptImpactStruct stEvent, object oTar
     RemoveStackingEffects(oTarget, stEvent.oCaster, stEvent.nAbility);
 
     // physical resistance
-    if (ResistanceCheck(stEvent.oCaster, oTarget, PROPERTY_ATTRIBUTE_SPELLPOWER, RESISTANCE_PHYSICAL) == FALSE)
-    {
+    if (ResistanceCheck(stEvent.oCaster, oTarget, PROPERTY_ATTRIBUTE_SPELLPOWER, RESISTANCE_PHYSICAL) == FALSE) {
         // frozen
         eEffect = EffectParalyze();
         ApplyEffectOnObject(EFFECT_DURATION_TYPE_TEMPORARY, eEffect, oTarget, fDuration, stEvent.oCaster, stEvent.nAbility);
@@ -36,8 +35,7 @@ void _ApplySpellEffects(struct EventSpellScriptImpactStruct stEvent, object oTar
         eEffect = Effect(EFFECT_TYPE_PETRIFY);
         eEffect = SetEffectInteger(eEffect, 0, 1);
         eEffect = SetEffectEngineInteger(eEffect, EFFECT_INTEGER_VFX, CONE_OF_COLD_FROZEN_VFX);
-    } else
-    {
+    } else {
         // slow
         eEffect = EffectModifyMovementSpeed(CONE_OF_COLD_SPEED_PENALTY, TRUE);
         eEffect = SetEffectEngineInteger(eEffect, EFFECT_INTEGER_VFX, CONE_OF_COLD_SLOW_VFX);
@@ -58,8 +56,7 @@ void _ApplyImpactDamageAndEffects(struct EventSpellScriptImpactStruct stEvent)
     // cone details
     float fAoEParam1 = GetM2DAFloat(TABLE_ABILITIES_SPELLS, "aoe_param1", stEvent.nAbility);
     float fAoEParam2 = GetM2DAFloat(TABLE_ABILITIES_SPELLS, "aoe_param2", stEvent.nAbility);
-    if (fAoEParam2 <= 0.0f)
-    {
+    if (fAoEParam2 <= 0.0f) {
         fAoEParam2 = 5.0f;
     }
     stEvent.lTarget = GetLocation(stEvent.oCaster);
@@ -70,19 +67,13 @@ void _ApplyImpactDamageAndEffects(struct EventSpellScriptImpactStruct stEvent)
     object[] oTargets = GetObjectsInShape(OBJECT_TYPE_CREATURE, SHAPE_CONE, stEvent.lTarget, fAoEParam1, fAoEParam2);
     int nCount = 0;
     int nMax = GetArraySize(oTargets);
-    for (nCount = 0; nCount < nMax; nCount++)
-    {
+    for (nCount = 0; nCount < nMax; nCount++) {
         // do not affect caster
-        if (oTargets[nCount] != stEvent.oCaster)
-        {
+        if (oTargets[nCount] != stEvent.oCaster) {
             if (CheckSpellResistance(oTargets[nCount], stEvent.oCaster, stEvent.nAbility) == FALSE)
-            {
                 SetIndividualImpactAOEEvent(stEvent.oCaster,oTargets[nCount],stEvent.nAbility,stEvent.lTarget,500);
-            }
             else
-            {
                 UI_DisplayMessage(oTargets[nCount], UI_MESSAGE_RESISTED);
-            }
         }
     }
 }
