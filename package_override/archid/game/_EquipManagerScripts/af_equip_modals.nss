@@ -29,14 +29,14 @@ void main() {
             }
 
             // Need to delay reactivations due to an engine bug in calculating reserved mana/stamina
-            DelayEvent(0.05, OBJECT_SELF, Event(EVENT_TYPE_INVALID), "equip_modals");
+            DelayEvent(0.05, OBJECT_SELF, Event(EVENT_TYPE_INVALID), "af_equip_modals");
 
             break;
         }
 
         case EVENT_TYPE_INVALID: {
             // Reactivate any that were deactivated by unequip event but are still valid
-            int[] arAbilities = GetAbilityList(OBJECT_SELF, ABILITY_INVALID, TRUE); // n.b. GetAbilityList is from patch 1.03 script.ldf
+            int[] arAbilities = GetAbilityList(OBJECT_SELF, ABILITY_INVALID, TRUE); // n.b. GetAbilityList is from patch002 script.ldf
             int nSize = GetArraySize(arAbilities);
             int i;
             for (i = 0; i < nSize; i++) {
