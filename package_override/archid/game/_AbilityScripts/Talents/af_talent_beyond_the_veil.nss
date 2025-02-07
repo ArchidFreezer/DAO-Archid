@@ -40,25 +40,12 @@ void _ActivateModalAbility(struct EventSpellScriptImpactStruct stEvent)
         // VFX
         eEffects[0] = SetEffectEngineInteger(eEffects[0], EFFECT_INTEGER_VFX, Ability_GetImpactObjectVfxId(nVfx));
     }
-
-    #ifdef DEBUG
-    Log_Trace_Spell("_ActivateModalAbility", "Activating modal ability.", stEvent.nAbility, OBJECT_INVALID);
-    #endif
-
     Ability_ApplyUpkeepEffects(stEvent.oCaster, stEvent.nAbility, eEffects, stEvent.oTarget);
-
-    #ifdef DEBUG
-    Log_Trace_Spell("_ActivateModalAbility", "Modal ability activated.", stEvent.nAbility, OBJECT_INVALID);
-    #endif
 }
 
 // remove effects
 void _DeactivateModalAbility(object oCaster, int nAbility)
 {
-    #ifdef DEBUG
-    Log_Trace_Spell("_DeactivateModalAbility", "Deactivate modal ability.", nAbility, OBJECT_INVALID);
-    #endif
-
     // remove effects
     Effects_RemoveUpkeepEffect(oCaster, nAbility);
 }
@@ -93,10 +80,6 @@ void main()
         {
             // Get a structure with the event parameters
             struct EventSpellScriptImpactStruct stEvent = Events_GetEventSpellScriptImpactParameters(ev);
-
-            #ifdef DEBUG
-            Log_Trace(LOG_CHANNEL_COMBAT_ABILITY, GetCurrentScriptName() + ".EVENT_TYPE_SPELLSCRIPT_IMPACT",Log_GetAbilityNameById(stEvent.nAbility));
-            #endif
 
             // Remove any previously existing effects from same spellid to avoid stacking
             Ability_PreventAbilityEffectStacking(stEvent.oTarget, stEvent.oCaster, stEvent.nAbility);
