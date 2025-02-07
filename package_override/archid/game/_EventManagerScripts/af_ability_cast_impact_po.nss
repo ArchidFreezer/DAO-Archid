@@ -1,6 +1,11 @@
 #include "ability_h"
 #include "abi_templates"
-
+                      
+/**
+*
+* Runs after the standard EVENT_TYPE_ABILITY_CAST_IMPACT handling scripts
+*
+*/
 void main() {
     event ev = GetCurrentEvent();
     int nAbility = GetEventInteger(ev,0);
