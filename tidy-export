@@ -2,3 +2,4 @@
 rm -rf package_override/toolsetexport
 rm addin/core/override/toolsetexport/*
 rm addin/module/override/toolsetexport/*
+rm ~/Documents/BioWare/Dragon\ Age/modules/Single\ Player/override/toolsetexport/*

@@ -14,7 +14,8 @@
 #include "utility_h"
 #include "wrappers_h"
 #include "events_h"
-#include "ai_main_h_2"
+#include "ai_main_h_2" 
+#include "af_ability_h"
 
 #include "plt_lite_multi_gax"
 
@@ -64,8 +65,8 @@ void SwitchForm()
         RemoveAbility(OBJECT_SELF, ABILITY_SPELL_TBD_WAS_DANCE_OF_MADNESS);
         RemoveAbility(OBJECT_SELF, ABILITY_SPELL_DRAIN_LIFE);
         RemoveAbility(OBJECT_SELF, ABILITY_SPELL_ANTIMAGIC_BURST);
-        RemoveAbility(OBJECT_SELF, 10401); // Dispel Magic
-        RemoveAbility(OBJECT_SELF, 11114); // Misdirection Hex
+        RemoveAbility(OBJECT_SELF, AF_ABILITY_DISPEL_MAGIC);
+        RemoveAbility(OBJECT_SELF, AF_ABILITY_MISDIRECTION_HEX);
 
         AddAbility(OBJECT_SELF, ABILITY_TALENT_SHIELD_WALL);
         AddAbility(OBJECT_SELF, ABILITY_TALENT_MONSTER_REVENANT_DOUBLESTRIKE);
@@ -89,8 +90,8 @@ void SwitchForm()
         AddAbility(OBJECT_SELF, ABILITY_SPELL_TBD_WAS_DANCE_OF_MADNESS);
         AddAbility(OBJECT_SELF, ABILITY_SPELL_DRAIN_LIFE);
         AddAbility(OBJECT_SELF, ABILITY_SPELL_ANTIMAGIC_BURST);
-        AddAbility(OBJECT_SELF, 10401); // Dispel Magic
-        AddAbility(OBJECT_SELF, 11114); // Misdirection Hex
+        AddAbility(OBJECT_SELF, AF_ABILITY_DISPEL_MAGIC);
+        AddAbility(OBJECT_SELF, AF_ABILITY_MISDIRECTION_HEX);
 
         RemoveAbility(OBJECT_SELF, ABILITY_TALENT_SHIELD_WALL);
         RemoveAbility(OBJECT_SELF, ABILITY_TALENT_MONSTER_REVENANT_DOUBLESTRIKE);
