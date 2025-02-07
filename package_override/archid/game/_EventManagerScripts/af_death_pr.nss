@@ -11,7 +11,7 @@ void main() {
                     LootObject(OBJECT_SELF, oBag);
                     event evi = Event(EVENT_TYPE_INVALID);
                     evi = SetEventCreator(evi, oKiller);
-                    DelayEvent(1.0, oBag, evi, "af_death_autoloot");
+                    DelayEvent(1.0, oBag, evi, "af_death_pr");
                 }
             }
 
@@ -20,7 +20,7 @@ void main() {
 
         case EVENT_TYPE_INVALID: {
             if (GetGameMode() != GM_EXPLORE) {
-                DelayEvent(1.0, OBJECT_SELF, ev, "af_death_autoloot");
+                DelayEvent(1.0, OBJECT_SELF, ev, "af_death_pr");
                 return;
             }
             object oKiller = GetEventCreator(ev);

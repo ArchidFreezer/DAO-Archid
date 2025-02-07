@@ -36,18 +36,10 @@ void main() {
     if ((nAbility == ABILITY_SPELL_WALKING_BOMB || nAbility == ABILITY_SPELL_MASS_CORPSE_DETONATION) && GetGameDifficulty() >= 2)
         fThreat *= 2.0;
 
-    object oCaster;
+    object oCaster = GetEventCreator(ev);
     object[] arTargets;
-    if (GetEventType(ev) == EVENT_TYPE_ENTER) {
-        oCaster = GetEventCreator(ev);
-        arTargets[0] = GetEventTarget(ev);
-    } else {
-        oCaster = GetEventObject(ev, 0);
-        if (GetM2DAInt(TABLE_ABILITIES_SPELLS, "aoe_type", nAbility) == 0)
-            arTargets[0] = GetEventObject(ev, 2);
-        else
-            arTargets = GetTargetsInAoE(ev);
-    }
+    arTargets[0] = GetEventTarget(ev);
+
     int i, nSize = GetArraySize(arTargets);
     for (i = 0; i < nSize; i++)
         AI_Threat_UpdateCreatureThreat(arTargets[i], oCaster, fThreat);
