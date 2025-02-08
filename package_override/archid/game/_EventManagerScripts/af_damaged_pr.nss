@@ -1,13 +1,20 @@
 #include "talent_constants_h"
 #include "2da_constants_h"
 #include "ai_threat_h"
-
+/*
+* EVENT_TYPE_DAMAGED post script
+* Runs before the normal processing of the event
+*
+* Used by:
+*   Dain's Frightening Appearance buffs Threaten
+*/
 void main()
 {
     event  ev = GetCurrentEvent();
     object oAttacker = GetEventCreator(ev);
     object oTarget = OBJECT_SELF;
-
+    
+    // Dain's Frightening Appearance buffs Threaten
     if (!IsFollower(oTarget) && HasAbility(oAttacker, ABILITY_TALENT_FRIGHTENING) && IsModalAbilityActive(oAttacker, ABILITY_TALENT_THREATEN) && IsObjectValid(oTarget) && !IsDead(oTarget) && IsObjectHostile(oAttacker, oTarget)) {
         float fDamage = GetEventFloat(ev, 0);
         float fMaxHealth = GetMaxHealth(oTarget);
