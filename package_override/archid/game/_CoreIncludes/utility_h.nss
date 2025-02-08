@@ -8,6 +8,7 @@
 #include "ai_constants_h"
 #include "stats_core_h"
 #include "plt_tut_friendly_aoe"
+#include "af_constants_h"
 
 /** @addtogroup scripting_utility Scripting Utility
 *
@@ -962,7 +963,7 @@ int UT_SkillCheck(int nSkill, int nLevel, object oObject = OBJECT_SELF)
             nSkillCheck += nCheckBonus;
             
             // Increases hostility and intimidation
-            if (nSkill == SKILL_INTIMIDATE && GetHasEffects(oObject, 663906003))
+            if (nSkill == SKILL_INTIMIDATE && GetHasEffects(oObject, AF_EFFECT_TYPE_HOSTILITY_INTIMIDATION))
                 nSkillCheck += 10;
 
             if(nLevel == UT_SKILL_CHECK_LOW && nSkillCheck >= 25)

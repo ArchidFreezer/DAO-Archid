@@ -20,6 +20,7 @@ const int AF_OPT_FIX_DOT_DURATIONS = 11;
 
 /* Custom effects */
 const int AF_EFFECT_TYPE_MESSY_KILLS = 6610000;
+const int AF_EFFECT_TYPE_HOSTILITY_INTIMIDATION = 6610004;
 
 /* The following colours are used by the game */
 const int AF_COLOUR_WHITE = 0xffffff;      // General
