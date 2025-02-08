@@ -2,7 +2,7 @@
 #include "2da_constants_h"
 /*
 * EVENT_TYPE_DOT_TICK post script
-* Runs after the normal processing of the event
+* Runs before the normal processing of the event
 *
 * Used by:
 *   Dain's Fire and Ice cancel out

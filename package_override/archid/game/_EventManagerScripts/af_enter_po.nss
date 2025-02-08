@@ -1,23 +1,46 @@
-#include "effect_constants_h"
-#include "af_eventmanager_h"
-#include "af_ability_h"
+#include "2da_constants_h"
+#include "ai_threat_h"
+
+object[] GetTargetsInAoE(event ev) {
+    int nAbility = GetEventInteger(ev,0);
+    int nAoEType = GetM2DAInt(TABLE_ABILITIES_SPELLS, "aoe_type", nAbility);
+    float fAoEParam1 = GetM2DAFloat(TABLE_ABILITIES_SPELLS, "aoe_param1", nAbility);
+
+    int nShape;
+    location lTarget;
+    float fAoEParam2;
+    if (nAoEType == 1) {
+        nShape = SHAPE_SPHERE;
+        object oTarget = GetEventObject(ev,1);
+        lTarget = oTarget == OBJECT_INVALID ? GetEventLocation(ev,0) : GetLocation(oTarget);
+        fAoEParam2 = 0.0;
+    } else {
+        nShape = SHAPE_CONE;
+        object oCaster = GetEventObject(ev,0);
+        lTarget = GetLocation(oCaster);
+        fAoEParam2 = GetM2DAFloat(TABLE_ABILITIES_SPELLS, "aoe_param2", nAbility);
+        if (fAoEParam2 <= 0.0)
+            fAoEParam2 = 5.0;
+    }
+    return GetObjectsInShape(OBJECT_TYPE_CREATURE, nShape, lTarget, fAoEParam1, fAoEParam2);
+}
 
 void main() {
     event ev = GetCurrentEvent();
     int nAbility = GetEventInteger(ev, 0);
-    // Rock mastery is special (stone aura is too but you can't transistion areas with it active so...)
-    if (nAbility == AF_ABILITY_ROCK_MASTERY)
-        nAbility = AF_ABILITY_ROCK_MASTERY_EFFECT1;
-    object oTarget = GetEventTarget(ev);
+    float fThreat = GetM2DAFloat(TABLE_ABILITIES_SPELLS,"threat_impact",nAbility);
+    if (fThreat == 0.0)
+        return;
+
+    fThreat *= AI_THREAT_ABILITY_IMPACT_THREAT_COEFF;
+    if ((nAbility == ABILITY_SPELL_WALKING_BOMB || nAbility == ABILITY_SPELL_MASS_CORPSE_DETONATION) && GetGameDifficulty() >= 2)
+        fThreat *= 2.0;
+
     object oCaster = GetEventCreator(ev);
-    if (nAbility != 0 && oTarget != oCaster) {
-        effect[] arEffects = GetEffects(oTarget, EFFECT_TYPE_INVALID, nAbility, oCaster);
-        int nSize = GetArraySize(arEffects);
-        int i;
-        for (i = 0;i < nSize;i++) {
-            effect ef = arEffects[i];
-            if (GetEffectType(ef) != EFFECT_TYPE_AOE)
-                RemoveEffect(oTarget, ef);
-        }
-    }
+    object[] arTargets;
+    arTargets[0] = GetEventTarget(ev);
+
+    int i, nSize = GetArraySize(arTargets);
+    for (i = 0; i < nSize; i++)
+        AI_Threat_UpdateCreatureThreat(arTargets[i], oCaster, fThreat);
 }

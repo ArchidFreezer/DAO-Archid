@@ -1,5 +1,5 @@
 #include "af_follower_specs_h"
-            
+
 /*
 * Called after the EVENT_TYPE_PARTY_MEMBER_HIRED standard processing
 *
