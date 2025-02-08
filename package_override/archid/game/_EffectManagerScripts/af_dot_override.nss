@@ -24,15 +24,5 @@ void main() {
 
             break;
         }
-
-        case EVENT_TYPE_DOT_TICK:
-        {
-            if (IsDead() || IsDying())
-                SetCreatureFlag(OBJECT_SELF,CREATURE_RULES_FLAG_DOT,FALSE);
-            else
-                Effects_HandleCreatureDotTickEvent();
-
-            break;
-        }
     }
 }
