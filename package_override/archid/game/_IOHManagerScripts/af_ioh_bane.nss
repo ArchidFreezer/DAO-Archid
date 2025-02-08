@@ -1,7 +1,6 @@
 #include "events_h"
 #include "effects_h"
 #include "sys_itemprops_h"
-#include "eventmanager_h"
 
 void main()
 {
