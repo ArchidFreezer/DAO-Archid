@@ -1,6 +1,12 @@
 #include "effect_constants_h"
 #include "2da_constants_h"
-
+/*
+* EVENT_TYPE_DOT_TICK post script
+* Runs after the normal processing of the event
+*
+* Used by:
+*   Dain's Fire and Ice cancel out
+*/
 void main() {
     effect[] aEffects = GetEffects(OBJECT_SELF, EFFECT_TYPE_DOT);
     int i, nSize = GetArraySize(aEffects);
