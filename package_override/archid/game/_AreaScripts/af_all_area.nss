@@ -1,3 +1,4 @@
+#include "2da_constants_h"
 #include "config_h"
 #include "core_h"
 #include "af_ability_h"
@@ -30,12 +31,17 @@ void main() {
     if (sName == "DAO_PRC_STR" || sName == "DAO_PRC_GIB") {
         InitHeartbeat(GetHero(), CONFIG_CONSTANT_HEARTBEAT_RATE);
     }
+
     
-    // Dain's Follower specialisation points
-    object[] arFollowers = GetPartyList();
+    object[] arFollowers = GetPartyPoolList();
     nSize = GetArraySize(arFollowers);
     for (i = 0; i < nSize; i++) {
-        AF_CheckFollowerSpec(arFollowers[i]);
+        // Dain's Follower specialisation points
+        AF_CheckFollowerSpec(arFollowers[i]);   
+        
+        // Dain's Oghren Dwarven Resistance
+        if (GetTag(arFollowers[i]) == "gen00fl_oghren" && !HasAbility(arFollowers[i], ABILITY_SKILL_DWARVEN_RESISTANCE))
+            AddAbility(arFollowers[i], ABILITY_SKILL_DWARVEN_RESISTANCE);
     }
 
 }
