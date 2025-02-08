@@ -33,15 +33,18 @@ void main() {
     }
 
 
-    object[] arFollowers = GetPartyPoolList();
-    nSize = GetArraySize(arFollowers);
+    object[] arParty = GetPartyPoolList();
+    nSize = GetArraySize(arParty);
     for (i = 0; i < nSize; i++) {
         // Dain's Follower specialisation points
-        AF_CheckFollowerSpec(arFollowers[i]);
+        AF_CheckFollowerSpec(arParty[i]);
 
         // Dain's Oghren Dwarven Resistance
-        if (GetTag(arFollowers[i]) == "gen00fl_oghren" && !HasAbility(arFollowers[i], ABILITY_SKILL_DWARVEN_RESISTANCE))
-            AddAbility(arFollowers[i], ABILITY_SKILL_DWARVEN_RESISTANCE);
+        if (GetTag(arParty[i]) == "gen00fl_oghren" && !HasAbility(arParty[i], ABILITY_SKILL_DWARVEN_RESISTANCE))
+            AddAbility(arParty[i], ABILITY_SKILL_DWARVEN_RESISTANCE);
+        
+        // Dain's Plus Heal
+        SetCreatureProperty(arParty[i], 51, 100.0, PROPERTY_VALUE_BASE);
     }
       
     // Dain's Fix PC Crit Chance
