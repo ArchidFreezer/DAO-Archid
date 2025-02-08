@@ -1,11 +1,13 @@
 #include "config_h"
 #include "core_h"
 #include "af_ability_h"
+#include "af_follower_specs_h"
 
 void main() {
     object[] arObjects = GetObjectsInArea(GetArea(GetHero()));
-    int i, nSize = GetArraySize(arObjects);
 
+    int i;
+    int nSize = GetArraySize(arObjects);
     for (i = 0; i < nSize; i++) {
         object oObj = arObjects[i];
         if (GetObjectType(oObj) == OBJECT_TYPE_CREATURE) {
@@ -28,4 +30,12 @@ void main() {
     if (sName == "DAO_PRC_STR" || sName == "DAO_PRC_GIB") {
         InitHeartbeat(GetHero(), CONFIG_CONSTANT_HEARTBEAT_RATE);
     }
+    
+    // Dain's Follower specialisation points
+    object[] arFollowers = GetPartyList();
+    nSize = GetArraySize(arFollowers);
+    for (i = 0; i < nSize; i++) {
+        AF_CheckFollowerSpec(arFollowers[i]);
+    }
+
 }

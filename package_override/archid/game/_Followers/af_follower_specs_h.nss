@@ -1,16 +1,17 @@
-#include "2da_constants_h"
-#include "var_constants_h"
 #include "events_h"
-
-int CanSpecialise(object oCreature = OBJECT_SELF) {
+/*
+* Core code from Dain's Follower specialisation points fix
+* Ensures that followers (Sten) get a second spec point at level 7
+*/
+int _CanSpecialise(object oCreature = OBJECT_SELF) {
     return IsHumanoid(oCreature) && !GetLocalInt(oCreature,IS_SUMMONED_CREATURE);
 }
 
-int IsScaled(object oCreature = OBJECT_SELF) {
+int _IsScaled(object oCreature = OBJECT_SELF) {
     return GetLocalInt(oCreature, FOLLOWER_SCALED) && !IsHero(oCreature);
 }
 
-int MissingSpecPoints(object oCreature = OBJECT_SELF) {
+int _MissingSpecPoints(object oCreature = OBJECT_SELF) {
     int i;
     int nSpecPoints = FloatToInt(-1.0*GetCreatureProperty(oCreature, 38));
     int nLevel = GetLevel(oCreature);
@@ -39,26 +40,12 @@ int MissingSpecPoints(object oCreature = OBJECT_SELF) {
     return nSpecPoints;
 }
 
-void CheckSpec(object oCreature = OBJECT_SELF) {
-    if (IsScaled(oCreature) && CanSpecialise(oCreature)) {
-        int nMissing = MissingSpecPoints(oCreature);
+void AF_CheckFollowerSpec(object oCreature = OBJECT_SELF) {
+    if (_IsScaled(oCreature) && _CanSpecialise(oCreature)) {
+        int nMissing = _MissingSpecPoints(oCreature);
         if (nMissing > 0) {
             float fPoints = GetCreatureProperty(oCreature, 38) + IntToFloat(nMissing);
             SetCreatureProperty(oCreature, 38, fPoints);
-        }
-    }
-}
-
-void main() {
-    event ev = GetCurrentEvent();
-    int nEventType = GetEventType(ev);
-    if (nEventType == EVENT_TYPE_PARTY_MEMBER_HIRED) {
-        CheckSpec(OBJECT_SELF);
-    } else {
-        object[] arFollowers = GetPartyList();
-        int i, nSize = GetArraySize(arFollowers);
-        for (i = 0; i < nSize; i++) {
-            CheckSpec(arFollowers[i]);
         }
     }
 }
