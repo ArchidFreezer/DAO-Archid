@@ -32,16 +32,20 @@ void main() {
         InitHeartbeat(GetHero(), CONFIG_CONSTANT_HEARTBEAT_RATE);
     }
 
-    
+
     object[] arFollowers = GetPartyPoolList();
     nSize = GetArraySize(arFollowers);
     for (i = 0; i < nSize; i++) {
         // Dain's Follower specialisation points
-        AF_CheckFollowerSpec(arFollowers[i]);   
-        
+        AF_CheckFollowerSpec(arFollowers[i]);
+
         // Dain's Oghren Dwarven Resistance
         if (GetTag(arFollowers[i]) == "gen00fl_oghren" && !HasAbility(arFollowers[i], ABILITY_SKILL_DWARVEN_RESISTANCE))
             AddAbility(arFollowers[i], ABILITY_SKILL_DWARVEN_RESISTANCE);
     }
-
+      
+    // Dain's Fix PC Crit Chance
+    SetCreatureProperty(GetHero(), CRITICAL_MODIFIER_MELEE, 3.0, PROPERTY_VALUE_BASE);
+    SetCreatureProperty(GetHero(), CRITICAL_MODIFIER_RANGED, 3.0, PROPERTY_VALUE_BASE);
+    
 }
