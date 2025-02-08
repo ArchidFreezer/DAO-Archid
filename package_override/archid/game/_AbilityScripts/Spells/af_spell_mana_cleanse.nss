@@ -22,10 +22,8 @@ void _ApplySpellEffects(struct EventSpellScriptImpactStruct stEvent, object oTar
     effect eEffect;
 
     // if hostile
-    if (IsObjectHostile(stEvent.oCaster, oTarget) == TRUE)
-    {
-        if (IsMagicUser(oTarget) == TRUE)
-        {
+    if (IsObjectHostile(stEvent.oCaster, oTarget) == TRUE) {
+        if (IsMagicUser(oTarget) == TRUE) {
             float fDrain = -1.0f * (100.0f + GetCreatureSpellPower(stEvent.oCaster)) * MANA_CLEANSE_FACTOR;
             eEffect = EffectModifyManaStamina(fDrain);
             eEffect = SetEffectEngineInteger(eEffect, EFFECT_INTEGER_VFX, Ability_GetImpactObjectVfxId(stEvent.nAbility));
@@ -39,11 +37,9 @@ void _ApplyImpactDamageAndEffects(struct EventSpellScriptImpactStruct stEvent)
 {
     // only work for sphere spells
     int nAoEType = GetM2DAInt(TABLE_ABILITIES_SPELLS, "aoe_type", stEvent.nAbility);
-    if (nAoEType == 1)
-    {
+    if (nAoEType == 1) {
         // location impact vfx
-        if (stEvent.oTarget != OBJECT_INVALID)
-        {
+        if (stEvent.oTarget != OBJECT_INVALID) {
             stEvent.lTarget = GetLocation(stEvent.oTarget);
         }
         Ability_ApplyLocationImpactVFX(stEvent.nAbility, stEvent.lTarget);
@@ -60,16 +56,11 @@ void _ApplyImpactDamageAndEffects(struct EventSpellScriptImpactStruct stEvent)
         // cycle through objects
         int nCount = 0;
         int nMax = Min(GetArraySize(oTargets), MAX_AOE_TARGETS);
-        for (nCount = 0; nCount < nMax; nCount++)
-        {
+        for (nCount = 0; nCount < nMax; nCount++) {
             if (CheckSpellResistance(oTargets[nCount], stEvent.oCaster, stEvent.nAbility) == FALSE)
-            {
-                // per-spell effects
-                SetIndividualImpactAOEEvent(stEvent.oCaster,oTargets[nCount],stEvent.nAbility,stEvent.lTarget);
-            } else
-            {
+                SetIndividualImpactAOEEvent(stEvent.oCaster,oTargets[nCount],stEvent.nAbility,stEvent.lTarget); // per-spell effects
+            else
                 UI_DisplayMessage(oTargets[nCount], UI_MESSAGE_RESISTED);
-            }
         }
     }
 }
