@@ -1,7 +1,8 @@
 #include "abi_templates"
 #include "effect_constants_h"
 #include "talent_constants_h"
-#include "plt_tut_modal"
+#include "plt_tut_modal" 
+#include "af_ability_h"
 
 // add effects
 void _ActivateModalAbility(struct EventSpellScriptImpactStruct stEvent)
@@ -9,15 +10,14 @@ void _ActivateModalAbility(struct EventSpellScriptImpactStruct stEvent)
     effect[] eEffects;
     event eHeartbeat;
 
-    if(IsFollower(stEvent.oCaster))
-    {
+    if(IsFollower(stEvent.oCaster)) {
         WR_SetPlotFlag(PLT_TUT_MODAL, TUT_MODAL_1, TRUE);
     }
 
     eEffects[0] = EffectAreaOfEffect(2003, R"shale_aoe_duration.ncs", 105417);
     eEffects[0] = SetEffectEngineFloat(eEffects[0], EFFECT_FLOAT_SCALE, GetM2DAFloat(TABLE_VFX_PERSISTENT, "RADIUS", 2003));
     eEffects[1] = EffectModifyProperty(PROPERTY_ATTRIBUTE_DEFENSE, 10.0, PROPERTY_ATTRIBUTE_ARMOR, -5.0);
-    if (HasAbility(stEvent.oCaster, 300302 /* Earthen Grasp */)) {
+    if (HasAbility(stEvent.oCaster, AF_ABILITY_EARTHEN_GRASP)) {
         // Probably would've made more sense to put crit mod above, but I'm copying how vanilla does it apart from threat value
         eEffects[2] = EffectModifyProperty(PROPERTY_ATTRIBUTE_MELEE_CRIT_MODIFIER, -10.0, PROPERTY_ATTRIBUTE_MISSILE_SHIELD, 60.0, PROPERTY_SIMPLE_THREAT_DECREASE_RATE, 4.0);
     } else {

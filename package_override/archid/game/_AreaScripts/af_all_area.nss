@@ -42,13 +42,16 @@ void main() {
         // Dain's Oghren Dwarven Resistance
         if (GetTag(arParty[i]) == "gen00fl_oghren" && !HasAbility(arParty[i], ABILITY_SKILL_DWARVEN_RESISTANCE))
             AddAbility(arParty[i], ABILITY_SKILL_DWARVEN_RESISTANCE);
-        
+
         // Dain's Plus Heal
         SetCreatureProperty(arParty[i], 51, 100.0, PROPERTY_VALUE_BASE);
+        
+        // Dain's Reduce Hostility
+        SetCreatureProperty(arParty[i], PROPERTY_SIMPLE_THREAT_DECREASE_RATE, 0.0, PROPERTY_VALUE_BASE);
     }
-      
+
     // Dain's Fix PC Crit Chance
     SetCreatureProperty(GetHero(), CRITICAL_MODIFIER_MELEE, 3.0, PROPERTY_VALUE_BASE);
     SetCreatureProperty(GetHero(), CRITICAL_MODIFIER_RANGED, 3.0, PROPERTY_VALUE_BASE);
-    
+
 }
