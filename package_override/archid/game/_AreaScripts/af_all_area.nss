@@ -3,6 +3,7 @@
 #include "core_h"
 #include "af_ability_h"
 #include "af_follower_specs_h"
+#include "af_utility_h"
 
 void main() {
     object[] arObjects = GetObjectsInArea(GetArea(GetHero()));
@@ -45,9 +46,18 @@ void main() {
 
         // Dain's Plus Heal
         SetCreatureProperty(arParty[i], 51, 100.0, PROPERTY_VALUE_BASE);
-        
+
         // Dain's Reduce Hostility
         SetCreatureProperty(arParty[i], PROPERTY_SIMPLE_THREAT_DECREASE_RATE, 0.0, PROPERTY_VALUE_BASE);
+        
+        // Dain's Rune slots
+        int nOpts = i ? GET_ITEMS_OPTION_EQUIPPED : GET_ITEMS_OPTION_ALL; // All items for hero , equipped for others
+        object[] arItems = GetItemsInInventory(arParty[i], nOpts);
+        int j, nItemSize = GetArraySize(arItems);
+        for (j = 0; j < nItemSize; j++) {
+            AF_CheckRuneSlots(arItems[j]);
+        }
+    
     }
 
     // Dain's Fix PC Crit Chance
