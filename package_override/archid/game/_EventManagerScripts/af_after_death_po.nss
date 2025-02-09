@@ -1,23 +1,16 @@
-#include "var_constants_h"
-#include "sys_itemsets_h"
-#include "af_follower_specs_h"
 #include "af_toggle_modals_h"
 
 /*
-* Called after the EVENT_TYPE_PARTY_MEMBER_HIRED standard processing
+* Called after the EVENT_TYPE_AFTER_DEATH standard processing
 *
 * Used by:
-*   Dain's Follower specialisation points
-*   Dain's Item sets on party change
 *   Dain's Apply party buffs to new members
 */
 void main() {
     event ev = GetCurrentEvent();
 
-    AF_CheckFollowerSpec(OBJECT_SELF);
-    if (GetLocalInt(OBJECT_SELF, FOLLOWER_SCALED)) ItemSet_Update(OBJECT_SELF);
-    
     // Apply party buffs to new members
+    // The toggle modals processing send an EVENT_TYPE_INVALID event internally after a slight delay so catch that here
     if (GetEventType(ev) == EVENT_TYPE_INVALID) {
         int nAbi = GetEventInteger(ev, 0);
         if (nAbi > 0) {
