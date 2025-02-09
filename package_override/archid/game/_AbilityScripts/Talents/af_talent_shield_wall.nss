@@ -23,15 +23,13 @@ float _GetAttackDamage(object oAttacker) {
 }
 
 // add effects
-void _ActivateModalAbility(struct EventSpellScriptImpactStruct stEvent)
-{
+void _ActivateModalAbility(struct EventSpellScriptImpactStruct stEvent) {
     // effects
     effect eEffect;
     effect[] eEffects;
     int nVfx = Ability_GetImpactObjectVfxId(stEvent.nAbility);
 
-    if(IsFollower(stEvent.oCaster))
-    {
+    if(IsFollower(stEvent.oCaster)) {
         WR_SetPlotFlag(PLT_TUT_MODAL, TUT_MODAL_1, TRUE);
     }
 
@@ -40,8 +38,7 @@ void _ActivateModalAbility(struct EventSpellScriptImpactStruct stEvent)
     eEffects[2] = EffectModifyProperty(PROPERTY_ATTRIBUTE_DAMAGE_BONUS, -0.2f * _GetAttackDamage(stEvent.oCaster));
 
     // shield mastery bonus
-    if (HasAbility(stEvent.oCaster, ABILITY_TALENT_SHIELD_MASTERY) == TRUE)
-    {
+    if (HasAbility(stEvent.oCaster, ABILITY_TALENT_SHIELD_MASTERY) == TRUE) {
         eEffects[3] = EffectModifyProperty(PROPERTY_ATTRIBUTE_DEFENSE, SHIELD_MASTERY_SHIELD_WALL_DEFENSE_BONUS);
     }
 
@@ -52,8 +49,7 @@ void _ActivateModalAbility(struct EventSpellScriptImpactStruct stEvent)
 }
 
 // remove effects
-void _DeactivateModalAbility(object oCaster, int nAbility)
-{
+void _DeactivateModalAbility(object oCaster, int nAbility) {
     // remove effects
     Effects_RemoveUpkeepEffect(oCaster, nAbility);
 }
@@ -104,8 +100,7 @@ void main()
             struct EventSpellScriptDeactivateStruct stEvent = Events_GetEventSpellScriptDeactivateParameters(ev);
 
             // is ability active?
-            if (IsModalAbilityActive(stEvent.oCaster, stEvent.nAbility) == TRUE)
-            {
+            if (IsModalAbilityActive(stEvent.oCaster, stEvent.nAbility) == TRUE) {
                 _DeactivateModalAbility(stEvent.oCaster, stEvent.nAbility);
             }
 
