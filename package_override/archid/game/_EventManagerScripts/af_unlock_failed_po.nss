@@ -1,7 +1,13 @@
 #include "2da_constants_h"
 #include "wrappers_h"
 #include "sys_traps_h"
-
+/*
+* EVENT_TYPE_UNLOCK_FAILED post script
+* Runs after the normal processing of the event
+*
+* Used by:
+*   Dain's Party members unlock
+*/
 void main() {
     event ev = GetCurrentEvent();
     object oUser = GetEventObject(ev, 0);
