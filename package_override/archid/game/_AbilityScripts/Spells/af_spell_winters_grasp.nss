@@ -32,10 +32,8 @@ void ForceExplosion(object oTarget, object oCaster)
     object[] oTargets = GetObjectsInShape(OBJECT_TYPE_CREATURE, SHAPE_SPHERE, lTarget, FORCE_EXPLOSION_RADIUS);
     int nCount = 0;
     int nMax = GetArraySize(oTargets);
-    for (nCount = 0; nCount < nMax; nCount++)
-    {
-        if (oTargets[nCount] != oTarget)
-        {
+    for (nCount = 0; nCount < nMax; nCount++) {
+        if (oTargets[nCount] != oTarget) {
             ApplyEffectOnObject(EFFECT_DURATION_TYPE_INSTANT, eKnockdown, oTargets[nCount], 0.0f, oCaster, ABILITY_SPELL_CRUSHING_PRISON);
             ApplyEffectOnObject(EFFECT_DURATION_TYPE_INSTANT, eEffect, oTargets[nCount], 0.0f, oCaster, ABILITY_SPELL_CRUSHING_PRISON);
             ApplyEffectOnObject(EFFECT_DURATION_TYPE_INSTANT, eVFX, oTargets[nCount], 0.0f, oCaster, ABILITY_SPELL_CRUSHING_PRISON);
@@ -43,8 +41,7 @@ void ForceExplosion(object oTarget, object oCaster)
     }
 
     // combo effect codex - shockwave
-    if (IsFollower(oCaster) == TRUE)
-    {
+    if (IsFollower(oCaster) == TRUE) {
         WR_SetPlotFlag(PLT_COD_AOW_SPELLCOMBO5, COD_AOW_SPELLCOMBO_5_COMBUSTION, TRUE);
     }
 }
@@ -67,8 +64,7 @@ void _HandleImpact(struct EventSpellScriptImpactStruct stEvent)
     int bHostile = FALSE;
 
     // make sure there is a location, just in case
-    if (IsObjectValid(stEvent.oTarget) == TRUE)
-    {
+    if (IsObjectValid(stEvent.oTarget) == TRUE) {
         stEvent.lTarget = GetLocation(stEvent.oTarget);
     }
 
@@ -93,8 +89,7 @@ void _HandleImpact(struct EventSpellScriptImpactStruct stEvent)
             RemoveStackingEffects(stEvent.oTarget, stEvent.oCaster, stEvent.nAbility);
 
             // physical resistance
-            if (ResistanceCheck(stEvent.oCaster, stEvent.oTarget, PROPERTY_ATTRIBUTE_SPELLPOWER, RESISTANCE_PHYSICAL) == FALSE)
-            {
+            if (ResistanceCheck(stEvent.oCaster, stEvent.oTarget, PROPERTY_ATTRIBUTE_SPELLPOWER, RESISTANCE_PHYSICAL) == FALSE) {
                 // frozen
                 eEffect = EffectParalyze(WINTERS_GRASP_FROZEN_VFX);
                 ApplyEffectOnObject(EFFECT_DURATION_TYPE_TEMPORARY, eEffect, stEvent.oTarget, fDuration, stEvent.oCaster, stEvent.nAbility);
@@ -103,8 +98,7 @@ void _HandleImpact(struct EventSpellScriptImpactStruct stEvent)
                 eEffect = Effect(EFFECT_TYPE_PETRIFY);
                 eEffect = SetEffectInteger(eEffect, 0, 0);
                 ApplyEffectOnObject(EFFECT_DURATION_TYPE_TEMPORARY, eEffect, stEvent.oTarget, fDuration, stEvent.oCaster, stEvent.nAbility);
-            } else
-            {
+            } else {
                 // vfx
                 eEffect = EffectVisualEffect(WINTERS_GRASP_SLOW_VFX);
                 ApplyEffectOnObject(EFFECT_DURATION_TYPE_TEMPORARY, eEffect, stEvent.oTarget, fDuration, stEvent.oCaster, stEvent.nAbility);
