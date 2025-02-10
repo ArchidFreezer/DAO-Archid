@@ -9,8 +9,7 @@ void _ActivateModalAbility(struct EventSpellScriptImpactStruct stEvent)
     effect[] eEffects;
     int nVfx = Ability_GetImpactObjectVfxId(stEvent.nAbility);
 
-    if(IsFollower(stEvent.oCaster))
-    {
+    if(IsFollower(stEvent.oCaster)) {
         WR_SetPlotFlag(PLT_TUT_MODAL, TUT_MODAL_1, TRUE);
     }
 
