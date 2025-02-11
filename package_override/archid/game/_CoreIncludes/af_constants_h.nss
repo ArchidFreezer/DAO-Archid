@@ -33,4 +33,20 @@ const int AF_COLOUR_GREEN = 0x00cc00;      // Healing
 const int AF_COLOUR_MAGENTA = 0xff33ff;    // Debug
 const int AF_COLOUR_BLUE = 0x6699ff;       // Mana damage
 const int AF_COLOUR_ORANGE = 0xff6600;     //
-const int AF_COLOUR_GREY = 0x888888;       // Archid debug
+const int AF_COLOUR_GREY = 0x888888;       // Archid debug    
+
+/* Module variables containing flags */
+const string AF_PARTYFLAG_LUCKY = "AF_PARTYFLAG_LUCKY";
+
+/* Follower flag masks */
+const int AF_PARTY_FLAG_HERO          = 0x00000001;
+const int AF_PARTY_FLAG_ALISTAIR      = 0x00000002;
+const int AF_PARTY_FLAG_DOG           = 0x00000004;
+const int AF_PARTY_FLAG_LELIANA       = 0x00000008;
+const int AF_PARTY_FLAG_LOGHAIN       = 0x00000010;
+const int AF_PARTY_FLAG_MORRIGAN      = 0x00000020;
+const int AF_PARTY_FLAG_OGHREN        = 0x00000040;
+const int AF_PARTY_FLAG_SHALE         = 0x00000080;
+const int AF_PARTY_FLAG_STEN          = 0x00000100;
+const int AF_PARTY_FLAG_WYNNE         = 0x00000200;
+const int AF_PARTY_FLAG_ZEVRAIN       = 0x00000400;
