@@ -1,15 +1,51 @@
 GDA,abi_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/abi_af.GDA
+GDA,aip_shade.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/aip_shade.GDA
+GDA,aip_shriek_alpha.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/aip_shriek_alpha.GDA
+GDA,aip_succubus.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/aip_succubus.GDA
+GDA,anim_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/anim_af.GDA
+GDA,apr_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/apr_af.GDA
 GDA,archid_options.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/archid_options.GDA
+GDA,effect_immunities_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/effect_immunities_af.GDA
 GDA,effectoverride_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/effectoverride_af.GDA
 GDA,effects_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/effects_af.GDA
 GDA,engineevents_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/engineevents_af.GDA
+GDA,equipmanager_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/equipmanager_af.GDA
 GDA,eventmanager_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/eventmanager_af.GDA
+GDA,exptable.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/exptable.GDA
+GDA,heroicpartystats_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/heroicpartystats_af.GDA
+GDA,heroicstats_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/heroicstats_af.GDA
+GDA,iohmanager_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/iohmanager_af.GDA
+GDA,item_sets_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/item_sets_af.GDA
 GDA,itemprps_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/itemprps_af.GDA
 GDA,itemstats_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/itemstats_af.GDA
 GDA,logging_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/logging_af.GDA
 GDA,m2da_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/m2da_af.GDA
+GDA,mace_variations_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/mace_variations_af.GDA
+GDA,materialrules_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/materialrules_af.GDA
+GDA,passive_abilities_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/passive_abilities_af.GDA
+GDA,persistent_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/persistent_af.GDA
 GDA,prcscr_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/prcscr_af.GDA
+GDA,properties_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/properties_af.GDA
+GDA,race_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/race_af.GDA
+GDA,rand_beach_gxa.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/rand_beach_gxa.GDA
+GDA,rand_canyon.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/rand_canyon.GDA
+GDA,rand_farm_gxa.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/rand_farm_gxa.GDA
+GDA,rand_forest.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/rand_forest.GDA
+GDA,rand_forest_gxa.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/rand_forest_gxa.GDA
+GDA,rand_plains.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/rand_plains.GDA
+GDA,rand_plains_gxa.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/rand_plains_gxa.GDA
+GDA,tint_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/tint_af.GDA
 GDA,var_module_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/var_module_af.GDA
+GDA,vfx_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/vfx_af.GDA
+uti,shl200im_helm_of_honn.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/Areas/Honnleath/shl200ar_wilhelms_cellar/shl200im_helm_of_honn.uti
+ncs,litecr_multi_gax.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/Areas/LightContent/CreatureScripts/litecr_multi_gax.ncs
+nss,litecr_multi_gax.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/Areas/LightContent/CreatureScripts/litecr_multi_gax.nss
+ncs,orz530cr_spider_queen.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/Areas/Orzamar/orz530ar_ortan_thaig/orz530cr_spider_queen.ncs
+uti,kcc_im_arm_glv_lgt_spd.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/Areas/Ostagar/kcc_im_arm_glv_lgt_spd.uti
+utp,pre100ip_wizards_chest.utp,/mnt/c/Projects/DAO/archid/package_override/archid/game/Areas/Prelude/pre100ar_kings_camp/pre100ip_wizards_chest.utp
+uti,gwb_im_arm_shd_twr_wdn1.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/Areas/WardensKeep/gwb_im_arm_shd_twr_wdn1.uti
+ncs,af_item_swift_salve.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Items/af_item_swift_salve.ncs
+nss,af_item_swift_salve.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Items/af_item_swift_salve.nss
 ncs,af_mtalent_broodm_charge.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Monsters/af_mtalent_broodm_charge.ncs
 nss,af_mtalent_broodm_charge.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Monsters/af_mtalent_broodm_charge.nss
 ncs,af_mtalent_canine_howl.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Monsters/af_mtalent_canine_howl.ncs
@@ -18,6 +54,8 @@ ncs,af_mtalent_desire_tstrike.ncs,/mnt/c/Projects/DAO/archid/package_override/ar
 nss,af_mtalent_desire_tstrike.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Monsters/af_mtalent_desire_tstrike.nss
 ncs,af_mtalent_ogre_stomp.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Monsters/af_mtalent_ogre_stomp.ncs
 nss,af_mtalent_ogre_stomp.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Monsters/af_mtalent_ogre_stomp.nss
+ncs,af_mtalent_poison_spit.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Monsters/af_mtalent_poison_spit.ncs
+nss,af_mtalent_poison_spit.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Monsters/af_mtalent_poison_spit.nss
 ncs,af_mtalent_sloth_tstrike.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Monsters/af_mtalent_sloth_tstrike.ncs
 nss,af_mtalent_sloth_tstrike.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Monsters/af_mtalent_sloth_tstrike.nss
 ncs,af_mtalent_stalk_scare.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Monsters/af_mtalent_stalk_scare.ncs
@@ -30,36 +68,78 @@ ncs,monster_singletarget.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/
 ncs,monster_talent_brood.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Monsters/monster_talent_brood.ncs
 ncs,monster_talent_dragon.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Monsters/monster_talent_dragon.ncs
 ncs,monster_talent_sylvan.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Monsters/monster_talent_sylvan.ncs
+ncs,skill_stealing.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Skills/skill_stealing.ncs
+nss,skill_stealing.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Skills/skill_stealing.nss
+ncs,af_spell_antimagic_ward.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_antimagic_ward.ncs
+nss,af_spell_antimagic_ward.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_antimagic_ward.nss
 ncs,af_spell_blood_control.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_blood_control.ncs
 nss,af_spell_blood_control.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_blood_control.nss
 ncs,af_spell_bloody_grasp.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_bloody_grasp.ncs
 nss,af_spell_bloody_grasp.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_bloody_grasp.nss
+ncs,af_spell_cone_of_cold.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_cone_of_cold.ncs
+nss,af_spell_cone_of_cold.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_cone_of_cold.nss
 ncs,af_spell_crushing_prison.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_crushing_prison.ncs
 nss,af_spell_crushing_prison.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_crushing_prison.nss
 ncs,af_spell_curse_of_mortality.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_curse_of_mortality.ncs
 nss,af_spell_curse_of_mortality.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_curse_of_mortality.nss
+ncs,af_spell_glyph_paralysis.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_glyph_paralysis.ncs
+nss,af_spell_glyph_paralysis.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_glyph_paralysis.nss
+ncs,af_spell_haste.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_haste.ncs
+nss,af_spell_haste.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_haste.nss
+ncs,af_spell_mana_cleanse.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_mana_cleanse.ncs
+nss,af_spell_mana_cleanse.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_mana_cleanse.nss
+ncs,af_spell_virul_walking_bomb.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_virul_walking_bomb.ncs
+nss,af_spell_virul_walking_bomb.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_virul_walking_bomb.nss
+ncs,af_spell_walking_bomb.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_walking_bomb.ncs
+nss,af_spell_walking_bomb.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_walking_bomb.nss
+ncs,af_spell_winters_grasp.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_winters_grasp.ncs
+nss,af_spell_winters_grasp.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/af_spell_winters_grasp.nss
 ncs,spell_aoe_duration.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/spell_aoe_duration.ncs
 ncs,spell_aoe_instant.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/spell_aoe_instant.ncs
 ncs,spell_blizzard.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/spell_blizzard.ncs
 nss,spell_blizzard.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/spell_blizzard.nss
+ncs,spell_chainlightning.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/spell_chainlightning.ncs
+nss,spell_chainlightning.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/spell_chainlightning.nss
+ncs,spell_drainlife.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/spell_drainlife.ncs
+nss,spell_drainlife.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/spell_drainlife.nss
 ncs,spell_singletarget.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/spell_singletarget.ncs
 ncs,spell_stingingswarm.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/spell_stingingswarm.ncs
+ncs,spell_wynne.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/spell_wynne.ncs
+nss,spell_wynne.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Spells/spell_wynne.nss
 ncs,af_talent_assault.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_assault.ncs
 nss,af_talent_assault.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_assault.nss
 ncs,af_talent_aura_of_pain.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_aura_of_pain.ncs
 nss,af_talent_aura_of_pain.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_aura_of_pain.nss
 ncs,af_talent_berserk.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_berserk.ncs
 nss,af_talent_berserk.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_berserk.nss
+ncs,af_talent_beyond_the_veil.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_beyond_the_veil.ncs
+nss,af_talent_beyond_the_veil.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_beyond_the_veil.nss
 ncs,af_talent_blood_thirst.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_blood_thirst.ncs
 nss,af_talent_blood_thirst.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_blood_thirst.nss
+ncs,af_talent_dual_striking.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_dual_striking.ncs
+nss,af_talent_dual_striking.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_dual_striking.nss
+ncs,af_talent_dw_sweep.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_dw_sweep.ncs
+nss,af_talent_dw_sweep.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_dw_sweep.nss
+ncs,af_talent_earthen_grasp.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_earthen_grasp.ncs
+nss,af_talent_earthen_grasp.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_earthen_grasp.nss
+ncs,af_talent_mark_of_death_x.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_mark_of_death_x.ncs
+nss,af_talent_mark_of_death_x.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_mark_of_death_x.nss
 ncs,af_talent_mighty_blow.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_mighty_blow.ncs
 nss,af_talent_mighty_blow.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_mighty_blow.nss
+ncs,af_talent_misdirection_x.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_misdirection_x.ncs
+nss,af_talent_misdirection_x.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_misdirection_x.nss
 ncs,af_talent_overpower.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_overpower.ncs
 nss,af_talent_overpower.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_overpower.nss
+ncs,af_talent_quake.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_quake.ncs
+nss,af_talent_quake.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_quake.nss
+ncs,af_talent_rock_mastery.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_rock_mastery.ncs
+nss,af_talent_rock_mastery.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_rock_mastery.nss
 ncs,af_talent_shield_bash.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_shield_bash.ncs
 nss,af_talent_shield_bash.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_shield_bash.nss
 ncs,af_talent_shield_pummel.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_shield_pummel.ncs
 nss,af_talent_shield_pummel.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_shield_pummel.nss
+ncs,af_talent_shield_wall.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_shield_wall.ncs
+nss,af_talent_shield_wall.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_shield_wall.nss
 ncs,af_talent_tainted_blade.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_tainted_blade.ncs
 nss,af_talent_tainted_blade.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_tainted_blade.nss
 ncs,af_talent_twin_strikes.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/af_talent_twin_strikes.ncs
@@ -72,6 +152,10 @@ nss,talent_arrow_slaying.nss,/mnt/c/Projects/DAO/archid/package_override/archid/
 ncs,talent_scattershot.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/talent_scattershot.ncs
 nss,talent_scattershot.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/talent_scattershot.nss
 ncs,talent_singletarget.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AbilityScripts/Talents/talent_singletarget.ncs
+ncs,af_all_area.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AreaScripts/af_all_area.ncs
+nss,af_all_area.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AreaScripts/af_all_area.nss
+ncs,af_pre01al_kings_camp.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AreaScripts/af_pre01al_kings_camp.ncs
+nss,af_pre01al_kings_camp.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AreaScripts/af_pre01al_kings_camp.nss
 nss,ability_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_CoreIncludes/ability_h.nss
 nss,af_ability_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_CoreIncludes/af_ability_h.nss
 nss,af_autoloot_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_CoreIncludes/af_autoloot_h.nss
@@ -79,10 +163,13 @@ nss,af_constants_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_
 nss,af_eventmanager_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_CoreIncludes/af_eventmanager_h.nss
 nss,af_log_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_CoreIncludes/af_log_h.nss
 nss,af_option_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_CoreIncludes/af_option_h.nss
+nss,af_toggle_modals_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_CoreIncludes/af_toggle_modals_h.nss
+nss,af_utility_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_CoreIncludes/af_utility_h.nss
 nss,combat_damage_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_CoreIncludes/combat_damage_h.nss
 nss,combat_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_CoreIncludes/combat_h.nss
 nss,core_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_CoreIncludes/core_h.nss
 nss,placeable_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_CoreIncludes/placeable_h.nss
+nss,utility_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_CoreIncludes/utility_h.nss
 ncs,af_effectmanager.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_CoreScripts/af_effectmanager.ncs
 nss,af_effectmanager.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_CoreScripts/af_effectmanager.nss
 ncs,af_equipmanager.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_CoreScripts/af_equipmanager.ncs
@@ -100,343 +187,377 @@ nss,module_core.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Cor
 ncs,placeable_core.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_CoreScripts/placeable_core.ncs
 ncs,af_dot_override.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EffectManagerScripts/af_dot_override.ncs
 nss,af_dot_override.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EffectManagerScripts/af_dot_override.nss
+ncs,af_effect_damage_ward.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EffectManagerScripts/af_effect_damage_ward.ncs
+nss,af_effect_damage_ward.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EffectManagerScripts/af_effect_damage_ward.nss
+ncs,af_effect_death.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EffectManagerScripts/af_effect_death.ncs
+nss,af_effect_death.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EffectManagerScripts/af_effect_death.nss
+ncs,af_effect_dispel.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EffectManagerScripts/af_effect_dispel.ncs
+nss,af_effect_dispel.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EffectManagerScripts/af_effect_dispel.nss
+ncs,af_effect_enchantment.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EffectManagerScripts/af_effect_enchantment.ncs
+nss,af_effect_enchantment.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EffectManagerScripts/af_effect_enchantment.nss
+ncs,af_effect_gen_clean_aura.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EffectManagerScripts/af_effect_gen_clean_aura.ncs
+nss,af_effect_gen_clean_aura.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EffectManagerScripts/af_effect_gen_clean_aura.nss
 ncs,af_effect_lucky.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EffectManagerScripts/af_effect_lucky.ncs
 nss,af_effect_lucky.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EffectManagerScripts/af_effect_lucky.nss
-ncs,af_attackimpact_lacerate.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_attackimpact_lacerate.ncs
-nss,af_attackimpact_lacerate.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_attackimpact_lacerate.nss
-ncs,af_command_pending.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_command_pending.ncs
-nss,af_command_pending.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_command_pending.nss
-ncs,af_damaged_dwe.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_damaged_dwe.ncs
-nss,af_damaged_dwe.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_damaged_dwe.nss
-ncs,af_damaged_sleep.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_damaged_sleep.ncs
-nss,af_damaged_sleep.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_damaged_sleep.nss
-ncs,af_damaged_suppfire.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_damaged_suppfire.ncs
-nss,af_damaged_suppfire.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_damaged_suppfire.nss
-ncs,af_death_autoloot.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_death_autoloot.ncs
-nss,af_death_autoloot.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_death_autoloot.nss
-ncs,af_area_remove_dot_flag.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_GameEffects/af_area_remove_dot_flag.ncs
-nss,af_area_remove_dot_flag.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_GameEffects/af_area_remove_dot_flag.nss
+ncs,af_effect_tele_weapons.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EffectManagerScripts/af_effect_tele_weapons.ncs
+nss,af_effect_tele_weapons.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EffectManagerScripts/af_effect_tele_weapons.nss
+ncs,af_effect_vessel_spirit.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EffectManagerScripts/af_effect_vessel_spirit.ncs
+nss,af_effect_vessel_spirit.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EffectManagerScripts/af_effect_vessel_spirit.nss
+ncs,af_effect_weaken_darkspawn.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EffectManagerScripts/af_effect_weaken_darkspawn.ncs
+nss,af_effect_weaken_darkspawn.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EffectManagerScripts/af_effect_weaken_darkspawn.nss
+ncs,af_equip_modals.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EquipManagerScripts/af_equip_modals.ncs
+nss,af_equip_modals.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EquipManagerScripts/af_equip_modals.nss
+ncs,af_equip_statcheck.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EquipManagerScripts/af_equip_statcheck.ncs
+nss,af_equip_statcheck.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EquipManagerScripts/af_equip_statcheck.nss
+ncs,af_ability_cast_impact_po.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_ability_cast_impact_po.ncs
+nss,af_ability_cast_impact_po.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_ability_cast_impact_po.nss
+ncs,af_ability_cast_impact_pr.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_ability_cast_impact_pr.ncs
+nss,af_ability_cast_impact_pr.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_ability_cast_impact_pr.nss
+ncs,af_after_death_po.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_after_death_po.ncs
+nss,af_after_death_po.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_after_death_po.nss
+ncs,af_attack_impact_ov.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_attack_impact_ov.ncs
+nss,af_attack_impact_ov.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_attack_impact_ov.nss
+ncs,af_attack_impact_po.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_attack_impact_po.ncs
+nss,af_attack_impact_po.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_attack_impact_po.nss
+ncs,af_cast_at_ov.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_cast_at_ov.ncs
+nss,af_cast_at_ov.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_cast_at_ov.nss
+ncs,af_command_pending_ov.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_command_pending_ov.ncs
+nss,af_command_pending_ov.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_command_pending_ov.nss
+ncs,af_damaged_ov.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_damaged_ov.ncs
+nss,af_damaged_ov.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_damaged_ov.nss
+ncs,af_damaged_po.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_damaged_po.ncs
+nss,af_damaged_po.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_damaged_po.nss
+ncs,af_damaged_pr.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_damaged_pr.ncs
+nss,af_damaged_pr.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_damaged_pr.nss
+ncs,af_death_po.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_death_po.ncs
+nss,af_death_po.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_death_po.nss
+ncs,af_dot_tick_ov.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_dot_tick_ov.ncs
+nss,af_dot_tick_ov.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_dot_tick_ov.nss
+ncs,af_dot_tick_pr.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_dot_tick_pr.ncs
+nss,af_dot_tick_pr.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_dot_tick_pr.nss
+ncs,af_dying_po.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_dying_po.ncs
+nss,af_dying_po.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_dying_po.nss
+ncs,af_enter_po.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_enter_po.ncs
+nss,af_enter_po.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_enter_po.nss
+ncs,af_enter_pr.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_enter_pr.ncs
+nss,af_enter_pr.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_enter_pr.nss
+ncs,af_heartbeat_2_po.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_heartbeat_2_po.ncs
+nss,af_heartbeat_2_po.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_heartbeat_2_po.nss
+ncs,af_inventory_added_po.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_inventory_added_po.ncs
+nss,af_inventory_added_po.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_inventory_added_po.nss
+ncs,af_party_member_hired_po.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_party_member_hired_po.ncs
+nss,af_party_member_hired_po.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_party_member_hired_po.nss
+ncs,af_unlock_failed_po.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_unlock_failed_po.ncs
+nss,af_unlock_failed_po.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_unlock_failed_po.nss
+ncs,af_use_ov.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_use_ov.ncs
+nss,af_use_ov.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_EventManagerScripts/af_use_ov.nss
+nss,af_follower_specs_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Followers/af_follower_specs_h.nss
+ncs,af_effect_gca_aoe.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_GameEffects/af_effect_gca_aoe.ncs
+nss,af_effect_gca_aoe.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_GameEffects/af_effect_gca_aoe.nss
 nss,af_effect_lucky_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_GameEffects/af_effect_lucky_h.nss
+ncs,af_effect_wnd_aoe.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_GameEffects/af_effect_wnd_aoe.ncs
+nss,af_effect_wnd_aoe.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_GameEffects/af_effect_wnd_aoe.nss
+nss,effect_death_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_GameEffects/effect_death_h.nss
+nss,effect_dispel_magic_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_GameEffects/effect_dispel_magic_h.nss
 nss,effect_dot2_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_GameEffects/effect_dot2_h.nss
 nss,effects_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_GameEffects/effects_h.nss
-nss,effect_lucky_h.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/_core/Uninstall Checker/effect_lucky_h.nss
-nss,fastmove_h.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/_core/Uninstall Checker/fastmove_h.nss
-nss,no_weapon_crust_h.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/_core/Uninstall Checker/no_weapon_crust_h.nss
-gda,prcscr_uninstallcheck.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/_core/Uninstall Checker/prcscr_uninstallcheck.gda
-ncs,uninstallchecker.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/_core/Uninstall Checker/uninstallchecker.ncs
-nss,uninstallchecker.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/_core/Uninstall Checker/uninstallchecker.nss
-ncs,applyimpactthreat.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Abilities apply impact threat/applyimpactthreat.ncs
-nss,applyimpactthreat.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Abilities apply impact threat/applyimpactthreat.nss
-ncs,castat_impactthreat.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Abilities apply impact threat/castat_impactthreat.ncs
-nss,castat_impactthreat.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Abilities apply impact threat/castat_impactthreat.nss
-gda,engineevents_impactthreat.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Abilities apply impact threat/engineevents_impactthreat.gda
-gda,eventmanager_impactthreat.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Abilities apply impact threat/eventmanager_impactthreat.gda
-ncs,ip_restrict_alist.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Alistair restriction/ip_restrict_alist.ncs
-nss,ip_restrict_alist.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Alistair restriction/ip_restrict_alist.nss
-gda,abi_antimagicward.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Antimagic Ward/abi_antimagicward.gda
-ncs,antimagic_ward.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Antimagic Ward/antimagic_ward.ncs
-nss,antimagic_ward.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Antimagic Ward/antimagic_ward.nss
-gda,properties_attackspeedfix.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Attack Speed mod/properties_attackspeedfix.gda
-gda,engineevents_enter.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Aura stacking/engineevents_enter.gda
-ncs,enter_aurastacking.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Aura stacking/enter_aurastacking.ncs
-nss,enter_aurastacking.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Aura stacking/enter_aurastacking.nss
-gda,eventmanager_aurastacking.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Aura stacking/eventmanager_aurastacking.gda
-gda,abi_badanim.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Bad monster animations/abi_badanim.gda
-gda,aip_shade.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Bad monster animations/aip_shade.gda
-gda,aip_shriek_alpha.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Bad monster animations/aip_shriek_alpha.gda
-ncs,litecr_multi_gax.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Bad monster animations/litecr_multi_gax.ncs
-nss,litecr_multi_gax.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Bad monster animations/litecr_multi_gax.nss
-ncs,monster_badanim.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Bad monster animations/monster_badanim.ncs
-nss,monster_badanim.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Bad monster animations/monster_badanim.nss
-gda,prcscr_badanim.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Bad monster animations/prcscr_badanim.gda
-ncs,prcscr_badanim.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Bad monster animations/prcscr_badanim.ncs
-nss,prcscr_badanim.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Bad monster animations/prcscr_badanim.nss
-gda,abi_btv.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Beyond the Veil/abi_btv.gda
-ncs,beyond_the_veil.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Beyond the Veil/beyond_the_veil.ncs
-nss,beyond_the_veil.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Beyond the Veil/beyond_the_veil.nss
-ncs,spell_chainlightning.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Chain Lighting/spell_chainlightning.ncs
-nss,spell_chainlightning.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Chain Lighting/spell_chainlightning.nss
-gda,item_sets_chevalier.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Chevalier Set Bonus/item_sets_chevalier.gda
-gda,abi_combatmagic.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Combat Magic tooltip/abi_combatmagic.gda
-ncs,abiimpact_cndgrp.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Condition groups/abiimpact_cndgrp.ncs
-nss,abiimpact_cndgrp.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Condition groups/abiimpact_cndgrp.nss
-gda,engineevents_abiimpact.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Condition groups/engineevents_abiimpact.gda
-gda,eventmanager_conditiongrp.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Condition groups/eventmanager_conditiongrp.gda
-gda,engineevents_un_equip.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Conditional modals/engineevents_un_equip.gda
-ncs,equip_modals.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Conditional modals/equip_modals.ncs
-nss,equip_modals.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Conditional modals/equip_modals.nss
-gda,equipmanager_modals.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Conditional modals/equipmanager_modals.gda
-gda,abi_coneofcold.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Cone of Cold/abi_coneofcold.gda
-ncs,cone_of_cold.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Cone of Cold/cone_of_cold.ncs
-nss,cone_of_cold.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Cone of Cold/cone_of_cold.nss
-gda,engineevents_item_onhit.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Crow Poison/engineevents_item_onhit.gda
-gda,iohmanager_crowpoison.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Crow Poison/iohmanager_crowpoison.gda
-ncs,itemonhit_crowpoison.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Crow Poison/itemonhit_crowpoison.ncs
-nss,itemonhit_crowpoison.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Crow Poison/itemonhit_crowpoison.nss
-ncs,dlchb2.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/DLC heartbeat/dlchb2.ncs
-nss,dlchb2.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/DLC heartbeat/dlchb2.nss
-gda,prcscr_dlchb2.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/DLC heartbeat/prcscr_dlchb2.gda
-ncs,effect_damageward.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Damage Ward resets threat/effect_damageward.ncs
-nss,effect_damageward.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Damage Ward resets threat/effect_damageward.nss
-gda,effectoverride_dmgward.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Damage Ward resets threat/effectoverride_dmgward.gda
-gda,engineevents_applyeffect.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Damage Ward resets threat/engineevents_applyeffect.gda
-gda,engineevents_item_onhit.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Dispel and Chromatic Coatings/engineevents_item_onhit.gda
-gda,iohmanager_dcc.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Dispel and Chromatic Coatings/iohmanager_dcc.gda
-ncs,itemonhit_dcc.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Dispel and Chromatic Coatings/itemonhit_dcc.ncs
-nss,itemonhit_dcc.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Dispel and Chromatic Coatings/itemonhit_dcc.nss
-evt,mh_c.dw_tal_dstr_v3.evt,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Dual Striking/mh_c.dw_tal_dstr_v3.evt
-gda,abi_dwsweep.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Dual Weapon Sweep/abi_dwsweep.gda
-ncs,dwsweep.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Dual Weapon Sweep/dwsweep.ncs
-nss,dwsweep.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Dual Weapon Sweep/dwsweep.nss
-gda,abi_grasp.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Earthen Grasp rank adjustment/abi_grasp.gda
-ncs,talent_earthen_grasp.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Earthen Grasp rank adjustment/talent_earthen_grasp.ncs
-nss,talent_earthen_grasp.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Earthen Grasp rank adjustment/talent_earthen_grasp.nss
-uti,gen_im_wep_mel_dag_fng.uti,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Fang/gen_im_wep_mel_dag_fng.uti
-gda,abi_fv.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Find Vitals/abi_fv.gda
-gda,passive_abilities_fv.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Find Vitals/passive_abilities_fv.gda
-ncs,dottick_fireice.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Fire and ice cancel out/dottick_fireice.ncs
-nss,dottick_fireice.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Fire and ice cancel out/dottick_fireice.nss
-gda,engineevents_dottick.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Fire and ice cancel out/engineevents_dottick.gda
-gda,eventmanager_fireice.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Fire and ice cancel out/eventmanager_fireice.gda
-ncs,check_follower_spec.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Follower specialisation points/check_follower_spec.ncs
-nss,check_follower_spec.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Follower specialisation points/check_follower_spec.nss
-gda,engineevents_pmh.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Follower specialisation points/engineevents_pmh.gda
-gda,eventmanager_followerspec.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Follower specialisation points/eventmanager_followerspec.gda
-gda,prcscr_followerspec.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Follower specialisation points/prcscr_followerspec.gda
-ncs,castat_nostealthdrop.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Friendly abilities drop stealth/castat_nostealthdrop.ncs
-nss,castat_nostealthdrop.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Friendly abilities drop stealth/castat_nostealthdrop.nss
-gda,engineevents_castat.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Friendly abilities drop stealth/engineevents_castat.gda
-gda,eventmanager_stealthdrop.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Friendly abilities drop stealth/eventmanager_stealthdrop.gda
-ncs,damanged_frightthreaten.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Frightening Appearance buffs Threaten/damanged_frightthreaten.ncs
-nss,damanged_frightthreaten.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Frightening Appearance buffs Threaten/damanged_frightthreaten.nss
-gda,engineevents_damaged.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Frightening Appearance buffs Threaten/engineevents_damaged.gda
-gda,eventmanager_frightthreaten.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Frightening Appearance buffs Threaten/eventmanager_frightthreaten.gda
-ncs,aoe_gca.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Generates Cleansing Aura/aoe_gca.ncs
-nss,aoe_gca.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Generates Cleansing Aura/aoe_gca.nss
-ncs,effect_gca.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Generates Cleansing Aura/effect_gca.ncs
-nss,effect_gca.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Generates Cleansing Aura/effect_gca.nss
-gda,effectoverride_gca.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Generates Cleansing Aura/effectoverride_gca.gda
-gda,engineevents_effects.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Generates Cleansing Aura/engineevents_effects.gda
-gda,itemprps_cleansing.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Generates Cleansing Aura/itemprps_cleansing.gda
-gda,engineevents_damaged.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Heroic Attributes/engineevents_damaged.gda
-gda,eventmanager_ff.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Heroic Attributes/eventmanager_ff.gda
-gda,heroicpartystats_limitfix.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Heroic Attributes/heroicpartystats_limitfix.gda
-gda,heroicstats_limitfix.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Heroic Attributes/heroicstats_limitfix.gda
-ncs,party_damage_ff.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Heroic Attributes/party_damage_ff.ncs
-nss,party_damage_ff.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Heroic Attributes/party_damage_ff.nss
-ncs,attackimpact_hostility_int.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Increases Hostility and Intimidation/attackimpact_hostility_int.ncs
-nss,attackimpact_hostility_int.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Increases Hostility and Intimidation/attackimpact_hostility_int.nss
-gda,effects_hostility_int.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Increases Hostility and Intimidation/effects_hostility_int.gda
-gda,engineevents_attackimpact.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Increases Hostility and Intimidation/engineevents_attackimpact.gda
-gda,eventmanager_hostility_int.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Increases Hostility and Intimidation/eventmanager_hostility_int.gda
-ncs,gen00pt_skills.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Increases Hostility and Intimidation/gen00pt_skills.ncs
-gda,itemprps_hostility_int.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Increases Hostility and Intimidation/itemprps_hostility_int.gda
-nss,utility_h.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Increases Hostility and Intimidation/utility_h.nss
-ncs,dying_img.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Increases Monetary Gain/dying_img.ncs
-nss,dying_img.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Increases Monetary Gain/dying_img.nss
-gda,engineevents_dying.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Increases Monetary Gain/engineevents_dying.gda
-gda,eventmanager_img.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Increases Monetary Gain/eventmanager_img.gda
-gda,engineevents_pmh.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Item sets on party change/engineevents_pmh.gda
-gda,eventmanager_itemsets.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Item sets on party change/eventmanager_itemsets.gda
-ncs,pmh_itemsets.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Item sets on party change/pmh_itemsets.ncs
-nss,pmh_itemsets.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Item sets on party change/pmh_itemsets.nss
-nss,sys_itemsets_h.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Item sets on party change/sys_itemsets_h.nss
-gda,itemprps_legion_heraldry.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Legion of the Dead heraldry/itemprps_legion_heraldry.gda
-ncs,spell_drainlife.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Life Drain/spell_drainlife.ncs
-nss,spell_drainlife.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Life Drain/spell_drainlife.nss
-utp,pre100ip_wizards_chest.utp,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Mage Chest Key/pre100ip_wizards_chest.utp
-gda,engineevents_item_onhit.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Magebane and Soldiersbane drain/engineevents_item_onhit.gda
-gda,iohmanager_banedrain.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Magebane and Soldiersbane drain/iohmanager_banedrain.gda
-ncs,itemonhit_bane.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Magebane and Soldiersbane drain/itemonhit_bane.ncs
-nss,itemonhit_bane.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Magebane and Soldiersbane drain/itemonhit_bane.nss
-gda,abi_manacleanse.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Mana Cleanse/abi_manacleanse.gda
-ncs,spell_mana_cleanse.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Mana Cleanse/spell_mana_cleanse.ncs
-nss,spell_mana_cleanse.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Mana Cleanse/spell_mana_cleanse.nss
-gda,itemprps_morale.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Morale/itemprps_morale.gda
-ncs,oghrenresistance.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Oghren Dwarven Resistance/oghrenresistance.ncs
-nss,oghrenresistance.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Oghren Dwarven Resistance/oghrenresistance.nss
-gda,prcscr_oghrenresistance.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Oghren Dwarven Resistance/prcscr_oghrenresistance.gda
-ncs,fixpccritchance.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/PC crit chance/fixpccritchance.ncs
-nss,fixpccritchance.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/PC crit chance/fixpccritchance.nss
-gda,prcscr_pccritchance.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/PC crit chance/prcscr_pccritchance.gda
-gda,abi_glyph_paralysis.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Paralysis Explosion/abi_glyph_paralysis.gda
-ncs,spell_glyph_paralysis.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Paralysis Explosion/spell_glyph_paralysis.ncs
-nss,spell_glyph_paralysis.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Paralysis Explosion/spell_glyph_paralysis.nss
-ncs,fixbaseheal.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Plus Heal/fixbaseheal.ncs
-nss,fixbaseheal.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Plus Heal/fixbaseheal.nss
-gda,prcscr_plusheal.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Plus Heal/prcscr_plusheal.gda
-ncs,effect_enchantment.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Poison stacking/effect_enchantment.ncs
-nss,effect_enchantment.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Poison stacking/effect_enchantment.nss
-gda,effectoverride_enchantment.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Poison stacking/effectoverride_enchantment.gda
-gda,engineevents_applyeffect.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Poison stacking/engineevents_applyeffect.gda
-gda,abi_rangedaim.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Ranged aim speed/abi_rangedaim.gda
-ncs,item_swiftsalve.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Ranged aim speed/item_swiftsalve.ncs
-nss,item_swiftsalve.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Ranged aim speed/item_swiftsalve.nss
-ncs,spell_haste.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Ranged aim speed/spell_haste.ncs
-nss,spell_haste.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Ranged aim speed/spell_haste.nss
-gda,mace_variation_cudgel.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reaper's Cudgel/mace_variation_cudgel.gda
-uti,prc_im_gib_wep_mac_dao.uti,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reaper's Cudgel/prc_im_gib_wep_mac_dao.uti
-uti,prc_im_gib_wep_mac_ep1.uti,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reaper's Cudgel/prc_im_gib_wep_mac_ep1.uti
-tnt,t3_xwb.tnt,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reaper's Cudgel/t3_xwb.tnt
-gda,tint_cudgel.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reaper's Cudgel/tint_cudgel.gda
-mao,w_mce_mc07a_0.mao,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reaper's Cudgel/w_mce_mc07a_0.mao
-mmh,w_mce_mc07a_0.mmh,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reaper's Cudgel/w_mce_mc07a_0.mmh
-msh,w_mce_mc07a_0.msh,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reaper's Cudgel/w_mce_mc07a_0.msh
-phy,w_mce_mc07a_0.phy,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reaper's Cudgel/w_mce_mc07a_0.phy
-dds,w_mce_mc07a_0d.dds,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reaper's Cudgel/w_mce_mc07a_0d.dds
-dds,w_mce_mc07a_0n.dds,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reaper's Cudgel/w_mce_mc07a_0n.dds
-dds,w_mce_mc07a_0s.dds,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reaper's Cudgel/w_mce_mc07a_0s.dds
-dds,w_mce_mc07a_0t.dds,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reaper's Cudgel/w_mce_mc07a_0t.dds
-gda,abi_rockmastery.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reduces Hostility/abi_rockmastery.gda
-gda,engineevents_hb2.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reduces Hostility/engineevents_hb2.gda
-gda,eventmanager_reducehostility.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reduces Hostility/eventmanager_reducehostility.gda
-ncs,hb2_reducehostility.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reduces Hostility/hb2_reducehostility.ncs
-nss,hb2_reducehostility.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reduces Hostility/hb2_reducehostility.nss
-gda,itemprps_hostility.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reduces Hostility/itemprps_hostility.gda
-gda,prcscr_basehostility.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reduces Hostility/prcscr_basehostility.gda
-gda,properties_hostility.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reduces Hostility/properties_hostility.gda
-ncs,setbasehostility.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reduces Hostility/setbasehostility.ncs
-nss,setbasehostility.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reduces Hostility/setbasehostility.nss
-ncs,talent_rockmastery.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reduces Hostility/talent_rockmastery.ncs
-nss,talent_rockmastery.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Reduces Hostility/talent_rockmastery.nss
-uti,kcc_im_arm_glv_lgt_spd.uti,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Repeater Gloves/kcc_im_arm_glv_lgt_spd.uti
-gda,anim_rockbarrage.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Rock Barrage/anim_rockbarrage.gda
-ncs,addruneslots.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Rune slots/addruneslots.ncs
-nss,addruneslots.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Rune slots/addruneslots.nss
-gda,engineevents_invadded.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Rune slots/engineevents_invadded.gda
-gda,eventmanager_runeslots.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Rune slots/eventmanager_runeslots.gda
-gda,prcscr_runeslots.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Rune slots/prcscr_runeslots.gda
-gda,effect_immunities_shale.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Shale Immunities/effect_immunities_shale.gda
-gda,abi_shale_quake.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Shale Quake/abi_shale_quake.gda
-ncs,shale_quake.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Shale Quake/shale_quake.ncs
-nss,shale_quake.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Shale Quake/shale_quake.nss
-gda,apr_shatter.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Shattering Blows/apr_shatter.gda
-gda,abi_shieldwall.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Shield Wall damage/abi_shieldwall.gda
-ncs,talent_shield_wall.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Shield Wall damage/talent_shield_wall.ncs
-nss,talent_shield_wall.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Shield Wall damage/talent_shield_wall.nss
-gda,engineevents_item_onhit.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Slow Rune duration/engineevents_item_onhit.gda
-gda,iohmanager_slowrune.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Slow Rune duration/iohmanager_slowrune.gda
-ncs,itemonhit_slow.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Slow Rune duration/itemonhit_slow.ncs
-nss,itemonhit_slow.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Slow Rune duration/itemonhit_slow.nss
-ncs,effect_death.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Spirit death/effect_death.ncs
-nss,effect_death.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Spirit death/effect_death.nss
-nss,effect_death_h.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Spirit death/effect_death_h.nss
-gda,effectoverride_death.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Spirit death/effectoverride_death.gda
-gda,engineevents_applyeffect.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Spirit death/engineevents_applyeffect.gda
-gda,abi_sweepingstrike.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Sweeping Strike/abi_sweepingstrike.gda
-ncs,effect_mptele.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Telekinetic dual wield/effect_mptele.ncs
-nss,effect_mptele.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Telekinetic dual wield/effect_mptele.nss
-gda,effectoverride_mptele.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Telekinetic dual wield/effectoverride_mptele.gda
-gda,engineevents_effects.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Telekinetic dual wield/engineevents_effects.gda
-gda,itemprps_dualtele.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Telekinetic dual wield/itemprps_dualtele.gda
-gda,abi_wynne.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Vessel of the Spirit/abi_wynne.gda
-ncs,effect_wynne.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Vessel of the Spirit/effect_wynne.ncs
-nss,effect_wynne.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Vessel of the Spirit/effect_wynne.nss
-gda,effectoverride_wynne.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Vessel of the Spirit/effectoverride_wynne.gda
-gda,engineevents_effects.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Vessel of the Spirit/engineevents_effects.gda
-ncs,spell_wynne.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Vessel of the Spirit/spell_wynne.ncs
-nss,spell_wynne.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Vessel of the Spirit/spell_wynne.nss
-gda,engineevents_item_onhit.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Weak Points/engineevents_item_onhit.gda
-gda,iohmanager_wp.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Weak Points/iohmanager_wp.gda
-ncs,itemonhit_weakpoints.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Weak Points/itemonhit_weakpoints.ncs
-nss,itemonhit_weakpoints.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Weak Points/itemonhit_weakpoints.nss
-ncs,aoe_wnd.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Weakens Nearby Darkspawn/aoe_wnd.ncs
-nss,aoe_wnd.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Weakens Nearby Darkspawn/aoe_wnd.nss
-ncs,effect_wnd.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Weakens Nearby Darkspawn/effect_wnd.ncs
-nss,effect_wnd.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Weakens Nearby Darkspawn/effect_wnd.nss
-gda,effectoverride_wnd.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Weakens Nearby Darkspawn/effectoverride_wnd.gda
-gda,engineevents_effects.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Weakens Nearby Darkspawn/engineevents_effects.gda
-gda,itemprps_wnd.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Weakens Nearby Darkspawn/itemprps_wnd.gda
-gda,persistent_wnd.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Weakens Nearby Darkspawn/persistent_wnd.gda
-gda,vfx_wnd.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/bug_fixes/Weakens Nearby Darkspawn/vfx_wnd.gda
-uti,prm000im_bergens_honor.uti,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/cosmetic/Bergen's Honor/prm000im_bergens_honor.uti
-uti,gen_im_wep_mal_cha.uti,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/cosmetic/Chasind Great Maul/gen_im_wep_mal_cha.uti
-uti,gen_im_wep_mag_sta_mld.uti,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/cosmetic/Staff of the Magister Lord/gen_im_wep_mag_sta_mld.uti
-uti,prm000im_edge_.uti,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/cosmetic/The Edge/prm000im_edge_.uti
-uti,gen_im_arm_cht_med_var.uti,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/cosmetic/Varathorn's Ironbark Armour/gen_im_arm_cht_med_var.uti
-uti,gwb_im_arm_shd_twr_wdn1.uti,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/cosmetic/Warden Tower Shield description/gwb_im_arm_shd_twr_wdn1.uti
-gda,engineevents_pmh_ad.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Apply party buffs to new members/engineevents_pmh_ad.gda
-gda,eventmanager_reapplybuffs.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Apply party buffs to new members/eventmanager_reapplybuffs.gda
-ncs,reapply_buffs.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Apply party buffs to new members/reapply_buffs.ncs
-nss,reapply_buffs.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Apply party buffs to new members/reapply_buffs.nss
-gda,engineevents_invadded.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Display received items/engineevents_invadded.gda
-gda,eventmanager_rcvitem.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Display received items/eventmanager_rcvitem.gda
-ncs,invadd_rcvitem.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Display received items/invadd_rcvitem.ncs
-nss,invadd_rcvitem.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Display received items/invadd_rcvitem.nss
-gda,m2da_rcvitem.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Display received items/m2da_rcvitem.gda
-gda,rcvitem_opts.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Display received items/rcvitem_opts.gda
-uti,shl200im_helm_of_honn.uti,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/HoH strength req/shl200im_helm_of_honn.uti
-gda,engineevents_use.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Party skill for disarm/engineevents_use.gda
-gda,eventmanager_partydisarm.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Party skill for disarm/eventmanager_partydisarm.gda
-ncs,use_disarm_partyskill.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Party skill for disarm/use_disarm_partyskill.ncs
-nss,use_disarm_partyskill.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Party skill for disarm/use_disarm_partyskill.nss
-gda,abi_songs.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Quiet Singing/abi_songs.gda
-ncs,talent_songs.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Quiet Singing/talent_songs.ncs
-nss,talent_songs.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Quiet Singing/talent_songs.nss
-gda,abi_stealing.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Stealing Cooldown/abi_stealing.gda
-ncs,skill_stealing.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Stealing no stealth drop/skill_stealing.ncs
-nss,skill_stealing.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Stealing no stealth drop/skill_stealing.nss
-nss,sys_treasure_h.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/quality_of_life/Stealing no stealth drop/sys_treasure_h.nss
-ncs,alistair_oath.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Alistair's Oath/alistair_oath.ncs
-nss,alistair_oath.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Alistair's Oath/alistair_oath.nss
-gda,prcscr_alistairoath.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Alistair's Oath/prcscr_alistairoath.gda
-gda,materialrules_gxa.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Awakening Metal Scaling/materialrules_gxa.gda
-gda,engineevents_pmh.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Dog Inspiration/engineevents_pmh.gda
-gda,eventmanager_dogskill.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Dog Inspiration/eventmanager_dogskill.gda
-ncs,pmh_dogskill.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Dog Inspiration/pmh_dogskill.ncs
-nss,pmh_dogskill.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Dog Inspiration/pmh_dogskill.nss
-ncs,effect_dispel.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Don't dispel 3rd party modals/effect_dispel.ncs
-nss,effect_dispel.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Don't dispel 3rd party modals/effect_dispel.nss
-nss,effect_dispel_magic_h.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Don't dispel 3rd party modals/effect_dispel_magic_h.nss
-gda,effectoverride_dispel.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Don't dispel 3rd party modals/effectoverride_dispel.gda
-gda,engineevents_applyeffect.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Don't dispel 3rd party modals/engineevents_applyeffect.gda
-gda,abi_dualstriking.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Dual Striking reduces anim speed/abi_dualstriking.gda
-ncs,talent_dual_striking.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Dual Striking reduces anim speed/talent_dual_striking.ncs
-nss,talent_dual_striking.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Dual Striking reduces anim speed/talent_dual_striking.nss
-gda,engineevents_pmh.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Follower scaling/engineevents_pmh.gda
-gda,eventmanager_followerscale.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Follower scaling/eventmanager_followerscale.gda
-ncs,pmh_followerscale.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Follower scaling/pmh_followerscale.ncs
-nss,pmh_followerscale.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Follower scaling/pmh_followerscale.nss
-gda,race_qunari.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Qunari attributes/race_qunari.gda
-gda,rand_forest.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Random encounter frequency/rand_forest.gda
-gda,rand_highway.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Random encounter frequency/rand_highway.gda
-gda,rand_plains.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Random encounter frequency/rand_plains.gda
-gda,rand_beach_gxa.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Random encounter frequency (Awakening)/rand_beach_gxa.gda
-gda,rand_canyon_gxa.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Random encounter frequency (Awakening)/rand_canyon_gxa.gda
-gda,rand_farm_gxa.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Random encounter frequency (Awakening)/rand_farm_gxa.gda
-gda,rand_forest_gxa.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Random encounter frequency (Awakening)/rand_forest_gxa.gda
-gda,rand_plains_gxa.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Random encounter frequency (Awakening)/rand_plains_gxa.gda
-ncs,dying_all_kill_rewards.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Rewards from all kills/dying_all_kill_rewards.ncs
-nss,dying_all_kill_rewards.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Rewards from all kills/dying_all_kill_rewards.nss
-gda,engineevents_dying.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Rewards from all kills/engineevents_dying.gda
-gda,eventmanager_allkillrewards.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Rewards from all kills/eventmanager_allkillrewards.gda
-uti,gen_im_wep_mel_gsw_stn.uti,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Silverite Asala/gen_im_wep_mel_gsw_stn.uti
-gda,abi_poison_spit.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Spider Queen/abi_poison_spit.gda
-ncs,orz530cr_spider_queen.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Spider Queen/orz530cr_spider_queen.ncs
-ncs,talent_monster_poison_spit.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Spider Queen/talent_monster_poison_spit.ncs
-nss,talent_monster_poison_spit.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Spider Queen/talent_monster_poison_spit.nss
-gda,properties_hpregen.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Uncap health regen/properties_hpregen.gda
-gda,abi_wintersgrasp.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Winter's Grasp freeze/abi_wintersgrasp.gda
-ncs,winters_grasp.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Winter's Grasp freeze/winters_grasp.ncs
-nss,winters_grasp.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/tweaks/Winter's Grasp freeze/winters_grasp.nss
-gda,aip_succubus.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/xtras/Desire Demon Nightmare/aip_succubus.gda
-ncs,damaged_destroyer.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/xtras/Destroyer/damaged_destroyer.ncs
-nss,damaged_destroyer.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/xtras/Destroyer/damaged_destroyer.nss
-gda,engineevents_damaged.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/xtras/Destroyer/engineevents_damaged.gda
-gda,eventmanager_destroyer.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/xtras/Destroyer/eventmanager_destroyer.gda
-gda,engineevents_equip.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/xtras/Item stat requirements/engineevents_equip.gda
-ncs,equip_statcheck.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/xtras/Item stat requirements/equip_statcheck.ncs
-nss,equip_statcheck.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/xtras/Item stat requirements/equip_statcheck.nss
-gda,equipmanager_statcheck.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/xtras/Item stat requirements/equipmanager_statcheck.gda
-gda,abi_stonefist.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/xtras/Nature damage spells/abi_stonefist.gda
-gda,abi_wb.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/xtras/Nature damage spells/abi_wb.gda
-ncs,spell_nature.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/xtras/Nature damage spells/spell_nature.ncs
-nss,spell_nature.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/xtras/Nature damage spells/spell_nature.nss
-gda,engineevents_unlockfail.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/xtras/Party members unlock/engineevents_unlockfail.gda
-gda,eventmanager_partyunlock.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/xtras/Party members unlock/eventmanager_partyunlock.gda
-ncs,unlockfail_partyskill.ncs,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/xtras/Party members unlock/unlockfail_partyskill.ncs
-nss,unlockfail_partyskill.nss,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/xtras/Party members unlock/unlockfail_partyskill.nss
-gda,exptable.gda,/mnt/c/Projects/DAO/archid/package_override/external/dains_fixes/xtras/Tactics Slots/exptable.gda
+uti,gen_im_arm_cht_med_var.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/ArmourChest/Medium/gen_im_arm_cht_med_var.uti
+uti,prm000im_bergens_honor.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/ArmourHelmets/Massive/prm000im_bergens_honor.uti
+ncs,ip_restrict_alist.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/ItemScripts/ip_restrict_alist.ncs
+nss,ip_restrict_alist.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/ItemScripts/ip_restrict_alist.nss
+ncs,gen00pt_skills.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/PlotScripts/gen00pt_skills.ncs
+uti,gen_im_wep_mag_sta_mld.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/WeaponsMage/Staves/gen_im_wep_mag_sta_mld.uti
+uti,gen_im_wep_mel_dag_fng.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/WeaponsMelee/Daggers/gen_im_wep_mel_dag_fng.uti
+uti,prm000im_edge_.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/WeaponsMelee/Daggers/prm000im_edge_.uti
+uti,gen_im_wep_mel_gsw_stn.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/WeaponsMelee/Greatswords/gen_im_wep_mel_gsw_stn.uti
+uti,prc_im_gib_wep_mac_dao.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/WeaponsMelee/Maces/prc_im_gib_wep_mac_dao.uti
+uti,prc_im_gib_wep_mac_ep1.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/WeaponsMelee/Maces/prc_im_gib_wep_mac_ep1.uti
+uti,gen_im_wep_mal_cha.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/WeaponsMelee/Mauls/gen_im_wep_mal_cha.uti
+ncs,af_ioh_bane.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_IOHManagerScripts/af_ioh_bane.ncs
+nss,af_ioh_bane.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_IOHManagerScripts/af_ioh_bane.nss
+ncs,af_ioh_chromatic.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_IOHManagerScripts/af_ioh_chromatic.ncs
+nss,af_ioh_chromatic.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_IOHManagerScripts/af_ioh_chromatic.nss
+ncs,af_ioh_crow_poison.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_IOHManagerScripts/af_ioh_crow_poison.ncs
+nss,af_ioh_crow_poison.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_IOHManagerScripts/af_ioh_crow_poison.nss
+ncs,af_ioh_dispel.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_IOHManagerScripts/af_ioh_dispel.ncs
+nss,af_ioh_dispel.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_IOHManagerScripts/af_ioh_dispel.nss
+ncs,af_ioh_slow_rune.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_IOHManagerScripts/af_ioh_slow_rune.ncs
+nss,af_ioh_slow_rune.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_IOHManagerScripts/af_ioh_slow_rune.nss
+ncs,af_ioh_weak_points.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_IOHManagerScripts/af_ioh_weak_points.ncs
+nss,af_ioh_weak_points.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_IOHManagerScripts/af_ioh_weak_points.nss
+nss,sys_itemsets_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_System/_Includes/sys_itemsets_h.nss
+nss,sys_treasure_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_System/_Includes/sys_treasure_h.nss
+tnt,t3_xwb.tnt,/mnt/c/Projects/DAO/archid/package_override/archid/graphics/Items/WeaponsMelee/ReapersCudgel/t3_xwb.tnt
+mao,w_mce_mc07a_0.mao,/mnt/c/Projects/DAO/archid/package_override/archid/graphics/Items/WeaponsMelee/ReapersCudgel/w_mce_mc07a_0.mao
+mmh,w_mce_mc07a_0.mmh,/mnt/c/Projects/DAO/archid/package_override/archid/graphics/Items/WeaponsMelee/ReapersCudgel/w_mce_mc07a_0.mmh
+msh,w_mce_mc07a_0.msh,/mnt/c/Projects/DAO/archid/package_override/archid/graphics/Items/WeaponsMelee/ReapersCudgel/w_mce_mc07a_0.msh
+phy,w_mce_mc07a_0.phy,/mnt/c/Projects/DAO/archid/package_override/archid/graphics/Items/WeaponsMelee/ReapersCudgel/w_mce_mc07a_0.phy
+dds,w_mce_mc07a_0d.dds,/mnt/c/Projects/DAO/archid/package_override/archid/graphics/Items/WeaponsMelee/ReapersCudgel/w_mce_mc07a_0d.dds
+dds,w_mce_mc07a_0n.dds,/mnt/c/Projects/DAO/archid/package_override/archid/graphics/Items/WeaponsMelee/ReapersCudgel/w_mce_mc07a_0n.dds
+dds,w_mce_mc07a_0s.dds,/mnt/c/Projects/DAO/archid/package_override/archid/graphics/Items/WeaponsMelee/ReapersCudgel/w_mce_mc07a_0s.dds
+dds,w_mce_mc07a_0t.dds,/mnt/c/Projects/DAO/archid/package_override/archid/graphics/Items/WeaponsMelee/ReapersCudgel/w_mce_mc07a_0t.dds
+evt,mh_c.dw_tal_dstr_v3.evt,/mnt/c/Projects/DAO/archid/package_override/archid/graphics/mh_c.dw_tal_dstr_v3.evt
+ani,terra_designer023_2_f.ani,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_designer023_2_f.ani
+evt,terra_designer023_2_f.evt,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_designer023_2_f.evt
+gad,terra_designer023_2_f.gad,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_designer023_2_f.gad
+ani,terra_drk_base_morr.ani,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_drk_base_morr.ani
+evt,terra_drk_base_morr.evt,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_drk_base_morr.evt
+gad,terra_drk_base_morr.gad,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_drk_base_morr.gad
+ani,terra_drk_base_play.ani,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_drk_base_play.ani
+evt,terra_drk_base_play.evt,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_drk_base_play.evt
+gad,terra_drk_base_play.gad,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_drk_base_play.gad
+ani,terra_drk_pt2_morr.ani,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_drk_pt2_morr.ani
+evt,terra_drk_pt2_morr.evt,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_drk_pt2_morr.evt
+gad,terra_drk_pt2_morr.gad,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_drk_pt2_morr.gad
+ani,terra_drk_pt2_play_8.ani,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_drk_pt2_play_8.ani
+evt,terra_drk_pt2_play_8.evt,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_drk_pt2_play_8.evt
+gad,terra_drk_pt2_play_8.gad,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_drk_pt2_play_8.gad
+ani,terra_slap_norm.ani,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_slap_norm.ani
+evt,terra_slap_norm.evt,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_slap_norm.evt
+gad,terra_slap_norm.gad,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_slap_norm.gad
+utc,pre211cr_flemeth.utc,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Creatures/pre211cr_flemeth.utc
+cub,231160.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/231160.cub
+cut,231160.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/231160.cut
+cub,235483.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/235483.cub
+cut,235483.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/235483.cut
+cub,morr_kiss_dm_dr_terraex_lgt.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/morr_kiss_dm_dr_terraex_lgt.cub
+cut,morr_kiss_dm_dr_terraex_lgt.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/morr_kiss_dm_dr_terraex_lgt.cut
+cub,morr_kiss_em_dr_terraex_hev.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/morr_kiss_em_dr_terraex_hev.cub
+cut,morr_kiss_em_dr_terraex_hev.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/morr_kiss_em_dr_terraex_hev.cut
+cub,morr_kiss_em_dr_terraex_lgt.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/morr_kiss_em_dr_terraex_lgt.cub
+cut,morr_kiss_em_dr_terraex_lgt.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/morr_kiss_em_dr_terraex_lgt.cut
+cub,morr_kiss_hm_dr_terraex_hev.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/morr_kiss_hm_dr_terraex_hev.cub
+cut,morr_kiss_hm_dr_terraex_hev.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/morr_kiss_hm_dr_terraex_hev.cut
+cub,morr_kiss_hm_dr_terraex_lgt.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/morr_kiss_hm_dr_terraex_lgt.cub
+cut,morr_kiss_hm_dr_terraex_lgt.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/morr_kiss_hm_dr_terraex_lgt.cut
+cub,terra_100082_morrigan_nodog.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_100082_morrigan_nodog.cub
+cut,terra_100082_morrigan_nodog.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_100082_morrigan_nodog.cut
+cub,terra_100082_morrigan_wdog.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_100082_morrigan_wdog.cub
+cut,terra_100082_morrigan_wdog.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_100082_morrigan_wdog.cut
+cub,terra_100426_redone.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_100426_redone.cub
+cut,terra_100426_redone.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_100426_redone.cut
+cub,terra_100435_give_mirror.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_100435_give_mirror.cub
+cut,terra_100435_give_mirror.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_100435_give_mirror.cut
+cub,terra_187925.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_187925.cub
+cut,terra_187925.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_187925.cut
+cub,terra_187929.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_187929.cub
+cut,terra_187929.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_187929.cut
+cub,terra_187930.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_187930.cub
+cut,terra_187930.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_187930.cut
+cub,terra_187930_friend.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_187930_friend.cub
+cut,terra_187930_friend.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_187930_friend.cut
+cub,terra_187930_notwarm.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_187930_notwarm.cub
+cut,terra_187930_notwarm.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_187930_notwarm.cut
+cub,terra_187933.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_187933.cub
+cut,terra_187933.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_187933.cut
+cub,terra_187934.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_187934.cub
+cut,terra_187934.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_187934.cut
+cub,terra_187935_morr_leave.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_187935_morr_leave.cub
+cut,terra_187935_morr_leave.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_187935_morr_leave.cut
+cub,terra_187937.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_187937.cub
+cut,terra_187937.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_187937.cut
+cub,terra_73866_st.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_73866_st.cub
+cut,terra_73866_st.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_73866_st.cut
+cub,terra_morrikiss_angry_dm_dy.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_angry_dm_dy.cub
+cut,terra_morrikiss_angry_dm_dy.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_angry_dm_dy.cut
+cub,terra_morrikiss_angry_dm_na.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_angry_dm_na.cub
+cut,terra_morrikiss_angry_dm_na.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_angry_dm_na.cut
+cub,terra_morrikiss_angry_dm_zz.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_angry_dm_zz.cub
+cut,terra_morrikiss_angry_dm_zz.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_angry_dm_zz.cut
+cub,terra_morrikiss_angry_em_dy.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_angry_em_dy.cub
+cut,terra_morrikiss_angry_em_dy.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_angry_em_dy.cut
+cub,terra_morrikiss_angry_em_na.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_angry_em_na.cub
+cut,terra_morrikiss_angry_em_na.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_angry_em_na.cut
+cub,terra_morrikiss_angry_em_zz.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_angry_em_zz.cub
+cut,terra_morrikiss_angry_em_zz.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_angry_em_zz.cut
+cub,terra_morrikiss_angry_hm_dy.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_angry_hm_dy.cub
+cut,terra_morrikiss_angry_hm_dy.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_angry_hm_dy.cut
+cub,terra_morrikiss_angry_hm_na.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_angry_hm_na.cub
+cut,terra_morrikiss_angry_hm_na.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_angry_hm_na.cut
+cub,terra_morrikiss_angry_hm_zz.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_angry_hm_zz.cub
+cut,terra_morrikiss_angry_hm_zz.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_angry_hm_zz.cut
+cub,terra_morrikiss_dm_na_dy.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_dm_na_dy.cub
+cut,terra_morrikiss_dm_na_dy.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_dm_na_dy.cut
+cub,terra_morrikiss_em_na_dy.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_em_na_dy.cub
+cut,terra_morrikiss_em_na_dy.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_em_na_dy.cut
+cub,terra_morrikiss_hm_na_dy.cub,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_hm_na_dy.cub
+cut,terra_morrikiss_hm_na_dy.cut,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Cutscenes/terra_morrikiss_hm_na_dy.cut
+dlb,cir200_greagoir.dlb,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Dialogs/cir200_greagoir.dlb
+dlg,cir200_greagoir.dlg,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Dialogs/cir200_greagoir.dlg
+dlb,morrigan_main.dlb,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Dialogs/morrigan_main.dlb
+dlg,morrigan_main.dlg,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Dialogs/morrigan_main.dlg
+dlg,cutscene_slideshow.dlg,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Epilogue_Slidefix/cutscene_slideshow.dlg
+fxe,1092894819_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092894819_m.fxe
+fxe,1092894821_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092894821_m.fxe
+fxe,1092894822_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092894822_m.fxe
+fxe,1092894824_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092894824_m.fxe
+fxe,1092894828_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092894828_m.fxe
+fxe,1092894830_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092894830_m.fxe
+fxe,1092894831_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092894831_m.fxe
+fxe,1092894834_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092894834_m.fxe
+fxe,1092894835_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092894835_m.fxe
+fxe,1092894837_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092894837_m.fxe
+fxe,1092894839_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092894839_m.fxe
+fxe,1092894841_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092894841_m.fxe
+fxe,1092896414_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896414_m.fxe
+fxe,1092896415_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896415_m.fxe
+fxe,1092896416_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896416_m.fxe
+fxe,1092896417_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896417_m.fxe
+fxe,1092896420_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896420_m.fxe
+fxe,1092896424_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896424_m.fxe
+fxe,1092896425_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896425_m.fxe
+fxe,1092896426_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896426_m.fxe
+fxe,1092896432_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896432_m.fxe
+fxe,1092896439_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896439_m.fxe
+fxe,1092896440_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896440_m.fxe
+fxe,1092896465_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896465_m.fxe
+fxe,1092896466_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896466_m.fxe
+fxe,1092896503_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896503_m.fxe
+fxe,1092896504_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896504_m.fxe
+fxe,1092896535_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896535_m.fxe
+fxe,1092896536_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896536_m.fxe
+fxe,1092896537_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896537_m.fxe
+fxe,1092896538_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896538_m.fxe
+fxe,1092896539_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896539_m.fxe
+fxe,1092896540_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896540_m.fxe
+fxe,1092896541_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896541_m.fxe
+fxe,1092896542_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896542_m.fxe
+fxe,1092896543_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896543_m.fxe
+fxe,1092896544_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896544_m.fxe
+fxe,1092896573_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896573_m.fxe
+fxe,1092896574_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896574_m.fxe
+fxe,1092896575_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896575_m.fxe
+fxe,1092896576_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896576_m.fxe
+fxe,1092896577_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896577_m.fxe
+fxe,1092896578_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896578_m.fxe
+fxe,1092896579_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896579_m.fxe
+fxe,1092896580_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896580_m.fxe
+fxe,1092896624_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896624_m.fxe
+fxe,1092896738_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896738_m.fxe
+fxe,1092896739_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896739_m.fxe
+fxe,1092896740_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896740_m.fxe
+fxe,1092896944_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896944_m.fxe
+fxe,1092896945_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896945_m.fxe
+fxe,1092896946_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896946_m.fxe
+fxe,1092896947_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896947_m.fxe
+fxe,1092896950_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896950_m.fxe
+fxe,1092896954_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896954_m.fxe
+fxe,1092896955_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896955_m.fxe
+fxe,1092896969_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896969_m.fxe
+fxe,1092896970_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896970_m.fxe
+fxe,1092896971_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896971_m.fxe
+fxe,1092896972_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896972_m.fxe
+fxe,1092896973_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896973_m.fxe
+fxe,1092896974_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896974_m.fxe
+fxe,1092896975_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896975_m.fxe
+fxe,1092896976_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896976_m.fxe
+fxe,1092896977_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896977_m.fxe
+fxe,1092896981_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896981_m.fxe
+fxe,1092896982_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896982_m.fxe
+fxe,1092896983_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896983_m.fxe
+fxe,1092896987_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896987_m.fxe
+fxe,1092896988_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896988_m.fxe
+fxe,1092896989_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896989_m.fxe
+fxe,1092896995_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896995_m.fxe
+fxe,1092896996_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896996_m.fxe
+fxe,1092896997_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092896997_m.fxe
+fxe,1092897003_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897003_m.fxe
+fxe,1092897006_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897006_m.fxe
+fxe,1092897009_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897009_m.fxe
+fxe,1092897015_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897015_m.fxe
+fxe,1092897016_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897016_m.fxe
+fxe,1092897017_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897017_m.fxe
+fxe,1092897049_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897049_m.fxe
+fxe,1092897052_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897052_m.fxe
+fxe,1092897053_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897053_m.fxe
+fxe,1092897054_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897054_m.fxe
+fxe,1092897055_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897055_m.fxe
+fxe,1092897057_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897057_m.fxe
+fxe,1092897072_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897072_m.fxe
+fxe,1092897073_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897073_m.fxe
+fxe,1092897074_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897074_m.fxe
+fxe,1092897075_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897075_m.fxe
+fxe,1092897078_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897078_m.fxe
+fxe,1092897079_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897079_m.fxe
+fxe,1092897080_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897080_m.fxe
+fxe,1092897082_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897082_m.fxe
+fxe,1092897083_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897083_m.fxe
+fxe,1092897084_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897084_m.fxe
+fxe,1092897086_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897086_m.fxe
+fxe,1092897087_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897087_m.fxe
+fxe,1092897093_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897093_m.fxe
+fxe,1092897095_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092897095_m.fxe
+ncs,pre210ar_flemeths_hut_ext.ncs,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Flemeths_Hut_Scripts/pre210ar_flemeths_hut_ext.ncs
+ncs,pre211ar_flemeths_hut_int.ncs,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Flemeths_Hut_Scripts/pre211ar_flemeths_hut_int.ncs
+uti,gen_im_gift_flmgrimoire_ng.uti,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Items/gen_im_gift_flmgrimoire_ng.uti
+ncs,genpt_leliana_banter.ncs,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Leli_Banter/genpt_leliana_banter.ncs
+ncs,mnp000pt_camp_events.ncs,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Leli_Banter/mnp000pt_camp_events.ncs
+plo,plt_genpt_leliana_banter.plo,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Leli_Banter/plt_genpt_leliana_banter.plo
+plo,plt_genpt_morrigan_banter.plo,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Plots/plt_genpt_morrigan_banter.plo
+plo,plt_genpt_morrigan_defined.plo,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Plots/plt_genpt_morrigan_defined.plo
+plo,plt_genpt_morrigan_events.plo,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Plots/plt_genpt_morrigan_events.plo
+plo,plt_genpt_morrigan_main.plo,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Plots/plt_genpt_morrigan_main.plo
+ncs,genpt_morrigan_banter.ncs,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Scripts/genpt_morrigan_banter.ncs
+ncs,genpt_morrigan_defined.ncs,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Scripts/genpt_morrigan_defined.ncs
+ncs,genpt_morrigan_events.ncs,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Scripts/genpt_morrigan_events.ncs
+ncs,genpt_morrigan_main.ncs,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Scripts/genpt_morrigan_main.ncs
+fev,terra_morr.fev,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Sound_FMOD/terra_morr.fev
+seq,terra_morr.fev.seq,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Sound_FMOD/terra_morr.fev.seq
+fsb,terra_morr.fsb,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Sound_FMOD/terra_morr.fsb
+seq,terra_morr.fsb.seq,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Sound_FMOD/terra_morr.fsb.seq
+stg,2p_200_broken_circle.stg,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Stage/2p_200_broken_circle.stg
+stg,cli310st_morrigan.stg,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Stage/cli310st_morrigan.stg
+stg,morrigan_main_outside_hut.stg,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Stage/morrigan_main_outside_hut.stg
+stg,terra_morrigan_main_st.stg,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Stage/terra_morrigan_main_st.stg
+anb,fxp_terrafire_terra.anb,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.anb
+ani,fxp_terrafire_terra.cess.ani,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.cess.ani
+xml,fxp_terrafire_terra.cess.ani.xml,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.cess.ani.xml
+evt,fxp_terrafire_terra.cess.evt,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.cess.evt
+gad,fxp_terrafire_terra.cess.gad,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.cess.gad
+ani,fxp_terrafire_terra.cust.ani,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.cust.ani
+xml,fxp_terrafire_terra.cust.ani.xml,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.cust.ani.xml
+evt,fxp_terrafire_terra.cust.evt,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.cust.evt
+gad,fxp_terrafire_terra.cust.gad,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.cust.gad
+ani,fxp_terrafire_terra.dura.ani,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.dura.ani
+xml,fxp_terrafire_terra.dura.ani.xml,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.dura.ani.xml
+evt,fxp_terrafire_terra.dura.evt,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.dura.evt
+gad,fxp_terrafire_terra.dura.gad,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.dura.gad
+ani,fxp_terrafire_terra.impa.ani,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.impa.ani
+xml,fxp_terrafire_terra.impa.ani.xml,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.impa.ani.xml
+evt,fxp_terrafire_terra.impa.evt,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.impa.evt
+gad,fxp_terrafire_terra.impa.gad,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.impa.gad
+met,fxp_terrafire_terra.met,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.met
+mmh,fxp_terrafire_terra.mmh,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.mmh
+msh,fxp_terrafire_terra.msh,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.msh
+phy,fxp_terrafire_terra.phy,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrafire_terra.phy
+anb,fxp_terrahand_terra.anb,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.anb
+ani,fxp_terrahand_terra.cess.ani,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.cess.ani
+xml,fxp_terrahand_terra.cess.ani.xml,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.cess.ani.xml
+evt,fxp_terrahand_terra.cess.evt,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.cess.evt
+gad,fxp_terrahand_terra.cess.gad,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.cess.gad
+ani,fxp_terrahand_terra.cust.ani,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.cust.ani
+xml,fxp_terrahand_terra.cust.ani.xml,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.cust.ani.xml
+evt,fxp_terrahand_terra.cust.evt,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.cust.evt
+gad,fxp_terrahand_terra.cust.gad,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.cust.gad
+ani,fxp_terrahand_terra.dura.ani,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.dura.ani
+xml,fxp_terrahand_terra.dura.ani.xml,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.dura.ani.xml
+evt,fxp_terrahand_terra.dura.evt,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.dura.evt
+gad,fxp_terrahand_terra.dura.gad,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.dura.gad
+ani,fxp_terrahand_terra.impa.ani,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.impa.ani
+xml,fxp_terrahand_terra.impa.ani.xml,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.impa.ani.xml
+evt,fxp_terrahand_terra.impa.evt,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.impa.evt
+gad,fxp_terrahand_terra.impa.gad,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.impa.gad
+met,fxp_terrahand_terra.met,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.met
+mmh,fxp_terrahand_terra.mmh,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.mmh
+msh,fxp_terrahand_terra.msh,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.msh
+phy,fxp_terrahand_terra.phy,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.phy
+GDA,PRCSCR_terra_morr.GDA,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/PRCSCR_terra_morr.GDA
+dlg,cutscene_postcoronation.dlg,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Terra_Ex_Bann_Fix/cutscene_postcoronation.dlg
+ncs,terra_epi_fix_pc_bann.ncs,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Terra_Ex_Bann_Fix/terra_epi_fix_pc_bann.ncs
+plo,plt_terra_util.plo,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Terra_Ex_Scripts/plt_terra_util.plo
+ncs,terra_morr.ncs,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Terra_Ex_Scripts/terra_morr.ncs
+ncs,terra_morr_circlefix.ncs,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Terra_Ex_Scripts/terra_morr_circlefix.ncs
+ncs,terra_util.ncs,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Terra_Ex_Scripts/terra_util.ncs
 cub,121760.cub,/mnt/c/Projects/DAO/archid/package_override/external/qwinn_fixpack_3/121760.cub
 cut,121760.cut,/mnt/c/Projects/DAO/archid/package_override/external/qwinn_fixpack_3/121760.cut
 stg,1p_200_all.stg,/mnt/c/Projects/DAO/archid/package_override/external/qwinn_fixpack_3/1p_200_all.stg
