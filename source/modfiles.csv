@@ -297,6 +297,205 @@ dds,w_mce_mc07a_0n.dds,/mnt/c/Projects/DAO/archid/package_override/archid/graphi
 dds,w_mce_mc07a_0s.dds,/mnt/c/Projects/DAO/archid/package_override/archid/graphics/Items/WeaponsMelee/ReapersCudgel/w_mce_mc07a_0s.dds
 dds,w_mce_mc07a_0t.dds,/mnt/c/Projects/DAO/archid/package_override/archid/graphics/Items/WeaponsMelee/ReapersCudgel/w_mce_mc07a_0t.dds
 evt,mh_c.dw_tal_dstr_v3.evt,/mnt/c/Projects/DAO/archid/package_override/archid/graphics/mh_c.dw_tal_dstr_v3.evt
+ncs,battledress_import.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Battledress of the Provocateur/battledress_import.ncs
+nss,battledress_import.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Battledress of the Provocateur/battledress_import.nss
+GDA,prcscr_lel_ep1.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Battledress of the Provocateur/prcscr_lel_ep1.GDA
+ncs,blightblood_import.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Blightblood/blightblood_import.ncs
+nss,blightblood_import.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Blightblood/blightblood_import.nss
+GDA,prcscr_drk_ep1.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Blightblood/prcscr_drk_ep1.GDA
+ncs,bregans_bow_import.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Bregan's Bow/bregans_bow_import.ncs
+nss,bregans_bow_import.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Bregan's Bow/bregans_bow_import.nss
+GDA,prcscr_promogriffbeakep1.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Bregan's Bow/prcscr_promogriffbeakep1.GDA
+GDA,prcscrep1_promogriffbeak.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Bregan's Bow/prcscrep1_promogriffbeak.GDA
+GDA,prcscrep1_promogriffbeakep1.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Bregan's Bow/prcscrep1_promogriffbeakep1.GDA
+ncs,bulwark_import.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Bulwark of the True King/bulwark_import.ncs
+nss,bulwark_import.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Bulwark of the True King/bulwark_import.nss
+GDA,prcscr_promobulwarktkep1.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Bulwark of the True King/prcscr_promobulwarktkep1.GDA
+GDA,prcscrep1_promobulwarktk.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Bulwark of the True King/prcscrep1_promobulwarktk.GDA
+GDA,prcscrep1_promobulwarktkep1.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Bulwark of the True King/prcscrep1_promobulwarktkep1.GDA
+ncs,golems_might_import.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Golems of Amgarrak/golems_might_import.ncs
+nss,golems_might_import.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Golems of Amgarrak/golems_might_import.nss
+GDA,prcscr_gib_ep1.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Golems of Amgarrak/prcscr_gib_ep1.GDA
+ncs,pearl_import.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Pearl of the Anointed/pearl_import.ncs
+nss,pearl_import.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Pearl of the Anointed/pearl_import.nss
+GDA,prcscr_promopearlannep1.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Pearl of the Anointed/prcscr_promopearlannep1.GDA
+GDA,prcscrep1_promopearlann.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Pearl of the Anointed/prcscrep1_promopearlann.GDA
+GDA,prcscrep1_promopearlannep1.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Pearl of the Anointed/prcscrep1_promopearlannep1.GDA
+GDA,prcscr_str_ep1.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Witch Hunt/prcscr_str_ep1.GDA
+ncs,witchcraft_import.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Witch Hunt/witchcraft_import.ncs
+nss,witchcraft_import.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/Witch Hunt/witchcraft_import.nss
+ncs,give_awakening_dlc.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/give_awakening_dlc.ncs
+nss,give_awakening_dlc.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/give_awakening_dlc.nss
+nss,plt_dlc_integration.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/plt_dlc_integration.nss
+plo,plt_dlc_integration.plo,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Awakening Upgrade/plt_dlc_integration.plo
+ncs,place_amulet_of_war_mage.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Amulet of the War Mage/place_amulet_of_war_mage.ncs
+nss,place_amulet_of_war_mage.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Amulet of the War Mage/place_amulet_of_war_mage.nss
+GDA,prcscr_promowarmage.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Amulet of the War Mage/prcscr_promowarmage.GDA
+ncs,place_band_of_fire.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Band of Fire/place_band_of_fire.ncs
+nss,place_band_of_fire.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Band of Fire/place_band_of_fire.nss
+GDA,prcscr_promobandfire.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Band of Fire/prcscr_promobandfire.GDA
+ncs,place_battledress.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Battledress of the Provocateur/place_battledress.ncs
+nss,place_battledress.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Battledress of the Provocateur/place_battledress.nss
+GDA,prcscr_lel_dao.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Battledress of the Provocateur/prcscr_lel_dao.GDA
+ncs,place_blightblood.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Blightblood/place_blightblood.ncs
+nss,place_blightblood.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Blightblood/place_blightblood.nss
+ncs,place_darkspawn_chronicles.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Blightblood/place_darkspawn_chronicles.ncs
+nss,place_darkspawn_chronicles.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Blightblood/place_darkspawn_chronicles.nss
+GDA,prcscr_drk_dao.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Blightblood/prcscr_drk_dao.GDA
+ncs,place_blood_dragon_boots.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Blood Dragon Plate/place_blood_dragon_boots.ncs
+nss,place_blood_dragon_boots.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Blood Dragon Plate/place_blood_dragon_boots.nss
+ncs,place_blood_dragon_gauntlet.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Blood Dragon Plate/place_blood_dragon_gauntlet.ncs
+nss,place_blood_dragon_gauntlet.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Blood Dragon Plate/place_blood_dragon_gauntlet.nss
+ncs,place_blood_dragon_helmet.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Blood Dragon Plate/place_blood_dragon_helmet.ncs
+nss,place_blood_dragon_helmet.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Blood Dragon Plate/place_blood_dragon_helmet.nss
+ncs,place_blood_dragon_plate.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Blood Dragon Plate/place_blood_dragon_plate.ncs
+nss,place_blood_dragon_plate.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Blood Dragon Plate/place_blood_dragon_plate.nss
+gda,prcscr_promomassfx.gda,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Blood Dragon Plate/prcscr_promomassfx.gda
+ncs,place_bregans_bow.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Bregan's Bow/place_bregans_bow.ncs
+nss,place_bregans_bow.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Bregan's Bow/place_bregans_bow.nss
+gda,prcscr_promogriffbeak.gda,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Bregan's Bow/prcscr_promogriffbeak.gda
+ncs,place_bulwark_true_king.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Bulwark of the True King/place_bulwark_true_king.ncs
+nss,place_bulwark_true_king.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Bulwark of the True King/place_bulwark_true_king.nss
+gda,prcscr_promobulwarktk.gda,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Bulwark of the True King/prcscr_promobulwarktk.gda
+ncs,place_bergens_honor.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Collector's Edition/place_bergens_honor.ncs
+nss,place_bergens_honor.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Collector's Edition/place_bergens_honor.nss
+ncs,place_final_reason.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Collector's Edition/place_final_reason.ncs
+nss,place_final_reason.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Collector's Edition/place_final_reason.nss
+ncs,place_grimoire_frozen_waste.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Collector's Edition/place_grimoire_frozen_waste.ncs
+nss,place_grimoire_frozen_waste.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Collector's Edition/place_grimoire_frozen_waste.nss
+gda,prcscr_promodacollectors.gda,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Collector's Edition/prcscr_promodacollectors.gda
+ncs,place_dalish_promise_ring.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Dalish Promise Ring/place_dalish_promise_ring.ncs
+nss,place_dalish_promise_ring.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Dalish Promise Ring/place_dalish_promise_ring.nss
+GDA,prcscr_promodring.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Dalish Promise Ring/prcscr_promodring.GDA
+ncs,place_edge.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Edge/place_edge.ncs
+nss,place_edge.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Edge/place_edge.nss
+GDA,prcscr_promoedge.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Edge/prcscr_promoedge.GDA
+ncs,place_embris_many_pockets.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Embri's Many Pockets/place_embris_many_pockets.ncs
+nss,place_embris_many_pockets.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Embri's Many Pockets/place_embris_many_pockets.nss
+gda,prcscr_promoembri.gda,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Embri's Many Pockets/prcscr_promoembri.gda
+utp,genip_invis_campfire.utp,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/genip_invis_campfire.utp
+ncs,place_alistair_doll.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_alistair_doll.ncs
+nss,place_alistair_doll.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_alistair_doll.nss
+ncs,place_amulet_of_memories.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_amulet_of_memories.ncs
+nss,place_amulet_of_memories.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_amulet_of_memories.nss
+ncs,place_beard_flask.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_beard_flask.ncs
+nss,place_beard_flask.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_beard_flask.nss
+ncs,place_butterfly_sword.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_butterfly_sword.ncs
+nss,place_butterfly_sword.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_butterfly_sword.nss
+ncs,place_cat_ladys_hobblestick.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_cat_ladys_hobblestick.ncs
+nss,place_cat_ladys_hobblestick.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_cat_ladys_hobblestick.nss
+ncs,place_chant_of_light.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_chant_of_light.ncs
+nss,place_chant_of_light.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_chant_of_light.nss
+ncs,place_chastity_belt.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_chastity_belt.ncs
+nss,place_chastity_belt.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_chastity_belt.nss
+ncs,place_fat_lute.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_fat_lute.ncs
+nss,place_fat_lute.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_fat_lute.nss
+ncs,place_geneaology_of_kyngs.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_geneaology_of_kyngs.ncs
+nss,place_geneaology_of_kyngs.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_geneaology_of_kyngs.nss
+ncs,place_grey_warden_puppet.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_grey_warden_puppet.ncs
+nss,place_grey_warden_puppet.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_grey_warden_puppet.nss
+ncs,place_king_marics_shield.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_king_marics_shield.ncs
+nss,place_king_marics_shield.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_king_marics_shield.nss
+ncs,place_lump_of_charcoal.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_lump_of_charcoal.ncs
+nss,place_lump_of_charcoal.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_lump_of_charcoal.nss
+ncs,place_orlesian_mask.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_orlesian_mask.ncs
+nss,place_orlesian_mask.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_orlesian_mask.nss
+ncs,place_pet_rock.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_pet_rock.ncs
+nss,place_pet_rock.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_pet_rock.nss
+ncs,place_protective_cone.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_protective_cone.ncs
+nss,place_protective_cone.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_protective_cone.nss
+ncs,place_qunari_prayers_dead.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_qunari_prayers_dead.ncs
+nss,place_qunari_prayers_dead.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_qunari_prayers_dead.nss
+ncs,place_rare_antivan_brandy.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_rare_antivan_brandy.ncs
+nss,place_rare_antivan_brandy.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_rare_antivan_brandy.nss
+ncs,place_rotten_onion.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_rotten_onion.ncs
+nss,place_rotten_onion.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_rotten_onion.nss
+ncs,place_scented_soap.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_scented_soap.ncs
+nss,place_scented_soap.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_scented_soap.nss
+ncs,place_stick.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_stick.ncs
+nss,place_stick.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_stick.nss
+ncs,place_sugar_cake.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_sugar_cake.ncs
+nss,place_sugar_cake.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_sugar_cake.nss
+ncs,place_thoughtful_gift.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_thoughtful_gift.ncs
+nss,place_thoughtful_gift.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_thoughtful_gift.nss
+ncs,place_ugly_boots.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_ugly_boots.ncs
+nss,place_ugly_boots.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_ugly_boots.nss
+ncs,place_uncrushable_pigeon.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_uncrushable_pigeon.ncs
+nss,place_uncrushable_pigeon.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/place_uncrushable_pigeon.nss
+nss,plt_immersive_feastday.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/plt_immersive_feastday.nss
+plo,plt_immersive_feastday.plo,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/plt_immersive_feastday.plo
+gda,prcscr_immersive_feastday.gda,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/prcscr_immersive_feastday.gda
+gda,prcscr_vala.gda,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/prcscr_vala.gda
+ncs,valar_party_camp.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/valar_party_camp.ncs
+nss,valar_party_camp.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Integration/valar_party_camp.nss
+uti,val_im_gift_cookie.uti,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Rebalance/val_im_gift_cookie.uti
+ncs,val_module.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Rebalance/val_module.ncs
+ncs,vala_module.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/Rebalance/vala_module.ncs
+ncs,give_feastday_gifts.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/give_feastday_gifts.ncs
+nss,give_feastday_gifts.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/give_feastday_gifts.nss
+ncs,give_feastday_pranks.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/give_feastday_pranks.ncs
+nss,give_feastday_pranks.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feastday Gifts and Pranks/give_feastday_pranks.nss
+ncs,place_feral_wolf_charm.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feral Wolf Charm/place_feral_wolf_charm.ncs
+nss,place_feral_wolf_charm.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feral Wolf Charm/place_feral_wolf_charm.nss
+gda,prcscr_promowolfcharm.gda,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Feral Wolf Charm/prcscr_promowolfcharm.gda
+ncs,place_high_regard_of_dace.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Golems of Amgarrak/place_high_regard_of_dace.ncs
+nss,place_high_regard_of_dace.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Golems of Amgarrak/place_high_regard_of_dace.nss
+ncs,place_reapers_cudgel.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Golems of Amgarrak/place_reapers_cudgel.ncs
+nss,place_reapers_cudgel.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Golems of Amgarrak/place_reapers_cudgel.nss
+ncs,place_sash_forbidden_secret.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Golems of Amgarrak/place_sash_forbidden_secret.ncs
+nss,place_sash_forbidden_secret.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Golems of Amgarrak/place_sash_forbidden_secret.nss
+gda,prcscr_gib_dao.gda,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Golems of Amgarrak/prcscr_gib_dao.gda
+ncs,place_guildmasters_belt.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Guildmaster's Belt/place_guildmasters_belt.ncs
+nss,place_guildmasters_belt.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Guildmaster's Belt/place_guildmasters_belt.nss
+GDA,prcscr_promogmbelt.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Guildmaster's Belt/prcscr_promogmbelt.GDA
+ncs,place_helm_of_the_deep.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Helm of the Deep/place_helm_of_the_deep.ncs
+nss,place_helm_of_the_deep.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Helm of the Deep/place_helm_of_the_deep.nss
+gda,prcscr_promohelmdeep.gda,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Helm of the Deep/prcscr_promohelmdeep.gda
+ncs,place_lions_paw.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Lion's Paw/place_lions_paw.ncs
+nss,place_lions_paw.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Lion's Paw/place_lions_paw.nss
+gda,prcscr_promolion.gda,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Lion's Paw/prcscr_promolion.gda
+ncs,place_lucky_stone.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Lucky Stone/place_lucky_stone.ncs
+nss,place_lucky_stone.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Lucky Stone/place_lucky_stone.nss
+gda,prcscr_promolucky.gda,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Lucky Stone/prcscr_promolucky.gda
+ncs,place_mark_of_vigilance.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Mark of Vigilance/place_mark_of_vigilance.ncs
+nss,place_mark_of_vigilance.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Mark of Vigilance/place_mark_of_vigilance.nss
+gda,prcscr_promovigil.gda,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Mark of Vigilance/prcscr_promovigil.gda
+ncs,place_formati_tome.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Memory Band/place_formati_tome.ncs
+nss,place_formati_tome.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Memory Band/place_formati_tome.nss
+ncs,place_memory_band.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Memory Band/place_memory_band.ncs
+nss,place_memory_band.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Memory Band/place_memory_band.nss
+gda,prcscr_prcmemoryband.gda,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Memory Band/prcscr_prcmemoryband.gda
+ncs,place_pearl_of_the_anointed.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Pearl of the Anointed/place_pearl_of_the_anointed.ncs
+nss,place_pearl_of_the_anointed.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Pearl of the Anointed/place_pearl_of_the_anointed.nss
+GDA,prcscr_promopearlann.GDA,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Pearl of the Anointed/prcscr_promopearlann.GDA
+ncs,place_wicked_oath.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Wicked Oath/place_wicked_oath.ncs
+nss,place_wicked_oath.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Wicked Oath/place_wicked_oath.nss
+gda,prcscr_promowickedoath.gda,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Wicked Oath/prcscr_promowickedoath.gda
+ncs,place_cinch_of_maneuvering.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Witch Hunt/place_cinch_of_maneuvering.ncs
+nss,place_cinch_of_maneuvering.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Witch Hunt/place_cinch_of_maneuvering.nss
+ncs,place_dragonbone_cleaver.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Witch Hunt/place_dragonbone_cleaver.ncs
+nss,place_dragonbone_cleaver.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Witch Hunt/place_dragonbone_cleaver.nss
+ncs,place_sorrows_of_arlathan.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Witch Hunt/place_sorrows_of_arlathan.ncs
+nss,place_sorrows_of_arlathan.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Witch Hunt/place_sorrows_of_arlathan.nss
+ncs,place_vestments_of_the_seer.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Witch Hunt/place_vestments_of_the_seer.ncs
+nss,place_vestments_of_the_seer.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Witch Hunt/place_vestments_of_the_seer.nss
+gda,prcscr_str_dao.gda,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/Witch Hunt/prcscr_str_dao.gda
+nss,plt_immersive_dlc.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/plt_immersive_dlc.nss
+plo,plt_immersive_dlc.plo,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/DLC Integration/plt_immersive_dlc.plo
+uti,prc_im_wep_mel_lsw_drk_dao.uti,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Fixes/Blightblood Tag/prc_im_wep_mel_lsw_drk_dao.uti
+uti,prm000im_dragon_blood_helm.uti,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Fixes/Blood Dragon Helm Tag/prm000im_dragon_blood_helm.uti
+mao,pn_hlf_s01b.mao,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Fixes/Cailans Helm Conflict/pn_hlf_s01b.mao
+mao,pn_hlf_s01b_l2.mao,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Fixes/Cailans Helm Conflict/pn_hlf_s01b_l2.mao
+mao,pn_hlf_s01b_l3.mao,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Fixes/Cailans Helm Conflict/pn_hlf_s01b_l3.mao
+gda,eventmanager_refeastday.gda,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Fixes/Feastday Prank Disposition/eventmanager_refeastday.gda
+ncs,handle_pranks.ncs,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Fixes/Feastday Prank Disposition/handle_pranks.ncs
+nss,handle_pranks.nss,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Fixes/Feastday Prank Disposition/handle_pranks.nss
+gda,greatsword_variation_gxagwb.gda,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Fixes/Starfang Vigilance Conflict/greatsword_variation_gxagwb.gda
+uti,gwb_im_wep_mel_gsw_stm.uti,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Fixes/Starfang Vigilance Conflict/gwb_im_wep_mel_gsw_stm.uti
+uti,gwb_im_wep_mel_lsw_stm.uti,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Fixes/Starfang Vigilance Conflict/gwb_im_wep_mel_lsw_stm.uti
+gda,longsword_variation_gxagwb.gda,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Fixes/Starfang Vigilance Conflict/longsword_variation_gxagwb.gda
+uti,gwb_im_arm_glv_mas_wcm.uti,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Fixes/Warden Commander Gloves Icon/gwb_im_arm_glv_mas_wcm.uti
+txt,Readme Immersive DLC Integration.txt,/mnt/c/Projects/DAO/archid/package_override/external/immersive_dlc_integration/Readme Immersive DLC Integration.txt
 ani,terra_designer023_2_f.ani,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_designer023_2_f.ani
 evt,terra_designer023_2_f.evt,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_designer023_2_f.evt
 gad,terra_designer023_2_f.gad,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_designer023_2_f.gad
@@ -386,7 +585,6 @@ dlb,cir200_greagoir.dlb,/mnt/c/Projects/DAO/archid/package_override/external/mor
 dlg,cir200_greagoir.dlg,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Dialogs/cir200_greagoir.dlg
 dlb,morrigan_main.dlb,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Dialogs/morrigan_main.dlb
 dlg,morrigan_main.dlg,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Dialogs/morrigan_main.dlg
-dlg,cutscene_slideshow.dlg,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Epilogue_Slidefix/cutscene_slideshow.dlg
 fxe,1092894819_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092894819_m.fxe
 fxe,1092894821_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092894821_m.fxe
 fxe,1092894822_m.fxe,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_FaceFX/1092894822_m.fxe
@@ -552,8 +750,6 @@ mmh,fxp_terrahand_terra.mmh,/mnt/c/Projects/DAO/archid/package_override/external
 msh,fxp_terrahand_terra.msh,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.msh
 phy,fxp_terrahand_terra.phy,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_VFX/fxp_terrahand_terra.phy
 GDA,PRCSCR_terra_morr.GDA,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/PRCSCR_terra_morr.GDA
-dlg,cutscene_postcoronation.dlg,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Terra_Ex_Bann_Fix/cutscene_postcoronation.dlg
-ncs,terra_epi_fix_pc_bann.ncs,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Terra_Ex_Bann_Fix/terra_epi_fix_pc_bann.ncs
 plo,plt_terra_util.plo,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Terra_Ex_Scripts/plt_terra_util.plo
 ncs,terra_morr.ncs,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Terra_Ex_Scripts/terra_morr.ncs
 ncs,terra_morr_circlefix.ncs,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Terra_Ex_Scripts/terra_morr_circlefix.ncs
