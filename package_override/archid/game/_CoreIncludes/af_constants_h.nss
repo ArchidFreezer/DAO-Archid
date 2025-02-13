@@ -23,6 +23,9 @@ const int AF_OPT_FIX_DOT_DURATIONS = 11;
 const int AF_OPT_RECEIVED_ITEM_DURATION = 12;
 const int AF_OPT_RECEIVED_ITEM_COLOUR = 13;
 
+/* Creature properties */
+const int AF_CRE_PROPERTY_SIMPLE_SPECIALIZATION_POINTS = 38;
+
 /* Custom effects */
 const int AF_EFFECT_TYPE_MESSY_KILLS = 6610000;
 const int AF_EFFECT_TYPE_HOSTILITY_INTIMIDATION = 6610004;
@@ -43,6 +46,7 @@ const string AF_PARTYFLAG_LUCKY = "AF_PARTYFLAG_LUCKY";
 const string AF_DLCITEMS_FLAG1 = "AF_DLCITEMS_FLAG1";
 const string AF_DLCITEMS_FLAG2 = "AF_DLCITEMS_FLAG2";
 const string AF_FEASTITEMS_FLAG = "AF_FEASTITEMS_FLAG";
+const string AF_GENERAL_FLAG = "AF_GENERAL_FLAG";
 
 /* Follower flag masks */
 const int AF_PARTY_FLAG_HERO          = 0x00000001;
@@ -108,7 +112,7 @@ const int AF_DLC2_SORROWS_ARLATHAN_IMPORT            = 0x00001000;
 const int AF_DLC2_VESTMENTS_IMPORT                   = 0x00002000;
 const int AF_DLC2_MEMORY_BAND_RETURN                 = 0x00004000;
 
-/* Feast Day Gifts */
+/* Feast Day Gifts - AF_FEASTITEMS_FLAG */
 const int AF_FEAST_ALISTAIR_DOLL                     = 0x00000001;
 const int AF_FEAST_AMUILET_OF_MEMORIES               = 0x00000002;
 const int AF_FEAST_BEARD_FLASK                       = 0x00000004;
@@ -133,3 +137,6 @@ const int AF_FEAST_SUGAR_CAKE                        = 0x00100000;
 const int AF_FEAST_THOUGHTFUL_GIFT                   = 0x00200000;
 const int AF_FEAST_UGLY_BOOTS                        = 0x00400000;
 const int AF_FEAST_UNCRUSHABLE_PIGEON                = 0x00800000;
+                                                      
+/* General bit flags - AF_GENERAL_FLAG */
+const int AF_GENERAL_AWAKENING_SPEC                  = 0x00000001;

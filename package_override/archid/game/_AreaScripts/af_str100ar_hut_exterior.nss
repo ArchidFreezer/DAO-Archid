@@ -3,6 +3,10 @@
 #include "af_log_h"
 #include "af_utility_h"
 
+/**
+* Awakening starting location
+*/
+
 void main() {
 
     object oHero = GetHero();
@@ -153,6 +157,8 @@ void main() {
         }
     }
 
-
     if (nItemUpdated) DisplayFloatyMessage(oHero, "DAO DLC Items imported to Awakening, check equipped", FLOATY_MESSAGE, AF_COLOUR_RED, 5.0f);
+                          
+    // Set the correct number of specialisation points when importing into Awakening
+    AF_AwakeningSpecFix();
 }

@@ -175,7 +175,7 @@ int AF_IsItemPrank(object oItem) {
 }
 
 /**
-* @brief Sets the follower approval to Warm 
+* @brief Sets the follower approval to Warm
 *
 * @param    oFollower follower whose approval should be changed
 */
@@ -187,6 +187,35 @@ void AF_SetFollowerWarm(object oFollower) {
             int nStringRef = GetM2DAInt(TABLE_APPROVAL_NORMAL_RANGES, "StringRef", APP_RANGE_WARM);
             SetFollowerApprovalDescription(oFollower, nStringRef);
             Approval_ChangeApproval(nFollower, 0);
+        }
+    }
+}
+
+/**
+* @brief Fix extra specialization point importing into Awakening
+*
+* If the hero already has 3 specialisations when being importing into Awakenign they should not be given another
+*/
+void AF_AwakeningSpecFix() {
+    if (!AF_IsModuleFlagSet(AF_GENERAL_FLAG, AF_GENERAL_AWAKENING_SPEC)) {
+
+        object oChar = GetHero();
+        int iCount = 0;
+
+        if (GetLevel(oChar) >= 22) {
+            if (HasAbility(oChar, 4012) || HasAbility(oChar, 4013) || HasAbility(oChar, 4014)) iCount += 1;
+            if (HasAbility(oChar, 4015) || HasAbility(oChar, 4016) || HasAbility(oChar, 4017)) iCount += 1;
+            if (HasAbility(oChar, 4018) || HasAbility(oChar, 4019) || HasAbility(oChar, 4029)) iCount += 1;
+            if (HasAbility(oChar, 4025) || HasAbility(oChar, 4021) || HasAbility(oChar, 4030)) iCount += 1;
+            if (HasAbility(oChar, 401000) || HasAbility(oChar, 401002) || HasAbility(oChar, 401004)) iCount += 1;
+            if (HasAbility(oChar, 401001) || HasAbility(oChar, 401003) || HasAbility(oChar, 401005)) iCount += 1;
+
+            if (iCount >=3) SetCreatureProperty(oChar, AF_CRE_PROPERTY_SIMPLE_SPECIALIZATION_POINTS, 0.0f, PROPERTY_VALUE_TOTAL);
+            else if (iCount ==2) SetCreatureProperty(oChar, AF_CRE_PROPERTY_SIMPLE_SPECIALIZATION_POINTS, 1.0f, PROPERTY_VALUE_TOTAL);
+            else if (iCount ==1) SetCreatureProperty(oChar, AF_CRE_PROPERTY_SIMPLE_SPECIALIZATION_POINTS, 2.0f, PROPERTY_VALUE_TOTAL);
+            else SetCreatureProperty(oChar, AF_CRE_PROPERTY_SIMPLE_SPECIALIZATION_POINTS, 3.0f, PROPERTY_VALUE_TOTAL);
+            
+            AF_SetModuleFlag(AF_GENERAL_FLAG, AF_GENERAL_AWAKENING_SPEC);
         }
     }
 }
