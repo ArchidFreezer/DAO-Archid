@@ -1,21 +1,20 @@
 #include "2da_constants_h"
 #include "events_h"        
 #include "global_objects_h"
+#include "af_constants_h"
 
 const int ABILITY_GUITYPE_SKILL = 13;
-const int PROPERTY_SIMPLE_SPECIALIZATION_POINTS = 38;   
 
-object[] GetEquippedItems(object oCreature, int[] arEquipSlots, int[] arWeaponSets)
-{
+object[] GetEquippedItems(object oCreature, int[] arEquipSlots, int[] arWeaponSets) {
     object[] arItems;
 
     int nIndex = 0;
-    int nRows = GetM2DARows(-1, "mof_removable_equipment");
+    int nRows = GetM2DARows(AF_TABLE_REMOVABLE_EQUIP);
 
     int i = 0;
     for (i = 0; i < nRows; i++) {
-        int nEquipSlot = GetM2DAInt(-1, "EquipSlot", i, "mof_removable_equipment");
-        int nWeaponSet = GetM2DAInt(-1, "WeaponSet", i, "mof_removable_equipment");
+        int nEquipSlot = GetM2DAInt(AF_TABLE_REMOVABLE_EQUIP, "EquipSlot", i);
+        int nWeaponSet = GetM2DAInt(AF_TABLE_REMOVABLE_EQUIP, "WeaponSet", i);
 
         if (nWeaponSet == -1) nWeaponSet = INVALID_WEAPON_SET;
         object oItem = GetItemInEquipSlot(nEquipSlot, oCreature, nWeaponSet);

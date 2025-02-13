@@ -22,9 +22,10 @@ const int AF_OPT_ONHIT_IN_DAMAGE = 10;
 const int AF_OPT_FIX_DOT_DURATIONS = 11;
 const int AF_OPT_RECEIVED_ITEM_DURATION = 12;
 const int AF_OPT_RECEIVED_ITEM_COLOUR = 13;
-
-/* Creature properties */
-const int AF_CRE_PROPERTY_SIMPLE_SPECIALIZATION_POINTS = 38;
+   
+/* M2DA Table IDs */
+// These are ones to be used across mulitple scripts
+const int AF_TABLE_REMOVABLE_EQUIP = 6610007;
 
 /* Custom effects */
 const int AF_EFFECT_TYPE_MESSY_KILLS = 6610000;
@@ -137,6 +138,6 @@ const int AF_FEAST_SUGAR_CAKE                        = 0x00100000;
 const int AF_FEAST_THOUGHTFUL_GIFT                   = 0x00200000;
 const int AF_FEAST_UGLY_BOOTS                        = 0x00400000;
 const int AF_FEAST_UNCRUSHABLE_PIGEON                = 0x00800000;
-                                                      
+
 /* General bit flags - AF_GENERAL_FLAG */
 const int AF_GENERAL_AWAKENING_SPEC                  = 0x00000001;
