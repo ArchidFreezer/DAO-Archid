@@ -23,7 +23,8 @@ void main() {
     if (!AF_IsModuleFlagSet(AF_DLCITEMS_FLAG1, AF_DLC_SASH_OF_FORBIDDEN_SECRETS)) {
         object oContainer = GetObjectByTag("orz320cr_lt_revenant");
         if (IsObjectValid(oContainer)) {
-            CreateItemOnObject(R"prc_im_gib_acc_blt_dao.uti", oContainer, 1, "", TRUE);
+            object oItem = CreateItemOnObject(R"prc_im_gib_acc_blt_dao.uti", oContainer, 1, "", TRUE);
+            EquipItem(oContainer, oItem);
             AF_SetModuleFlag(AF_DLCITEMS_FLAG1, AF_DLC_SASH_OF_FORBIDDEN_SECRETS);
         }
     }

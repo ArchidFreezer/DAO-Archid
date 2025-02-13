@@ -6,7 +6,8 @@ void main() {
     if (!AF_IsModuleFlagSet(AF_DLCITEMS_FLAG1, AF_DLC_EMBRIS_MANY_POCKETS)) {
         object oContainer = GetObjectByTag("cir220cr_tranquil_mon", 0);
         if (IsObjectValid(oContainer)) {
-            CreateItemOnObject(R"prm000im_embri.uti", oContainer, 1, "", TRUE);
+            object oItem = CreateItemOnObject(R"prm000im_embri.uti", oContainer, 1, "", TRUE);
+            EquipItem(oContainer, oItem);
             AF_SetModuleFlag(AF_DLCITEMS_FLAG1, AF_DLC_EMBRIS_MANY_POCKETS);
         }
     }

@@ -6,7 +6,8 @@ void main() {
     if (!AF_IsModuleFlagSet(AF_DLCITEMS_FLAG2, AF_DLC2_WICKED_OATH)) {
         object oContainer = GetObjectByTag("den920cr_taliesen");
         if (IsObjectValid(oContainer)) {
-            CreateItemOnObject(R"prm000im_wickedoath.uti", oContainer, 1, "", TRUE);
+            object oItem = CreateItemOnObject(R"prm000im_wickedoath.uti", oContainer, 1, "", TRUE);
+            EquipItem(oContainer, oItem);
             AF_SetModuleFlag(AF_DLCITEMS_FLAG2, AF_DLC2_WICKED_OATH);
         }
     }
