@@ -3,6 +3,7 @@
 *
 * These are functions that typically too small to warrant a script file of their own
 */
+#include "approval_h"
 #include "placeable_h"
 #include "2da_constants_h"
 #include "af_constants_h"
@@ -101,11 +102,11 @@ void AF_SetModuleFlag(string sVar, int nFlag, int bSet = TRUE) {
         nVal |= nFlag;
     else
         nVal &= ~nFlag;
-    
+
     AF_LogDebug("AF_SetModuleFlag Variable: " + sVar + " Flag: " + IntToHexString(nFlag) + " Was: " + IntToHexString(nOld) + " Is: " + IntToHexString(nVal));
-    
+
     SetLocalInt(GetModule(), sVar, nVal);
-} 
+}
 
 /**
 * @brief Returns the state of a module flag
@@ -124,7 +125,7 @@ int AF_IsModuleFlagSet(string sVar, int nFlag) {
 
     return ( (nVal & nFlag ) == nFlag);
 }
- 
+
 /**
 * @brief Gets the hex flag mask for a party member
 *
@@ -150,3 +151,42 @@ int AF_GetPartyMemberMask(object oCreature) {
     return nRet;
 }
 
+/**
+* @brief Gets whether the item is prank
+*
+* @param    oItem item to check if it is a prank
+*
+* @return   TRUE if the item is a prank; FALSE otherwise
+*/
+int AF_IsItemPrank(object oItem) {
+    int nRet = FALSE;
+    if (IsObjectValid(oItem)) {
+        nRet = (GetTag(oItem) == "val_im_gift_sermon" ||
+                GetTag(oItem) == "val_im_gift_chant" ||
+                GetTag(oItem) == "val_im_gift_skull" ||
+                GetTag(oItem) == "val_im_gift_pigeon" ||
+                GetTag(oItem) == "val_im_gift_boots" ||
+                GetTag(oItem) == "val_im_gift_chastity" ||
+                GetTag(oItem) == "val_im_gift_stick" ||
+                GetTag(oItem) == "val_im_gift_soap" ||
+                GetTag(oItem) == "val_im_gift_mask");
+    }
+    return nRet;
+}
+
+/**
+* @brief Sets the follower approval to Warm 
+*
+* @param    oFollower follower whose approval should be changed
+*/
+void AF_SetFollowerWarm(object oFollower) {
+    int nFollower = Approval_GetFollowerIndex(oFollower);
+    if (IsObjectValid(oFollower)) {
+        int bApproval = GetFollowerApproval(oFollower);
+        if (bApproval > APP_RANGE_WARM) {
+            int nStringRef = GetM2DAInt(TABLE_APPROVAL_NORMAL_RANGES, "StringRef", APP_RANGE_WARM);
+            SetFollowerApprovalDescription(oFollower, nStringRef);
+            Approval_ChangeApproval(nFollower, 0);
+        }
+    }
+}
