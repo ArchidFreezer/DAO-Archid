@@ -27,6 +27,9 @@ const int AF_OPT_RECEIVED_ITEM_COLOUR = 13;
 // These are ones to be used across mulitple scripts
 const int AF_TABLE_REMOVABLE_EQUIP = 6610007;
 
+/* Creature properties */
+const int AF_CRE_PROPERTY_SIMPLE_SPECIALIZATION_POINTS = 38;
+
 /* Custom effects */
 const int AF_EFFECT_TYPE_MESSY_KILLS = 6610000;
 const int AF_EFFECT_TYPE_HOSTILITY_INTIMIDATION = 6610004;

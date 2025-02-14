@@ -158,7 +158,14 @@ void main() {
     }
 
     if (nItemUpdated) DisplayFloatyMessage(oHero, "DAO DLC Items imported to Awakening, check equipped", FLOATY_MESSAGE, AF_COLOUR_RED, 5.0f);
-                          
+
     // Set the correct number of specialisation points when importing into Awakening
     AF_AwakeningSpecFix();
+    
+    // Gain starting Runecrafting recipes in Awakening
+    if(IsUsingEP1Resources()) {
+        UT_AddItemToInventory(R"gxa_im_cft_run_102.uti", 1, OBJECT_INVALID, "", TRUE);
+        UT_AddItemToInventory(R"gxa_im_cft_run_103.uti", 1, OBJECT_INVALID, "", TRUE);
+        UT_AddItemToInventory(R"gxa_im_cft_run_111.uti", 1, OBJECT_INVALID, "", TRUE);
+    }
 }
