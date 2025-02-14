@@ -57,6 +57,12 @@ gda,ts_gxaferplclieutenant.gda,/mnt/c/Projects/DAO/archid/package_override/archi
 GDA,var_module_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/var_module_af.GDA
 GDA,vfx_af.GDA,/mnt/c/Projects/DAO/archid/package_override/archid/2da/vfx_af.GDA
 utm,store_vgk210cr_enchanter.utm,/mnt/c/Projects/DAO/archid/package_override/archid/game/Areas/Awakening/store_vgk210cr_enchanter.utm
+ncs,bec000pt_main.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/Areas/BackgroundElfCity/PlotScripts/bec000pt_main.ncs
+nss,bec000pt_main.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/Areas/BackgroundElfCity/PlotScripts/bec000pt_main.nss
+ncs,bhm000pt_tranquility.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/Areas/BackgroundMage/PlotScripts/bhm000pt_tranquility.ncs
+nss,bhm000pt_tranquility.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/Areas/BackgroundMage/PlotScripts/bhm000pt_tranquility.nss
+dlg,bhm200_senior_torrin.dlg,/mnt/c/Projects/DAO/archid/package_override/archid/game/Areas/BackgroundMage/bhm200ar_tower_level_2/bhm200_senior_torrin.dlg
+dlg,bhm600_sloth.dlg,/mnt/c/Projects/DAO/archid/package_override/archid/game/Areas/BackgroundMage/bhm600ar_fade_harrowing/bhm600_sloth.dlg
 ncs,cli420ar_city_gates_cutscn.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/Areas/Climax/cli420ar_city_gates_cutscn/cli420ar_city_gates_cutscn.ncs
 nss,cli420ar_city_gates_cutscn.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/Areas/Climax/cli420ar_city_gates_cutscn/cli420ar_city_gates_cutscn.nss
 uti,shl200im_helm_of_honn.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/Areas/Honnleath/shl200ar_wilhelms_cellar/shl200im_helm_of_honn.uti
@@ -261,6 +267,7 @@ ncs,af_urn01al_ruined_village.ncs,/mnt/c/Projects/DAO/archid/package_override/ar
 nss,af_urn01al_ruined_village.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AreaScripts/af_urn01al_ruined_village.nss
 ncs,af_urn220ar_mountain_top.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AreaScripts/af_urn220ar_mountain_top.ncs
 nss,af_urn220ar_mountain_top.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_AreaScripts/af_urn220ar_mountain_top.nss
+plo,plt_cod_cha_shale.plo,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Codex/Characters/plt_cod_cha_shale.plo
 nss,ability_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_CoreIncludes/ability_h.nss
 nss,af_ability_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_CoreIncludes/af_ability_h.nss
 nss,af_autoloot_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_CoreIncludes/af_autoloot_h.nss
@@ -373,6 +380,7 @@ nss,effect_death_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_
 nss,effect_dispel_magic_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_GameEffects/effect_dispel_magic_h.nss
 nss,effect_dot2_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_GameEffects/effect_dot2_h.nss
 nss,effects_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_GameEffects/effects_h.nss
+uti,gen_im_arm_cht_mas_tem.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/ArmourChest/Massive/gen_im_arm_cht_mas_tem.uti
 uti,gen_im_arm_cht_med_var.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/ArmourChest/Medium/gen_im_arm_cht_med_var.uti
 uti,gwb_im_arm_glv_mas_wcm.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/ArmourGloves/Massive/gwb_im_arm_glv_mas_wcm.uti
 uti,prm000im_bergens_honor.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/ArmourHelmets/Massive/prm000im_bergens_honor.uti
@@ -604,6 +612,29 @@ GDA,PRCSCR_hstSigrun.GDA,/mnt/c/Projects/DAO/archid/package_override/external/aw
 ncs,hst_sigrun_mischa.ncs,/mnt/c/Projects/DAO/archid/package_override/external/awakening/sigrun_law_order/hst_sigrun_mischa.ncs
 nss,hst_sigrun_mischa.nss,/mnt/c/Projects/DAO/archid/package_override/external/awakening/sigrun_law_order/hst_sigrun_mischa.nss
 ncs,terra_silverite.ncs,/mnt/c/Projects/DAO/archid/package_override/external/awakening/terraex_silverite/terra_silverite.ncs
+gda,PRCSCR_str_letter.gda,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Garevel letter for Witch Hunt/PRCSCR_str_letter.gda
+plo,plt_str_letter_check.plo,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Garevel letter for Witch Hunt/plt_str_letter_check.plo
+plo,str_cod_garevel_letter.plo,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Garevel letter for Witch Hunt/str_cod_garevel_letter.plo
+uti,str_cod_garevel_letter.uti,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Garevel letter for Witch Hunt/str_cod_garevel_letter.uti
+ncs,str_letter.ncs,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Garevel letter for Witch Hunt/str_letter.ncs
+plo,gib_cod_gibcreature.plo,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Updated Codex - GoA/Harvester/gib_cod_gibcreature.plo
+uti,gib_cod_gibcreature.uti,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Updated Codex - GoA/Harvester/gib_cod_gibcreature.uti
+plo,gib_cod_jerrik.plo,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Updated Codex - GoA/Jerrik/gib_cod_jerrik.plo
+gda,PRCSCR_goa_scripts.gda,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Updated Codex - GoA/REQUIRED FOR MOD TO WORK/PRCSCR_goa_scripts.gda
+ncs,goa_scripts.ncs,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Updated Codex - GoA/REQUIRED FOR MOD TO WORK/goa_scripts.ncs
+plo,plt_gib_codex.plo,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Updated Codex - GoA/REQUIRED FOR MOD TO WORK/plt_gib_codex.plo
+plo,gib_cod_protector_golem.plo,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Updated Codex - GoA/Runic Golem/gib_cod_protector_golem.plo
+uti,gib_cod_protector_golem.uti,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Updated Codex - GoA/Runic Golem/gib_cod_protector_golem.uti
+gda,PRCSCR_warden_gib.gda,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Warden Codex - GoA/PRCSCR_warden_gib.gda
+plo,gib_cod_pcintro.plo,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Warden Codex - GoA/gib_cod_pcintro.plo
+uti,gib_cod_pcintro.uti,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Warden Codex - GoA/gib_cod_pcintro.uti
+ncs,goa_codex.ncs,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Warden Codex - GoA/goa_codex.ncs
+plo,plt_gib_checking_plot.plo,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Warden Codex - GoA/plt_gib_checking_plot.plo
+gda,PRCSCR_warden_str.gda,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Warden Codex - Witch Hunt/PRCSCR_warden_str.gda
+plo,plt_str_checking_plot.plo,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Warden Codex - Witch Hunt/plt_str_checking_plot.plo
+plo,str_cod_pcintro.plo,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Warden Codex - Witch Hunt/str_cod_pcintro.plo
+uti,str_cod_pcintro.uti,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Warden Codex - Witch Hunt/str_cod_pcintro.uti
+ncs,str_codex.ncs,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Warden Codex - Witch Hunt/str_codex.ncs
 ani,terra_designer023_2_f.ani,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_designer023_2_f.ani
 evt,terra_designer023_2_f.evt,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_designer023_2_f.evt
 gad,terra_designer023_2_f.gad,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Morrigan_Animations/terra_designer023_2_f.gad
@@ -2095,3 +2126,7 @@ dlb,wynne.dlb,/mnt/c/Projects/DAO/archid/package_override/external/qwinn_fixpack
 dlg,wynne.dlg,/mnt/c/Projects/DAO/archid/package_override/external/qwinn_fixpack_3/wynne.dlg
 dlb,zevran_main.dlb,/mnt/c/Projects/DAO/archid/package_override/external/qwinn_fixpack_3/zevran_main.dlb
 dlg,zevran_main.dlg,/mnt/c/Projects/DAO/archid/package_override/external/qwinn_fixpack_3/zevran_main.dlg
+uti,cod_bks_felix_letter.uti,/mnt/c/Projects/DAO/archid/package_override/external/sulchers_pass_consistency/felix_letter/cod_bks_felix_letter.uti
+plo,plt_cod_bks_felix_letter.plo,/mnt/c/Projects/DAO/archid/package_override/external/sulchers_pass_consistency/felix_letter/plt_cod_bks_felix_letter.plo
+plo,plt_sulchers_pass_plot.plo,/mnt/c/Projects/DAO/archid/package_override/external/sulchers_pass_consistency/felix_letter/plt_sulchers_pass_plot.plo
+ncs,sulchers_pass_note.ncs,/mnt/c/Projects/DAO/archid/package_override/external/sulchers_pass_consistency/felix_letter/sulchers_pass_note.ncs
