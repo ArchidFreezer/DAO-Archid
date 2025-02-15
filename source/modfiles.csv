@@ -396,13 +396,22 @@ nss,effect_death_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_
 nss,effect_dispel_magic_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_GameEffects/effect_dispel_magic_h.nss
 nss,effect_dot2_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_GameEffects/effect_dot2_h.nss
 nss,effects_h.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_GameEffects/effects_h.nss
+uti,prc_im_ep1_reward4.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/Accessories/Belts/prc_im_ep1_reward4.uti
+uti,prc_im_reward4.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/Accessories/Belts/prc_im_reward4.uti
+uti,str_im_belt.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/Accessories/Belts/str_im_belt.uti
 uti,gxa_im_arm_bot_hvy_001.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/ArmourBoots/Heavy/gxa_im_arm_bot_hvy_001.uti
+uti,lel_im_arm_cht_lgt_02.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/ArmourChest/Light/lel_im_arm_cht_lgt_02.uti
+uti,prc_daep1_lel_im_arm_cht_01.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/ArmourChest/Light/prc_daep1_lel_im_arm_cht_01.uti
+uti,prc_dao_lel_im_arm_cht_01.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/ArmourChest/Light/prc_dao_lel_im_arm_cht_01.uti
 uti,gen_im_arm_cht_mas_tem.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/ArmourChest/Massive/gen_im_arm_cht_mas_tem.uti
 uti,gen_im_arm_cht_med_var.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/ArmourChest/Medium/gen_im_arm_cht_med_var.uti
 uti,gxa_im_arm_glv_hvy_001.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/ArmourGloves/Heavy/gxa_im_arm_glv_hvy_001.uti
 uti,gwb_im_arm_glv_mas_wcm.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/ArmourGloves/Massive/gwb_im_arm_glv_mas_wcm.uti
 uti,prm000im_bergens_honor.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/ArmourHelmets/Massive/prm000im_bergens_honor.uti
 uti,prm000im_dragon_blood_helm.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/ArmourHelmets/Massive/prm000im_dragon_blood_helm.uti
+uti,prc_im_ep1_reward3.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/Clothing/Mage/prc_im_ep1_reward3.uti
+uti,prc_im_reward3.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/Clothing/Mage/prc_im_reward3.uti
+uti,str_im_robes.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/Clothing/Mage/str_im_robes.uti
 uti,val_im_gift_cookie.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/Gifts/val_im_gift_cookie.uti
 ncs,val_module.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/Gifts/val_module.ncs
 ncs,vala_module.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/Gifts/vala_module.ncs
@@ -410,6 +419,7 @@ ncs,ip_restrict_alist.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/gam
 nss,ip_restrict_alist.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/ItemScripts/ip_restrict_alist.nss
 utp,genip_black_vials.utp,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/Placeables/genip_black_vials.utp
 ncs,gen00pt_skills.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/PlotScripts/gen00pt_skills.ncs
+uti,gxa_im_tome_unlearning.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/QuickItems/Unique/gxa_im_tome_unlearning.uti
 uti,gxa_im_upg_run_wp6_cir.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/Upgrade/gxa_im_upg_run_wp6_cir.uti
 uti,gxa_im_upg_run_wp6_dwe.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/Upgrade/gxa_im_upg_run_wp6_dwe.uti
 uti,gxa_im_upg_run_wp6_hal.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/Upgrade/gxa_im_upg_run_wp6_hal.uti
@@ -419,6 +429,9 @@ uti,gxa_im_upg_run_wp7_dwe.uti,/mnt/c/Projects/DAO/archid/package_override/archi
 uti,gxa_im_upg_run_wp7_hal.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/Upgrade/gxa_im_upg_run_wp7_hal.uti
 uti,gxa_im_upg_run_wp7_sil.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/Upgrade/gxa_im_upg_run_wp7_sil.uti
 uti,gen_im_wep_mag_sta_mld.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/WeaponsMage/Staves/gen_im_wep_mag_sta_mld.uti
+uti,prc_im_ep1_reward1.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/WeaponsMelee/Battleaxes/prc_im_ep1_reward1.uti
+uti,prc_im_reward1.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/WeaponsMelee/Battleaxes/prc_im_reward1.uti
+uti,str_im_battleaxe.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/WeaponsMelee/Battleaxes/str_im_battleaxe.uti
 uti,gen_im_wep_mel_dag_fng.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/WeaponsMelee/Daggers/gen_im_wep_mel_dag_fng.uti
 uti,prm000im_edge_.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/WeaponsMelee/Daggers/prm000im_edge_.uti
 uti,gen_im_wep_mel_gsw_stn.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/WeaponsMelee/Greatswords/gen_im_wep_mel_gsw_stn.uti
@@ -429,6 +442,9 @@ uti,prc_im_gib_wep_mac_dao.uti,/mnt/c/Projects/DAO/archid/package_override/archi
 uti,prc_im_gib_wep_mac_ep1.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/WeaponsMelee/Maces/prc_im_gib_wep_mac_ep1.uti
 uti,gen_im_wep_mal_cha.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/WeaponsMelee/Mauls/gen_im_wep_mal_cha.uti
 uti,gen_im_wep_rng_lbw_fsn.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/WeaponsRanged/Longbows/gen_im_wep_rng_lbw_fsn.uti
+uti,prc_im_ep1_reward2.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/WeaponsRanged/Longbows/prc_im_ep1_reward2.uti
+uti,prc_im_reward2.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/WeaponsRanged/Longbows/prc_im_reward2.uti
+uti,str_im_longbow.uti,/mnt/c/Projects/DAO/archid/package_override/archid/game/_Global/WeaponsRanged/Longbows/str_im_longbow.uti
 ncs,af_ioh_bane.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_IOHManagerScripts/af_ioh_bane.ncs
 nss,af_ioh_bane.nss,/mnt/c/Projects/DAO/archid/package_override/archid/game/_IOHManagerScripts/af_ioh_bane.nss
 ncs,af_ioh_chromatic.ncs,/mnt/c/Projects/DAO/archid/package_override/archid/game/_IOHManagerScripts/af_ioh_chromatic.ncs
@@ -678,23 +694,6 @@ plo,plt_str_checking_plot.plo,/mnt/c/Projects/DAO/archid/package_override/extern
 plo,str_cod_pcintro.plo,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Warden Codex - Witch Hunt/str_cod_pcintro.plo
 uti,str_cod_pcintro.uti,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Warden Codex - Witch Hunt/str_cod_pcintro.uti
 ncs,str_codex.ncs,/mnt/c/Projects/DAO/archid/package_override/external/codex_fixes_and_tweaks_for_goa_and_wh/Warden Codex - Witch Hunt/str_codex.ncs
-uti,lel_im_arm_cht_lgt_02.uti,/mnt/c/Projects/DAO/archid/package_override/external/dlc_item_fixes/Battledress of the Provocateur/lel_im_arm_cht_lgt_02.uti
-uti,prc_daep1_lel_im_arm_cht_01.uti,/mnt/c/Projects/DAO/archid/package_override/external/dlc_item_fixes/Battledress of the Provocateur/prc_daep1_lel_im_arm_cht_01.uti
-uti,prc_dao_lel_im_arm_cht_01.uti,/mnt/c/Projects/DAO/archid/package_override/external/dlc_item_fixes/Battledress of the Provocateur/prc_dao_lel_im_arm_cht_01.uti
-uti,prc_im_ep1_reward4.uti,/mnt/c/Projects/DAO/archid/package_override/external/dlc_item_fixes/Cinch of Skillfull Manuvering/prc_im_ep1_reward4.uti
-uti,prc_im_reward4.uti,/mnt/c/Projects/DAO/archid/package_override/external/dlc_item_fixes/Cinch of Skillfull Manuvering/prc_im_reward4.uti
-uti,str_im_belt.uti,/mnt/c/Projects/DAO/archid/package_override/external/dlc_item_fixes/Cinch of Skillfull Manuvering/str_im_belt.uti
-txt,DLC Item Fix 1.1 Readme.txt,/mnt/c/Projects/DAO/archid/package_override/external/dlc_item_fixes/DLC Item Fix 1.1 Readme.txt
-uti,prc_im_ep1_reward1.uti,/mnt/c/Projects/DAO/archid/package_override/external/dlc_item_fixes/Dragonbone Cleaver/prc_im_ep1_reward1.uti
-uti,prc_im_reward1.uti,/mnt/c/Projects/DAO/archid/package_override/external/dlc_item_fixes/Dragonbone Cleaver/prc_im_reward1.uti
-uti,str_im_battleaxe.uti,/mnt/c/Projects/DAO/archid/package_override/external/dlc_item_fixes/Dragonbone Cleaver/str_im_battleaxe.uti
-uti,gxa_im_tome_unlearning.uti,/mnt/c/Projects/DAO/archid/package_override/external/dlc_item_fixes/Manual of Focus/gxa_im_tome_unlearning.uti
-uti,prc_im_ep1_reward2.uti,/mnt/c/Projects/DAO/archid/package_override/external/dlc_item_fixes/The Sorrows of Arlathan/prc_im_ep1_reward2.uti
-uti,prc_im_reward2.uti,/mnt/c/Projects/DAO/archid/package_override/external/dlc_item_fixes/The Sorrows of Arlathan/prc_im_reward2.uti
-uti,str_im_longbow.uti,/mnt/c/Projects/DAO/archid/package_override/external/dlc_item_fixes/The Sorrows of Arlathan/str_im_longbow.uti
-uti,prc_im_ep1_reward3.uti,/mnt/c/Projects/DAO/archid/package_override/external/dlc_item_fixes/Vestments of the Seer/prc_im_ep1_reward3.uti
-uti,prc_im_reward3.uti,/mnt/c/Projects/DAO/archid/package_override/external/dlc_item_fixes/Vestments of the Seer/prc_im_reward3.uti
-uti,str_im_robes.uti,/mnt/c/Projects/DAO/archid/package_override/external/dlc_item_fixes/Vestments of the Seer/str_im_robes.uti
 cub,73254_shade_first_line.cub,/mnt/c/Projects/DAO/archid/package_override/external/ghost_elves/73254_shade_first_line.cub
 cut,73254_shade_first_line.cut,/mnt/c/Projects/DAO/archid/package_override/external/ghost_elves/73254_shade_first_line.cut
 txt,Ghost Elves Readme.txt,/mnt/c/Projects/DAO/archid/package_override/external/ghost_elves/Ghost Elves Readme.txt
@@ -959,6 +958,10 @@ plo,plt_terra_util.plo,/mnt/c/Projects/DAO/archid/package_override/external/morr
 ncs,terra_morr.ncs,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Terra_Ex_Scripts/terra_morr.ncs
 ncs,terra_morr_circlefix.ncs,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Terra_Ex_Scripts/terra_morr_circlefix.ncs
 ncs,terra_util.ncs,/mnt/c/Projects/DAO/archid/package_override/external/morrigan_restoration_patch/Terra_Ex_Scripts/terra_util.ncs
+cub,93020.cub,/mnt/c/Projects/DAO/archid/package_override/external/paragon_cutscene_fixes/93020.cub
+cut,93020.cut,/mnt/c/Projects/DAO/archid/package_override/external/paragon_cutscene_fixes/93020.cut
+cub,orz550cs_broodmother.cub,/mnt/c/Projects/DAO/archid/package_override/external/paragon_cutscene_fixes/orz550cs_broodmother.cub
+cut,orz550cs_broodmother.cut,/mnt/c/Projects/DAO/archid/package_override/external/paragon_cutscene_fixes/orz550cs_broodmother.cut
 cub,121760.cub,/mnt/c/Projects/DAO/archid/package_override/external/qwinn_fixpack_3/121760.cub
 cut,121760.cut,/mnt/c/Projects/DAO/archid/package_override/external/qwinn_fixpack_3/121760.cut
 stg,1p_200_all.stg,/mnt/c/Projects/DAO/archid/package_override/external/qwinn_fixpack_3/1p_200_all.stg
