@@ -22,7 +22,7 @@ const int AF_OPT_ONHIT_IN_DAMAGE = 10;
 const int AF_OPT_FIX_DOT_DURATIONS = 11;
 const int AF_OPT_RECEIVED_ITEM_DURATION = 12;
 const int AF_OPT_RECEIVED_ITEM_COLOUR = 13;
-   
+
 /* M2DA Table IDs */
 // These are ones to be used across mulitple scripts
 const int AF_TABLE_REMOVABLE_EQUIP = 6610007;
@@ -144,3 +144,4 @@ const int AF_FEAST_UNCRUSHABLE_PIGEON                = 0x00800000;
 
 /* General bit flags - AF_GENERAL_FLAG */
 const int AF_GENERAL_AWAKENING_SPEC                  = 0x00000001;
+const int AF_GENERAL_OWEN_FARSONG                    = 0x00000002;
