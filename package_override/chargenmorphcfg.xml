@@ -211,6 +211,12 @@
     <resource name="t3_har_rbr" />
     <resource name="t3_har_dbr" />
     <resource name="t3_har_blk" />
+    <resource name="t3_har_SunsBrn" />
+    <resource name="t3_har_SunFlax" />
+    <resource name="t3_har_SunDrtyBln" />
+    <resource name="t3_har_SunsBlnd" />
+    <resource name="t3_har_SunHnyBrn" />
+    <resource name="t3_har_SunMousyBrn" />
   </hair_colors>
   <skin_colors>
     <resource name="t1_skn_001" />
@@ -253,6 +259,32 @@
     <resource name="t3_eye_dbr" />
     <resource name="t3_eye_gry" />
     <resource name="t3_eye_blk" />
+    <resource name="t3_eye_sunAplGrn" />
+    <resource name="t3_eye_SunGrnGry" />
+    <resource name="t3_eye_SunPaleGrn" />
+    <resource name="t3_eye_SunGryGrn" />
+    <resource name="t3_eye_SunBrn" />
+    <resource name="t3_eye_SunPaleBrown" />
+    <resource name="t3_eye_sunlghtgray" />
+    <resource name="t3_eye_sunblu" />
+    <resource name="t3_eye_SunStrmBlu" />
+    <resource name="t3_eye_sunteal" />
+    <resource name="t3_eye_sunmorri" />
+    <resource name="t3_eye_sunyel" />
+    <resource name="t3_eye_SunBrn2" />
+    <resource name="t3_eye_SunBrn3" />
+    <resource name="t3_eye_SunCottnCndy" />
+    <resource name="t3_eye_SunDskyPnk" />
+    <resource name="t3_eye_SunGryBrn" />
+    <resource name="t3_eye_SunLavender" />
+    <resource name="t3_eye_SunLghtBrn" />
+    <resource name="t3_eye_SunPink" />
+    <resource name="t3_eye_SunPtryGrn" />
+    <resource name="t3_eye_SunOrg" />
+    <resource name="t3_eye_SunPrtyGry" />
+    <resource name="t3_eye_SunPurple" />
+    <resource name="t3_eye_SunRed" />
+    <resource name="t3_eye_SunYllwBrn" />
   </eyes_colors>
   <eyes_makeup_colors>
     <resource name="" />
@@ -351,6 +383,12 @@
     <resource name="t1_stb_rbr" />
     <resource name="t1_stb_dbr" />
     <resource name="t1_stb_blk" />
+    <resource name="t1_stb_SunsBrn" />
+    <resource name="t1_stb_SunFlax" />
+    <resource name="t1_stb_SunDrtyBln" />
+    <resource name="t1_stb_SunsBlnd" />
+    <resource name="t1_stb_SunHnyBrn" />
+    <resource name="t1_stb_SunMousyBrn" />
   </brow_stubble_colors>
   <crew_cut_colors>
     <resource name="t1_stb_wht" />
@@ -362,6 +400,11 @@
     <resource name="t1_stb_rbr" />
     <resource name="t1_stb_dbr" />
     <resource name="t1_stb_blk" />
+    <resource name="t1_stb_SunsBrn" />
+    <resource name="t1_stb_SunFlax" />
+    <resource name="t1_stb_SunDrtyBln" />
+    <resource name="t1_stb_SunHnyBrn" />
+    <resource name="t1_stb_SunMousyBrn" />
   </crew_cut_colors>
   <tattoo_colors>
     <resource name="T1_TAT_BLK" />
