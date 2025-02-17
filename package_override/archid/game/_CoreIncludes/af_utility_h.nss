@@ -214,7 +214,7 @@ void AF_AwakeningSpecFix() {
             else if (iCount ==2) SetCreatureProperty(oChar, AF_CRE_PROPERTY_SIMPLE_SPECIALIZATION_POINTS, 1.0f, PROPERTY_VALUE_TOTAL);
             else if (iCount ==1) SetCreatureProperty(oChar, AF_CRE_PROPERTY_SIMPLE_SPECIALIZATION_POINTS, 2.0f, PROPERTY_VALUE_TOTAL);
             else SetCreatureProperty(oChar, AF_CRE_PROPERTY_SIMPLE_SPECIALIZATION_POINTS, 3.0f, PROPERTY_VALUE_TOTAL);
-            
+
             AF_SetModuleFlag(AF_GENERAL_FLAG, AF_GENERAL_AWAKENING_SPEC);
         }
     }

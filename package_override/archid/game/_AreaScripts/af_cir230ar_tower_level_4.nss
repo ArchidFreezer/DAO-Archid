@@ -19,4 +19,18 @@ void main() {
             AF_SetModuleFlag(AF_DLCITEMS_FLAG1, AF_DLC_MARK_OF_VIGILANCE);
         }
     }
+
+    // Swap out templars - Templar Variety mod
+    if (!AF_IsModuleFlagSet(AF_GENERAL_FLAG, AF_GENERAL_TPSWAP_BC4)) {
+        AF_SetModuleFlag(AF_GENERAL_FLAG, AF_GENERAL_TPSWAP_BC4);
+              object oTemplar = GetObjectByTag("cir220cr_possessedtemplar", 1);
+        if (!IsDead(oTemplar)) {
+            object oNewTemp = CreateObject(OBJECT_TYPE_CREATURE, R"templar_m_arch_hos.utc", GetLocation(oTemplar));
+            SetTeamId(oNewTemp, 126);
+            SetName(oNewTemp, GetName(oTemplar));
+            if (IsObjectValid(oNewTemp)) {
+                Safe_Destroy_Object(oTemplar);
+            }
+        }
+    }
 }

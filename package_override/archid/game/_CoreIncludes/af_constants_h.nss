@@ -145,3 +145,9 @@ const int AF_FEAST_UNCRUSHABLE_PIGEON                = 0x00800000;
 /* General bit flags - AF_GENERAL_FLAG */
 const int AF_GENERAL_AWAKENING_SPEC                  = 0x00000001;
 const int AF_GENERAL_OWEN_FARSONG                    = 0x00000002;
+const int AF_GENERAL_TPSWAP_WH                       = 0x00000004;
+const int AF_GENERAL_TPSWAP_BC3                      = 0x00000008;
+const int AF_GENERAL_TPSWAP_BC4                      = 0x00000010;
+const int AF_GENERAL_TPSWAP_BCF                      = 0x00000020;
+const int AF_GENERAL_TPSWAP_RAN154                   = 0x00000040;
+const int AF_GENERAL_TPSWAP_RAN800                   = 0x00000080;
