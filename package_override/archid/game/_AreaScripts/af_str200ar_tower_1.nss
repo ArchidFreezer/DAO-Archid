@@ -3,7 +3,7 @@
 
 void main()
 {
-    // Swap out templars - Templare Variety mod
+    // Swap out templars - Templar Variety mod
     if (!AF_IsModuleFlagSet(AF_GENERAL_FLAG, AF_GENERAL_TPSWAP_WH)) {
         object oTempGen = GetObjectByTag("str200cr_templar");
         location lTemp = GetLocation(oTempGen); 
