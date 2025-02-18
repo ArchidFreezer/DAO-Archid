@@ -51,6 +51,7 @@ const string AF_DLCITEMS_FLAG1 = "AF_DLCITEMS_FLAG1";
 const string AF_DLCITEMS_FLAG2 = "AF_DLCITEMS_FLAG2";
 const string AF_FEASTITEMS_FLAG = "AF_FEASTITEMS_FLAG";
 const string AF_GENERAL_FLAG = "AF_GENERAL_FLAG";
+const string AF_NOHELM_FLAG = "AF_NOHELM_FLAG";
 
 /* Follower flag masks */
 const int AF_PARTY_FLAG_HERO          = 0x00000001;
@@ -141,6 +142,25 @@ const int AF_FEAST_SUGAR_CAKE                        = 0x00100000;
 const int AF_FEAST_THOUGHTFUL_GIFT                   = 0x00200000;
 const int AF_FEAST_UGLY_BOOTS                        = 0x00400000;
 const int AF_FEAST_UNCRUSHABLE_PIGEON                = 0x00800000;
+
+/* No Helmet Hack flags - AF_NOHELM_FLAG */
+const int AF_NOHELM_SLOT_ACTIVE                      = 0x00000001;
+const int AF_NOHELM_PLAYER                           = 0x00000002;
+const int AF_NOHELM_ALISTAIR                         = 0x00000004;
+const int AF_NOHELM_ANDERS                           = 0x00000008;
+const int AF_NOHELM_JUSTICE                          = 0x00000010;
+const int AF_NOHELM_LELIANA                          = 0x00000020;
+const int AF_NOHELM_LOGHAIN                          = 0x00000040;
+const int AF_NOHELM_MHAIRI                           = 0x00000080;
+const int AF_NOHELM_MORRIGAN                         = 0x00000100;
+const int AF_NOHELM_NATHANIEL                        = 0x00000200;
+const int AF_NOHELM_OGHREN                           = 0x00000400;
+const int AF_NOHELM_SIGRUN                           = 0x00000800;
+const int AF_NOHELM_STEN                             = 0x00001000;
+const int AF_NOHELM_UNKNOWN                          = 0x00002000;
+const int AF_NOHELM_VELANNA                          = 0x00004000;
+const int AF_NOHELM_WYNNE                            = 0x00008000;
+const int AF_NOHELM_ZEVRAN                           = 0x00010000;
 
 /* General bit flags - AF_GENERAL_FLAG */
 const int AF_GENERAL_AWAKENING_SPEC                  = 0x00000001;

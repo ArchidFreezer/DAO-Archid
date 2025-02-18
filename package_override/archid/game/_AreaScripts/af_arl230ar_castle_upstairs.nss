@@ -2,7 +2,7 @@
 
 void main() {
 
-    // Add DLC item Blood Dragon Plate Gauntlets
+    // Add DLC item Bulwark of the True King
     if (!AF_IsModuleFlagSet(AF_DLCITEMS_FLAG1, AF_DLC_BULWARK_OF_THE_TRUE_KING)) {
         object oContainer = GetObjectByTag("genip_chest_ornate", 0);
         if (IsObjectValid(oContainer)) {
