@@ -34,7 +34,7 @@ void main() {
                 Safe_Destroy_Object(oTemplar);
             }
         }
-        
+
         oTemplar = GetObjectByTag("cir230cr_possessed_templar", 4);
         if (!IsDead(oTemplar)) {
             UnequipItem(oTemplar, GetItemInEquipSlot(INVENTORY_SLOT_HEAD, oTemplar));
