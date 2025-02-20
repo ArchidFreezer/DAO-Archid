@@ -174,3 +174,4 @@ const int AF_GENERAL_TPSWAP_RAN800                   = 0x00000080;
 const int AF_GENERAL_ORZOUTS_05                      = 0x00000100;
 const int AF_GENERAL_ORZOUTS_06                      = 0x00000200;
 const int AF_GENERAL_ORZOUTS_230                     = 0x00000400;
+const int AF_GENERAL_ALISTAIR_ROSE                   = 0x00000800;

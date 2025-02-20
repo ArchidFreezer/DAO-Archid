@@ -5,6 +5,8 @@
 */
 #include "approval_h"
 #include "placeable_h"
+#include "plt_genpt_alistair_main"
+#include "plt_genpt_alistair_defined"
 #include "2da_constants_h"
 #include "af_constants_h"
 #include "af_log_h"
@@ -218,4 +220,25 @@ void AF_AwakeningSpecFix() {
             AF_SetModuleFlag(AF_GENERAL_FLAG, AF_GENERAL_AWAKENING_SPEC);
         }
     }
+}
+     
+/**
+* @brief Give Alistairs Rose amulet if he has given the hero the rose plot item
+*
+*/
+void AF_CheckAlistairRose() { 
+    // If we have already given the amulet then we won't give it again
+    if (AF_IsModuleFlagSet(AF_GENERAL_FLAG, AF_GENERAL_ALISTAIR_ROSE)) return;
+                                          
+    // Alistair hasn't given the rose, then don't give the amulet
+    if(!WR_GetPlotFlag(PLT_GENPT_ALISTAIR_MAIN, ALISTAIR_MAIN_GIVES_PC_ROSE)) return;
+    
+    // Alistair hasn't or isn't being romanced, so don't give the amulet
+    if(!WR_GetPlotFlag(PLT_GENPT_ALISTAIR_DEFINED, ALISTAIR_DEFINED_ROMANCE_ACTIVE_OR_STILL_IN_LOVE)) return;
+    
+    // We have checked the condition so give the amulet
+    UT_AddItemToInventory(R"af_alistair_rose.uti", 1);
+    
+    // Set the flag so we don;t give it again
+    AF_SetModuleFlag(AF_GENERAL_FLAG, AF_GENERAL_ALISTAIR_ROSE);
 }
