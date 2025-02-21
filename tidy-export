@@ -1,5 +1,5 @@
 #!/bin/bash
-rm -rf package_override/toolsetexport
-rm addin/core/override/toolsetexport/*
-rm addin/module/override/toolsetexport/*
-rm ~/Documents/BioWare/Dragon\ Age/modules/Single\ Player/override/toolsetexport/*
+rm -rf package_override/toolsetexport 2>/dev/null
+rm addin/core/override/toolsetexport/* 2>/dev/null
+rm addin/module/override/toolsetexport/* 2>/dev/null
+rm ~/Documents/BioWare/Dragon\ Age/modules/Single\ Player/override/toolsetexport/* 2>/dev/null
