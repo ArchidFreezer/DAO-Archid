@@ -1,0 +1,44 @@
+#!/bin/sh
+
+MODDIR='/c/Projects/DAO/archid'
+XLSDIR="${MODDIR}/source/2da"
+OUTDIR="${MODDIR}/package_override/archid/2da"
+
+#
+# Specific output folders
+AIDIR='creature_ai'            # Creature AI
+CHDIR='creature_heads'         # Creature heads
+DIDIR='prcscr_dlc_integration' # DLC item integration
+IVDIR='item_variation'         # Item variations
+REDIR='random_encounter'       # Random encounters
+TSDIR='treasure_system'        # Treasure system
+
+# Read the list of modified xls files into an array
+cd ${MODDIR}
+mapfile -t changed_xls < <(git status -s | grep 'source\/2da\/.*xls' | sed 's/.*2da\/\(.*\)/\1/')
+
+cd ${XLSDIR}
+for file in ${changed_xls[@]}; do
+	# We can't pass varaibles to the DOS CMD so we need to do it the hard way
+	[[ "${file}" = "creature_ai.xls" ]] && cmd "//c ExcelProcessor.exe creature_ai.xls > NUL" && break
+	[[ "${file}" = "item_variations.xls" ]] && cmd "//c ExcelProcessor.exe item_variations.xls > NUL" && break
+	[[ "${file}" = "m2da.xls" ]] && cmd "//c ExcelProcessor.exe m2da.xls > NUL" && break
+	[[ "${file}" = "prcscr_dlcitems.xls" ]] && cmd "//c ExcelProcessor.exe prcscr_dlcitems.xls > NUL" && break
+	[[ "${file}" = "prcscr_vala.xls" ]] && cmd "//c ExcelProcessor.exe prcscr_vala.xls > NUL" && break
+	[[ "${file}" = "rand_locations.xls" ]] && cmd "//c ExcelProcessor.exe rand_locations.xls > NUL" && break
+	[[ "${file}" = "treasure_system.xls" ]] && cmd "//c ExcelProcessor.exe treasure_system.xls > NUL" && break
+done
+
+# Change the GDA file extension to lowercase as uppercase offends me!
+find . -name '*.GDA' -type f -exec bash -c 'base=${0%.*} ext=${0##*.} a=$base.${ext,,}; [ "$a" != "$0" ] && mv -- "$0" "$a"' {} \;
+
+# First move the specific files
+mv aip_*.gda "${OUTDIR}/${AIDIR}" 2>/dev/null
+mv *_heads_af.gda "${OUTDIR}/${CHDIR}" 2>/dev/null
+mv *_variation_af.gda "${OUTDIR}/${IVDIR}" 2>/dev/null
+mv prcscr_af.gda $OUTDIR 2>/dev/null   # We move the base file first
+mv prcscr_*.gda "${OUTDIR}/${DIDIR}" 2>/dev/null # Any left are the DLC integration files
+mv rand_*.gda "${OUTDIR}/${REDIR}" 2>/dev/null
+mv ts_*.gda "${OUTDIR}/${TSDIR}" 2>/dev/null
+# Now move the rest
+mv *.gda $OUTDIR 2>/dev/null
