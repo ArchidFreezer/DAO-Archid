@@ -20,13 +20,13 @@ mapfile -t changed_xls < <(git status -s | grep 'source\/2da\/.*xls' | sed 's/.*
 cd ${XLSDIR}
 for file in ${changed_xls[@]}; do
 	# We can't pass varaibles to the DOS CMD so we need to do it the hard way
-	[[ "${file}" = "creature_ai.xls" ]] && cmd "//c ExcelProcessor.exe creature_ai.xls > NUL" && break
-	[[ "${file}" = "item_variations.xls" ]] && cmd "//c ExcelProcessor.exe item_variations.xls > NUL" && break
-	[[ "${file}" = "m2da.xls" ]] && cmd "//c ExcelProcessor.exe m2da.xls > NUL" && break
-	[[ "${file}" = "prcscr_dlcitems.xls" ]] && cmd "//c ExcelProcessor.exe prcscr_dlcitems.xls > NUL" && break
-	[[ "${file}" = "prcscr_vala.xls" ]] && cmd "//c ExcelProcessor.exe prcscr_vala.xls > NUL" && break
-	[[ "${file}" = "rand_locations.xls" ]] && cmd "//c ExcelProcessor.exe rand_locations.xls > NUL" && break
-	[[ "${file}" = "treasure_system.xls" ]] && cmd "//c ExcelProcessor.exe treasure_system.xls > NUL" && break
+	[[ "${file}" = "creature_ai.xls" ]] && cmd "//c ExcelProcessor.exe creature_ai.xls > NUL" && continue
+	[[ "${file}" = "item_variations.xls" ]] && cmd "//c ExcelProcessor.exe item_variations.xls > NUL" && continue
+	[[ "${file}" = "m2da.xls" ]] && cmd "//c ExcelProcessor.exe m2da.xls > NUL" && continue
+	[[ "${file}" = "prcscr_dlcitems.xls" ]] && cmd "//c ExcelProcessor.exe prcscr_dlcitems.xls > NUL" && continue
+	[[ "${file}" = "prcscr_vala.xls" ]] && cmd "//c ExcelProcessor.exe prcscr_vala.xls > NUL" && continue
+	[[ "${file}" = "rand_locations.xls" ]] && cmd "//c ExcelProcessor.exe rand_locations.xls > NUL" && continue
+	[[ "${file}" = "treasure_system.xls" ]] && cmd "//c ExcelProcessor.exe treasure_system.xls > NUL" && continue
 done
 
 # Change the GDA file extension to lowercase as uppercase offends me!
