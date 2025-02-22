@@ -2,13 +2,15 @@
 #include "af_utility_h"
 
 void main() {
- 
-    // No Outsiders in Orzammar
-    if (!AF_IsModuleFlagSet(AF_GENERAL_FLAG, AF_GENERAL_ORZOUTS_05)) {
+
+    /* Run one-time code */
+    if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_ORZ05AL)) {
+
+        // No Outsiders in Orzammar
         // Get the load templates
         string sBerserker = "orz260cr_prov_fight_3";
         string sChampion = "orz260cr_prov_fight_2";
-        
+
         object oArea = GetObjectByTag("orz260ar_proving");
         object[] oFighters = GetObjectsInArea(oArea, "orz260cr_prov_lite");
         int i;
@@ -22,7 +24,6 @@ void main() {
                 LoadItemsFromTemplate(oFighters[i], sChampion);
             }
         }
-        AF_SetModuleFlag(AF_GENERAL_FLAG, AF_GENERAL_ORZOUTS_05);
+        AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_ORZ05AL);
     }
-
 }

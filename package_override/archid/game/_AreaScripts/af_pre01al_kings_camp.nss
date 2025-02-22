@@ -1,12 +1,21 @@
+#include "af_utility_h"
+
 void main() {
-                                     
-    // Alistair's Oath
-    object oAlistair = GetObjectByTag("gen00fl_alistair");
-    if (!IsFollower(oAlistair) && !IsObjectValid(GetItemInEquipSlot(INVENTORY_SLOT_NECK, oAlistair))) {
-        CreateItemOnObject(R"gen_im_acc_amu_war.uti", oAlistair);
-        object oItem = GetItemPossessedBy(oAlistair, "gen_im_acc_amu_war");
-        RemoveItemProperty(oItem, 10018);
-        AddItemProperty(oItem, 6030, 1);
-        EquipItem(oAlistair, oItem);
+
+    /* Run one-time code */
+    if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_PRE01AL)) {
+        object oContainer;
+        
+        // Alistair's Oath
+        object oAlistair = GetObjectByTag("gen00fl_alistair");
+        if (!IsFollower(oAlistair) && !IsObjectValid(GetItemInEquipSlot(INVENTORY_SLOT_NECK, oAlistair))) {
+            CreateItemOnObject(R"gen_im_acc_amu_war.uti", oAlistair);
+            object oItem = GetItemPossessedBy(oAlistair, "gen_im_acc_amu_war");
+            RemoveItemProperty(oItem, 10018);
+            AddItemProperty(oItem, 6030, 1);
+            EquipItem(oAlistair, oItem);
+        }
+
+        AF_SetModuleFlag(AF_DAOAREA2_FLAG, AF_DAOAREA2_PRE01AL);
     }
 }

@@ -2,12 +2,16 @@
 
 void main() {
 
-     // Add Feastday King Marics Shield
-    if (!AF_IsModuleFlagSet(AF_FEASTITEMS_FLAG, AF_FEAST_KING_MARICS_SHIELD)) {
-        object oContainer = GetObjectByTag("genip_chest_iron");
+    /* Run one-time code */
+    if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_DEN971AR)) {
+        object oContainer;            
+        
+        // Add Feastday King Marics Shield
+        oContainer = GetObjectByTag("genip_chest_iron");
         if (IsObjectValid(oContainer)) {
             CreateItemOnObject(R"val_im_gift_shield.uti", oContainer, 1, "", TRUE);
-            AF_SetModuleFlag(AF_FEASTITEMS_FLAG, AF_FEAST_KING_MARICS_SHIELD);
         }
+
+        AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_DEN971AR);
     }
 }

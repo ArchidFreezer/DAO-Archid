@@ -199,46 +199,42 @@ void AF_SetFollowerWarm(object oFollower) {
 * If the hero already has 3 specialisations when being importing into Awakenign they should not be given another
 */
 void AF_AwakeningSpecFix() {
-    if (!AF_IsModuleFlagSet(AF_GENERAL_FLAG, AF_GENERAL_AWAKENING_SPEC)) {
+    object oChar = GetHero();
+    int iCount = 0;
 
-        object oChar = GetHero();
-        int iCount = 0;
+    if (GetLevel(oChar) >= 22) {
+        if (HasAbility(oChar, 4012) || HasAbility(oChar, 4013) || HasAbility(oChar, 4014)) iCount += 1;
+        if (HasAbility(oChar, 4015) || HasAbility(oChar, 4016) || HasAbility(oChar, 4017)) iCount += 1;
+        if (HasAbility(oChar, 4018) || HasAbility(oChar, 4019) || HasAbility(oChar, 4029)) iCount += 1;
+        if (HasAbility(oChar, 4025) || HasAbility(oChar, 4021) || HasAbility(oChar, 4030)) iCount += 1;
+        if (HasAbility(oChar, 401000) || HasAbility(oChar, 401002) || HasAbility(oChar, 401004)) iCount += 1;
+        if (HasAbility(oChar, 401001) || HasAbility(oChar, 401003) || HasAbility(oChar, 401005)) iCount += 1;
 
-        if (GetLevel(oChar) >= 22) {
-            if (HasAbility(oChar, 4012) || HasAbility(oChar, 4013) || HasAbility(oChar, 4014)) iCount += 1;
-            if (HasAbility(oChar, 4015) || HasAbility(oChar, 4016) || HasAbility(oChar, 4017)) iCount += 1;
-            if (HasAbility(oChar, 4018) || HasAbility(oChar, 4019) || HasAbility(oChar, 4029)) iCount += 1;
-            if (HasAbility(oChar, 4025) || HasAbility(oChar, 4021) || HasAbility(oChar, 4030)) iCount += 1;
-            if (HasAbility(oChar, 401000) || HasAbility(oChar, 401002) || HasAbility(oChar, 401004)) iCount += 1;
-            if (HasAbility(oChar, 401001) || HasAbility(oChar, 401003) || HasAbility(oChar, 401005)) iCount += 1;
+        if (iCount >=3) SetCreatureProperty(oChar, AF_CRE_PROPERTY_SIMPLE_SPECIALIZATION_POINTS, 0.0f, PROPERTY_VALUE_TOTAL);
+        else if (iCount ==2) SetCreatureProperty(oChar, AF_CRE_PROPERTY_SIMPLE_SPECIALIZATION_POINTS, 1.0f, PROPERTY_VALUE_TOTAL);
+        else if (iCount ==1) SetCreatureProperty(oChar, AF_CRE_PROPERTY_SIMPLE_SPECIALIZATION_POINTS, 2.0f, PROPERTY_VALUE_TOTAL);
+        else SetCreatureProperty(oChar, AF_CRE_PROPERTY_SIMPLE_SPECIALIZATION_POINTS, 3.0f, PROPERTY_VALUE_TOTAL);
 
-            if (iCount >=3) SetCreatureProperty(oChar, AF_CRE_PROPERTY_SIMPLE_SPECIALIZATION_POINTS, 0.0f, PROPERTY_VALUE_TOTAL);
-            else if (iCount ==2) SetCreatureProperty(oChar, AF_CRE_PROPERTY_SIMPLE_SPECIALIZATION_POINTS, 1.0f, PROPERTY_VALUE_TOTAL);
-            else if (iCount ==1) SetCreatureProperty(oChar, AF_CRE_PROPERTY_SIMPLE_SPECIALIZATION_POINTS, 2.0f, PROPERTY_VALUE_TOTAL);
-            else SetCreatureProperty(oChar, AF_CRE_PROPERTY_SIMPLE_SPECIALIZATION_POINTS, 3.0f, PROPERTY_VALUE_TOTAL);
-
-            AF_SetModuleFlag(AF_GENERAL_FLAG, AF_GENERAL_AWAKENING_SPEC);
-        }
     }
 }
-     
+
 /**
 * @brief Give Alistairs Rose amulet if he has given the hero the rose plot item
 *
 */
-void AF_CheckAlistairRose() { 
+void AF_CheckAlistairRose() {
     // If we have already given the amulet then we won't give it again
     if (AF_IsModuleFlagSet(AF_GENERAL_FLAG, AF_GENERAL_ALISTAIR_ROSE)) return;
-                                          
+
     // Alistair hasn't given the rose, then don't give the amulet
     if(!WR_GetPlotFlag(PLT_GENPT_ALISTAIR_MAIN, ALISTAIR_MAIN_GIVES_PC_ROSE)) return;
-    
+
     // Alistair hasn't or isn't being romanced, so don't give the amulet
     if(!WR_GetPlotFlag(PLT_GENPT_ALISTAIR_DEFINED, ALISTAIR_DEFINED_ROMANCE_ACTIVE_OR_STILL_IN_LOVE)) return;
-    
+
     // We have checked the condition so give the amulet
     UT_AddItemToInventory(R"af_alistair_rose.uti", 1);
-    
+
     // Set the flag so we don;t give it again
     AF_SetModuleFlag(AF_GENERAL_FLAG, AF_GENERAL_ALISTAIR_ROSE);
 }

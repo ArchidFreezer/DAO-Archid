@@ -2,12 +2,16 @@
 
 void main() {
 
-     // Add Feastday Qunari Prayers for the Dead
-    if (!AF_IsModuleFlagSet(AF_FEASTITEMS_FLAG, AF_FEAST_QUNARI_PRAYERS_DEAD)) {
-        object oContainer = GetObjectByTag("store_orz100cr_faryn");
+    /* Run one-time code */
+    if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_ORZ01AL)) {
+        object oContainer;                     
+        
+        // Add Feastday Qunari Prayers for the Dead
+        oContainer = GetObjectByTag("store_orz100cr_faryn");
         if (IsObjectValid(oContainer)) {
             CreateItemOnObject(R"val_im_gift_cookie.uti", oContainer, 1, "", TRUE);
-            AF_SetModuleFlag(AF_FEASTITEMS_FLAG, AF_FEAST_QUNARI_PRAYERS_DEAD);
         }
+
+        AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_ORZ01AL);
     }
 }

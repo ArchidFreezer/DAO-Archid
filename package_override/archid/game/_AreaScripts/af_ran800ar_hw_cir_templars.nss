@@ -2,8 +2,11 @@
 
 void main()
 {
-    // Swap out templars - Templar Variety mod
-    if (!AF_IsModuleFlagSet(AF_GENERAL_FLAG, AF_GENERAL_TPSWAP_RAN800)) {
+    /* Run one-time code */
+    if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_RAN800AR)) {
+        object oContainer;
+        
+        // Swap out templars - Templar Variety mod
         object oTemplar = GetObjectByTag("ran800cr_templar", 1);
         if (!IsDead(oTemplar)) {
             object oNewTemp = CreateObject(OBJECT_TYPE_CREATURE, R"templar_f_med_low.utc", GetLocation(oTemplar)); //
@@ -40,6 +43,6 @@ void main()
             }
         }
 
-        AF_SetModuleFlag(AF_GENERAL_FLAG, AF_GENERAL_TPSWAP_RAN800);
+        AF_SetModuleFlag(AF_DAOAREA2_FLAG, AF_DAOAREA2_RAN800AR);
     }
 }

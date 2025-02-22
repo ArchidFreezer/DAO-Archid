@@ -1,8 +1,11 @@
 #include "af_utility_h"
 
 void main() {
-    // Swap out templars - Templar Variety mod
-    if (!AF_IsModuleFlagSet(AF_GENERAL_FLAG, AF_GENERAL_TPSWAP_RAN154)) {
+    /* Run one-time code */
+    if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_RAN154AR)) {
+        object oContainer;
+        
+        // Swap out templars - Templar Variety mod
         object oTemplar = GetObjectByTag("ran154cr_templar_a", 1);
         if (!IsDead(oTemplar)) {
             object oNewTemp = CreateObject(OBJECT_TYPE_CREATURE, R"templar_f_heavy.utc", GetLocation(oTemplar)); //
@@ -19,6 +22,6 @@ void main() {
             }
         }
 
-        AF_SetModuleFlag(AF_GENERAL_FLAG, AF_GENERAL_TPSWAP_RAN154);
+        AF_SetModuleFlag(AF_DAOAREA2_FLAG, AF_DAOAREA2_RAN154AR);
     }
 }

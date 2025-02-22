@@ -2,12 +2,16 @@
 
 void main() {
 
-    // Add DLC item Blood Dragon Plate Boots
-    if (!AF_IsModuleFlagSet(AF_DLCITEMS_FLAG1, AF_DLC_BLOOD_DRAGON_PLATE_BOOTS)) {
-        object oContainer = GetObjectByTag("ntb310ip_dragonhorde");
+    /* Run one-time code */
+    if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_NTB310AR)) {
+        object oContainer;                  
+        
+        // Add DLC item Blood Dragon Plate Boots
+        oContainer = GetObjectByTag("ntb310ip_dragonhorde");
         if (IsObjectValid(oContainer)) {
             CreateItemOnObject(R"prm000im_dragon_blood_boots.uti", oContainer, 1, "", TRUE);
-            AF_SetModuleFlag(AF_DLCITEMS_FLAG1, AF_DLC_BLOOD_DRAGON_PLATE_BOOTS);
         }
+
+        AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_NTB310AR);
     }
 }
