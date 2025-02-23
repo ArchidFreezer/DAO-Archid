@@ -1,5 +1,6 @@
 #include "events_h"
 #include "af_nohelmet_h"
+#include "af_respec_h"
 #include "af_utility_h"
 
 void main()
@@ -42,6 +43,15 @@ void main()
                     AF_NoHelmetLeaveGUI(); // No helmet mod
                     break;
             }
+            break;
+        }
+        case EVENT_TYPE_POPUP_RESULT: {
+            // Cycle through all the popup event listeners until one handles the event
+            // Each listener should return TRUE or FALSE based on whether it handled the event on not
+            if(AF_RespecPopupEventHandler(ev)) {
+                break;
+            }
+
             break;
         }
         default:

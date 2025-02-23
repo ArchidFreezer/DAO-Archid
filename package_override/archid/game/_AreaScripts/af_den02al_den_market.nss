@@ -1,3 +1,4 @@
+#include "af_respec_h"
 #include "af_utility_h"
 
 void main() {
@@ -41,6 +42,11 @@ void main() {
         if (IsObjectValid(oContainer)) {
             CreateItemOnObject(R"val_im_gift_parfait.uti", oContainer, 1, "", TRUE);
         }
+
+        // Respec Raven - On top of three barrels
+        location lSpawn = Location(GetArea(GetMainControlled()), Vector(72.14, 45.76, 0.0), -147.0);
+        object oRaven    = CreateObject(OBJECT_TYPE_CREATURE, AF_CRR_RESPEC_RAVEN, lSpawn);
+        SetPosition(oRaven, Vector(71.6, 45.6, 0.97), FALSE);
 
         AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_DEN02AL);
     }

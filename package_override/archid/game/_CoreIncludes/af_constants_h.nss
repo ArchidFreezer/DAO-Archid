@@ -4,6 +4,14 @@
 * This file should not contain component specific values to reduce the need for recompilation
 */
 
+/* Popup Types */
+const int AF_POPUP_INVALID                 = 0;
+const int AF_POPUP_QUESTION                = 1;   // Yes/No
+const int AF_POPUP_RENAME_DOG              = 2;   // Confirm
+const int AF_POPUP_BLOCKING_PLACEABLE      = 3;   // OK
+const int AF_POPUP_MESSAGE                 = 4;   // OK
+const int AF_POPUP_RESPEC_CHAR             = 5;   // Yes/No
+
 /* Log groups */
 const int AF_LOGGROUP_DLCINT = 1;
 
@@ -94,7 +102,7 @@ const int AF_DAOAREA1_NTB02AL     = 0x00800000;
 const int AF_DAOAREA1_NTB310AR    = 0x01000000;
 const int AF_DAOAREA1_NTB330AR    = 0x02000000;
 const int AF_DAOAREA1_NTB340AR    = 0x08000000;
-const int AF_DAOAREA1_ORZ01AL     = 0x04000000;
+const int AF_DAOAREA1_ORZ100AR    = 0x04000000;
 const int AF_DAOAREA1_ORZ02AL     = 0x10000000;
 const int AF_DAOAREA1_ORZ03AL     = 0x20000000;
 const int AF_DAOAREA1_ORZ05AL     = 0x40000000;
@@ -114,6 +122,11 @@ const int AF_DAOAREA2_SHL300AL    = 0x00000400;
 const int AF_DAOAREA2_STR200AR    = 0x00000800;
 const int AF_DAOAREA2_URN01AL     = 0x00001000;
 const int AF_DAOAREA2_URN220AR    = 0x00002000;
+const int AF_DAOAREA2_PRE05AL     = 0x00004000;
+const int AF_DAOAREA2_ARL101AR    = 0x00008000;
+const int AF_DAOAREA2_CIR100AR    = 0x00010000;
+const int AF_DAOAREA2_CAM104AR    = 0x00020000;
+const int AF_DAOAREA2_CAM110AR    = 0x00040000;
 
 /* No Helmet Hack flags - AF_NOHELM_FLAG */
 const int AF_NOHELM_SLOT_ACTIVE   = 0x00000001;
@@ -137,3 +150,4 @@ const int AF_NOHELM_ZEVRAN        = 0x00010000;
 /* General bit flags - AF_GENERAL_FLAG */
 const int AF_GENERAL_AWAKENING_INIT  = 0x00000001;
 const int AF_GENERAL_ALISTAIR_ROSE   = 0x00000002;
+const int AF_GENERAL_RESPEC_USE      = 0x00000004;
