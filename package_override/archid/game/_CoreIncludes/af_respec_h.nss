@@ -41,7 +41,7 @@ const int DLG_PARAM_SPIRITHEALER = 7;
 const int DLG_PARAM_TEMPLAR = 8;
 const int DLG_PARAM_MAGE = 9;
 const int DLG_PARAM_ROGUE = 10;
-const int DLG_PARAM_WARRIOR = 11;  
+const int DLG_PARAM_WARRIOR = 11;
 const int DLG_PARAM_ANY = 12;
 
 ////
@@ -930,55 +930,62 @@ void AF_RespecAttributes(object oCharacter, float fValue = 1.0f)
 **/
 void AF_RespecSkills(object oCharacter) {
     // Master list of all available skills ( 8 rows, 4 ranks, 32 skill points max )
-    int[] aSkillLIst;
+    int[] aSkillList;
     int iSkill =0;
 
     // Coercion (Only the hero has this)
-    aSkillLIst[iSkill++] = AF_ABILITY_MASTER_COERCION;
-    aSkillLIst[iSkill++] = AF_ABILITY_EXPERT_COERCION;
-    aSkillLIst[iSkill++] = AF_ABILITY_IMPROVED_COERCION;
-    aSkillLIst[iSkill++] = AF_ABILITY_COERCION;
+    aSkillList[iSkill++] = AF_ABILITY_MASTER_COERCION;
+    aSkillList[iSkill++] = AF_ABILITY_EXPERT_COERCION;
+    aSkillList[iSkill++] = AF_ABILITY_IMPROVED_COERCION;
+    aSkillList[iSkill++] = AF_ABILITY_COERCION;
 
-    aSkillLIst[iSkill++] = AF_ABILITY_MASTER_STEALING;
-    aSkillLIst[iSkill++] = AF_ABILITY_EXPERT_STEALING;
-    aSkillLIst[iSkill++] = AF_ABILITY_IMPROVED_STEALING;
-    aSkillLIst[iSkill++] = AF_ABILITY_STEALING;
+    aSkillList[iSkill++] = AF_ABILITY_MASTER_STEALING;
+    aSkillList[iSkill++] = AF_ABILITY_EXPERT_STEALING;
+    aSkillList[iSkill++] = AF_ABILITY_IMPROVED_STEALING;
+    aSkillList[iSkill++] = AF_ABILITY_STEALING;
 
-    aSkillLIst[iSkill++] = AF_ABILITY_MASTER_TRAP_MAKING;
-    aSkillLIst[iSkill++] = AF_ABILITY_EXPERT_TRAP_MAKING;
-    aSkillLIst[iSkill++] = AF_ABILITY_IMPROVED_TRAP_MAKING;
-    aSkillLIst[iSkill++] = AF_ABILITY_TRAP_MAKING;
+    aSkillList[iSkill++] = AF_ABILITY_MASTER_TRAP_MAKING;
+    aSkillList[iSkill++] = AF_ABILITY_EXPERT_TRAP_MAKING;
+    aSkillList[iSkill++] = AF_ABILITY_IMPROVED_TRAP_MAKING;
+    aSkillList[iSkill++] = AF_ABILITY_TRAP_MAKING;
 
-    aSkillLIst[iSkill++] = AF_ABILITY_MASTER_SURVIVAL;
-    aSkillLIst[iSkill++] = AF_ABILITY_EXPERT_SURVIVAL;
-    aSkillLIst[iSkill++] = AF_ABILITY_IMPROVED_SURVIVAL;
-    aSkillLIst[iSkill++] = AF_ABILITY_SURVIVAL;
+    aSkillList[iSkill++] = AF_ABILITY_MASTER_SURVIVAL;
+    aSkillList[iSkill++] = AF_ABILITY_EXPERT_SURVIVAL;
+    aSkillList[iSkill++] = AF_ABILITY_IMPROVED_SURVIVAL;
+    aSkillList[iSkill++] = AF_ABILITY_SURVIVAL;
 
-    aSkillLIst[iSkill++] = AF_ABILITY_MASTER_HERBALISM;
-    aSkillLIst[iSkill++] = AF_ABILITY_EXPERT_HERBALISM;
-    aSkillLIst[iSkill++] = AF_ABILITY_IMPROVED_HERBALISM;
-    aSkillLIst[iSkill++] = AF_ABILITY_HERBALISM;
+    aSkillList[iSkill++] = AF_ABILITY_MASTER_HERBALISM;
+    aSkillList[iSkill++] = AF_ABILITY_EXPERT_HERBALISM;
+    aSkillList[iSkill++] = AF_ABILITY_IMPROVED_HERBALISM;
+    aSkillList[iSkill++] = AF_ABILITY_HERBALISM;
 
-    aSkillLIst[iSkill++] = AF_ABILITY_MASTER_POISON_MAKING;
-    aSkillLIst[iSkill++] = AF_ABILITY_EXPERT_POISON_MAKING;
-    aSkillLIst[iSkill++] = AF_ABILITY_IMPROVED_POISON_MAKING;
-    aSkillLIst[iSkill++] = AF_ABILITY_POISON_MAKING;
+    aSkillList[iSkill++] = AF_ABILITY_MASTER_POISON_MAKING;
+    aSkillList[iSkill++] = AF_ABILITY_EXPERT_POISON_MAKING;
+    aSkillList[iSkill++] = AF_ABILITY_IMPROVED_POISON_MAKING;
+    aSkillList[iSkill++] = AF_ABILITY_POISON_MAKING;
 
-    aSkillLIst[iSkill++] = AF_ABILITY_MASTER_COMBAT_TRAINING;
-    aSkillLIst[iSkill++] = AF_ABILITY_EXPERT_COMBAT_TRAINING;
-    aSkillLIst[iSkill++] = AF_ABILITY_IMPROVED_COMBAT_TRAINING;
-    aSkillLIst[iSkill++] = AF_ABILITY_COMBAT_TRAINING;
+    aSkillList[iSkill++] = AF_ABILITY_MASTER_COMBAT_TRAINING;
+    aSkillList[iSkill++] = AF_ABILITY_EXPERT_COMBAT_TRAINING;
+    aSkillList[iSkill++] = AF_ABILITY_IMPROVED_COMBAT_TRAINING;
+    aSkillList[iSkill++] = AF_ABILITY_COMBAT_TRAINING;
 
-    aSkillLIst[iSkill++] = AF_ABILITY_MASTER_COMBAT_TACTICS;
-    aSkillLIst[iSkill++] = AF_ABILITY_EXPERT_COMBAT_TACTICS;
-    aSkillLIst[iSkill++] = AF_ABILITY_IMPROVED_COMBAT_TACTICS;
-    aSkillLIst[iSkill++] = AF_ABILITY_COMBAT_TACTICS;
+    aSkillList[iSkill++] = AF_ABILITY_MASTER_COMBAT_TACTICS;
+    aSkillList[iSkill++] = AF_ABILITY_EXPERT_COMBAT_TACTICS;
+    aSkillList[iSkill++] = AF_ABILITY_IMPROVED_COMBAT_TACTICS;
+    aSkillList[iSkill++] = AF_ABILITY_COMBAT_TACTICS;
 
+
+    // From the SpellShaping mod
+    aSkillList[iSkill++] = AF_ABILITY_SPELLSHAPING;
+    aSkillList[iSkill++] = AF_ABILITY_IMPROVED_SPELLSHAPING;
+    aSkillList[iSkill++] = AF_ABILITY_EXPERT_SPELLSHAPING;
+    aSkillList[iSkill++] = AF_ABILITY_MASTER_SPELLSHAPING;
+    
     // This will loop through the whole skill list array and free up any skill
     // point that is taken. Shale has no assignable skills even though she does have
     // COMBAT_TACTICS_1 hidden. Because of this we want to skip her.
     if ( GetName(oCharacter) != "Shale"  ) {
-        _AF_RespecLoopSkill(aSkillLIst, oCharacter);
+        _AF_RespecLoopSkill(aSkillList, oCharacter);
 
         // Recalculate the amount of available tactics due to the loss of Combat Tactics
         Chargen_SetNumTactics(oCharacter);
