@@ -1,18 +1,25 @@
 #include "wrappers_h"
 #include "af_utility_h"
 
+/**
+* Script for Area List: orz230ar_gangsters_hideout
+*
+* Contains the following areas:
+*   orz230ar_gangsters_hideout  (Carta Hideout)
+*
+*/
 void main() {
 
-    /* Run one-time code */
+    /* orz230ar (Carta Hideout) - run once */
     if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_ORZ230AR)) {
-        object oContainer;     
-        
+        object oContainer;
+
         // Add Feastday Beard Flask
         oContainer = GetObjectByTag("genip_barrel_standard", 2);
         if (IsObjectValid(oContainer)) {
             CreateItemOnObject(R"val_im_gift_flask.uti", oContainer, 1, "", TRUE);
-        }                      
-        
+        }
+
         // No Outsiders in Orzammar
         // Equip all creatures who used to be non-dwarves with berserker gear
         object oArea = GetObjectByTag("orz230ar_gangsters_hideout");

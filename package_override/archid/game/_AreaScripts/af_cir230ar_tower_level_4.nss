@@ -1,23 +1,30 @@
 #include "af_utility_h"
 
+/**
+* Script for Area List: cir230ar_tower_level_4
+*
+* Contains the following areas:
+*   cir230ar_tower_level_4  (Templar Quarters)
+*
+*/
 void main() {
 
-    /* Run one-time code */
+    /* cir230ar (Templar Quarters) - Run once */
     if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_CIR230AR)) {
-        object oContainer;                      
-        
+        object oContainer;
+
         // Add DLC item Blood Dragon Plate Gauntlets
         oContainer = GetObjectByTag("genip_chest_iron", 0);
         if (IsObjectValid(oContainer)) {
             CreateItemOnObject(R"prm000im_dragon_blood_glove.uti", oContainer, 1, "", TRUE);
-        }                            
-        
+        }
+
         // Add DLC item Mark of Vigilance
         oContainer = GetObjectByTag("genip_chest_ornate", 1);
         if (IsObjectValid(oContainer)) {
             CreateItemOnObject(R"prm000im_vigilance.uti", oContainer, 1, "", TRUE);
-        }                                     
-        
+        }
+
         // Swap out templars - Templar Variety mod
         object oTemplar = GetObjectByTag("cir220cr_possessedtemplar", 1);
         if (!IsDead(oTemplar)) {

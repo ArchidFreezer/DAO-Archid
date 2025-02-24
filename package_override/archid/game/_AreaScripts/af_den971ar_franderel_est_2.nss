@@ -1,11 +1,18 @@
 #include "af_utility_h"
 
+/**
+* Script for Area List: den971ar_franderel_estate_2
+*
+* Contains the following areas:
+*   den971ar_franderel_estate_2  (South Wing of Bann Franderel's Estate)
+*
+*/
 void main() {
 
-    /* Run one-time code */
+    /* den971ar (South Wing of Bann Franderel's Estate) - Run once */
     if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_DEN971AR)) {
-        object oContainer;            
-        
+        object oContainer;
+
         // Add Feastday King Marics Shield
         oContainer = GetObjectByTag("genip_chest_iron");
         if (IsObjectValid(oContainer)) {

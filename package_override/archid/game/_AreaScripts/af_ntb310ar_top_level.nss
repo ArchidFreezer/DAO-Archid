@@ -1,11 +1,18 @@
 #include "af_utility_h"
 
+/**
+* Script for Area List: ntb310ar_top_level
+*
+* Contains the following areas:
+*   ntb310ar_top_level   (Ruins Upper Level)
+*
+*/
 void main() {
 
-    /* Run one-time code */
+    /* ntb310ar (Ruins Upper Level) - run once */
     if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_NTB310AR)) {
-        object oContainer;                  
-        
+        object oContainer;
+
         // Add DLC item Blood Dragon Plate Boots
         oContainer = GetObjectByTag("ntb310ip_dragonhorde");
         if (IsObjectValid(oContainer)) {

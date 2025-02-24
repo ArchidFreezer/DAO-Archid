@@ -1,23 +1,32 @@
 #include "af_utility_h"
 
+/**
+* Script for Area List: ntb02al_brecilian_forest
+*
+* Contains the following areas:
+*   brecilian_forestnw_cutscene   (West Brecilian Forest)
+*   ntb200ar_brecilian_forestnw   (West Brecilian Forest)
+*   ntb210ar_brecilian_forestne   (East Brecilian Forest)
+*
+*/
 void main() {
 
-    /* Run one-time code */
-    if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_NTB02AL)) {
+    /* ntb200ar (West Brecilian Forest) - Run once */
+    if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_NTB200AR)) {
         object oContainer;
-        
+
         // Add Feastday Stick
         oContainer = GetObjectByTag("ntb200ip_ironbark");
         if (IsObjectValid(oContainer)) {
             CreateItemOnObject(R"val_im_gift_ball.uti", oContainer, 1, "", TRUE);
-        }                     
-        
+        }
+
         // Add Uncrushable Pigeon
         oContainer = GetObjectByTag("bear_great", 0);
         if (IsObjectValid(oContainer)) {
             CreateItemOnObject(R"val_im_gift_pigeon.uti", oContainer, 1, "", TRUE);
         }
 
-        AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_NTB02AL);
+        AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_NTB200AR);
     }
 }

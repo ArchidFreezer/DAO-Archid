@@ -1,8 +1,15 @@
 #include "af_utility_h"
 
+/**
+* Script for Area List: ran700ar_merchant
+*
+* Contains the following areas:
+*   ran700ar_merchant   (Gentle Path)
+*
+*/
 void main() {
 
-    /* Run one-time code */
+    /* ran700ar (Gentle Path) - run once */
     if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_RAN700AR)) {
         object oContainer = GetObjectByTag("store_ran700cr_merchant");
         if (IsObjectValid(oContainer)) {

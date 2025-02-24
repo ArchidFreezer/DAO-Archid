@@ -1,8 +1,15 @@
 #include "af_utility_h"
 
+/**
+* Script for Area List: cir310ar_fade_burning_tower
+*
+* Contains the following areas:
+*   cir310ar_fade_burning_tower  (Burning Tower)
+*
+*/
 void main()
 {
-    /* Run one-time code */
+    /* cir310ar (Burning Tower) - Run once */
     if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_CIR310AR)) {
 
         // Swap out templars - Templar Variety mod

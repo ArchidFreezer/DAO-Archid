@@ -3,6 +3,13 @@
 #include "af_log_h"
 #include "af_utility_h"
 
+/**
+* Script for Area List: bhm600ar_fade_harrowing
+*
+* Contains the following areas:
+*   bhm600ar_fade_harrowing (The Fade)
+*
+*/
 void main()
 {
     object oContainer = GetObjectByTag("bhhm600ip_healing_kits");

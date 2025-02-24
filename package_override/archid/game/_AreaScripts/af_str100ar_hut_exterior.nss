@@ -4,16 +4,19 @@
 #include "af_utility_h"
 
 /**
-* Awakening starting location
+* Script for Area List: str100ar_hut_exterior
+*
+* Contains the following areas:
+*   str100ar_hut_exterior   (???)  Witch Hunt
+*
 */
-
 void main() {
 
     /* Run the Awakening initialisation code
     *  This should only be run once, but may be run from one of several scripts so it
     *   has it's own varaible */
     if (!AF_IsModuleFlagSet(AF_GENERAL_FLAG, AF_GENERAL_AWAKENING_INIT)) {
-            
+
         object oHero = GetHero();
         object oItem;
         int nItemUpdated = FALSE;
@@ -137,7 +140,7 @@ void main() {
             UT_AddItemToInventory(R"gxa_im_cft_run_103.uti", 1, OBJECT_INVALID, "", TRUE);
             UT_AddItemToInventory(R"gxa_im_cft_run_111.uti", 1, OBJECT_INVALID, "", TRUE);
         }
-        
+
         AF_SetModuleFlag(AF_GENERAL_FLAG, AF_GENERAL_AWAKENING_INIT);
     }
 }

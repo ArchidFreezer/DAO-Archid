@@ -1,11 +1,18 @@
 #include "af_utility_h"
 
-void main()
-{
-    /* Run one-time code */
+/**
+* Script for Area List: ran800ar_hw_cir_templars
+*
+* Contains the following areas:
+*   ran800ar_hw_cir_templars   (Narrow Road)
+*
+*/
+void main() {
+
+    /* ran800ar (Narrow Road) - run once */
     if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_RAN800AR)) {
         object oContainer;
-        
+
         // Swap out templars - Templar Variety mod
         object oTemplar = GetObjectByTag("ran800cr_templar", 1);
         if (!IsDead(oTemplar)) {

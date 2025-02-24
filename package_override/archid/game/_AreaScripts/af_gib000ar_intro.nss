@@ -4,11 +4,15 @@
 #include "af_utility_h"
 
 /**
-* Awakening starting location
+* Script for Area List: gib000ar_intro
+*
+* Contains the following areas:
+*   gib000ar_intro  (???) Awakening DLC
+*
 */
 void main() {
 
-    /* Run one-time code */
+    /* gib000ar (???) - Run once */
     if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_GIB000AR)) {
         object oContainer;
 
@@ -143,7 +147,7 @@ void main() {
             UT_AddItemToInventory(R"gxa_im_cft_run_103.uti", 1, OBJECT_INVALID, "", TRUE);
             UT_AddItemToInventory(R"gxa_im_cft_run_111.uti", 1, OBJECT_INVALID, "", TRUE);
         }
-            
+
         AF_SetModuleFlag(AF_GENERAL_FLAG, AF_GENERAL_AWAKENING_INIT);
     }
 }

@@ -1,9 +1,16 @@
 #include "af_respec_h"
 #include "af_utility_h"
 
+/**
+* Script for Area List: arl101ar_redcliffe_night
+*
+* Contains the following areas:
+*   arl101ar_redcliffe_night (Redcliffe Village Night)
+*
+*/
 void main() {
 
-    /* Run one-time code */
+    /* arl101ar (Redcliffe Village Night) - Run once */
     if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_ARL101AR)) {
 
         // Respec Raven

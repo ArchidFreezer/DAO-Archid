@@ -1,10 +1,17 @@
 #include "wrappers_h"
 #include "af_utility_h"
 
+/**
+* Script for Area List: orz05al_orzammar_proving
+*
+* Contains the following areas:
+*   orz260ar_proving  (Orzammar Proving)
+*
+*/
 void main() {
 
-    /* Run one-time code */
-    if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_ORZ05AL)) {
+    /* orz260ar (Orzammar Proving) - run once */
+    if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_ORZ260AR)) {
 
         // No Outsiders in Orzammar
         // Get the load templates
@@ -24,6 +31,6 @@ void main() {
                 LoadItemsFromTemplate(oFighters[i], sChampion);
             }
         }
-        AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_ORZ05AL);
+        AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_ORZ260AR);
     }
 }

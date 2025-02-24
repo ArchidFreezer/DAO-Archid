@@ -2,17 +2,16 @@
 #include "af_utility_h"
 
 /**
-* Script for Area List: orz01al_orzammar_entrance*
+* Script for Area List: orz01al_orzammar_entrance
 *
 * Contains the following areas:
 *   orz100ar_mountain_pass
 *   orz110ar_hall_of_heroes
 *
 */
-
 void main() {
 
-    /* orz100ar_mountain_pass - run once */
+    /* orz100ar (Frostback Mountain Pass) - run once */
     if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_ORZ100AR)) {
         object oContainer;
 

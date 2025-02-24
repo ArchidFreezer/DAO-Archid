@@ -1,10 +1,17 @@
 #include "af_respec_h"
 #include "af_utility_h"
 
+/**
+* Script for Area List: ntb01al_dalish_camp
+*
+* Contains the following areas:
+*   ntb100ar_dalish_camp   (Dalish Camp)
+*
+*/
 void main() {
 
-    /* Run one-time code */
-    if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_NTB01AL)) {
+    /* ntb100ar (Dalish Camp) - Run once */
+    if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_NTB100AR)) {
         object oContainer;
 
         // Add DLC item Dalish Promise Ring
@@ -18,6 +25,6 @@ void main() {
         object oRaven    = CreateObject(OBJECT_TYPE_CREATURE, AF_CRR_RESPEC_RAVEN, lSpawn);
         SetPosition(oRaven, Vector(264.74, 247.8, 7.85), FALSE);
 
-        AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_NTB01AL);
+        AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_NTB100AR);
     }
 }

@@ -1,18 +1,25 @@
 #include "af_utility_h"
 
+/**
+* Script for Area List: cir220ar_tower_level_3
+*
+* Contains the following areas:
+*   cir220ar_tower_level_3  (Great Hall)
+*
+*/
 void main() {
 
-    /* Run one-time code */
+    /* cir220ar (Great Hall) - Run once */
     if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_CIR220AR)) {
         object oContainer;
-        
+
         // Add DLC item Embris Many Pockets
         oContainer = GetObjectByTag("cir220cr_tranquil_mon", 0);
         if (IsObjectValid(oContainer)) {
             object oItem = CreateItemOnObject(R"prm000im_embri.uti", oContainer, 1, "", TRUE);
             EquipItem(oContainer, oItem);
         }
-        
+
         // Swap out templars - Templar Variety mod
         object oTemplar = GetObjectByTag("cir230cr_possessed_templar", 1);
         if (!IsDead(oTemplar)) {

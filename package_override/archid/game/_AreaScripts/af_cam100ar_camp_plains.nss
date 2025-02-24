@@ -1,9 +1,16 @@
 #include "af_respec_h"
 #include "af_utility_h"
 
+/**
+* Script for Area List: cam100ar_camp_plains
+*
+* Contains the following areas:
+*   cam100ar_camp_plains   (Plains camp)
+*
+*/
 void main() {
 
-    /* cam100ar_camp_plains - Run once */
+    /* cam100ar (Plains camp) - Run once */
     if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_CAM100AR)) {
 
         // Add Feastday Lump of Charcoal

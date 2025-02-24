@@ -1,11 +1,18 @@
 #include "utility_h"
 #include "af_utility_h"
 
-void main()
-{
-    /* Run one-time code */
+/**
+* Script for Area List: str200ar_tower_1
+*
+* Contains the following areas:
+*   str200ar_tower_1   (???)
+*
+*/
+void main() {
+
+    /* str200ar (???) - run once */
     if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_STR200AR)) {
-        
+
         // Swap out templars - Templar Variety mod
         object oTempGen = GetObjectByTag("str200cr_templar");
         location lTemp = GetLocation(oTempGen);

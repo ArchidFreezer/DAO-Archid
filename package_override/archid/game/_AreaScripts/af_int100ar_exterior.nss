@@ -4,15 +4,19 @@
 #include "af_utility_h"
 
 /**
-* Awakening starting location
+* Script for Area List: int100ar_exterior
+*
+* Contains the following areas:
+*   int100ar_exterior  (???) Awakening DLC
+*
 */
 void main() {
 
-    /* Run one-time code */
-    if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_GIB000AR)) {
+    /* int100ar (???) - Run once */
+    if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_INT100AR)) {
         object oContainer;
 
-        AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_GIB000AR);
+        AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_INT100AR);
     }
 
     /* Run the Awakening initialisation code
@@ -142,7 +146,7 @@ void main() {
             UT_AddItemToInventory(R"gxa_im_cft_run_103.uti", 1, OBJECT_INVALID, "", TRUE);
             UT_AddItemToInventory(R"gxa_im_cft_run_111.uti", 1, OBJECT_INVALID, "", TRUE);
         }
-                
+
         AF_SetModuleFlag(AF_GENERAL_FLAG, AF_GENERAL_AWAKENING_INIT);
     }
 }

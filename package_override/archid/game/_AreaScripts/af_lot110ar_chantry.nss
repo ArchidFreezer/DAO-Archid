@@ -1,11 +1,18 @@
 #include "af_utility_h"
 
+/**
+* Script for Area List: lot110ar_chantry
+*
+* Contains the following areas:
+*   lot110ar_chantry (Chantry)
+*
+*/
 void main() {
 
-    /* Run one-time code */
+    /* lot110ar (Chantry) - run once */
     if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_LOT110AR)) {
-        object oContainer;        
-        
+        object oContainer;
+
         // Add Feastday Chant of Light
         oContainer = GetObjectByTag("lot100ip_holy_sym_chest");
         if (IsObjectValid(oContainer)) {

@@ -1,10 +1,18 @@
 #include "af_utility_h"
 
+/**
+* Script for Area List: ran154ar_plains_demons_2
+*
+* Contains the following areas:
+*   ran154ar_plains_demons_2  (Lakeside Road)
+*
+*/
 void main() {
-    /* Run one-time code */
+
+    /* ran154ar (Lakeside Road) - run once */
     if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_RAN154AR)) {
         object oContainer;
-        
+
         // Swap out templars - Templar Variety mod
         object oTemplar = GetObjectByTag("ran154cr_templar_a", 1);
         if (!IsDead(oTemplar)) {
