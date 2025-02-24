@@ -1,6 +1,7 @@
 #include "events_h"
 #include "af_nohelmet_h"
-#include "af_respec_h"
+#include "af_respec_h"                   
+#include "af_spellshaping_h"
 #include "af_utility_h"
 
 void main()
@@ -20,6 +21,7 @@ void main()
         case EVENT_TYPE_MODULE_LOAD: {
             AF_NoHelmetBookAdd();
             AF_CheckAlistairRose();
+            AF_SpellShapingCheckConfig();
             break;
         }
         case EVENT_TYPE_GUI_OPENED: {

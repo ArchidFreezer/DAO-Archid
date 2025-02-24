@@ -1,4 +1,6 @@
 #include "effects_h"
+#include "ability_h"
+#include "af_ability_h"
 
 const int TABLE_EFFECT_OVERRIDE = 6610001;
 const int TABLE_EFFECT_MANAGER = 6610002;
@@ -8,6 +10,87 @@ int CheckCriterion(int nRow, string sCol, int nComparison) {
     return nVal == -1 || nVal == nComparison;
 }
 
+int IsSpellShapingApplicable(int nEffectType, object oCreator) {
+    return (nEffectType == EFFECT_TYPE_DAMAGE || IsEffectTypeHostile(nEffectType) || nEffectType == EFFECT_TYPE_PETRIFY || nEffectType == EFFECT_TYPE_SLIP) &&
+        IsObjectValid(oCreator) && IsObjectValid(OBJECT_SELF) && !IsDead(oCreator) &&
+        HasAbility(oCreator,AF_ABILITY_SPELLSHAPING) && Ability_IsAbilityActive(oCreator, AF_ABILITY_SPELLSHAPING) &&
+        !IsObjectHostile(OBJECT_SELF, oCreator);
+}
+
+float GetCostMultiplier(object oCreator, int nDifficulty) {
+    float fManacost;
+    float fAdjust;
+    switch (nDifficulty) {
+        case GAME_DIFFICULTY_CASUAL: {
+            return 0.0;
+        }
+        case GAME_DIFFICULTY_NORMAL: {
+            fManacost = 0.15;
+            fAdjust = 0.05;
+            break;
+        }
+        case GAME_DIFFICULTY_HARD: {
+            fManacost = 0.30;
+            fAdjust = 0.05;
+            break;
+        }
+        // nightmare, for which no constant is defined apparently
+        default: {
+            fManacost = 0.60;
+            fAdjust = 0.10;
+        }
+    }
+
+    int nRanks = HasAbility(oCreator,AF_ABILITY_IMPROVED_SPELLSHAPING) + HasAbility(oCreator,AF_ABILITY_EXPERT_SPELLSHAPING) + HasAbility(oCreator,AF_ABILITY_MASTER_SPELLSHAPING);
+    return fManacost - nRanks*fAdjust;
+}
+
+int HandleDamage(object oCreator, int nAbility, float fDamage) {
+    if (nAbility == ABILITY_SPELL_BLOOD_SACRIFICE)
+        return FALSE;
+
+    int nDifficulty = GetGameDifficulty();
+    if (nDifficulty == GAME_DIFFICULTY_CASUAL)
+        return TRUE;
+
+    float fCost = fDamage * GetCostMultiplier(oCreator, nDifficulty);
+    //if (Ability_IsBloodMagic(oCreator)) {
+    if (Ability_IsBloodMagic(oCreator)) {
+        int nBloodMagicVFX = 1519;
+        float fMultiplier = 0.8f;
+        if (GetHasEffects(oCreator, EFFECT_TYPE_BLOOD_MAGIC_BONUS))
+            fMultiplier = 0.6f;
+
+        fCost = fCost* fMultiplier;
+
+        // NO need to check health for nightmare mode if using blood magic
+        // because they will die if they run out of health.
+
+        // Effects_ApplyInstantEffectDamage expects positive value
+        Effects_ApplyInstantEffectDamage(oCreator, oCreator, fCost, DAMAGE_TYPE_PLOT, DAMAGE_EFFECT_FLAG_UNRESISTABLE, nAbility, nBloodMagicVFX);
+    } else {
+        // For Nightmare, we stop damage protection when they run out of mana.
+        if (nDifficulty > GAME_DIFFICULTY_HARD) {
+            float fMana = GetCurrentManaStamina(oCreator);
+            if (fMana < fCost)
+                return FALSE;
+        }
+
+        Effect_InstantApplyEffectModifyManaStamina(oCreator, -1.0*fCost);
+    }
+    return TRUE;
+}
+
+int CheckSpellShaping(effect ef) {
+    int nEffectType = GetEffectType(ef);
+    object oCreator = GetEffectCreator(ef);
+    if (IsSpellShapingApplicable(nEffectType, oCreator))
+        return (nEffectType == EFFECT_TYPE_DAMAGE) ? HandleDamage(oCreator, GetEffectAbilityID(ef), GetEffectFloat(ef, 0)) : TRUE;
+
+    return FALSE;
+}
+
+
 void main() {
     // Get event
     event ev = GetCurrentEvent();
@@ -16,6 +99,11 @@ void main() {
     // Get effect
     effect ef = GetCurrentEffect();
     int nEffectType = GetEffectType(ef);
+
+    // Time to check spell shaping
+    if (nEventType == 33 && CheckSpellShaping(ef)) {
+        return;
+    }
 
     // Prep override and listeners
     string sOverride = GetM2DAString(TABLE_EFFECT_OVERRIDE, "Script", nEffectType);
