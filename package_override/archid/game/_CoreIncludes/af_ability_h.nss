@@ -28,6 +28,11 @@ const int AF_ABILITY_IMPROVED_SPELLSHAPING = 6610005;
 const int AF_ABILITY_EXPERT_SPELLSHAPING = 6610006;
 const int AF_ABILITY_MASTER_SPELLSHAPING = 6610007;
 
+const int AF_ABILITY_SPELL_UNLOCK_1 = 6610008;
+const int AF_ABILITY_SPELL_UNLOCK_2 = 6610009;
+const int AF_ABILITY_SPELL_UNLOCK_3 = 6610010;
+
+
 /**
 * Weapon
 **/
@@ -322,7 +327,7 @@ const int AF_ABILITY_REGENERATING_BURST = 300203;
 const int AF_ABILITY_REGENERATING_BURST_EFFECT1 = 300210;    // This is not selectable by the player
 const int AF_ABILITY_ROCK_MASTERY = 300300;
 const int AF_ABILITY_HURL_ROCK = 300301;
-const int AF_ABILITY_EARTHEN_GRASP = 300302;                 
+const int AF_ABILITY_EARTHEN_GRASP = 300302;
 const int AF_ABILITY_ROCK_BARRAGE = 300303;
 const int AF_ABILITY_ROCK_MASTERY_DUMMY = 300305;           // Dummy ability used by af_talent_shl_aoe_duration script
 const int AF_ABILITY_ROCK_MASTERY_EFFECT1 = 300310;         // This is not selectable by the player

@@ -680,6 +680,11 @@ void AF_RespecAbilities(object oCharacter) {
     AF_ABILITIES_MAGE[iMage++] = ABILITY_SPELL_SHARED_FATE;               // Curse of Mortality 11101
     AF_ABILITIES_MAGE[iMage++] = ABILITY_SPELL_DEATH_MAGIC;
     AF_ABILITIES_MAGE[iMage++] = ABILITY_SPELL_DRAIN_LIFE;
+      
+    // Unlock spell
+    AF_ABILITIES_MAGE[iMage++] = AF_ABILITY_SPELL_UNLOCK_1;
+    AF_ABILITIES_MAGE[iMage++] = AF_ABILITY_SPELL_UNLOCK_2;
+    AF_ABILITIES_MAGE[iMage++] = AF_ABILITY_SPELL_UNLOCK_3;
 
     ////
     // DOG TALENTS master table
@@ -980,7 +985,7 @@ void AF_RespecSkills(object oCharacter) {
     aSkillList[iSkill++] = AF_ABILITY_IMPROVED_SPELLSHAPING;
     aSkillList[iSkill++] = AF_ABILITY_EXPERT_SPELLSHAPING;
     aSkillList[iSkill++] = AF_ABILITY_MASTER_SPELLSHAPING;
-    
+
     // This will loop through the whole skill list array and free up any skill
     // point that is taken. Shale has no assignable skills even though she does have
     // COMBAT_TACTICS_1 hidden. Because of this we want to skip her.
