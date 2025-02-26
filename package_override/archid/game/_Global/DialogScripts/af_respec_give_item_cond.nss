@@ -5,66 +5,92 @@
 /**
 * Dialog conditional
 * The dialog line associated with this script will only be shown if the player does not already have a respec potion
-*/
+*/ 
 
 int StartingConditional()
 {
     object oCharacter = GetMainControlled();
     int nParam = GetConversationEntryParameter();
     int nReturn = FALSE;
-    
+
     AF_LogDebug("   Dialog condition script param: " + IntToString(nParam), AF_LOGGROUP_RESPEC);
+
+/*    int bAchAssassin = GetHasAchievementByID(ACH_HAS_ASSASSIN);
+    int bAchBerserker = GetHasAchievementByID(ACH_HAS_BERSERKER);
+    int bAchChampion = GetHasAchievementByID(ACH_HAS_CHAMPION);
+    int bAchDuelist = GetHasAchievementByID(ACH_HAS_DUELIST);
+    int bAchRanger = GetHasAchievementByID(ACH_HAS_RANGER);
+    int bAchReaver = GetHasAchievementByID(ACH_HAS_REAVER);
+    int bAchTemplar = GetHasAchievementByID(ACH_HAS_TEMPLAR);
+    int bAchArcaneWarrior = GetHasAchievementByID(ACH_HAS_ARCANEWARRIOR);
+    int bAchBard = GetHasAchievementByID(ACH_HAS_BARD);
+    int bAchBloodMage = GetHasAchievementByID(ACH_HAS_BLOODMAGE);
+    int bAchShapeshifter = GetHasAchievementByID(ACH_HAS_SHAPESHIFTER);
+    int bAchSpiritHealer = GetHasAchievementByID(ACH_HAS_SPIRITHEALER); */
+
+    int bAchAssassin = WR_GetPlotFlag(PLT_GENPT_CORE_ACHIEVEMENTS, ACH_HAS_ASSASSIN);
+    int bAchBerserker = WR_GetPlotFlag(PLT_GENPT_CORE_ACHIEVEMENTS, ACH_HAS_BERSERKER);
+    int bAchChampion = WR_GetPlotFlag(PLT_GENPT_CORE_ACHIEVEMENTS, ACH_HAS_CHAMPION);
+    int bAchDuelist = WR_GetPlotFlag(PLT_GENPT_CORE_ACHIEVEMENTS, ACH_HAS_DUELIST);
+    int bAchRanger = WR_GetPlotFlag(PLT_GENPT_CORE_ACHIEVEMENTS, ACH_HAS_RANGER);
+    int bAchReaver = WR_GetPlotFlag(PLT_GENPT_CORE_ACHIEVEMENTS, ACH_HAS_REAVER);
+    int bAchTemplar = WR_GetPlotFlag(PLT_GENPT_CORE_ACHIEVEMENTS, ACH_HAS_TEMPLAR);
+    int bAchArcaneWarrior = WR_GetPlotFlag(PLT_GENPT_CORE_ACHIEVEMENTS, ACH_HAS_ARCANEWARRIOR);
+    int bAchBard = WR_GetPlotFlag(PLT_GENPT_CORE_ACHIEVEMENTS, ACH_HAS_BARD);
+    int bAchBloodMage = WR_GetPlotFlag(PLT_GENPT_CORE_ACHIEVEMENTS, ACH_HAS_BLOODMAGE);
+    int bAchShapeshifter = WR_GetPlotFlag(PLT_GENPT_CORE_ACHIEVEMENTS, ACH_HAS_SHAPESHIFTER);
+    int bAchSpiritHealer = WR_GetPlotFlag(PLT_GENPT_CORE_ACHIEVEMENTS, ACH_HAS_SPIRITHEALER);
 
     switch (nParam) {
         case DLG_PARAM_POTION: {
             nReturn = !CountItemsByTag(oCharacter, AF_ITM_RESPEC_POTION);
-            break;    
+            break;
         }
         case DLG_PARAM_ASSASSIN: {
-            nReturn = !GetHasAchievementByID(SPEC_ROGUE_ASSASSIN);
-            break;      
+            nReturn = !bAchAssassin;
+            break;
         }
         case DLG_PARAM_BARD: {
-            nReturn = !GetHasAchievementByID(SPEC_ROGUE_BARD);
-            break;  
+            nReturn = !bAchBard;
+            break;
         }
         case DLG_PARAM_BERSERKER: {
-            nReturn = !GetHasAchievementByID(SPEC_WARRIOR_BERSERKER);
-            break;       
+            nReturn = !bAchBerserker;
+            break;
         }
         case DLG_PARAM_RANGER: {
-            nReturn = !GetHasAchievementByID(SPEC_ROGUE_RANGER);
-            break;    
+            nReturn = !bAchRanger;
+            break;
         }
         case DLG_PARAM_SHAPESHIFTER: {
-            nReturn = !GetHasAchievementByID(SPEC_WIZARD_SHAPESHIFTER);
-            break;          
+            nReturn = !bAchShapeshifter;
+            break;
         }
         case DLG_PARAM_SPIRITHEALER: {
-            nReturn = !GetHasAchievementByID(SPEC_WIZARD_SPIRITHEALER);
-            break;          
+            nReturn = !bAchSpiritHealer;
+            break;
         }
         case DLG_PARAM_TEMPLAR: {
-            nReturn = !GetHasAchievementByID(SPEC_WARRIOR_TEMPLAR);
-            break;     
+            nReturn = !bAchTemplar;
+            break;
         }
         case DLG_PARAM_MAGE: {
-            nReturn = (!GetHasAchievementByID(SPEC_WIZARD_SHAPESHIFTER) && !GetHasAchievementByID(SPEC_WIZARD_SPIRITHEALER));
-            break;     
+            nReturn = (!bAchShapeshifter || !bAchSpiritHealer);
+            break;
         }
         case DLG_PARAM_ROGUE: {
-            nReturn = (!GetHasAchievementByID(SPEC_ROGUE_ASSASSIN) && !GetHasAchievementByID(SPEC_ROGUE_BARD) && !GetHasAchievementByID(SPEC_ROGUE_RANGER));
-            break;     
+            nReturn = (!bAchAssassin || !bAchBard || !bAchRanger);
+            break;
         }
         case DLG_PARAM_WARRIOR: {
-            nReturn = (!GetHasAchievementByID(SPEC_WARRIOR_BERSERKER) && !GetHasAchievementByID(SPEC_WARRIOR_TEMPLAR));
+            nReturn = (!bAchBerserker || !bAchTemplar);
             break;
         }
         case DLG_PARAM_ANY: {
-            nReturn = (!GetHasAchievementByID(SPEC_WIZARD_SHAPESHIFTER) && !GetHasAchievementByID(SPEC_WIZARD_SPIRITHEALER) &&
-                       !GetHasAchievementByID(SPEC_ROGUE_ASSASSIN) && !GetHasAchievementByID(SPEC_ROGUE_BARD) && !GetHasAchievementByID(SPEC_ROGUE_RANGER) &&
-                       !GetHasAchievementByID(SPEC_WARRIOR_BERSERKER) && !GetHasAchievementByID(SPEC_WARRIOR_TEMPLAR));
-            break;     
+            nReturn = (!bAchShapeshifter || !bAchSpiritHealer ||
+                       !bAchAssassin || !bAchBard || !bAchRanger ||
+                       !bAchBerserker || !bAchTemplar);
+            break;
         }
     }
     return nReturn;
