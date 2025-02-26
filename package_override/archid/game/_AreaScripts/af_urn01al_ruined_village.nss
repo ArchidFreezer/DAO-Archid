@@ -23,8 +23,8 @@ void main() {
         }
 
         AF_SetModuleFlag(AF_DAOAREA2_FLAG, AF_DAOAREA2_URN110AR);
-    } 
-    
+    }
+
     /* urn130ar (Village Store) - run once */
     if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_URN130AR)) {
         object oContainer;

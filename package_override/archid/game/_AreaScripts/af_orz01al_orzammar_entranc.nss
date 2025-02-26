@@ -11,6 +11,8 @@
 */
 void main() {
 
+    object oArea = GetArea(OBJECT_SELF);
+
     /* orz100ar (Frostback Mountain Pass) - run once */
     if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_ORZ100AR)) {
         object oContainer;
@@ -25,6 +27,9 @@ void main() {
         location lSpawn = Location(GetArea(GetMainControlled()), Vector(128.41, 191.2, 1.0), 180.0);
         object oRaven    = CreateObject(OBJECT_TYPE_CREATURE, AF_CRR_RESPEC_RAVEN, lSpawn);
         SetPosition(oRaven, Vector(128.55, 190.6, 1.52), FALSE);
+        
+        // Deep Mushrooms
+        CreateObject(OBJECT_TYPE_PLACEABLE, R"genip_herb_deepmush2.utp", Location(oArea, Vector(204.444,294.726,6.04715), 0.0));
 
         AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_ORZ100AR);
     }

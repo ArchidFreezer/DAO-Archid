@@ -9,6 +9,8 @@
 *
 */
 void main() {
+    
+    object oArea = GetArea(OBJECT_SELF);
 
     /* orz230ar (Carta Hideout) - run once */
     if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_ORZ230AR)) {
@@ -34,6 +36,12 @@ void main() {
         for (i = 0; i < GetArraySize(oElves); i++) {
             LoadItemsFromTemplate(oElves[i], "orz260cr_prov_fight_3");
         }
+        
+        // Deep Mushrooms
+        CreateObject(OBJECT_TYPE_PLACEABLE, R"genip_herb_deepmush2.utp", Location(oArea, Vector(97.3649,-233.399,-10.0739), 0.0));
+        CreateObject(OBJECT_TYPE_PLACEABLE, R"genip_herb_deepmush2.utp", Location(oArea, Vector(100.271,-128.191,-0.0107007), 90.0));
+        CreateObject(OBJECT_TYPE_PLACEABLE, R"genip_herb_deepmush2.utp", Location(oArea, Vector(148.796,-129.986,-1.70084), 0.0));
+
 
         AF_SetModuleFlag(AF_DAOAREA2_FLAG, AF_DAOAREA2_ORZ230AR);
     }
