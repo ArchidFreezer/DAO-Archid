@@ -185,3 +185,8 @@ const int AF_NOHELM_ZEVRAN        = 0x00010000;
 const int AF_GENERAL_AWAKENING_INIT  = 0x00000001;
 const int AF_GENERAL_ALISTAIR_ROSE   = 0x00000002;
 const int AF_GENERAL_RESPEC_USE      = 0x00000004;
+
+/**
+* Objects used across mulitple scripts
+*/
+const resource AF_IPR_CAMP_MERCH_CHEST          = R"af_ip_camp_merch_chest.utp";
