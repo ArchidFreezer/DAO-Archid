@@ -150,7 +150,7 @@ const float AF_SH_CON = 13.0f;
 * @param oCreature - The creature
 * @author weriK
 **/
-float AF_GetStr(object oCreature)
+float _AF_GetStr(object oCreature)
 {
     return IntToFloat(GetCreatureAttribute(oCreature, PROPERTY_ATTRIBUTE_STRENGTH, PROPERTY_VALUE_BASE));
 }
@@ -159,7 +159,7 @@ float AF_GetStr(object oCreature)
 * @param oCreature - The creature
 * @author weriK
 **/
-float AF_GetDex(object oCreature)
+float _AF_GetDex(object oCreature)
 {
     return IntToFloat(GetCreatureAttribute(oCreature, PROPERTY_ATTRIBUTE_DEXTERITY, PROPERTY_VALUE_BASE));
 }
@@ -168,7 +168,7 @@ float AF_GetDex(object oCreature)
 * @param oCreature - The creature
 * @author weriK
 **/
-float AF_GetWil(object oCreature)
+float _AF_GetWil(object oCreature)
 {
     return IntToFloat(GetCreatureAttribute(oCreature, PROPERTY_ATTRIBUTE_WILLPOWER, PROPERTY_VALUE_BASE));
 }
@@ -177,7 +177,7 @@ float AF_GetWil(object oCreature)
 * @param oCreature - The creature
 * @author weriK
 **/
-float AF_GetMag(object oCreature)
+float _AF_GetMag(object oCreature)
 {
     return IntToFloat(GetCreatureAttribute(oCreature, PROPERTY_ATTRIBUTE_MAGIC, PROPERTY_VALUE_BASE));
 }
@@ -186,7 +186,7 @@ float AF_GetMag(object oCreature)
 * @param oCreature - The creature
 * @author weriK
 **/
-float AF_GetInt(object oCreature)
+float _AF_GetInt(object oCreature)
 {
     return IntToFloat(GetCreatureAttribute(oCreature, PROPERTY_ATTRIBUTE_INTELLIGENCE, PROPERTY_VALUE_BASE));
 }
@@ -195,7 +195,7 @@ float AF_GetInt(object oCreature)
 * @param oCreature - The creature
 * @author weriK
 **/
-float AF_GetCon(object oCreature)
+float _AF_GetCon(object oCreature)
 {
     return IntToFloat(GetCreatureAttribute(oCreature, PROPERTY_ATTRIBUTE_CONSTITUTION, PROPERTY_VALUE_BASE));
 }
@@ -210,7 +210,7 @@ float AF_GetCon(object oCreature)
 * @param fCon    - Specifies the constitution attribute's value, 1.0f by default.
 * @author weriK
 **/
-void AF_SetAllBaseAttributes(object oCreature,
+void _AF_SetAllBaseAttributes(object oCreature,
                               float fStr = 1.0f,
                               float fDex = 1.0f,
                               float fWil = 1.0f,
@@ -226,23 +226,12 @@ void AF_SetAllBaseAttributes(object oCreature,
     SetCreatureProperty( oCreature, PROPERTY_ATTRIBUTE_CONSTITUTION, fCon, PROPERTY_VALUE_BASE);
 }
 
-/** @brief Sets an attribute to the specified value
-* @param oCreature - The creature
-* @param nProp     - The ID of the attribute we wish to change
-* @param fValue    - Specifies the attribute value, 1.0f by default.
-* @author weriK
-**/
-void AF_SetBaseAttribute(object oCreature, int nProp, float fValue = 1.0f)
-{
-    SetCreatureProperty( oCreature, nProp, fValue, PROPERTY_VALUE_BASE);
-}
-
 /** @brief Gives a specified amount of attribute points to the creature
 * @param oCreature - The creature
 * @param fValue    - Specifies the amount, 1.0f by default.
 * @author weriK
 **/
-void AF_GiveAttributePoints(object oCreature, float fValue = 1.0f)
+void _AF_GiveAttributePoints(object oCreature, float fValue = 1.0f)
 {
     // First check if the character has unassigned attribute points
     float fUnassigned = IntToFloat(GetCreatureAttribute(oCreature, PROPERTY_SIMPLE_ATTRIBUTE_POINTS, PROPERTY_VALUE_TOTAL));
@@ -251,65 +240,21 @@ void AF_GiveAttributePoints(object oCreature, float fValue = 1.0f)
     SetCreatureProperty(oCreature, PROPERTY_SIMPLE_ATTRIBUTE_POINTS, fValue+fUnassigned);
 }
 
-/** @brief Gives a specified amount of skill points to the creature
-* @param oCreature - The creature
-* @param fValue    - Specifies the amount, 1.0f by default.
-* @author weriK
-**/
-void AF_GiveSkillPoints(object oCreature, float fValue = 1.0f)
-{
-    float fUnassigned = IntToFloat(GetCreatureAttribute(oCreature, PROPERTY_SIMPLE_SKILL_POINTS, PROPERTY_VALUE_TOTAL));
-    SetCreatureProperty(oCreature, PROPERTY_SIMPLE_SKILL_POINTS, fValue+fUnassigned);
-}
-
-/** @brief Gives a specified amount of spell/talent points to the creature
-* @param oCreature - The creature
-* @param fValue    - Specifies the amount, 1.0f by default.
-* @author weriK
-**/
-void AF_GiveTalentPoints(object oCreature, float fValue = 1.0f)
-{
-    float fUnassigned = IntToFloat(GetCreatureAttribute(oCreature, PROPERTY_SIMPLE_TALENT_POINTS, PROPERTY_VALUE_TOTAL));
-    SetCreatureProperty(oCreature, PROPERTY_SIMPLE_TALENT_POINTS, fValue+fUnassigned);
-}
-
-/** @brief Gives a specified amount of specialization points to the creature
-* @param oCreature - The creature
-* @param fValue    - Specifies the amount, 1.0f by default.
-* @author weriK
-**/
-void AF_GiveSpecPoints(object oCreature, float fValue = 1.0f)
-{
-    float fUnassigned = IntToFloat(GetCreatureAttribute(oCreature, 38, PROPERTY_VALUE_TOTAL));
-    SetCreatureProperty(oCreature, 38, fValue+fUnassigned);  // 38 is the spec point ID
-
-}
-
 /** @brief Resets the specified specialization if the creature has it and returns a specialization point
 * @param oCreature - The creature
 * @param iSpec     - Property ID of the specialization
 * @author weriK
 **/
-void AF_FreeSpecialization(object oCreature, int iSpec)
+void _AF_FreeSpecialization(object oCreature, int iSpec)
 {
     // Check whether the creature currently has the specialization learned
     // if it does, we remove it and give one spec point in return
     if ( HasAbility(oCreature, iSpec) )
     {
         RemoveAbility(oCreature, iSpec);
-        AF_GiveSpecPoints(oCreature);
+        float fUnassigned = IntToFloat(GetCreatureAttribute(oCreature, 38, PROPERTY_VALUE_TOTAL));
+        SetCreatureProperty(oCreature, 38, 1.0f + fUnassigned);  // 38 is the spec point ID
     }
-}
-
-/** @brief Clears all abilities in the creatures quickslots
-* @param oCreature - The creature
-* @author weriK
-**/
-void AF_ClearQuickslots(object oCreature)
-{
-    int i;
-    for ( i = 0; i< 256; i++ )
-        SetQuickslot(oCreature, i, 0);
 }
 
 /** @brief Loops through an ability array and resets spells and talents
@@ -340,7 +285,8 @@ void _AF_RespecLoopAbility(int[] arAbilityID, object oCharacter) {
 
             // Unlearn the talent
             RemoveAbility(oCharacter, arAbilityID[i]);
-            AF_GiveTalentPoints(oCharacter, 1.0f);
+            float fUnassigned = IntToFloat(GetCreatureAttribute(oCharacter, PROPERTY_SIMPLE_TALENT_POINTS, PROPERTY_VALUE_TOTAL));
+            SetCreatureProperty(oCharacter, PROPERTY_SIMPLE_TALENT_POINTS, 1.0f +fUnassigned);
         } // ! if
     } // ! for
 }
@@ -369,7 +315,8 @@ void _AF_RespecLoopSkill(int[] arAbilityID, object oCharacter){
             AF_LogInfo("   Skill on char: " + IntToString(arAbilityID[i]), AF_LOGGROUP_RESPEC);
             // Unlearn the talent
             RemoveAbility(oCharacter, arAbilityID[i]);
-            AF_GiveSkillPoints(oCharacter, 1.0f);
+            float fUnassigned = IntToFloat(GetCreatureAttribute(oCharacter, PROPERTY_SIMPLE_SKILL_POINTS, PROPERTY_VALUE_TOTAL));
+            SetCreatureProperty(oCharacter, PROPERTY_SIMPLE_SKILL_POINTS, 1.0f + fUnassigned);
         }
     }
 }
@@ -385,7 +332,7 @@ void _AF_RespecLoopSkill(int[] arAbilityID, object oCharacter){
 * @param oCharacter - The character
 * @author weriK
 **/
-void AF_RespecAbilities(object oCharacter) {
+void _AF_RespecAbilities(object oCharacter) {
     // Ok this part is well *cough* not very fun
     // *wave* to bioware for a GetLearnedAbilitiesArray() function
 
@@ -753,19 +700,19 @@ void AF_RespecAbilities(object oCharacter) {
         _AF_RespecLoopAbility(AF_ABILITIES_MAGE, oCharacter);
 
         // Specializations
-        AF_FreeSpecialization(oCharacter, AF_ABILITY_ARCANE_WARRIOR);
-        AF_FreeSpecialization(oCharacter, AF_ABILITY_BLOOD_MAGE);
-        AF_FreeSpecialization(oCharacter, AF_ABILITY_SHAPE_SHIFTER);
-        AF_FreeSpecialization(oCharacter, AF_ABILITY_SPIRIT_HEALER);
+        _AF_FreeSpecialization(oCharacter, AF_ABILITY_ARCANE_WARRIOR);
+        _AF_FreeSpecialization(oCharacter, AF_ABILITY_BLOOD_MAGE);
+        _AF_FreeSpecialization(oCharacter, AF_ABILITY_SHAPE_SHIFTER);
+        _AF_FreeSpecialization(oCharacter, AF_ABILITY_SPIRIT_HEALER);
     } else if ( GetCreatureCoreClass(oCharacter) == CLASS_ROGUE ) {
         // Free up the rogue talents
         _AF_RespecLoopAbility(AF_ABILITIES_ROGUE, oCharacter);
 
         // Specializations
-        AF_FreeSpecialization(oCharacter, AF_ABILITY_ASSASSIN);
-        AF_FreeSpecialization(oCharacter, AF_ABILITY_BARD);
-        AF_FreeSpecialization(oCharacter, AF_ABILITY_DUELIST);
-        AF_FreeSpecialization(oCharacter, AF_ABILITY_RANGER);
+        _AF_FreeSpecialization(oCharacter, AF_ABILITY_ASSASSIN);
+        _AF_FreeSpecialization(oCharacter, AF_ABILITY_BARD);
+        _AF_FreeSpecialization(oCharacter, AF_ABILITY_DUELIST);
+        _AF_FreeSpecialization(oCharacter, AF_ABILITY_RANGER);
 
         // Let's make sure we are not stuck in stealth
         if (IsStealthy(oCharacter) == TRUE)
@@ -780,10 +727,10 @@ void AF_RespecAbilities(object oCharacter) {
             _AF_RespecLoopAbility(AF_ABILITIES_WARRIOR, oCharacter);
 
             // Specializations
-            AF_FreeSpecialization(oCharacter, AF_ABILITY_CHAMPION);
-            AF_FreeSpecialization(oCharacter, AF_ABILITY_TEMPLAR);
-            AF_FreeSpecialization(oCharacter, AF_ABILITY_BERSERKER);
-            AF_FreeSpecialization(oCharacter, AF_ABILITY_REAVER);
+            _AF_FreeSpecialization(oCharacter, AF_ABILITY_CHAMPION);
+            _AF_FreeSpecialization(oCharacter, AF_ABILITY_TEMPLAR);
+            _AF_FreeSpecialization(oCharacter, AF_ABILITY_BERSERKER);
+            _AF_FreeSpecialization(oCharacter, AF_ABILITY_REAVER);
         }
     } else if ( GetCreatureCoreClass(oCharacter) == CLASS_DOG ) {
         // Free up the dog talents
@@ -793,7 +740,7 @@ void AF_RespecAbilities(object oCharacter) {
         _AF_RespecLoopAbility(AF_ABILITIES_SHALE, oCharacter);
     }
 
-} // ! AF_RespecAbilities
+} // ! _AF_RespecAbilities
 
 
 /** @brief Resets the attribute points
@@ -807,16 +754,16 @@ void AF_RespecAbilities(object oCharacter) {
 * @param fValue     - Starting value of every attribute after reset
 * @author weriK
 **/
-void AF_RespecAttributes(object oCharacter, float fValue = 1.0f)
+void _AF_RespecAttributes(object oCharacter, float fValue = 1.0f)
 {
     // Retrieve the base attribute values and
     // calculate the total amount we will have to give back to the player.
-    float fStr = AF_GetStr(oCharacter);
-    float fDex = AF_GetDex(oCharacter);
-    float fWil = AF_GetWil(oCharacter);
-    float fMag = AF_GetMag(oCharacter);
-    float fInt = AF_GetInt(oCharacter);
-    float fCon = AF_GetCon(oCharacter);
+    float fStr = _AF_GetStr(oCharacter);
+    float fDex = _AF_GetDex(oCharacter);
+    float fWil = _AF_GetWil(oCharacter);
+    float fMag = _AF_GetMag(oCharacter);
+    float fInt = _AF_GetInt(oCharacter);
+    float fCon = _AF_GetCon(oCharacter);
     float fSum = fStr+fDex+fWil+fMag+fInt+fCon;
 
     // Retrieve the character's race and core class
@@ -833,21 +780,21 @@ void AF_RespecAttributes(object oCharacter, float fValue = 1.0f)
         case RACE_HUMAN: {
             switch (iClass) {
                 case CLASS_ROGUE: {
-                    AF_SetAllBaseAttributes(oCharacter, AF_HR_STR, AF_HR_DEX, AF_HR_WIL, AF_HR_MAG, AF_HR_INT, AF_HR_CON);
+                    _AF_SetAllBaseAttributes(oCharacter, AF_HR_STR, AF_HR_DEX, AF_HR_WIL, AF_HR_MAG, AF_HR_INT, AF_HR_CON);
                     // Return the rest of the attribute points to the characters.
                     // Every character has AF_START_ATTR_SUM points spent by default
                     // at character generation (excluding the extra 5 you can choose)
-                    AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_HUMANOID);
+                    _AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_HUMANOID);
                     break;
                 }
                 case CLASS_WARRIOR: {
-                    AF_SetAllBaseAttributes(oCharacter, AF_HW_STR, AF_HW_DEX, AF_HW_WIL, AF_HW_MAG, AF_HW_INT, AF_HW_CON);
-                    AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_HUMANOID);
+                    _AF_SetAllBaseAttributes(oCharacter, AF_HW_STR, AF_HW_DEX, AF_HW_WIL, AF_HW_MAG, AF_HW_INT, AF_HW_CON);
+                    _AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_HUMANOID);
                     break;
                 }
                 case CLASS_WIZARD: {
-                    AF_SetAllBaseAttributes(oCharacter, AF_HM_STR, AF_HM_DEX, AF_HM_WIL, AF_HM_MAG, AF_HM_INT, AF_HM_CON);
-                    AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_HUMANOID);
+                    _AF_SetAllBaseAttributes(oCharacter, AF_HM_STR, AF_HM_DEX, AF_HM_WIL, AF_HM_MAG, AF_HM_INT, AF_HM_CON);
+                    _AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_HUMANOID);
                     break;
                 }
             } // ! switch class
@@ -858,18 +805,18 @@ void AF_RespecAttributes(object oCharacter, float fValue = 1.0f)
         case RACE_ELF: {
             switch (iClass) {
                 case CLASS_ROGUE: {
-                    AF_SetAllBaseAttributes(oCharacter, AF_ER_STR, AF_ER_DEX, AF_ER_WIL, AF_ER_MAG, AF_ER_INT, AF_ER_CON);
-                    AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_HUMANOID);
+                    _AF_SetAllBaseAttributes(oCharacter, AF_ER_STR, AF_ER_DEX, AF_ER_WIL, AF_ER_MAG, AF_ER_INT, AF_ER_CON);
+                    _AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_HUMANOID);
                     break;
                 }
                 case CLASS_WARRIOR: {
-                    AF_SetAllBaseAttributes(oCharacter, AF_EW_STR, AF_EW_DEX, AF_EW_WIL, AF_EW_MAG, AF_EW_INT, AF_EW_CON);
-                    AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_HUMANOID);
+                    _AF_SetAllBaseAttributes(oCharacter, AF_EW_STR, AF_EW_DEX, AF_EW_WIL, AF_EW_MAG, AF_EW_INT, AF_EW_CON);
+                    _AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_HUMANOID);
                     break;
                 }
                 case CLASS_WIZARD: {
-                    AF_SetAllBaseAttributes(oCharacter, AF_EM_STR, AF_EM_DEX, AF_EM_WIL, AF_EM_MAG, AF_EM_INT, AF_EM_CON);
-                    AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_HUMANOID);
+                    _AF_SetAllBaseAttributes(oCharacter, AF_EM_STR, AF_EM_DEX, AF_EM_WIL, AF_EM_MAG, AF_EM_INT, AF_EM_CON);
+                    _AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_HUMANOID);
                     break;
                 }
             } // ! switch class
@@ -880,13 +827,13 @@ void AF_RespecAttributes(object oCharacter, float fValue = 1.0f)
         case RACE_DWARF: {
             switch (iClass) {
                 case CLASS_ROGUE: {
-                    AF_SetAllBaseAttributes(oCharacter, AF_DR_STR, AF_DR_DEX, AF_DR_WIL, AF_DR_MAG, AF_DR_INT, AF_DR_CON);
-                    AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_HUMANOID);
+                    _AF_SetAllBaseAttributes(oCharacter, AF_DR_STR, AF_DR_DEX, AF_DR_WIL, AF_DR_MAG, AF_DR_INT, AF_DR_CON);
+                    _AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_HUMANOID);
                     break;
                 }
                 case CLASS_WARRIOR: {
-                    AF_SetAllBaseAttributes(oCharacter, AF_DW_STR, AF_DW_DEX, AF_DW_WIL, AF_DW_MAG, AF_DW_INT, AF_DW_CON);
-                    AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_HUMANOID);
+                    _AF_SetAllBaseAttributes(oCharacter, AF_DW_STR, AF_DW_DEX, AF_DW_WIL, AF_DW_MAG, AF_DW_INT, AF_DW_CON);
+                    _AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_HUMANOID);
                     break;
                 }
             } // ! switch class
@@ -897,8 +844,8 @@ void AF_RespecAttributes(object oCharacter, float fValue = 1.0f)
         case RACE_QUNARI: {
             if (iClass == CLASS_WARRIOR) {
                 // Only one class here, Sten is a warrior
-                AF_SetAllBaseAttributes(oCharacter, AF_QN_STR, AF_QN_DEX, AF_QN_WIL, AF_QN_MAG, AF_QN_INT, AF_QN_CON);
-                AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_QUNARI);
+                _AF_SetAllBaseAttributes(oCharacter, AF_QN_STR, AF_QN_DEX, AF_QN_WIL, AF_QN_MAG, AF_QN_INT, AF_QN_CON);
+                _AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_QUNARI);
             }
             break;
         } // ! case qunari
@@ -906,8 +853,8 @@ void AF_RespecAttributes(object oCharacter, float fValue = 1.0f)
         // Animal
         case RACE_ANIMAL: {
             if (iClass == CLASS_DOG) {
-                AF_SetAllBaseAttributes(oCharacter, AF_DG_STR, AF_DG_DEX, AF_DG_WIL, AF_DG_MAG, AF_DG_INT, AF_DG_CON);
-                AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_DOG);
+                _AF_SetAllBaseAttributes(oCharacter, AF_DG_STR, AF_DG_DEX, AF_DG_WIL, AF_DG_MAG, AF_DG_INT, AF_DG_CON);
+                _AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_DOG);
             }
             break;
         } // ! case animal
@@ -916,8 +863,8 @@ void AF_RespecAttributes(object oCharacter, float fValue = 1.0f)
         case RACE_GOLEM: {
             // NOTE: CLASS_SHALE (16) is not the correct class
             if (iClass == CLASS_WARRIOR && GetName(oCharacter) == "Shale") {
-                AF_SetAllBaseAttributes(oCharacter, AF_SH_STR, AF_SH_DEX, AF_SH_WIL, AF_SH_MAG, AF_SH_INT, AF_SH_CON);
-                AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_SHALE);
+                _AF_SetAllBaseAttributes(oCharacter, AF_SH_STR, AF_SH_DEX, AF_SH_WIL, AF_SH_MAG, AF_SH_INT, AF_SH_CON);
+                _AF_GiveAttributePoints(oCharacter, fSum-AF_START_ATTR_SUM_SHALE);
             }
             break;
         } // ! case golem
@@ -937,7 +884,7 @@ void AF_RespecAttributes(object oCharacter, float fValue = 1.0f)
 * @param oCharacter - The character
 * @author weriK
 **/
-void AF_RespecSkills(object oCharacter) {
+void _AF_RespecSkills(object oCharacter) {
     // Master list of all available skills ( 8 rows, 4 ranks, 32 skill points max )
     int[] aSkillList;
     int iSkill =0;
@@ -1005,16 +952,17 @@ void _AF_RespecCharacter(object oCharacter)
 {
     // Before anything we must to clear the quickslots
     // This was the cause of mage and Morrigan crashes
-    AF_ClearQuickslots(oCharacter);
+    int i;
+    for ( i = 0; i< 256; i++ ) SetQuickslot(oCharacter, i, 0);
 
     // Respec the spells
-    AF_RespecAbilities(oCharacter);
+    _AF_RespecAbilities(oCharacter);
 
     // Respec the skills
-    AF_RespecSkills(oCharacter);
+    _AF_RespecSkills(oCharacter);
 
     // Respec the attributes
-    AF_RespecAttributes(oCharacter);
+    _AF_RespecAttributes(oCharacter);
 
     // Notify the GUI that we have free points to spend and
     // play the level up animation
