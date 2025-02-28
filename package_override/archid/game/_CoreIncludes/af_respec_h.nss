@@ -680,7 +680,7 @@ void AF_RespecAbilities(object oCharacter) {
     AF_ABILITIES_MAGE[iMage++] = ABILITY_SPELL_SHARED_FATE;               // Curse of Mortality 11101
     AF_ABILITIES_MAGE[iMage++] = ABILITY_SPELL_DEATH_MAGIC;
     AF_ABILITIES_MAGE[iMage++] = ABILITY_SPELL_DRAIN_LIFE;
-      
+
     // Unlock spell
     AF_ABILITIES_MAGE[iMage++] = AF_ABILITY_SPELL_UNLOCK_1;
     AF_ABILITIES_MAGE[iMage++] = AF_ABILITY_SPELL_UNLOCK_2;
@@ -701,6 +701,10 @@ void AF_RespecAbilities(object oCharacter) {
     AF_ABILITIES_DOG[iDog++] = AF_ABILITY_DOG_SHRED;
     AF_ABILITIES_DOG[iDog++] = AF_ABILITY_DOG_CHARGE;
     AF_ABILITIES_DOG[iDog++] = AF_ABILITY_DOG_FORTITUDE;
+    AF_ABILITIES_DOG[iDog++] = AF_ABILITY_DOG_ENDURANCE;
+    AF_ABILITIES_DOG[iDog++] = AF_ABILITY_DOG_BOND;
+    AF_ABILITIES_DOG[iDog++] = AF_ABILITY_DOG_FRIGHTEN;
+    AF_ABILITIES_DOG[iDog++] = AF_ABILITY_DOG_LEAP;
 
     ////
     // SHALE TALENTS master table

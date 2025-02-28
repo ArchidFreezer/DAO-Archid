@@ -1,5 +1,5 @@
 #include "core_h"
-#include "sys_treasure_h" 
+#include "sys_treasure_h"
 #include "af_extradogslot_h"
 
 void main() {
@@ -32,8 +32,8 @@ void main() {
         if (IsObjectHostile(OBJECT_SELF, oHero)) RewardXPParty(0, XP_TYPE_COMBAT, OBJECT_SELF, oHero);
         // if this creature is a combatant, pass the event to the treasure function
         if (GetCombatantType(OBJECT_SELF) != CREATURE_TYPE_NON_COMBATANT) HandleEvent(ev, R"sys_treasure.ncs");
-    } 
-    
+    }
+
     // Extra dog slot
     AF_EDS_EventDying(ev);
 

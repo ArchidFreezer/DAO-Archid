@@ -58,7 +58,7 @@ const int E3_EDS_CONFLICT = 6610151; // Dying and Party Member Fired
 
 const int W1_EDS_CONFLICT = 6610148; // Summon Died Only
 const int W2_EDS_CONFLICT = 6610152; // Command Pending/Complete Only
-const int W3_EDS_CONFLICT = 6610153; // Summon Died and Command Pending/Complete  
+const int W3_EDS_CONFLICT = 6610153; // Summon Died and Command Pending/Complete
 
 // Custom events
 const int EVENT_TYPE_DOG_RAN_AWAY = 6610000;
@@ -125,6 +125,14 @@ const string EDS_DOG_HAS_OVERWHELM = "EDS_OW";
 const string EDS_DOG_HAS_SHRED = "EDS_SH";
 // DOG_HAS_HOWL is type int
 const string EDS_DOG_HAS_HOWL = "EDS_HW";
+// DOG_HAS_ENDURANCE is type int
+const string EDS_DOG_HAS_ENDURANCE = "EDS_EN";
+// DOG_HAS_BOND is type int
+const string EDS_DOG_HAS_BOND = "EDS_BO";
+// DOG_HAS_FRIGHTEN is type int
+const string EDS_DOG_HAS_FRIGHTEN= "EDS_FR";
+// DOG_HAS_LEAP is type int
+const string EDS_DOG_HAS_LEAP = "EDS_LE";
 
 /* Whistle Item */
 
@@ -142,7 +150,7 @@ const resource AF_ITR_EDS_WHISTLE = R"af_eds_dog_whistle.uti";
 // Dog resource
 const resource GEN_FLR_DOG = R"gen00fl_dog.utc";
 
-const resource AF_RES_SYS_TREASURE =  R"sys_treasure.ncs"; 
+const resource AF_RES_SYS_TREASURE =  R"sys_treasure.ncs";
 
 const int STRING_REF_RENAME_DOG = 362390;
 
@@ -180,6 +188,10 @@ void _AF_DogSnapShot() {
             int hasOver   = HasAbility(oDog, ABILITY_TALENT_MONSTER_DOG_OVERWHELM);
             int hasShred  = HasAbility(oDog, ABILITY_TALENT_MONSTER_DOG_SHRED);
             int hasHowl   = HasAbility(oDog, ABILITY_TALENT_MONSTER_MABARI_HOWL);
+            int hasEndur  = HasAbility(oDog, AF_ABILITY_DOG_ENDURANCE);
+            int hasBond   = HasAbility(oDog, AF_ABILITY_DOG_BOND);
+            int hasFright = HasAbility(oDog, AF_ABILITY_DOG_FRIGHTEN);
+            int hasLeap   = HasAbility(oDog, AF_ABILITY_DOG_LEAP);
 
 /*
             AF_LogDebug("Dog SnapShot : ", AF_LOGGROUP_EDS
@@ -209,6 +221,10 @@ void _AF_DogSnapShot() {
             AF_LogDebug("  hasOver    : " + ToString(hasOver), AF_LOGGROUP_EDS
             AF_LogDebug("  hasShred   : " + ToString(hasShred), AF_LOGGROUP_EDS
             AF_LogDebug("  hasHowl    : " + ToString(hasHowl), AF_LOGGROUP_EDS
+            AF_LogDebug("  hasEndur   : " + ToString(hasEndur), AF_LOGGROUP_EDS
+            AF_LogDebug("  hasBond    : " + ToString(hasBond), AF_LOGGROUP_EDS
+            AF_LogDebug("  hasFright  : " + ToString(hasFright), AF_LOGGROUP_EDS
+            AF_LogDebug("  hasLeap    : " + ToString(hasLeap), AF_LOGGROUP_EDS
 */
             // Now store everything in module variables
             object oModule = GetModule();
@@ -237,6 +253,10 @@ void _AF_DogSnapShot() {
             SetLocalInt(oModule,EDS_DOG_HAS_OVERWHELM,hasOver);
             SetLocalInt(oModule,EDS_DOG_HAS_SHRED,hasShred);
             SetLocalInt(oModule,EDS_DOG_HAS_HOWL,hasHowl);
+            SetLocalInt(oModule,EDS_DOG_HAS_ENDURANCE,hasEndur);
+            SetLocalInt(oModule,EDS_DOG_HAS_BOND,hasBond);
+            SetLocalInt(oModule,EDS_DOG_HAS_FRIGHTEN,hasFright);
+            SetLocalInt(oModule,EDS_DOG_HAS_LEAP,hasLeap);
         }
 }
 
@@ -307,7 +327,7 @@ object _AF_GetDogOwner()
     }
     return OBJECT_INVALID;
 }
- 
+
 /**
 * @brief Get the owner of the dog
 *
@@ -328,7 +348,7 @@ string _AF_GetStoredDogOwner() {
 
 /**
 * @brief unattaches the dog from a party member
-* 
+*
 * @param    oCaster party member to unattach the dog from
 * @param    bRes whether the dog should be resurrected if the owner is dead
 * @param    bForceStoredRemoval -> Primarily used by EVENT_PARTY_MEMBER_FIRED
@@ -580,6 +600,28 @@ object _AF_FixBrokenDog() {
         {
             AF_LogDebug("Updating Nemesis Talent]", AF_LOGGROUP_EDS);
             AddAbility(oDog,ABILITY_TALENT_MONSTER_DOG_NEMESIS);
+        }
+        if (GetLocalInt(oModule,EDS_DOG_HAS_ENDURANCE))
+        {
+            AF_LogDebug("Updating Endurance Talent]", AF_LOGGROUP_EDS);
+            AddAbility(oDog,AF_ABILITY_DOG_ENDURANCE);
+        }
+        if (GetLocalInt(oModule,EDS_DOG_HAS_BOND))
+        {
+            AF_LogDebug("Updating Bond Talent]", AF_LOGGROUP_EDS);
+            AddAbility(oDog,AF_ABILITY_DOG_BOND);
+        }
+        if (GetLocalInt(oModule,EDS_DOG_HAS_FRIGHTEN))
+        {
+            AF_LogDebug("Updating Charge Talent]", AF_LOGGROUP_EDS);
+            AddAbility(oDog,AF_ABILITY_DOG_FRIGHTEN);
+            SetQuickslot(oDog, -1, AF_ABILITY_DOG_FRIGHTEN);
+        }
+        if (GetLocalInt(oModule,EDS_DOG_HAS_LEAP))
+        {
+            AF_LogDebug("Updating Charge Talent]", AF_LOGGROUP_EDS);
+            AddAbility(oDog,AF_ABILITY_DOG_LEAP);
+            SetQuickslot(oDog, -1, AF_ABILITY_DOG_LEAP);
         }
     } else {
         AF_LogDebug("Previous Record Not Found. Using Defaults", AF_LOGGROUP_EDS);
@@ -854,7 +896,7 @@ void _AF_Deactivate_DogSlot(object oCaster)
 
 /**
 * @brief removes the dog from the party
-* 
+*
 * If the dog is attached to a party member it is unattached first and then sent back to camp
 */
 void AF_RemoveDog(int bOnlyIfAttached=FALSE) {
@@ -976,7 +1018,7 @@ void AF_ExtraDogSlotGiveDogWhistle()
         AF_LogDebug("Dog Not member of party. Whistle was NOT Created", AF_LOGGROUP_EDS);
     }
 }
-                      
+
 /**
 * @brief Ensuredog attachment status is valid
 *
@@ -1072,7 +1114,7 @@ void AF_Activate_DogSlot(object oCaster, int markSlot=TRUE)
     else
         AF_LogDebug("Summon Dog returned invalid object", AF_LOGGROUP_EDS);
 }
-  
+
 /**
 * @brief Initialises the mod on entering a new area
 *
@@ -1128,7 +1170,7 @@ void AF_ExtraDogSlotLoadingInit() {
     }
   }
 }
-              
+
 /**
 * @brief event handler for when the dog whistlke is blown
 */
@@ -1165,7 +1207,7 @@ void AF_HandleDogWhistle(event ev)
         }
     }
 }
-       
+
 /**
 * @brief event handler for the rename dog popup
 *
