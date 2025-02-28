@@ -32,7 +32,8 @@ const int AF_OPT_RECEIVED_ITEM_DURATION = 12;
 const int AF_OPT_RECEIVED_ITEM_COLOUR = 13;
 
 /* M2DA Table IDs */
-// These are ones to be used across mulitple scripts
+// These are ones to be used across mulitple scripts 
+const int TABLE_PARTY_PICKER = 113;
 const int AF_TABLE_REMOVABLE_EQUIP = 6610007;
 
 /* Creature properties */

@@ -238,3 +238,132 @@ void AF_CheckAlistairRose() {
     // Set the flag so we don;t give it again
     AF_SetModuleFlag(AF_GENERAL_FLAG, AF_GENERAL_ALISTAIR_ROSE);
 }
+                                            
+/**
+* @brief Get party pool member by their tag
+*
+* @param    sTag tag of the party member
+* @return   object of the party pool member
+*/
+object AF_GetPartyPoolMemberByTag(string sTag) {
+    AF_LogDebug("AF_GetPartyPoolMemberByTag Called");
+    object [] arParty = GetPartyPoolList();
+    int i;
+    int nSize = GetArraySize(arParty);
+    for(i = 0; i < nSize; i++) {
+        if (sTag == GetTag(arParty[i])) return arParty[i];
+    }
+    return OBJECT_INVALID;
+}
+
+/**
+* @brief Get party member by their tag
+*
+* @param    sTag tag of the party member
+* @return   object of the party member
+*/
+object AF_GetPartyMemberByTag(string sTag) {
+    AF_LogDebug("AF_GetPartyMemberByTag Called");
+    object [] arParty = GetPartyList();
+    int i;
+    int nSize = GetArraySize(arParty);
+    for(i = 0; i < nSize; i++) {
+        if (sTag == GetTag(arParty[i])) return arParty[i];
+    }
+    return OBJECT_INVALID;
+}
+
+/**
+* @brief Returns if a creature is a summon
+*
+* @param    oCreature creature to check
+* @return   TRUE if the creature is a summon; FALSE otherwise
+*/
+int AF_IsSummon(object oCreature)
+{
+    AF_LogDebug("eds_IsSummon called");
+
+    // A different take. Instead of looking for a flag, we see if their
+    // tag is one of the registered party members from the party_picker
+    // 2DA file. We could also just compare to the tags of the
+    // GetPartyPoolList array, but what if we have lost a companions (they
+    // might have become diconnected).
+
+    int nRows = GetM2DARows(TABLE_PARTY_PICKER);
+    string sTag = GetTag(oCreature);
+    int i;
+    for (i = 0; i < nRows; i++) {
+        if (GetM2DAString(TABLE_PARTY_PICKER,"Tag",i) == sTag) {
+            AF_LogDebug("eds_IsSummon: Creature tag matches entry [" + ToString(i) + "]. Returning false");
+            return FALSE;
+        }
+    }
+    AF_LogDebug("eds_IsSummon: Creature tag did not match any party members. Returning true");
+    return TRUE;
+}
+      
+/**
+* @brief remove a member from the party
+*
+* @param    oMember party member to remove
+* @return   TRUE if the party member was removed; FALSE otherwise
+*/
+int AF_RemoveParyMember(object oMember)
+{
+    if (FALSE == AF_IsSummon(oMember)) {
+        string sTag = GetTag(oMember);
+        int nParty;
+        int nCamp;
+        int nRecruited;
+
+        if (GEN_FL_ALISTAIR == sTag) {
+            nParty  = GEN_ALISTAIR_IN_PARTY;
+            nCamp  = GEN_ALISTAIR_IN_CAMP;
+            nRecruited = GEN_ALISTAIR_RECRUITED;
+        } else if (GEN_FL_DOG == sTag) {
+            nParty  = GEN_DOG_IN_PARTY;
+            nCamp  = GEN_DOG_IN_CAMP;
+            nRecruited = GEN_DOG_RECRUITED;
+        } else if (GEN_FL_LELIANA == sTag) {
+            nParty  = GEN_LELIANA_IN_PARTY;
+            nCamp  = GEN_LELIANA_IN_CAMP;
+            nRecruited = GEN_LELIANA_RECRUITED;
+        } else if (GEN_FL_LOGHAIN == sTag) {
+            nParty  = GEN_LOGHAIN_IN_PARTY;
+            nCamp  = GEN_LOGHAIN_IN_CAMP;
+            nRecruited = GEN_LOGHAIN_RECRUITED;
+        } else if (GEN_FL_MORRIGAN == sTag) {
+            nParty  = GEN_MORRIGAN_IN_PARTY;
+            nCamp  = GEN_MORRIGAN_IN_CAMP;
+            nRecruited = GEN_MORRIGAN_RECRUITED;
+        } else if (GEN_FL_OGHREN == sTag) {
+            nParty  = GEN_OGHREN_IN_PARTY;
+            nCamp  = GEN_OGHREN_IN_CAMP;
+            nRecruited = GEN_OGHREN_RECRUITED;
+        } else if (GEN_FL_SHALE == sTag) {
+            nParty  = GEN_SHALE_IN_PARTY;
+            nCamp  = GEN_SHALE_IN_CAMP;
+            nRecruited = GEN_SHALE_RECRUITED;
+        } else if (GEN_FL_STEN == sTag) {
+            nParty  = GEN_STEN_IN_PARTY;
+            nCamp  = GEN_STEN_IN_CAMP;
+            nRecruited = GEN_STEN_RECRUITED;
+        } else if (GEN_FL_WYNNE == sTag) {
+            nParty  = GEN_WYNNE_IN_PARTY;
+            nCamp  = GEN_WYNNE_IN_CAMP;
+            nRecruited = GEN_WYNNE_RECRUITED;
+        } else if (GEN_FL_ZEVRAN == sTag) {
+            nParty  = GEN_ZEVRAN_IN_PARTY;
+            nCamp  = GEN_ZEVRAN_IN_CAMP;
+            nRecruited = GEN_ZEVRAN_RECRUITED;
+        }
+
+        if(WR_GetPlotFlag( PLT_GEN00PT_PARTY, nRecruited)) {
+            if(WR_GetPlotFlag(PLT_GEN00PT_PARTY, nParty) == TRUE) {
+                WR_SetPlotFlag(PLT_GEN00PT_PARTY, nCamp, TRUE, TRUE);
+                return TRUE;
+            }
+        }
+    }
+    return FALSE;
+}
