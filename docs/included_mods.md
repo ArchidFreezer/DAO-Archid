@@ -10,6 +10,7 @@ For mods where there are alternatives that provide similar functionality and one
 | [A Paragon of Her Kind Cutscene Fixes](https://www.nexusmods.com/dragonage/mods/5324) |  |
 | [A Priest - Not A Mage](https://www.nexusmods.com/dragonage/mods/5207) |  |
 | [Additional Clothing for Kids](https://www.nexusmods.com/dragonage/mods/4393) |  |
+| [Advanced Quickbar](https://www.nexusmods.com/dragonage/mods/706) |  |
 | [AlistairsRose](https://www.nexusmods.com/dragonage/mods/3401) |  |
 | [Alternative Default Eyes](https://www.nexusmods.com/dragonage/mods/5107) |  |
 | [Arcane Horror Replacer](https://www.nexusmods.com/dragonage/mods/6550) |  |
