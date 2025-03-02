@@ -1,0 +1,5 @@
+#include "mk_tf_assertions_h"
+#include "mk_tf_locations_h"
+#include "mk_tf_get_constants_array_h"    
+#include "mk_tf_setup_party_h"
+#include "mk_tf_setup_enemies_h"

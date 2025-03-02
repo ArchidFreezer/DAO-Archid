@@ -59,6 +59,7 @@ For mods where there are alternatives that provide similar functionality and one
 | [Elvorn's Grande Bestiary](https://www.nexusmods.com/dragonage/mods/6098) |  |
 | [Emotion Expressions Less Eye Wrinkles](https://www.nexusmods.com/dragonage/mods/5994) |  |
 | [Epilogue Grey Wardens of Ferelden Armor for Loghain](https://www.nexusmods.com/dragonage/mods/5890) |  |
+| [Even More Advanced Tactics](https://www.nexusmods.com/dragonage/mods/4096) |  |
 | [Extra Dog Slot](https://www.nexusmods.com/dragonage/mods/664) |  |
 | [Fare ye well Duncan](https://www.nexusmods.com/dragonage/mods/4449) |  |
 | [Fereldan Menswear](https://www.nexusmods.com/dragonage/mods/5363) |  |

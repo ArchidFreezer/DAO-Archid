@@ -3,7 +3,8 @@
 #include "var_constants_h"
 #include "sys_itemsets_h"
 #include "af_follower_specs_h"
-#include "af_toggle_modals_h"
+#include "af_toggle_modals_h" 
+#include "at_tools_pet_h"
 
 /*
 * Called after the EVENT_TYPE_PARTY_MEMBER_HIRED standard processing
@@ -34,14 +35,20 @@ void main() {
     for (i = 0; i < nPartySize; i++) {
         AF_ToggleAllAbilities(arParty[i]);
     }
-    
+
     // Dog inspiration
-    if (GetTag(OBJECT_SELF) == GEN_FL_DOG && GetLocalInt(OBJECT_SELF, FOLLOWER_SCALED)) {    
+    if (GetTag(OBJECT_SELF) == GEN_FL_DOG && GetLocalInt(OBJECT_SELF, FOLLOWER_SCALED)) {
         for (i = 1; i <= 4; i++) {
             string sColumn = "bonus" + IntToString(i);
             int nAbility = GetM2DAInt(TABLE_APP_FOLLOWER_BONUSES, sColumn, 2);
             if(!HasAbility(OBJECT_SELF, nAbility)) AddAbility(OBJECT_SELF, nAbility);
         }
+    }
+     
+    // Advanced Tactics
+    if (IsSummoned(OBJECT_SELF)) {
+        AT_CleanAbilities(OBJECT_SELF);
+        AT_EnableTacticsPresetsForSummon(OBJECT_SELF);
     }
     
 

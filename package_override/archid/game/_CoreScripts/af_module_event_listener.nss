@@ -3,12 +3,16 @@
 #include "af_nohelmet_h"
 #include "af_respec_h"
 #include "af_spellshaping_h"
-#include "af_utility_h"
+#include "af_utility_h" 
+#include "talmud_storage_h"
 
 void main()
 {
     event ev = GetCurrentEvent();
     int nEventType = GetEventType(ev);
+    
+    // Handle the Talmud storage
+    Storage_HandleModuleEvents();
 
     // We will watch for every event type and if the one we need
     // appears we will handle it as a special case. We will ignore the rest
