@@ -34,7 +34,7 @@ void main()
             nPossessed = 1 - nPossessed;
 
             /* Hardcoded string ID */
-            string sPossessed = GetStringByStringId(8000129);
+            string sPossessed = GetStringByStringId(6610300);
 
             DisplayFloatyMessage(OBJECT_SELF, sPossessed + ": " + (nPossessed == 1 ? "ON" : "OFF"), FLOATY_HIT, 0xf0dea7);
 
@@ -46,7 +46,7 @@ void main()
             nTraitors = 1 - nTraitors;
 
             /* Hardcoded string ID */
-            string sTraitors = GetStringByStringId(8000131);
+            string sTraitors = GetStringByStringId(6610302);
 
             DisplayFloatyMessage(OBJECT_SELF, sTraitors + ": " + (nTraitors == 1 ? "ON" : "OFF"), FLOATY_HIT, 0xf0dea7);
 
