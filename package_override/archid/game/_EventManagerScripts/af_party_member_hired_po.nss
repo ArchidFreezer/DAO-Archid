@@ -3,7 +3,7 @@
 #include "var_constants_h"
 #include "sys_itemsets_h"
 #include "af_follower_specs_h"
-#include "af_toggle_modals_h" 
+#include "af_toggle_modals_h"
 #include "at_tools_pet_h"
 
 /*
@@ -44,12 +44,12 @@ void main() {
             if(!HasAbility(OBJECT_SELF, nAbility)) AddAbility(OBJECT_SELF, nAbility);
         }
     }
-     
+
     // Advanced Tactics
     if (IsSummoned(OBJECT_SELF)) {
         AT_CleanAbilities(OBJECT_SELF);
         AT_EnableTacticsPresetsForSummon(OBJECT_SELF);
     }
-    
+
 
 }

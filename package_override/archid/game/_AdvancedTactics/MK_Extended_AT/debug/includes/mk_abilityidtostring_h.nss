@@ -2,16 +2,17 @@
 #defsym MK_ABILITY_ID_TO_STRING_H
 
 #include "at_tools_constants_h"
+#include "af_ability_h"
 
 string MK_AbilityIdToString(int nAbilityId)
 {
     switch(nAbilityId)
     {
         // Advanced Tactics
-        case AT_ABILITY_POSSESSED:
-            return "AT_ABILITY_POSSESSED";
-        case AT_ABILITY_TRAITORS:
-            return "AT_ABILITY_TRAITORS";
+        case AF_AT_ABILITY_POSSESSED:
+            return "AF_AT_ABILITY_POSSESSED";
+        case AF_AT_ABILITY_TRAITORS:
+            return "AF_AT_ABILITY_TRAITORS";
 
         case AT_ABILITY_SHIELD_PUMMEL:
             return "AT_ABILITY_SHIELD_PUMMEL";

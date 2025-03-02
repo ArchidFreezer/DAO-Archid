@@ -102,7 +102,7 @@ void main()
             object[]  arAllies = _AT_AI_GetAllies();
             int nSize = GetArraySize(arAllies);
             command cMove;
-            
+
             int i;
             for (i = 0; i < nSize; i++) {
                 object oAlly = arAllies[i];

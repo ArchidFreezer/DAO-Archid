@@ -27,6 +27,8 @@
 #include "sys_soundset_h"
 #include "var_constants_h"
 
+#include "af_ability_h"
+
 /* EventManager */
 #include "af_eventmanager_h"
 
@@ -240,7 +242,7 @@ void main()
 
     _MK_AI_DetermineCombatRound(oLastTarget, nLastCommandType, nCommandStatus, nLastSubCommand);
     MK_PrintToLog("[Command Complete] : Event End");
-    
+
     #ifdef MK_DEBUG_OBJECT_SELF
     MK_LogCommandQueue(OBJECT_SELF);
     MK_LogCreatureVar(OBJECT_SELF);
@@ -250,7 +252,7 @@ void main()
 }
 
  /** @brief ***INTERNAL***
-* Give the optionnal abilities to the group.
+* Give the optional abilities to the group.
 * I give it to whole group to be sure the player can access it with all party members.
 
 * I put that here because it remove the need to have a starting script for the mod, or
@@ -262,9 +264,9 @@ void _MK_AddSkills() {
     MK_PrintToLog("[Command Complete] Section: Add Skills");
     #endif
 
-    if (!HasAbility(OBJECT_SELF, AT_ABILITY_POSSESSED))
-        AddAbility(OBJECT_SELF, AT_ABILITY_POSSESSED);
+    if (!HasAbility(OBJECT_SELF, AF_AT_ABILITY_POSSESSED))
+        AddAbility(OBJECT_SELF, AF_AT_ABILITY_POSSESSED);
 
-    if (!HasAbility(OBJECT_SELF, AT_ABILITY_TRAITORS))
-        AddAbility(OBJECT_SELF, AT_ABILITY_TRAITORS);
+    if (!HasAbility(OBJECT_SELF, AF_AT_ABILITY_TRAITORS))
+        AddAbility(OBJECT_SELF, AF_AT_ABILITY_TRAITORS);
 }

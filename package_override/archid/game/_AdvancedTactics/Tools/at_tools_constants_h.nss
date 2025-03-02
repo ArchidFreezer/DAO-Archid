@@ -10,9 +10,6 @@
 /* Advanced Tactics */
 const int AT_EVENT_TYPE_SKILL_OPTIONS = 500;
 
-const int AT_ABILITY_POSSESSED = 50000;
-const int AT_ABILITY_TRAITORS = 50001;
-
 const int AT_ABILITY_SHIELD_PUMMEL = 1;
 const int AT_ABILITY_SHIELD_MASTERY = 2;
 const int AT_ABILITY_CRITICAL_STRIKE = 3;

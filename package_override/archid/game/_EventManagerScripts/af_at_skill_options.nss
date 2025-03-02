@@ -4,7 +4,7 @@
     Handle AT_EVENT_TYPE_SKILL_OPTIONS
 */
 
-#include "at_tools_constants_h"
+#include "af_ability_h"
 
 /* Advanced Tactics */
 #include "at_tools_log_h"
@@ -30,7 +30,7 @@ void main()
     int nAbility = GetEventInteger(ev, 0);
 
     switch (nAbility) {
-        case AT_ABILITY_POSSESSED: {
+        case AF_AT_ABILITY_POSSESSED: {
             nPossessed = 1 - nPossessed;
 
             /* Hardcoded string ID */
@@ -42,7 +42,7 @@ void main()
 
             break;
         }
-        case AT_ABILITY_TRAITORS: {
+        case AF_AT_ABILITY_TRAITORS: {
             nTraitors = 1 - nTraitors;
 
             /* Hardcoded string ID */
