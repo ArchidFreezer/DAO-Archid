@@ -4,6 +4,8 @@
 //==============================================================================
 //                                INCLUDES
 //==============================================================================
+#include "af_ability_h"
+
 /* Advanced Tactics */
 #include "at_tools_conditions_h"
 #include "at_condition_most_hated_h"
@@ -132,7 +134,7 @@ int _AT_SubCondition_HasDebuff(object oTarget, int nCase)
     {
         case 0:
         {
-            effect[] arEffects = GetEffectsByAbilityId(oTarget, AT_ABILITY_WEAKNESS);
+            effect[] arEffects = GetEffectsByAbilityId(oTarget, AF_ABILITY_WEAKNESS);
 
             if (GetArraySize(arEffects) > 0)
                 return TRUE;
@@ -141,12 +143,12 @@ int _AT_SubCondition_HasDebuff(object oTarget, int nCase)
         }
         case 1:
         {
-            effect[] arEffects = GetEffectsByAbilityId(oTarget, AT_ABILITY_AFFLICTION_HEX);
+            effect[] arEffects = GetEffectsByAbilityId(oTarget, AF_ABILITY_AFFLICTION_HEX);
 
             if (GetArraySize(arEffects) > 0)
                 return TRUE;
 
-            arEffects = GetEffectsByAbilityId(oTarget, AT_ABILITY_VULNERABILITY_HEX);
+            arEffects = GetEffectsByAbilityId(oTarget, AF_ABILITY_VULNERABILITY_HEX);
 
             if (GetArraySize(arEffects) > 0)
                 return TRUE;
@@ -155,7 +157,7 @@ int _AT_SubCondition_HasDebuff(object oTarget, int nCase)
         }
         case 2:
         {
-            effect[] arEffects = GetEffectsByAbilityId(oTarget, AT_ABILITY_DEATH_HEX);
+            effect[] arEffects = GetEffectsByAbilityId(oTarget, AF_ABILITY_DEATH_HEX);
 
             if (GetArraySize(arEffects) > 0)
                 return TRUE;
@@ -165,7 +167,7 @@ int _AT_SubCondition_HasDebuff(object oTarget, int nCase)
         case 3:
         {
             /* Using it for enemies is not a problem */
-            if (_AT_AI_IsTargetValidForBeneficialAbility(oTarget, AT_ABILITY_DISPEL_MAGIC) == TRUE)
+            if (_AT_AI_IsTargetValidForBeneficialAbility(oTarget, AF_ABILITY_DISPEL_MAGIC) == TRUE)
                 return TRUE;
 
             break;

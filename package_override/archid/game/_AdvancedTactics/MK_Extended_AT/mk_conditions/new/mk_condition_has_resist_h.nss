@@ -9,7 +9,6 @@
 /* Advanced Tactics */
 #include "at_tools_conditions_h"
 #include "at_condition_hasarmortype_h"
-#include "at_tools_constants_h"
 
 /* MkBot */
 #include "mk_constants_h"
@@ -28,7 +27,7 @@ const int MK_RESISTANCE_COLD        = PROPERTY_ATTRIBUTE_DAMAGE_RESISTANCE_COLD;
 const int MK_RESISTANCE_ELECTRICITY = PROPERTY_ATTRIBUTE_DAMAGE_RESISTANCE_ELEC;
 const int MK_RESISTANCE_NATURE      = PROPERTY_ATTRIBUTE_DAMAGE_RESISTANCE_NATURE;
 const int MK_RESISTANCE_SPIRIT      = PROPERTY_ATTRIBUTE_DAMAGE_RESISTANCE_SPIRIT;
-const int MK_RESISTANCE_MAGIC       = PROPERTY_ATTRIBUTE_SPELLRESISTANCE; 
+const int MK_RESISTANCE_MAGIC       = PROPERTY_ATTRIBUTE_SPELLRESISTANCE;
 
 //==============================================================================
 //                                DECLARATIONS
@@ -48,7 +47,7 @@ object _MK_Condition_HasResistance(int nTacticCommand, int nTacticSubCommand, in
     object[] arTargets;
     int nSize;
     int i;
-     
+
     switch( nTargetType )
     {
         case AI_TARGET_TYPE_ENEMY:
@@ -135,8 +134,8 @@ int _MK_AI_HasResistance(object oTarget, int nResistanceLevel, int nResistanceTy
     }
     else // Magic Immunity
     {
-        nIsImmune  = GetHasEffects(oTarget, EFFECT_TYPE_INVALID, AT_ABILITY_ANTIMAGIC_WARD);
-        nIsImmune |= GetHasEffects(oTarget, AT_ABILITY_STRENGTH_OF_STONE);
+        nIsImmune  = GetHasEffects(oTarget, EFFECT_TYPE_INVALID, AF_ABILITY_ANTIMAGIC_WARD);
+        nIsImmune |= GetHasEffects(oTarget, AF_ABILITY_STRENGTH_OF_STONE);
     }
 
     //-------- Damage/Magic Resistances
@@ -218,11 +217,11 @@ int DamageTypeFromResistanceType(int nResistanceType)
  * @author MkBot
 */
 int PropertyFromResistanceType(int nResistanceType)
-{ 
+{
     return nResistanceType;
     /*
     switch(nResistanceType)
-    {  
+    {
         case MK_RESISTANCE_FIRE:
             return PROPERTY_ATTRIBUTE_DAMAGE_RESISTANCE_FIRE;
         case MK_RESISTANCE_COLD:

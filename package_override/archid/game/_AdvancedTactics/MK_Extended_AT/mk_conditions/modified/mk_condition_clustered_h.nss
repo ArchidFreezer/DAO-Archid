@@ -4,6 +4,8 @@
 //==============================================================================
 //                                INCLUDES
 //==============================================================================
+#include "af_ability_h"
+
 /* Advanced Tactics */
 #include "at_tools_conditions_h"
 #include "at_condition_most_hated_h"
@@ -23,19 +25,19 @@ object _MK_AI_Condition_GetEnemyClusteredWithSameGroup(int nTacticCommand, int n
 
     switch(nTacticSubCommand)
     {
-        case AT_ABILITY_INFERNO:
-        case AT_ABILITY_GREASE:
-        case AT_ABILITY_EARTHQUAKE:
-        case AT_ABILITY_BLIZZARD:
-        case AT_ABILITY_TEMPEST:
-        case AT_ABILITY_STORM_OF_THE_CENTURY:
-        case AT_ABILITY_DEATH_CLOUD:
-        case AT_ABILITY_ARCHDEMON_VORTEX:
-        case AT_ABILITY_FLAME_BLAST:
-        case AT_ABILITY_FIREBALL:
-        case AT_ABILITY_BLOOD_WOUND:
-        case AT_ABILITY_CONE_OF_COLD:
-        case AT_ABILITY_SHOCK:
+        case AF_ABILITY_INFERNO:
+        case AF_ABILITY_GREASE:
+        case AF_ABILITY_EARTHQUAKE:
+        case AF_ABILITY_BLIZZARD:
+        case AF_ABILITY_TEMPEST:
+        case AF_ABILITY_STORM_OF_THE_CENTURY:
+        case AF_ABILITY_DEATH_CLOUD:
+        case AF_ABILITY_ARCHDEMON_VORTEX:
+        case AF_ABILITY_FLAME_BLAST:
+        case AF_ABILITY_FIREBALL:
+        case AF_ABILITY_BLOOD_WOUND:
+        case AF_ABILITY_CONE_OF_COLD:
+        case AF_ABILITY_SHOCK:
         {
             nAllyFailChance = 100;
 
@@ -48,7 +50,7 @@ object _MK_AI_Condition_GetEnemyClusteredWithSameGroup(int nTacticCommand, int n
                                               nMinClusterSize,  // Tinman : The minimum # of enemies in the cluster, including the target
                                               nAllyFailChance,  // Tinman : The probability of failing the condition if an ally is in the cluster area
                                               FALSE);           // Tinman : This parameter is ignored in my function
-    
+
     if ((_AT_AI_IsEnemyValid(arTargets[0], TRUE, arTargets[0] != GetAttackTarget(OBJECT_SELF)) == TRUE)
     && (_AT_AI_IsEnemyValidForAbility(arTargets[0], nTacticCommand, nTacticSubCommand, nAbilityTargetType) == TRUE))
     {

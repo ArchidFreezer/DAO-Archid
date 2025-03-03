@@ -3,6 +3,8 @@
 //==============================================================================
 //                              INCLUDES
 //==============================================================================
+#include "af_ability_h"
+
 /* Advanced Tactics */
 #include "at_tools_conditions_h"
 
@@ -24,19 +26,19 @@ int MK_IsAffectedByAbility(object oCreature, int nAbilityId);
 /** @brief Returns nearest enemy that has any effect caused by given ability
 *
 * @param nTacticCommand     - see constants : AI_COMMAND_, AT_COMMAND_, MK_COMMAND_
-* @param nTacticSubCommand  - see constants : AT_ABILITY_
+* @param nTacticSubCommand  - see constants : AF_ABILITY_
 * @param nTargetType        - see constants : AI_TARGET_TYPE_, AT_TARGET_TYPE, MK_TARGET_TYPE_
 * @param nTacticID          - required for AI_TARGET_TYPE_FOLLOWER to acquire follower's ID from GUI
 * @param nAbilityTargetType - see constants : TARGET_TYPE_
 * @param Parameter1         - not used
-* @param nAbilityId         - see constants : AT_ABILITY_
+* @param nAbilityId         - see constants : AF_ABILITY_
 * @returns                  - valid target if found, else OBJECT_INVALID
 * @author MkBot
 **/
 object MK_Condition_AffectedByAbility(int nTacticCommand, int nTacticSubCommand, int nTargetType, int nTacticID, int nAbilityTargetType, int nParameter1, int nAbilityId)
 {
     switch (nTargetType)
-    {        
+    {
         case AI_TARGET_TYPE_ENEMY:
         case AT_TARGET_TYPE_TARGET:
         case MK_TARGET_TYPE_SAVED_ENEMY:
@@ -44,18 +46,18 @@ object MK_Condition_AffectedByAbility(int nTacticCommand, int nTacticSubCommand,
         {
             object[] arTargets = _MK_AI_GetEnemiesFromTargetType(nTargetType);
             int nSize = GetArraySize(arTargets);
-            
+
             int i;
             for (i = 0; i < nSize; i++)
             {
                 if (_AT_AI_IsEnemyValidForAbility(arTargets[i], nTacticCommand, nTacticSubCommand, nAbilityTargetType) == TRUE &&
-                    _MK_AI_IsSleepRoot(arTargets[i]) == FALSE &&  
+                    _MK_AI_IsSleepRoot(arTargets[i]) == FALSE &&
                     MK_IsAffectedByAbility(arTargets[i], nAbilityId) == TRUE)
                 {
                     return arTargets[i];
-                }                
+                }
             }
-            
+
             break;
         }
         case MK_TARGET_TYPE_PARTY_MEMBER:
@@ -70,7 +72,7 @@ object MK_Condition_AffectedByAbility(int nTacticCommand, int nTacticSubCommand,
         {
             object[] arTargets = _MK_AI_GetFollowersFromTargetType(nTargetType, nTacticID);
             int nSize = GetArraySize(arTargets);
-            
+
             int i;
             for (i = 0; i < nSize; i++)
             {
@@ -80,7 +82,7 @@ object MK_Condition_AffectedByAbility(int nTacticCommand, int nTacticSubCommand,
                     return arTargets[i];
                 }
             }
-            
+
             break;
         }
         default:
@@ -89,10 +91,10 @@ object MK_Condition_AffectedByAbility(int nTacticCommand, int nTacticSubCommand,
             MK_Error(nTacticID, "MK_Condition_AffectedByAbility", sMsg);
 
             break;
-        }    
+        }
     }
 
-    return OBJECT_INVALID;    
+    return OBJECT_INVALID;
 }
 
 
@@ -100,7 +102,7 @@ object MK_Condition_AffectedByAbility(int nTacticCommand, int nTacticSubCommand,
 /** @brief Checks whether oCreature has any effect caused by given ability
 *
 * @param oCreature  - creature to test
-* @param nAbilityId - see constants : AT_ABILITY_
+* @param nAbilityId - see constants : AF_ABILITY_
 * @returns          - TRUE or FALSE
 * @author MkBot
 **/
@@ -108,41 +110,41 @@ int MK_IsAffectedByAbility(object oCreature, int nAbilityId)
 {
     effect[] arEffects = GetEffectsByAbilityId(oCreature, nAbilityId);
     if (GetArraySize(arEffects) > 0)
-        return TRUE;    
-    return FALSE;    
+        return TRUE;
+    return FALSE;
 }
 
 //==============================================================================
 //                              UNIT TESTS
 //==============================================================================
 int UnitTest_IsAffectedByAbility()
-{    
+{
     PrintUnitTestHeader("UnitTest_IsAffectedByAbility");
 
     object oCreature = OBJECT_SELF;
-    int nAbilityId = AT_ABILITY_RAPIDSHOT;
-    
+    int nAbilityId = AF_ABILITY_RAPIDSHOT;
+
     return AssertBool(MK_IsAffectedByAbility(oCreature, nAbilityId));
 }
 
 int UnitTest_TargetAffectedByAbility()
-{       
+{
     PrintUnitTestHeader("UnitTest_TargetAffectedByAbility");
-    
-    object oEnemy = MK_Condition_AffectedByAbility(AI_COMMAND_ATTACK, 
-                                                   ABILITY_INVALID, 
-                                                   AI_TARGET_TYPE_ENEMY, 
-                                                   MK_TACTIC_ID_INVALID, 
-                                                   TARGET_TYPE_HOSTILE_CREATURE, 
-                                                   0, 
-                                                   AT_ABILITY_SHATTERING_SHOT);
- 
+
+    object oEnemy = MK_Condition_AffectedByAbility(AI_COMMAND_ATTACK,
+                                                   ABILITY_INVALID,
+                                                   AI_TARGET_TYPE_ENEMY,
+                                                   MK_TACTIC_ID_INVALID,
+                                                   TARGET_TYPE_HOSTILE_CREATURE,
+                                                   0,
+                                                   AF_ABILITY_SHATTERING_SHOT);
+
     return AssertObject(oEnemy) && AssertObjectEqual(oEnemy, GetAttackTarget(OBJECT_SELF));
 }
 
 int TestSuite_IsAffectedByAbility()
 {
-    PrintTestSuiteHeader("TestSuite_IsAffectedByAbility");    
+    PrintTestSuiteHeader("TestSuite_IsAffectedByAbility");
     int nResult = TRUE;
 
     nResult = UnitTest_IsAffectedByAbility() && nResult;

@@ -4,6 +4,8 @@
 //==============================================================================
 //                                INCLUDES
 //==============================================================================
+#include "af_ability_h"
+
 /* Advanced Tactics */
 #include "at_tools_conditions_h"
 
@@ -41,7 +43,7 @@ object _AT_AI_Condition_AtLeastXAlliesAreAlive(int nTacticCommand, int nTacticSu
             int nCount = 0;
             for (i = 0; i < nTargetsNum; i++)
             {
-                if (_AT_AI_IsTargetValidForBeneficialAbility(arTargets[i], AT_ABILITY_DISPEL_MAGIC) == TRUE)
+                if (_AT_AI_IsTargetValidForBeneficialAbility(arTargets[i], AF_ABILITY_DISPEL_MAGIC) == TRUE)
                     nCount++;
             }
 

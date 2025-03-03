@@ -4,8 +4,7 @@
 //==============================================================================
 //                                INCLUDES
 //==============================================================================
-/*Advanced Tactics*/
-#include "at_tools_constants_h"
+#include "af_ability_h"
 /*MkBot*/
 #include "mk_other_h"
 /*Talmud Storage*/
@@ -269,18 +268,18 @@ int MK_IsAbilityLockableAOE(int nAbility)
     int[] arLockableAbilities;
     int nSize = 0;
     //Dog
-    arLockableAbilities[nSize++] = AT_ABILITY_DOG_MABARI_HOWL;
+    arLockableAbilities[nSize++] = AF_ABILITY_DOG_DREAD_HOWL;
     //Shale
-    arLockableAbilities[nSize++] = AT_ABILITY_BELLOW;
-    arLockableAbilities[nSize++] = AT_ABILITY_HURL_ROCK;
-    arLockableAbilities[nSize++] = AT_ABILITY_EARTHEN_GRASP;
-    arLockableAbilities[nSize++] = AT_ABILITY_ROCK_BARRAGE;
+    arLockableAbilities[nSize++] = AF_ABILITY_BELLOW;
+    arLockableAbilities[nSize++] = AF_ABILITY_HURL_ROCK;
+    arLockableAbilities[nSize++] = AF_ABILITY_EARTHEN_GRASP;
+    arLockableAbilities[nSize++] = AF_ABILITY_ROCK_BARRAGE;
     //SPELLS
-    arLockableAbilities[nSize++] = AT_ABILITY_MASS_PARALYSIS;
-    arLockableAbilities[nSize++] = AT_ABILITY_SLEEP;
-    arLockableAbilities[nSize++] = AT_ABILITY_WAKING_NIGHTMARE;
-    arLockableAbilities[nSize++] = AT_ABILITY_GLYPH_OF_REPULSION;
-    arLockableAbilities[nSize++] = AT_ABILITY_GLYPH_OF_PARALYSIS;
+    arLockableAbilities[nSize++] = AF_ABILITY_MASS_PARALYSIS;
+    arLockableAbilities[nSize++] = AF_ABILITY_SLEEP;
+    arLockableAbilities[nSize++] = AF_ABILITY_WAKING_NIGHTMARE;
+    arLockableAbilities[nSize++] = AF_ABILITY_GLYPH_OF_REPULSION;
+    arLockableAbilities[nSize++] = AF_ABILITY_GLYPH_OF_PARALYSIS;
 
     //DAA
     //Pandemonium
@@ -293,7 +292,7 @@ int MK_IsAbilityLockableAOE(int nAbility)
     }
 
     //Special Case: Chempion's Warcry with Superiority
-    //if( nAbility == AT_ABILITY_WAR_CRY && HasAbility(AT_ABILITY_SUPERIORITY) )
+    //if( nAbility == AF_ABILITY_WAR_CRY && HasAbility(AF_ABILITY_SUPERIORITY) )
     //    return TRUE;
 
     return FALSE;
@@ -305,17 +304,17 @@ int MK_IsAbilityLockableMassiveDamage(int nAbility)
     int nSize = 0;
 
     //Rogue
-    arLockableAbilities[nSize++] = AT_ABILITY_HEARTSEEKER;
+    arLockableAbilities[nSize++] = AF_ABILITY_HEARTSEEKER;
     //Warrior
-    arLockableAbilities[nSize++] = AT_ABILITY_PEON_S_PLIGHT;
+    arLockableAbilities[nSize++] = AF_ABILITY_PEON_S_PLIGHT;
     //Massacre AOE
     //??
     //Berserker
-    arLockableAbilities[nSize++] = AT_ABILITY_FINAL_BLOW;
+    arLockableAbilities[nSize++] = AF_ABILITY_FINAL_BLOW;
     //Shale
-    arLockableAbilities[nSize++] = AT_ABILITY_KILLING_BLOW;
+    arLockableAbilities[nSize++] = AF_ABILITY_KILLING_BLOW;
     //Archery
-    arLockableAbilities[nSize++] = AT_ABILITY_ARROW_OF_SLAYING;
+    arLockableAbilities[nSize++] = AF_ABILITY_ARROW_OF_SLAYING;
 
     int i;
     for(i=0; i<nSize; i++)
@@ -334,31 +333,31 @@ int MK_IsAbilityLockableCantAttack(int nAbility)
 
 //---------- SINGLE TARGET
     //Rogue
-    arLockableAbilities[nSize++] = AT_ABILITY_DIRTY_FIGHTING;
+    arLockableAbilities[nSize++] = AF_ABILITY_DIRTY_FIGHTING;
     //Reaver
-    arLockableAbilities[nSize++] = AT_ABILITY_FRIGHTENING;
+    arLockableAbilities[nSize++] = AF_ABILITY_FRIGHTENING;
     //Archery
-    arLockableAbilities[nSize++] = AT_ABILITY_PINNING_SHOT;
+    arLockableAbilities[nSize++] = AF_ABILITY_PINNING_SHOT;
     //Shield
-    arLockableAbilities[nSize++] = AT_ABILITY_SHIELD_BASH;
-    arLockableAbilities[nSize++] = AT_ABILITY_SHIELD_PUMMEL;
-    arLockableAbilities[nSize++] = AT_ABILITY_OVERPOWER;
+    arLockableAbilities[nSize++] = AF_ABILITY_SHIELD_BASH;
+    arLockableAbilities[nSize++] = AF_ABILITY_SHIELD_PUMMEL;
+    arLockableAbilities[nSize++] = AF_ABILITY_OVERPOWER;
     //Two-handed fighting
-    arLockableAbilities[nSize++] = AT_ABILITY_POMMEL_STRIKE;
-    //arLockableAbilities[nSize++] = AT_ABILITY_TWO_HANDED_SWEEP;
+    arLockableAbilities[nSize++] = AF_ABILITY_POMMEL_STRIKE;
+    //arLockableAbilities[nSize++] = AF_ABILITY_TWO_HANDED_SWEEP;
     //Dog
-    arLockableAbilities[nSize++] = AT_ABILITY_DOG_CHARGE;
-    arLockableAbilities[nSize++] = AT_ABILITY_DOG_OVERWHELM;
+    arLockableAbilities[nSize++] = AF_ABILITY_DOG_CHARGE;
+    arLockableAbilities[nSize++] = AF_ABILITY_DOG_OVERWHELM;
     //Shale
-    arLockableAbilities[nSize++] = AT_ABILITY_SLAM;
+    arLockableAbilities[nSize++] = AF_ABILITY_SLAM;
     //Spells
-    arLockableAbilities[nSize++] = AT_ABILITY_STONEFIST;
-    arLockableAbilities[nSize++] = AT_ABILITY_PETRIFY;
-    arLockableAbilities[nSize++] = AT_ABILITY_FORCE_FIELD;
-    arLockableAbilities[nSize++] = AT_ABILITY_CRUSHING_PRISON;
-    arLockableAbilities[nSize++] = AT_ABILITY_PARALYZE;
-    arLockableAbilities[nSize++] = AT_ABILITY_HORROR;
-    arLockableAbilities[nSize++] = AT_ABILITY_MISDIRECTION_HEX;
+    arLockableAbilities[nSize++] = AF_ABILITY_STONEFIST;
+    arLockableAbilities[nSize++] = AF_ABILITY_PETRIFY;
+    arLockableAbilities[nSize++] = AF_ABILITY_FORCE_FIELD;
+    arLockableAbilities[nSize++] = AF_ABILITY_CRUSHING_PRISON;
+    arLockableAbilities[nSize++] = AF_ABILITY_PARALYZE;
+    arLockableAbilities[nSize++] = AF_ABILITY_HORROR;
+    arLockableAbilities[nSize++] = AF_ABILITY_MISDIRECTION_HEX;
 
     int i;
     for(i=0; i<nSize; i++)
@@ -375,22 +374,22 @@ int MK_IsAbilityLockableCantAttackAOE(int nAbility)
     int[] arLockableAbilities;
     int nSize = 0;
 
-//---------- AOE 
+//---------- AOE
     //Warrior
-    arLockableAbilities[nSize++] = AT_ABILITY_WAR_CRY;
+    arLockableAbilities[nSize++] = AF_ABILITY_WAR_CRY;
     //Dog
-    arLockableAbilities[nSize++] = AT_ABILITY_DOG_MABARI_HOWL;
+    arLockableAbilities[nSize++] = AF_ABILITY_DOG_DREAD_HOWL;
     //Shale
-    arLockableAbilities[nSize++] = AT_ABILITY_BELLOW;
-    arLockableAbilities[nSize++] = AT_ABILITY_HURL_ROCK;
-    arLockableAbilities[nSize++] = AT_ABILITY_EARTHEN_GRASP;
-    arLockableAbilities[nSize++] = AT_ABILITY_ROCK_BARRAGE;
+    arLockableAbilities[nSize++] = AF_ABILITY_BELLOW;
+    arLockableAbilities[nSize++] = AF_ABILITY_HURL_ROCK;
+    arLockableAbilities[nSize++] = AF_ABILITY_EARTHEN_GRASP;
+    arLockableAbilities[nSize++] = AF_ABILITY_ROCK_BARRAGE;
     //SPELLS
-    arLockableAbilities[nSize++] = AT_ABILITY_MASS_PARALYSIS;
-    arLockableAbilities[nSize++] = AT_ABILITY_SLEEP;
-    arLockableAbilities[nSize++] = AT_ABILITY_WAKING_NIGHTMARE;
-    arLockableAbilities[nSize++] = AT_ABILITY_GLYPH_OF_REPULSION;
-    arLockableAbilities[nSize++] = AT_ABILITY_GLYPH_OF_PARALYSIS;
+    arLockableAbilities[nSize++] = AF_ABILITY_MASS_PARALYSIS;
+    arLockableAbilities[nSize++] = AF_ABILITY_SLEEP;
+    arLockableAbilities[nSize++] = AF_ABILITY_WAKING_NIGHTMARE;
+    arLockableAbilities[nSize++] = AF_ABILITY_GLYPH_OF_REPULSION;
+    arLockableAbilities[nSize++] = AF_ABILITY_GLYPH_OF_PARALYSIS;
 
     int i;
     for(i=0; i<nSize; i++)
@@ -400,7 +399,7 @@ int MK_IsAbilityLockableCantAttackAOE(int nAbility)
     }
 
     //Special Case: Chempion's Warcry with Superiority
-    //if( nAbility == AT_ABILITY_WAR_CRY && HasAbility(AT_ABILITY_SUPERIORITY) )
+    //if( nAbility == AF_ABILITY_WAR_CRY && HasAbility(AF_ABILITY_SUPERIORITY) )
     //    return TRUE;
 
     return FALSE;
@@ -412,13 +411,13 @@ int MK_IsAbilityLockablePenalty(int nAbility)
     int nSize = 0;
 
     //Rogue
-    arLockableAbilities[nSize++] = AT_ABILITY_BELOW_THE_BELT;
+    arLockableAbilities[nSize++] = AF_ABILITY_BELOW_THE_BELT;
     //Duelist
-    arLockableAbilities[nSize++] = AT_ABILITY_UPSET_BALANCE;
+    arLockableAbilities[nSize++] = AF_ABILITY_UPSET_BALANCE;
     //Dual Weapon
-    arLockableAbilities[nSize++] = AT_ABILITY_DUAL_WEAPON_CRIPPLE;
+    arLockableAbilities[nSize++] = AF_ABILITY_DUAL_WEAPON_CRIPPLE;
     //Archery
-    arLockableAbilities[nSize++] = AT_ABILITY_CRIPPLING_SHOT;
+    arLockableAbilities[nSize++] = AF_ABILITY_CRIPPLING_SHOT;
 
     int i;
     for(i=0; i<nSize; i++)
@@ -436,12 +435,12 @@ int MK_IsAbilityLockableFriendly(int nAbility)
     int nSize = 0;
 
     //SPELLS
-    arLockableAbilities[nSize++] = AT_ABILITY_REJUVINATION;
-    arLockableAbilities[nSize++] = AT_ABILITY_REGENERATION;
-    arLockableAbilities[nSize++] = AT_ABILITY_HEROIC_OFFENSE;
-    arLockableAbilities[nSize++] = AT_ABILITY_HEROIC_AURA;
-    arLockableAbilities[nSize++] = AT_ABILITY_HEROIC_DEFENSE;
-    arLockableAbilities[nSize++] = AT_ABILITY_ANTIMAGIC_WARD;
+    arLockableAbilities[nSize++] = AF_ABILITY_REJUVINATION;
+    arLockableAbilities[nSize++] = AF_ABILITY_REGENERATION;
+    arLockableAbilities[nSize++] = AF_ABILITY_HEROIC_OFFENSE;
+    arLockableAbilities[nSize++] = AF_ABILITY_HEROIC_AURA;
+    arLockableAbilities[nSize++] = AF_ABILITY_HEROIC_DEFENSE;
+    arLockableAbilities[nSize++] = AF_ABILITY_ANTIMAGIC_WARD;
 
     int i;
     for(i=0; i<nSize; i++)
@@ -458,8 +457,8 @@ int MK_IsAbilityLockableDispell(int nAbility)
     int[] arLockableAbilities;
     int nSize = 0;
 
-    arLockableAbilities[nSize++] = AT_ABILITY_DISPEL_MAGIC;
-    arLockableAbilities[nSize++] = AT_ABILITY_ANTIMAGIC_WARD; //??
+    arLockableAbilities[nSize++] = AF_ABILITY_DISPEL_MAGIC;
+    arLockableAbilities[nSize++] = AF_ABILITY_ANTIMAGIC_WARD; //??
 
     int i;
     for(i=0; i<nSize; i++)
@@ -475,8 +474,8 @@ int MK_IsAbilityLockableDispellAOE(int nAbility)
     int[] arLockableAbilities;
     int nSize = 0;
 
-    arLockableAbilities[nSize++] = AT_ABILITY_CLEANSE_AREA;
-    arLockableAbilities[nSize++] = AT_ABILITY_ANTIMAGIC_BURST;
+    arLockableAbilities[nSize++] = AF_ABILITY_CLEANSE_AREA;
+    arLockableAbilities[nSize++] = AF_ABILITY_ANTIMAGIC_BURST;
 
     int i;
     for(i=0; i<nSize; i++)

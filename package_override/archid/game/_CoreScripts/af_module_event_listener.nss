@@ -3,14 +3,14 @@
 #include "af_nohelmet_h"
 #include "af_respec_h"
 #include "af_spellshaping_h"
-#include "af_utility_h" 
+#include "af_utility_h"
 #include "talmud_storage_h"
 
 void main()
 {
     event ev = GetCurrentEvent();
     int nEventType = GetEventType(ev);
-    
+
     // Handle the Talmud storage
     Storage_HandleModuleEvents();
 

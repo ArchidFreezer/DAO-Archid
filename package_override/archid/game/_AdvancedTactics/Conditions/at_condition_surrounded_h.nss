@@ -7,6 +7,8 @@
 /* Core */
 #include "talent_constants_h"
 
+#include "af_constants_h"
+
 /* Advanced Tactics */
 #include "at_tools_conditions_h"
 
@@ -72,34 +74,34 @@ object _AT_AI_Condition_SurroundedByAtLeastXEnemies(int nTacticCommand, int nTac
 
                 break;
             }
-            case AT_ABILITY_DUAL_WEAPON_SWEEP:
+            case AF_ABILITY_DUAL_WEAPON_SWEEP:
             {
                 fStart = -90.0f;
                 fEnd = 90.0f;
 
                 break;
             }
-            case AT_ABILITY_DEATH_SYPHON:
-            case AT_ABILITY_DEATH_MAGIC:
+            case AF_ABILITY_DEATH_SYPHON:
+            case AF_ABILITY_DEATH_MAGIC:
             {
                 fRadius = GetM2DAFloat(TABLE_VFX_PERSISTENT, "RADIUS", DEATH_MAGIC_AOE);
                 nCheckLiving = FALSE;
 
                 break;
             }
-            case AT_ABILITY_MIASMA:
+            case AF_ABILITY_MIASMA:
             {
                 fRadius = GetM2DAFloat(TABLE_VFX_PERSISTENT, "RADIUS", MIASMA_AOE);
 
                 break;
             }
-            case AT_ABILITY_PAIN:
+            case AF_ABILITY_PAIN:
             {
                 fRadius = GetM2DAFloat(TABLE_VFX_PERSISTENT, "RADIUS", PAIN_AOE);
 
                 break;
             }
-            case AT_ABILITY_WYNNE_SPECIAL:
+            case AF_ABILITY_WYNNE_SPECIAL:
             {
                 int bTrinket = IsObjectValid(GetItemPossessedBy(oCenter, "gen_im_acc_amu_am11"));
 
@@ -110,7 +112,7 @@ object _AT_AI_Condition_SurroundedByAtLeastXEnemies(int nTacticCommand, int nTac
 
                 break;
             }
-            case AT_ABILITY_DEVOUR:
+            case AF_ABILITY_DEVOUR:
             {
                 nCheckLiving = FALSE;
 

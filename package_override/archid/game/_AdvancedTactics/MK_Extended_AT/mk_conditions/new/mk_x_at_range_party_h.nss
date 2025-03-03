@@ -4,6 +4,8 @@
 //==============================================================================
 //                                INCLUDES
 //==============================================================================
+#include "af_ability_h"
+
 /* Advanced Tactics */
 #include "at_tools_conditions_h"
 #include "at_condition_most_hated_h"
@@ -99,7 +101,7 @@ int _MK_SubCondition_Party_AtLeastXEnemiesAtRadius(int nNumOfTargets, float fRad
         {
             if ((arTargets[i] != oCenter)
             &&  (IsObjectHostile(oCenter, arTargets[i]) == TRUE)
-            &&  (IsModalAbilityActive(arTargets[i],AT_ABILITY_STEALTH) == FALSE) )
+            &&  (IsModalAbilityActive(arTargets[i],AF_ABILITY_STEALTH) == FALSE) )
             nEnemiesCount++;
         }
     }
@@ -122,10 +124,10 @@ int _MK_AI_IsAtRangeOfFriends(object oEnemy, int nRangeID, object[] arFriends)
         float fRange = _MK_GetRangeFromID(nRangeID);
         if (fDist <= fRange)
         {
-            return TRUE;    
+            return TRUE;
         }
     }
-    
+
     return FALSE;
 }
 

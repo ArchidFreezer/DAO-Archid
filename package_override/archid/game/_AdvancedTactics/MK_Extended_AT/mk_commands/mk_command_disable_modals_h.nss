@@ -8,7 +8,7 @@
 #include "ai_main_h_2"
 /*Advanced Tactics*/
 #include "at_tools_ai_h"
-#include "at_tools_constants_h"
+#include "af_ability_h"
 
 //==============================================================================
 //                                DECLARATIONS
@@ -27,77 +27,77 @@ int MK_AddToQueueDeactivateStances(object oTarget)
     int size = 0;
 
     //Warrior
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_THREATEN;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_PRECISE_STRIKING;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_THREATEN;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_PRECISE_STRIKING;
     //Dual Weapon
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_DUAL_WEAPON_DOUBLE_STRIKE;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_DUAL_WEAPON_MOMENTUM;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_DUAL_WEAPON_DOUBLE_STRIKE;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_DUAL_WEAPON_MOMENTUM;
     //Archery
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_AIM;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_DEFENSIVE_FIRE;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_RAPIDSHOT;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_SUPPRESSING_FIRE;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_ACCURACY;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_ARROW_TIME;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_AIM;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_DEFENSIVE_FIRE;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_RAPIDSHOT;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_SUPPRESSING_FIRE;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_ACCURACY;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_ARROW_TIME;
     ///Weapon and Shield
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_SHIELD_DEFENSE;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_SHIELD_WALL;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_SHIELD_COVER;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_JUGGERNAUT;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_CARAPACE;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_AIR_OF_INSOLENCE;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_SHIELD_DEFENSE;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_SHIELD_WALL;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_SHIELD_COVER;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_JUGGERNAUT;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_CARAPACE;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_AIR_OF_INSOLENCE;
     //Two-Handed
-    //arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_INDOMITABLE;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_POWERFUL_SWINGS;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_TWO_HANDED_IMPACT;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_REAVING_STORM;
+    //arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_INDOMITABLE;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_POWERFUL_SWINGS;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_TWO_HANDED_IMPACT;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_REAVING_STORM;
     //Rogue Specializations
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_SONG_OF_VALOR;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_SONG_OF_COURAGE;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_CAPTIVATE;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_DUELING;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_ENDURE_HARDSHIP;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_SHADOW_FORM;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_SONG_OF_VALOR;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_SONG_OF_COURAGE;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_CAPTIVATING_SONG;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_DUELING;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_ENDURE_HARDSHIP;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_SHADOW_FORM;
     //Warrior Specializations
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_BERSERK;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_PAIN;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_RALLY;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_AURA_OF_THE_STALWART_DEFENDER;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_BEYOND_THE_VEIL;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_BERSERK;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_PAIN;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_RALLY;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_AURA_OF_THE_STALWART_DEFENDER;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_BEYOND_THE_VEIL;
     //Shale
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_PULVERIZING_BLOWS;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_STONEHEART;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_ROCK_MASTERY;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_STONE_AURA;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_PULVERIZING_BLOWS;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_STONEHEART;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_ROCK_MASTERY;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_STONE_AURA;
     //Arcane
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_ARCANE_SHIELD;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_ELEMENTAL_MASTERY;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_REPULSION_FIELD;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_INVIGORATE;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_ARCANE_FIELD;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_MYSTICAL_NEGATION;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_ARCANE_SHIELD;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_ELEMENTAL_MASTERY;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_REPULSION_FIELD;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_INVIGORATE;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_ARCANE_FIELD;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_MYSTICAL_NEGATION;
     //Primal
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_FLAMING_WEAPONS;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_ROCK_ARMOR;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_FROST_WEAPONS;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_FLAMING_WEAPONS;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_ROCK_ARMOR;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_FROST_WEAPONS;
     //Creation
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_HASTE;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_SPELL_WISP;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_SPELLBLOOM;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_HASTE;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_SPELL_WISP;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_SPELLBLOOM;
     //Spirit
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_SPELL_SHIELD;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_SPELL_MIGHT;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_DEATH_SYPHON;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_SPELL_SHIELD;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_SPELL_MIGHT;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_DEATH_SYPHON;
     //Entropy
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_MIASMA;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_DEATH_MAGIC;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_MIASMA;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_DEATH_MAGIC;
     //Mage Specializations
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_COMBAT_MAGIC;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_SHIMMERING_SHIELD;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_BLOOD_MAGIC;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_DRAINING_AURA;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_ELEMENTALcHAOS;
-    arrModalAbilitiesToDeactivate[size++] = AT_ABILITY_ONE_WITH_NATURE;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_COMBAT_MAGIC;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_SHIMMERING_SHIELD;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_BLOOD_MAGIC;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_DRAINING_AURA;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_ELEMENTALcHAOS;
+    arrModalAbilitiesToDeactivate[size++] = AF_ABILITY_ONE_WITH_NATURE;
 
     int succesFlag = FALSE;
     int i;

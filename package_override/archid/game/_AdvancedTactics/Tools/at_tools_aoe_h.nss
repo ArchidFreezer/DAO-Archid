@@ -12,7 +12,6 @@
 #include "monster_constants_h"
 
 /* Advanced Tactics */
-#include "at_tools_constants_h"
 #include "at_tools_storage_h"
 #include "at_tools_log_h"
 
@@ -58,25 +57,25 @@ int _AT_IsAOEValid(struct aoe AOE)
 
 int _AT_IsHostileAOE(int nAbility)
 {
-    /* AT_ABILITY_INFERNO // 10002
-       AT_ABILITY_EARTHQUAKE // 11116
-       AT_ABILITY_BLIZZARD // 13000
-       AT_ABILITY_TEMPEST // 14002
-       AT_ABILITY_STORM_OF_THE_CENTURY // 14004
-       AT_ABILITY_DEATH_CLOUD // 15003
+    /* AF_ABILITY_INFERNO // 10002
+       AF_ABILITY_EARTHQUAKE // 11116
+       AF_ABILITY_BLIZZARD // 13000
+       AF_ABILITY_TEMPEST // 14002
+       AF_ABILITY_STORM_OF_THE_CENTURY // 14004
+       AF_ABILITY_DEATH_CLOUD // 15003
     */
     if (GetM2DAInt(TABLE_AI_ABILITY_COND, "HostileAOE", nAbility) == 1)
         return TRUE;
 
     switch(nAbility)
     {
-        case AT_ABILITY_FLAME_BLAST: // 10001
-        case AT_ABILITY_FIREBALL: // 10003
-        case AT_ABILITY_BLOOD_WOUND: // 10702
-        case AT_ABILITY_GREASE: // 11113
-        case AT_ABILITY_CONE_OF_COLD: // 13002
-        case AT_ABILITY_SHOCK: // 14000
-        case AT_ABILITY_ARCHDEMON_VORTEX: // 90000
+        case AF_ABILITY_FLAME_BLAST: // 10001
+        case AF_ABILITY_FIREBALL: // 10003
+        case AF_ABILITY_BLOOD_WOUND: // 10702
+        case AF_ABILITY_GREASE: // 11113
+        case AF_ABILITY_CONE_OF_COLD: // 13002
+        case AF_ABILITY_SHOCK: // 14000
+        case AF_ABILITY_ARCHDEMON_VORTEX: // 90000
         {
             return TRUE;
         }
@@ -96,14 +95,14 @@ float _AT_GetAOEParam1(int nAbility)
 
     switch(nAbility)
     {
-        /*10002*/case AT_ABILITY_INFERNO:              nAOE = INFERNO_AOE;              break;
-        /*11113*/case AT_ABILITY_GREASE:               nAOE = GREASE_AOE;               break;
-        /*11116*/case AT_ABILITY_EARTHQUAKE:           nAOE = EARTHQUAKE_AOE;           break;
-        /*13000*/case AT_ABILITY_BLIZZARD:             nAOE = BLIZZARD_AOE;             break;
-        /*14002*/case AT_ABILITY_TEMPEST:              nAOE = TEMPEST_AOE;              break;
-        /*14004*/case AT_ABILITY_STORM_OF_THE_CENTURY: nAOE = STORM_OF_THE_CENTURY_AOE; break;
-        /*15003*/case AT_ABILITY_DEATH_CLOUD:          nAOE = DEATH_CLOUD_AOE;          break;
-        /*90000*/case AT_ABILITY_ARCHDEMON_VORTEX:     nAOE = ARHCDMEON_VORTEX_AOE;     break;
+        /*10002*/case AF_ABILITY_INFERNO:              nAOE = INFERNO_AOE;              break;
+        /*11113*/case AF_ABILITY_GREASE:               nAOE = GREASE_AOE;               break;
+        /*11116*/case AF_ABILITY_EARTHQUAKE:           nAOE = EARTHQUAKE_AOE;           break;
+        /*13000*/case AF_ABILITY_BLIZZARD:             nAOE = BLIZZARD_AOE;             break;
+        /*14002*/case AF_ABILITY_TEMPEST:              nAOE = TEMPEST_AOE;              break;
+        /*14004*/case AF_ABILITY_STORM_OF_THE_CENTURY: nAOE = STORM_OF_THE_CENTURY_AOE; break;
+        /*15003*/case AF_ABILITY_DEATH_CLOUD:          nAOE = DEATH_CLOUD_AOE;          break;
+        /*90000*/case AF_ABILITY_ARCHDEMON_VORTEX:     nAOE = ARHCDMEON_VORTEX_AOE;     break;
     }
 
     return GetM2DAFloat(TABLE_VFX_PERSISTENT, "RADIUS", nAOE);
@@ -121,14 +120,14 @@ int _AT_GetAOEDuration(int nAbility)
 
     switch(nAbility)
     {
-        /*10002*/case AT_ABILITY_INFERNO:              fDuration = INFERNO_DURATION;              break;
-        /*11113*/case AT_ABILITY_GREASE:               fDuration = GREASE_DURATION;               break;
-        /*11116*/case AT_ABILITY_EARTHQUAKE:           fDuration = EARTHQUAKE_DURATION;           break;
-        /*13000*/case AT_ABILITY_BLIZZARD:             fDuration = BLIZZARD_DURATION;             break;
-        /*14002*/case AT_ABILITY_TEMPEST:              fDuration = TEMPEST_DURATION;              break;
-        /*14004*/case AT_ABILITY_STORM_OF_THE_CENTURY: fDuration = STORM_OF_THE_CENTURY_DURATION; break;
-        /*15003*/case AT_ABILITY_DEATH_CLOUD:          fDuration = DEATH_CLOUD_DURATION;          break;
-        /*90000*/case AT_ABILITY_ARCHDEMON_VORTEX:     fDuration = ARCHDEMON_VORTEX_DURATION;     break;
+        /*10002*/case AF_ABILITY_INFERNO:              fDuration = INFERNO_DURATION;              break;
+        /*11113*/case AF_ABILITY_GREASE:               fDuration = GREASE_DURATION;               break;
+        /*11116*/case AF_ABILITY_EARTHQUAKE:           fDuration = EARTHQUAKE_DURATION;           break;
+        /*13000*/case AF_ABILITY_BLIZZARD:             fDuration = BLIZZARD_DURATION;             break;
+        /*14002*/case AF_ABILITY_TEMPEST:              fDuration = TEMPEST_DURATION;              break;
+        /*14004*/case AF_ABILITY_STORM_OF_THE_CENTURY: fDuration = STORM_OF_THE_CENTURY_DURATION; break;
+        /*15003*/case AF_ABILITY_DEATH_CLOUD:          fDuration = DEATH_CLOUD_DURATION;          break;
+        /*90000*/case AF_ABILITY_ARCHDEMON_VORTEX:     fDuration = ARCHDEMON_VORTEX_DURATION;     break;
     }
 
     return FloatToInt(fDuration);

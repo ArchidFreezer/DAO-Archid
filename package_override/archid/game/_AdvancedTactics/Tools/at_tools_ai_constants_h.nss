@@ -5,8 +5,6 @@
     Custom ai_constants_h
 */
 
-#include "at_tools_constants_h"
-
 /* Custom */
 /*Mk Extended Advanced TActics*/
 

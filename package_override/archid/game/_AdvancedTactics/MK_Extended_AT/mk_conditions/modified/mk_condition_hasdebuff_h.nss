@@ -4,10 +4,12 @@
 //==============================================================================
 //                                INCLUDES
 //==============================================================================
+#include "af_constants_h"
+
 /* Advanced Tactics */
 #include "at_tools_conditions_h"
 #include "at_condition_most_hated_h"
-#include "at_condition_hasdebuff_h"  
+#include "at_condition_hasdebuff_h"
 
 /* MkBot */
 #include "mk_constants_h"
@@ -47,7 +49,7 @@ object _MK_Condition_HasDebuff(int nTacticCommand, int nTacticSubCommand, int nT
             for (i = 0; i < nSize; i++)
             {
                 if (_AT_AI_IsEnemyValidForAbility(arTargets[i], nTacticCommand, nTacticSubCommand, nAbilityTargetType) == TRUE
-                &&  _MK_AI_IsSleepRoot(arTargets[i]) == FALSE  
+                &&  _MK_AI_IsSleepRoot(arTargets[i]) == FALSE
                 &&  _MK_SubCondition_HasDebuff(arTargets[i], nCase) == TRUE)
                     return arTargets[i];
             }
@@ -68,8 +70,8 @@ object _MK_Condition_HasDebuff(int nTacticCommand, int nTacticSubCommand, int nT
             nSize = GetArraySize(arTargets);
 
             for (i = 0; i < nSize; i++)
-            {                     
-                if (_MK_AI_IsFriendValidForAbility(arTargets[i], nTacticCommand, nTacticSubCommand, nAbilityTargetType) == TRUE 
+            {
+                if (_MK_AI_IsFriendValidForAbility(arTargets[i], nTacticCommand, nTacticSubCommand, nAbilityTargetType) == TRUE
                 &&  _MK_SubCondition_HasDebuff(arTargets[i], nCase) == TRUE)
                     return arTargets[i];
             }
@@ -83,7 +85,7 @@ object _MK_Condition_HasDebuff(int nTacticCommand, int nTacticSubCommand, int nT
             MK_PrintToLog(sMsg);
 
             break;
-        }        
+        }
     }
 
     return OBJECT_INVALID;
@@ -93,10 +95,10 @@ int _MK_SubCondition_HasDebuff(object oTarget, int nCase)
 {
     switch(nCase)
     {
-        case 0://AT_ABILITY_WEAKNESS
-        case 1://AT_ABILITY_VULNERABILITY_HEX or AT_ABILITY_AFFLICTION_HEX
-        case 2://AT_ABILITY_DEATH_HEX
-        case 3://AT_ABILITY_DISPEL_MAGIC
+        case 0://AF_ABILITY_WEAKNESS
+        case 1://AF_ABILITY_VULNERABILITY_HEX or AF_ABILITY_AFFLICTION_HEX
+        case 2://AF_ABILITY_DEATH_HEX
+        case 3://AF_ABILITY_DISPEL_MAGIC
         {
             #ifdef MK_DEBUG
             MK_PrintToLog("[_MK_SubCondition_HasDebuff]: 0 or 1 or 2 or 3");
@@ -104,12 +106,12 @@ int _MK_SubCondition_HasDebuff(object oTarget, int nCase)
             return _AT_SubCondition_HasDebuff(oTarget, nCase);
             break;
         }
-        case 4://AT_ABILITY_MISDIRECTION_HEX
+        case 4://AF_ABILITY_MISDIRECTION_HEX
         {
             #ifdef MK_DEBUG
-            MK_PrintToLog("[_MK_SubCondition_HasDebuff]: AT_ABILITY_MISDIRECTION_HEX");
+            MK_PrintToLog("[_MK_SubCondition_HasDebuff]: AF_ABILITY_MISDIRECTION_HEX");
             #endif
-            effect[] arEffects = GetEffectsByAbilityId(oTarget, AT_ABILITY_MISDIRECTION_HEX);
+            effect[] arEffects = GetEffectsByAbilityId(oTarget, AF_ABILITY_MISDIRECTION_HEX);
 
             if (GetArraySize(arEffects) > 0)
             {
@@ -121,12 +123,12 @@ int _MK_SubCondition_HasDebuff(object oTarget, int nCase)
 
             break;
         }
-        case 5://AT_ABILITY_CURSE_OF_MORTALITY
+        case 5://AF_ABILITY_CURSE_OF_MORTALITY
         {
             #ifdef MK_DEBUG
-            MK_PrintToLog("[_MK_SubCondition_HasDebuff]: AT_ABILITY_CURSE_OF_MORTALITY");
+            MK_PrintToLog("[_MK_SubCondition_HasDebuff]: AF_ABILITY_CURSE_OF_MORTALITY");
             #endif
-            effect[] arEffects = GetEffectsByAbilityId(oTarget, AT_ABILITY_CURSE_OF_MORTALITY);
+            effect[] arEffects = GetEffectsByAbilityId(oTarget, AF_ABILITY_CURSE_OF_MORTALITY);
 
             if (GetArraySize(arEffects) > 0)
             {
@@ -138,12 +140,12 @@ int _MK_SubCondition_HasDebuff(object oTarget, int nCase)
 
             break;
         }
-        case 6://AT_ABILITY_WAKING_NIGHTMARE
+        case 6://AF_ABILITY_WAKING_NIGHTMARE
         {
             #ifdef MK_DEBUG
-            MK_PrintToLog("[_MK_SubCondition_HasDebuff]: AT_ABILITY_WAKING_NIGHTMARE");
+            MK_PrintToLog("[_MK_SubCondition_HasDebuff]: AF_ABILITY_WAKING_NIGHTMARE");
             #endif
-            effect[] arEffects = GetEffectsByAbilityId(oTarget, AT_ABILITY_WAKING_NIGHTMARE);
+            effect[] arEffects = GetEffectsByAbilityId(oTarget, AF_ABILITY_WAKING_NIGHTMARE);
 
             if (GetArraySize(arEffects) > 0)
             {
@@ -155,12 +157,12 @@ int _MK_SubCondition_HasDebuff(object oTarget, int nCase)
 
             break;
         }
-        case 7://AT_ABILITY_FORCE_FIELD
+        case 7://AF_ABILITY_FORCE_FIELD
         {
             #ifdef MK_DEBUG
-            MK_PrintToLog("[_MK_SubCondition_HasDebuff]: AT_ABILITY_FORCE_FIELD");
+            MK_PrintToLog("[_MK_SubCondition_HasDebuff]: AF_ABILITY_FORCE_FIELD");
             #endif
-            effect[] arEffects = GetEffectsByAbilityId(oTarget, AT_ABILITY_FORCE_FIELD);
+            effect[] arEffects = GetEffectsByAbilityId(oTarget, AF_ABILITY_FORCE_FIELD);
 
             if (GetArraySize(arEffects) > 0)
             {
@@ -172,12 +174,12 @@ int _MK_SubCondition_HasDebuff(object oTarget, int nCase)
 
             break;
         }
-        case 8://AT_ABILITY_CRUSHING_PRISON
+        case 8://AF_ABILITY_CRUSHING_PRISON
         {
             #ifdef MK_DEBUG
-            MK_PrintToLog("[_MK_SubCondition_HasDebuff]: AT_ABILITY_CRUSHING_PRISON");
+            MK_PrintToLog("[_MK_SubCondition_HasDebuff]: AF_ABILITY_CRUSHING_PRISON");
             #endif
-            effect[] arEffects = GetEffectsByAbilityId(oTarget, AT_ABILITY_CRUSHING_PRISON);
+            effect[] arEffects = GetEffectsByAbilityId(oTarget, AF_ABILITY_CRUSHING_PRISON);
 
             if (GetArraySize(arEffects) > 0)
             {
@@ -189,12 +191,12 @@ int _MK_SubCondition_HasDebuff(object oTarget, int nCase)
 
             break;
         }
-        case 9://AT_ABILITY_WALKING_BOMB or AT_ABILITY_VIRULENT_WALKING_BOMB
+        case 9://AF_ABILITY_WALKING_BOMB or AF_ABILITY_VIRULENT_WALKING_BOMB
         {
             #ifdef MK_DEBUG
-            MK_PrintToLog("[_MK_SubCondition_HasDebuff]: AT_ABILITY_WALKING_BOMB or AT_ABILITY_VIRULENT_WALKING_BOMB");
+            MK_PrintToLog("[_MK_SubCondition_HasDebuff]: AF_ABILITY_WALKING_BOMB or AF_ABILITY_VIRULENT_WALKING_BOMB");
             #endif
-            effect[] arEffects = GetEffectsByAbilityId(oTarget, AT_ABILITY_WALKING_BOMB);
+            effect[] arEffects = GetEffectsByAbilityId(oTarget, AF_ABILITY_WALKING_BOMB);
 
             if (GetArraySize(arEffects) > 0)
             {
@@ -204,24 +206,7 @@ int _MK_SubCondition_HasDebuff(object oTarget, int nCase)
                 return TRUE;
             }
 
-            arEffects = GetEffectsByAbilityId(oTarget, AT_ABILITY_VIRULENT_WALKING_BOMB);
-
-            if (GetArraySize(arEffects) > 0)
-            {
-                #ifdef MK_DEBUG
-                MK_PrintToLog("[_MK_SubCondition_HasDebuff] return TRUE");
-                #endif
-                return TRUE;
-            }
-
-            break;
-        }
-        case 10://AT_ABILITY_STINGING_SWARM
-        {
-            #ifdef MK_DEBUG
-            MK_PrintToLog("[_MK_SubCondition_HasDebuff]: AT_ABILITY_STINGING_SWARM");
-            #endif
-            effect[] arEffects = GetEffectsByAbilityId(oTarget, AT_ABILITY_STINGING_SWARM);
+            arEffects = GetEffectsByAbilityId(oTarget, AF_ABILITY_VIRULENT_WALKING_BOMB);
 
             if (GetArraySize(arEffects) > 0)
             {
@@ -233,13 +218,30 @@ int _MK_SubCondition_HasDebuff(object oTarget, int nCase)
 
             break;
         }
-
-        case 11://AT_ABILITY_BLOOD_CONTROL
+        case 10://AF_ABILITY_STINGING_SWARM
         {
             #ifdef MK_DEBUG
-            MK_PrintToLog("[_MK_SubCondition_HasDebuff]: AT_ABILITY_BLOOD_CONTROL");
+            MK_PrintToLog("[_MK_SubCondition_HasDebuff]: AF_ABILITY_STINGING_SWARM");
             #endif
-            effect[] arEffects = GetEffectsByAbilityId(oTarget, AT_ABILITY_BLOOD_CONTROL);
+            effect[] arEffects = GetEffectsByAbilityId(oTarget, AF_ABILITY_STINGING_SWARM);
+
+            if (GetArraySize(arEffects) > 0)
+            {
+                #ifdef MK_DEBUG
+                MK_PrintToLog("[_MK_SubCondition_HasDebuff] return TRUE");
+                #endif
+                return TRUE;
+            }
+
+            break;
+        }
+
+        case 11://AF_ABILITY_BLOOD_CONTROL
+        {
+            #ifdef MK_DEBUG
+            MK_PrintToLog("[_MK_SubCondition_HasDebuff]: AF_ABILITY_BLOOD_CONTROL");
+            #endif
+            effect[] arEffects = GetEffectsByAbilityId(oTarget, AF_ABILITY_BLOOD_CONTROL);
 
             if (GetArraySize(arEffects) > 0)
             {
@@ -278,10 +280,10 @@ int _MK_SubCondition_HasDebuff(object oTarget, int nCase)
                 nDebuff = GetM2DAInt(TABLE_AI_ABILITY_COND, "MagicalDebuf", nAbility);
 
                 if(nDebuff == 1
-                && nAbility != ABILITY_SPELL_DAZE
-                && nAbility != AT_ABILITY_WEAKNESS
-                && nAbility != AT_ABILITY_VULNERABILITY_HEX
-                && nAbility != AT_ABILITY_AFFLICTION_HEX)
+                && nAbility != AF_ABILITY_DISORIENT
+                && nAbility != AF_ABILITY_WEAKNESS
+                && nAbility != AF_ABILITY_VULNERABILITY_HEX
+                && nAbility != AF_ABILITY_AFFLICTION_HEX)
                 {
                     #ifdef MK_DEBUG
                     MK_PrintToLog("[_MK_SubCondition_HasDebuff] return TRUE");

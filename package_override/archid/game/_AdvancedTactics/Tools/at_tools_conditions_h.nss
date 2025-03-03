@@ -31,7 +31,9 @@
 //==============================================================================
 /* Core */
 #include "ai_main_h_2"
-#include "ai_conditions_h"
+#include "ai_conditions_h" 
+
+#include "af_ability_h"
 
 /* Advanced Tactics */
 #include "at_tools_ai_constants_h"
@@ -112,7 +114,7 @@ int _AT_AI_HasAIStatus(object oCreature, int nAIStatus)
         /*16*/case AI_STATUS_KNOCKDOWN: return (GetHasEffects(oCreature, EFFECT_TYPE_KNOCKDOWN) || GetHasEffects(oCreature, EFFECT_TYPE_SLIP));
         /*17*/case AI_STATUS_GRABBED: return (GetHasEffects(oCreature, EFFECT_TYPE_GRABBED) || GetHasEffects(oCreature, EFFECT_TYPE_OVERWHELMED));
         /*18*/case AI_STATUS_GRABBING: return (GetHasEffects(oCreature, EFFECT_TYPE_GRABBING) || GetHasEffects(oCreature, EFFECT_TYPE_OVERWHELMING));
-        /*19*/case AI_STATUS_BERSERK: return IsModalAbilityActive(oCreature, AT_ABILITY_BERSERK);
+        /*19*/case AI_STATUS_BERSERK: return IsModalAbilityActive(oCreature, AF_ABILITY_BERSERK);
         /*20*/case AI_STATUS_CONFUSED: return GetHasEffects(oCreature, EFFECT_TYPE_CONFUSION);
 
         /*97*/case AI_STATUS_CANT_ATTACK: return _AT_AI_CantAttack(oCreature);
@@ -492,16 +494,16 @@ int _AT_AI_IsTargetValidForAbility(object oTarget, int nTacticCommand, int nTact
         {
             /* Advanced Tactics */
             /* Self AOE */
-            case AT_ABILITY_DUAL_WEAPON_WHIRLWIND:
-            case AT_ABILITY_DUAL_WEAPON_SWEEP:
-            case AT_ABILITY_TWO_HANDED_SWEEP:
-            case AT_ABILITY_DEVOUR:
-            case AT_ABILITY_MIND_BLAST:
-            case AT_ABILITY_DISENGAGE:
-            case AT_ABILITY_CLEANSE_AREA:
-            case AT_ABILITY_WAR_CRY:
-            case AT_ABILITY_TAUNT:
-            case AT_ABILITY_DOG_MABARI_HOWL:
+            case AF_ABILITY_DUAL_WEAPON_WHIRLWIND:
+            case AF_ABILITY_DUAL_WEAPON_SWEEP:
+            case AF_ABILITY_TWO_HANDED_SWEEP:
+            case AF_ABILITY_DEVOUR:
+            case AF_ABILITY_MIND_BLAST:
+            case AF_ABILITY_DISENGAGE:
+            case AF_ABILITY_CLEANSE_AREA:
+            case AF_ABILITY_WAR_CRY:
+            case AF_ABILITY_TAUNT:
+            case AF_ABILITY_DOG_DREAD_HOWL:
             {
                 float nAOEParam = GetM2DAFloat(TABLE_ABILITIES_SPELLS, "aoe_param1", nTacticSubCommand);
 
@@ -514,7 +516,7 @@ int _AT_AI_IsTargetValidForAbility(object oTarget, int nTacticCommand, int nTact
             /* CC */
 
             //MkBot:
-            case AT_ABILITY_DUAL_WEAPON_RIPOSTE:
+            case AF_ABILITY_DUAL_WEAPON_RIPOSTE:
             {
                 if (MK_IsShatterable(oTarget) == FALSE &&
                     (IsImmuneToEffectType(oTarget, EFFECT_TYPE_STUN) || _AT_AI_HasAIStatus(oTarget, AI_STATUS_CANT_ATTACK)) == TRUE)
@@ -523,8 +525,8 @@ int _AT_AI_IsTargetValidForAbility(object oTarget, int nTacticCommand, int nTact
                 break;
             }
             //MkBot:
-            case AT_ABILITY_SHIELD_PUMMEL:
-            case AT_ABILITY_DIRTY_FIGHTING:
+            case AF_ABILITY_SHIELD_PUMMEL:
+            case AF_ABILITY_DIRTY_FIGHTING:
             {
                 if (IsImmuneToEffectType(oTarget, EFFECT_TYPE_STUN) == TRUE)
                     return FALSE;
@@ -535,7 +537,7 @@ int _AT_AI_IsTargetValidForAbility(object oTarget, int nTacticCommand, int nTact
                 break;
             }
             //MkBot:
-            case AT_ABILITY_OVERPOWER:
+            case AF_ABILITY_OVERPOWER:
             {
                 if (MK_IsShatterable(oTarget) == FALSE &&
                     (IsImmuneToEffectType(oTarget, EFFECT_TYPE_KNOCKDOWN) || _AT_AI_HasAIStatus(oTarget, AI_STATUS_CANT_ATTACK)) == TRUE)
@@ -544,9 +546,9 @@ int _AT_AI_IsTargetValidForAbility(object oTarget, int nTacticCommand, int nTact
                 break;
             }
             //MkBot:
-            case AT_ABILITY_SHIELD_BASH:
-            case AT_ABILITY_POMMEL_STRIKE:
-            case AT_ABILITY_DOG_CHARGE:
+            case AF_ABILITY_SHIELD_BASH:
+            case AF_ABILITY_POMMEL_STRIKE:
+            case AF_ABILITY_DOG_CHARGE:
             {
                 if (IsImmuneToEffectType(oTarget, EFFECT_TYPE_KNOCKDOWN) == TRUE)
                     return FALSE;
@@ -556,20 +558,20 @@ int _AT_AI_IsTargetValidForAbility(object oTarget, int nTacticCommand, int nTact
 
                 break;
             }
-            //case AT_ABILITY_SHATTERING_SHOT: //MkBot: the purpose is to decrease armor
-            //case AT_ABILITY_DUAL_WEAPON_PUNISHER: //MkBot: it deals a lot of damage, everything else is a bonus
-            case AT_ABILITY_DAZE:
-            case AT_ABILITY_DISTRACTION:
-            case AT_ABILITY_PETRIFY:
-            case AT_ABILITY_CONE_OF_COLD:
-            case AT_ABILITY_PINNING_SHOT:
+            //case AF_ABILITY_SHATTERING_SHOT: //MkBot: the purpose is to decrease armor
+            //case AF_ABILITY_DUAL_WEAPON_PUNISHER: //MkBot: it deals a lot of damage, everything else is a bonus
+            case AF_ABILITY_DISORIENT:
+            case AF_ABILITY_DISTRACTION:
+            case AF_ABILITY_PETRIFY:
+            case AF_ABILITY_CONE_OF_COLD:
+            case AF_ABILITY_PINNING_SHOT:
             {
                 if (_AT_AI_HasAIStatus(oTarget, AI_STATUS_CANT_ATTACK) == TRUE)
                     return FALSE;
 
                 break;
             }
-            case AT_ABILITY_CRUSHING_PRISON:
+            case AF_ABILITY_CRUSHING_PRISON:
             {
                 if ((_AT_AI_HasAIStatus(oTarget, AT_STATUS_INVULNERABLE) != TRUE)
                 && (_AT_AI_HasAIStatus(oTarget, AI_STATUS_CANT_ATTACK) == TRUE))
@@ -578,8 +580,8 @@ int _AT_AI_IsTargetValidForAbility(object oTarget, int nTacticCommand, int nTact
 
                 break;
             }
-            case AT_ABILITY_HORROR:
-            case AT_ABILITY_FRIGHTENING:
+            case AF_ABILITY_HORROR:
+            case AF_ABILITY_FRIGHTENING:
             {
                 if (IsImmuneToEffectType(oTarget, EFFECT_TYPE_FEAR) == TRUE)
                     return FALSE;
@@ -594,7 +596,7 @@ int _AT_AI_IsTargetValidForAbility(object oTarget, int nTacticCommand, int nTact
 
                 break;
             }
-            case AT_ABILITY_SLEEP:
+            case AF_ABILITY_SLEEP:
             {
                 if (_AT_AI_HasAIStatus(oTarget, AI_STATUS_CANT_ATTACK) == TRUE)
                     return FALSE;
@@ -608,7 +610,7 @@ int _AT_AI_IsTargetValidForAbility(object oTarget, int nTacticCommand, int nTact
 
                 break;
             }
-            case AT_ABILITY_WAKING_NIGHTMARE:
+            case AF_ABILITY_WAKING_NIGHTMARE:
             {
                 if (IsImmuneToEffectType(oTarget, EFFECT_TYPE_CONFUSION) == TRUE)
                     return FALSE;
@@ -618,7 +620,7 @@ int _AT_AI_IsTargetValidForAbility(object oTarget, int nTacticCommand, int nTact
 
                 break;
             }
-            case AT_ABILITY_PARALYZE:
+            case AF_ABILITY_PARALYZE:
             {
                 if (IsImmuneToEffectType(oTarget, EFFECT_TYPE_PARALYZE) == TRUE)
                     return FALSE;
@@ -649,8 +651,8 @@ int _AT_AI_IsTargetValidForAbility(object oTarget, int nTacticCommand, int nTact
 
                 break;
             }
-            case AT_ABILITY_MANA_DRAIN:
-            case AT_ABILITY_MANA_CLASH:
+            case AF_ABILITY_MANA_DRAIN:
+            case AF_ABILITY_MANA_CLASH:
             {
                 if (IsMagicUser(oTarget) != TRUE)
                     return FALSE;
@@ -674,21 +676,21 @@ int _AT_AI_IsTargetValidForAbility(object oTarget, int nTacticCommand, int nTact
 
                 break;
             }
-            case AT_ABILITY_WALKING_BOMB:
+            case AF_ABILITY_WALKING_BOMB:
             {
-                if (Ability_IsAbilityActive(oTarget, AT_ABILITY_VIRULENT_WALKING_BOMB))
+                if (Ability_IsAbilityActive(oTarget, AF_ABILITY_VIRULENT_WALKING_BOMB))
                     return FALSE;
 
                 break;
             }
-            case AT_ABILITY_VIRULENT_WALKING_BOMB:
+            case AF_ABILITY_VIRULENT_WALKING_BOMB:
             {
-                if (Ability_IsAbilityActive(oTarget, AT_ABILITY_WALKING_BOMB))
+                if (Ability_IsAbilityActive(oTarget, AF_ABILITY_WALKING_BOMB))
                     return FALSE;
 
                 break;
             }
-            case AT_ABILITY_DOG_OVERWHELM:
+            case AF_ABILITY_DOG_OVERWHELM:
             case ABILITY_TALENT_MONSTER_SHRIEK_OVERWHLEM:
             case MONSTER_BEAR_OVERWHELM:
             case MONSTER_SPIDER_OVERWHELM:
@@ -728,9 +730,9 @@ int _AT_AI_IsTargetValidForAbility(object oTarget, int nTacticCommand, int nTact
 
                 break;
             }
-            case AT_ABILITY_SHIELD_DEFENSE:
+            case AF_ABILITY_SHIELD_DEFENSE:
             {
-                if (HasAbility(OBJECT_SELF, AT_ABILITY_SHIELD_WALL))
+                if (HasAbility(OBJECT_SELF, AF_ABILITY_SHIELD_WALL))
                     return FALSE;
 
                 break;
@@ -815,8 +817,8 @@ int _AT_AI_IsTargetValidForBeneficialAbility(object oTarget, int nAbilityID)
 
             break;
         }
-        case AT_ABILITY_HEAL:
-        case AT_ABILITY_REGENERATION:
+        case AF_ABILITY_HEAL:
+        case AF_ABILITY_REGENERATION:
         {
             float fMaxHealth = GetMaxHealth(oTarget);
             float fCurrentHealth = GetCurrentHealth(oTarget);
@@ -827,12 +829,12 @@ int _AT_AI_IsTargetValidForBeneficialAbility(object oTarget, int nAbilityID)
             if (GetHasEffects(oTarget, EFFECT_TYPE_CURSE_OF_MORTALITY) == TRUE)
                 return FALSE;
 
-            if (IsModalAbilityActive(oTarget, AT_ABILITY_BLOOD_MAGIC) == TRUE)
+            if (IsModalAbilityActive(oTarget, AF_ABILITY_BLOOD_MAGIC) == TRUE)
                 return FALSE;
 
             break;
         }
-        case AT_ABILITY_REJUVINATION:
+        case AF_ABILITY_REJUVINATION:
         {
             float fMaxManaStamina = GetCreatureProperty(oTarget, PROPERTY_DEPLETABLE_MANA_STAMINA, PROPERTY_VALUE_BASE);
             float fCurrentManaStamina = GetCreatureProperty(oTarget, PROPERTY_DEPLETABLE_MANA_STAMINA, PROPERTY_VALUE_CURRENT);
@@ -842,7 +844,7 @@ int _AT_AI_IsTargetValidForBeneficialAbility(object oTarget, int nAbilityID)
 
             break;
         }
-        case AT_ABILITY_DISPEL_MAGIC:
+        case AF_ABILITY_DISPEL_MAGIC:
         {
             effect[] arSpell = GetEffects(oTarget);
             int nSize = GetArraySize(arSpell);
@@ -965,18 +967,18 @@ int AT_IsHostileSelfAOE(int nTacticCommand, int nTacticSubCommand)
     {
         switch(nTacticSubCommand)
         {
-            case AT_ABILITY_DISENGAGE: // 3016
-            case AT_ABILITY_CLEANSE_AREA: // 3017
-            case AT_ABILITY_TWO_HANDED_SWEEP: // 3031
-            case AT_ABILITY_WAR_CRY: // 3037
-            case AT_ABILITY_TAUNT: // 3041
-            case AT_ABILITY_DUAL_WEAPON_WHIRLWIND: // 3043
-            case AT_ABILITY_DUAL_WEAPON_SWEEP: // 3044
-            case AT_ABILITY_DEVOUR: // 3065
-            case AT_ABILITY_MIND_BLAST: // 12006
-            case AT_ABILITY_ARCHDEMON_SMITE: // 90001
-            case AT_ABILITY_DOG_MABARI_HOWL: // 90048
-            case AT_ABILITY_GOLEM_HURL: // 90060
+            case AF_ABILITY_DISENGAGE: // 3016
+            case AF_ABILITY_CLEANSE_AREA: // 3017
+            case AF_ABILITY_TWO_HANDED_SWEEP: // 3031
+            case AF_ABILITY_WAR_CRY: // 3037
+            case AF_ABILITY_TAUNT: // 3041
+            case AF_ABILITY_DUAL_WEAPON_WHIRLWIND: // 3043
+            case AF_ABILITY_DUAL_WEAPON_SWEEP: // 3044
+            case AF_ABILITY_DEVOUR: // 3065
+            case AF_ABILITY_MIND_BLAST: // 12006
+            case AF_ABILITY_ARCHDEMON_SMITE: // 90001
+            case AF_ABILITY_DOG_DREAD_HOWL: // 90048
+            case AF_ABILITY_GOLEM_HURL: // 90060
             {
                 return TRUE;
 

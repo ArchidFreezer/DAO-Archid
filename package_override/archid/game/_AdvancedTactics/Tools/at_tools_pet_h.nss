@@ -4,7 +4,7 @@
     Good luck if you read these lines :)
 */
 
-#include "at_tools_constants_h"
+#include "af_ability_h"
 
 #include "ability_summon_h"
 #include "wrappers_h"
@@ -13,15 +13,15 @@ void AT_CleanAbilities(object oSummon)
 {
     RemoveAbility(oSummon, MONSTER_SPIDER_OVERWHELM);
     RemoveAbility(oSummon, MONSTER_BEAR_OVERWHELM);
-    RemoveAbility(oSummon, AT_ABILITY_DOG_MABARI_HOWL);
-    RemoveAbility(oSummon, AT_ABILITY_DOG_OVERWHELM);
-    RemoveAbility(oSummon, AT_ABILITY_DOG_CHARGE);
-    RemoveAbility(oSummon, AT_ABILITY_DOG_GROWL);
+    RemoveAbility(oSummon, AF_ABILITY_DOG_DREAD_HOWL);
+    RemoveAbility(oSummon, AF_ABILITY_DOG_OVERWHELM);
+    RemoveAbility(oSummon, AF_ABILITY_DOG_CHARGE);
+    RemoveAbility(oSummon, AF_ABILITY_DOG_GROWL);
 
     int nCoreClass = GetAppearanceType(oSummon);
 
     if (nCoreClass == 49)
-        RemoveAbility(oSummon, AT_ABILITY_DOG_SHRED);
+        RemoveAbility(oSummon, AF_ABILITY_DOG_SHRED);
 
     if (nCoreClass == 9)
         RemoveAbility(oSummon, ABILITY_TALENT_MONSTER_BEAR_RAGE);

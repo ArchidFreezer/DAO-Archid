@@ -4,6 +4,8 @@
 //==============================================================================
 //                                INCLUDES
 //==============================================================================
+#include "af_ability_h"
+
 /* Advanced Tactics */
 #include "at_tools_conditions_h"
 
@@ -42,8 +44,8 @@ object _MK_AI_Condition_AtLeastXEnemiesAtRadius(int nTacticCommand, int nTacticS
             object[] arFollowers = _MK_AI_GetFollowersFromTargetType(nTargetType, nTacticID);
             oCenter = arFollowers[0];
             if (_MK_AI_IsFriendValidForAbility(oCenter, nTacticCommand, nTacticSubCommand, nAbilityTargetType) == FALSE)
-                return OBJECT_INVALID; 
-            
+                return OBJECT_INVALID;
+
             break;
         }
         default:
@@ -67,7 +69,7 @@ object _MK_AI_Condition_AtLeastXEnemiesAtRadius(int nTacticCommand, int nTacticS
     {
         if ((arTargets[i] != oCenter)
         &&  (IsObjectHostile(oCenter, arTargets[i]) == TRUE)
-        &&  (IsModalAbilityActive(arTargets[i],AT_ABILITY_STEALTH) == FALSE) )
+        &&  (IsModalAbilityActive(arTargets[i],AF_ABILITY_STEALTH) == FALSE) )
             nEnemiesCount++;
     }
 

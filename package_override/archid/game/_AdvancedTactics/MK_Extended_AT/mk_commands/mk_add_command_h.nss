@@ -5,7 +5,10 @@
 //==============================================================================
 /* Core */
 #include "ai_main_h_2"
-#include "mk_cond_tools_h"
+#include "mk_cond_tools_h"  
+
+#include "af_ability_h"
+
 /* MkBot*/
 #include "mk_ability_mutex_h"
 #include "log_commands_h"
@@ -220,20 +223,20 @@ int MK_AbilityIsWarriorStance(int nAbilityId)
     int[] arrWarriorStances;
     int nSize = 0;
 
-    arrWarriorStances[nSize++] = AT_ABILITY_SHIELD_DEFENSE;
-    arrWarriorStances[nSize++] = AT_ABILITY_SHIELD_WALL;
-    arrWarriorStances[nSize++] = AT_ABILITY_SHIELD_COVER;
+    arrWarriorStances[nSize++] = AF_ABILITY_SHIELD_DEFENSE;
+    arrWarriorStances[nSize++] = AF_ABILITY_SHIELD_WALL;
+    arrWarriorStances[nSize++] = AF_ABILITY_SHIELD_COVER;
 
-    arrWarriorStances[nSize++] = AT_ABILITY_INDOMITABLE;
-    arrWarriorStances[nSize++] = AT_ABILITY_POWERFUL_SWINGS;
+    arrWarriorStances[nSize++] = AF_ABILITY_INDOMITABLE;
+    arrWarriorStances[nSize++] = AF_ABILITY_POWERFUL_SWINGS;
 
-    arrWarriorStances[nSize++] = AT_ABILITY_DUAL_WEAPON_DOUBLE_STRIKE;
-    arrWarriorStances[nSize++] = AT_ABILITY_DUAL_WEAPON_MOMENTUM;
+    arrWarriorStances[nSize++] = AF_ABILITY_DUAL_WEAPON_DOUBLE_STRIKE;
+    arrWarriorStances[nSize++] = AF_ABILITY_DUAL_WEAPON_MOMENTUM;
 
-    arrWarriorStances[nSize++] = AT_ABILITY_AIM;
-    arrWarriorStances[nSize++] = AT_ABILITY_DEFENSIVE_FIRE;
-    arrWarriorStances[nSize++] = AT_ABILITY_RAPIDSHOT;
-    arrWarriorStances[nSize++] = AT_ABILITY_SUPPRESSING_FIRE;
+    arrWarriorStances[nSize++] = AF_ABILITY_AIM;
+    arrWarriorStances[nSize++] = AF_ABILITY_DEFENSIVE_FIRE;
+    arrWarriorStances[nSize++] = AF_ABILITY_RAPIDSHOT;
+    arrWarriorStances[nSize++] = AF_ABILITY_SUPPRESSING_FIRE;
 
     int i;
     for(i=0; i<nSize; i++)
@@ -251,14 +254,14 @@ int MK_AbilityIsShieldReq(int nAbilityId)
     int[] arrAbilitiesShield;
     int nSize = 0;
 //MkBot: not very fast but easy to read and modify
-    arrAbilitiesShield[nSize++] = AT_ABILITY_SHIELD_DEFENSE;
-    arrAbilitiesShield[nSize++] = AT_ABILITY_SHIELD_WALL;
-    arrAbilitiesShield[nSize++] = AT_ABILITY_SHIELD_COVER;
+    arrAbilitiesShield[nSize++] = AF_ABILITY_SHIELD_DEFENSE;
+    arrAbilitiesShield[nSize++] = AF_ABILITY_SHIELD_WALL;
+    arrAbilitiesShield[nSize++] = AF_ABILITY_SHIELD_COVER;
 
-    arrAbilitiesShield[nSize++] = AT_ABILITY_SHIELD_BASH;
-    arrAbilitiesShield[nSize++] = AT_ABILITY_SHIELD_PUMMEL;
-    arrAbilitiesShield[nSize++] = AT_ABILITY_OVERPOWER;
-    arrAbilitiesShield[nSize++] = AT_ABILITY_ASSAULT;
+    arrAbilitiesShield[nSize++] = AF_ABILITY_SHIELD_BASH;
+    arrAbilitiesShield[nSize++] = AF_ABILITY_SHIELD_PUMMEL;
+    arrAbilitiesShield[nSize++] = AF_ABILITY_OVERPOWER;
+    arrAbilitiesShield[nSize++] = AF_ABILITY_ASSAULT;
 
     int i;
     for(i=0; i<nSize; i++)
@@ -275,15 +278,15 @@ int MK_AbilityIsTwoHandWeaponReq(int nAbilityId)
     int[] arrAbilitiesTwoHanded;
     int nSize = 0;
 //MkBot: not very fast but easy to read and modify
-    arrAbilitiesTwoHanded[nSize++] = AT_ABILITY_INDOMITABLE;
-    arrAbilitiesTwoHanded[nSize++] = AT_ABILITY_POWERFUL_SWINGS;
+    arrAbilitiesTwoHanded[nSize++] = AF_ABILITY_INDOMITABLE;
+    arrAbilitiesTwoHanded[nSize++] = AF_ABILITY_POWERFUL_SWINGS;
 
-    arrAbilitiesTwoHanded[nSize++] = AT_ABILITY_POMMEL_STRIKE;
-    arrAbilitiesTwoHanded[nSize++] = AT_ABILITY_MIGHTY_BLOW;
-    arrAbilitiesTwoHanded[nSize++] = AT_ABILITY_SUNDER_WEAPON;
-    arrAbilitiesTwoHanded[nSize++] = AT_ABILITY_SUNDER_ARMOR;
-    arrAbilitiesTwoHanded[nSize++] = AT_ABILITY_TWO_HANDED_SWEEP;
-    arrAbilitiesTwoHanded[nSize++] = AT_ABILITY_CRITICAL_STRIKE;
+    arrAbilitiesTwoHanded[nSize++] = AF_ABILITY_POMMEL_STRIKE;
+    arrAbilitiesTwoHanded[nSize++] = AF_ABILITY_MIGHTY_BLOW;
+    arrAbilitiesTwoHanded[nSize++] = AF_ABILITY_SUNDER_ARMS;
+    arrAbilitiesTwoHanded[nSize++] = AF_ABILITY_SUNDER_ARMOR;
+    arrAbilitiesTwoHanded[nSize++] = AF_ABILITY_TWO_HANDED_SWEEP;
+    arrAbilitiesTwoHanded[nSize++] = AF_ABILITY_CRITICAL_STRIKE;
 
     int i;
     for(i=0; i<nSize; i++)
@@ -300,15 +303,15 @@ int MK_AbilityIsDualWeaponsReq(int nAbilityId)
     int[] arrAbilitiesDual;
     int nSize = 0;
 
-    arrAbilitiesDual[nSize++] = AT_ABILITY_DUAL_WEAPON_DOUBLE_STRIKE;
-    arrAbilitiesDual[nSize++] = AT_ABILITY_DUAL_WEAPON_MOMENTUM;
+    arrAbilitiesDual[nSize++] = AF_ABILITY_DUAL_WEAPON_DOUBLE_STRIKE;
+    arrAbilitiesDual[nSize++] = AF_ABILITY_DUAL_WEAPON_MOMENTUM;
 
-    arrAbilitiesDual[nSize++] = AT_ABILITY_DUAL_WEAPON_RIPOSTE;
-    arrAbilitiesDual[nSize++] = AT_ABILITY_DUAL_WEAPON_CRIPPLE;
-    arrAbilitiesDual[nSize++] = AT_ABILITY_DUAL_WEAPON_PUNISHER;
-    arrAbilitiesDual[nSize++] = AT_ABILITY_DUAL_WEAPON_SWEEP;
-    arrAbilitiesDual[nSize++] = AT_ABILITY_DUAL_WEAPON_FLURRY;
-    arrAbilitiesDual[nSize++] = AT_ABILITY_DUAL_WEAPON_WHIRLWIND;
+    arrAbilitiesDual[nSize++] = AF_ABILITY_DUAL_WEAPON_RIPOSTE;
+    arrAbilitiesDual[nSize++] = AF_ABILITY_DUAL_WEAPON_CRIPPLE;
+    arrAbilitiesDual[nSize++] = AF_ABILITY_DUAL_WEAPON_PUNISHER;
+    arrAbilitiesDual[nSize++] = AF_ABILITY_DUAL_WEAPON_SWEEP;
+    arrAbilitiesDual[nSize++] = AF_ABILITY_DUAL_WEAPON_FLURRY;
+    arrAbilitiesDual[nSize++] = AF_ABILITY_DUAL_WEAPON_WHIRLWIND;
 
     int i;
     for(i=0; i<nSize; i++)
@@ -325,17 +328,17 @@ int MK_AbilityIsRangedReq(int nAbilityId)
     int[] arrAbilitiesRanged;
     int nSize = 0;
 
-    arrAbilitiesRanged[nSize++] = AT_ABILITY_AIM;
-    arrAbilitiesRanged[nSize++] = AT_ABILITY_DEFENSIVE_FIRE;
-    arrAbilitiesRanged[nSize++] = AT_ABILITY_RAPIDSHOT;
-    arrAbilitiesRanged[nSize++] = AT_ABILITY_SUPPRESSING_FIRE;
+    arrAbilitiesRanged[nSize++] = AF_ABILITY_AIM;
+    arrAbilitiesRanged[nSize++] = AF_ABILITY_DEFENSIVE_FIRE;
+    arrAbilitiesRanged[nSize++] = AF_ABILITY_RAPIDSHOT;
+    arrAbilitiesRanged[nSize++] = AF_ABILITY_SUPPRESSING_FIRE;
 
-    arrAbilitiesRanged[nSize++] = AT_ABILITY_PINNING_SHOT;
-    arrAbilitiesRanged[nSize++] = AT_ABILITY_CRIPPLING_SHOT;
-    arrAbilitiesRanged[nSize++] = AT_ABILITY_CRITICAL_SHOT;
-    arrAbilitiesRanged[nSize++] = AT_ABILITY_ARROW_OF_SLAYING;
-    arrAbilitiesRanged[nSize++] = AT_ABILITY_SHATTERING_SHOT;
-    arrAbilitiesRanged[nSize++] = AT_ABILITY_SCATTERSHOT;
+    arrAbilitiesRanged[nSize++] = AF_ABILITY_PINNING_SHOT;
+    arrAbilitiesRanged[nSize++] = AF_ABILITY_CRIPPLING_SHOT;
+    arrAbilitiesRanged[nSize++] = AF_ABILITY_CRITICAL_SHOT;
+    arrAbilitiesRanged[nSize++] = AF_ABILITY_ARROW_OF_SLAYING;
+    arrAbilitiesRanged[nSize++] = AF_ABILITY_SHATTERING_SHOT;
+    arrAbilitiesRanged[nSize++] = AF_ABILITY_SCATTERSHOT;
 
     int i;
     for(i=0; i<nSize; i++)
