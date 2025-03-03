@@ -141,7 +141,7 @@ For mods where there are alternatives that provide similar functionality and one
 | [TSM Better Epilogue Guards](https://www.nexusmods.com/dragonage/mods/4725) |  |
 | [TSM Better Fereldan Kids](https://www.nexusmods.com/dragonage/mods/5125) |  |
 | [TSM Better Henley's Apothecary](https://www.nexusmods.com/dragonage/mods/4707) |  |
-| [TSM Better RTO Items](https://www.nexusmods.com/dragonage/mods/4712) |  |
+| [TSM Better RTO Items](TSM Better RTO Items) |  |
 | [TSM Better Vigil's Keep Ghouls and Prisoners](https://www.nexusmods.com/dragonage/mods/4724) |  |
 | [TSM Cord of the Beresaad](https://www.nexusmods.com/dragonage/mods/4726) |  |
 | [TSM DAA Bodyguards Tweak](https://www.nexusmods.com/dragonage/mods/4107) |  |
