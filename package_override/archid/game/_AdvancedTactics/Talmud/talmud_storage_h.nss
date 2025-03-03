@@ -25,7 +25,7 @@ NOTE: if you change the stage area to be different from "char_stage" make sure y
 */
 
 
-#include "core_h"  
+#include "core_h"
 #include "mk_storage_h"
 
 /**** CONFIG ****/
@@ -125,7 +125,7 @@ void _TalSetStorageEffect(string sTag, effect eFect, int nLoadFactor = 0);
 *
 * @author Talmud
 **/
-void  _TalStorage_ModulePresave();
+void  TalStorage_ModulePresave();
 
 
 /** @brief Internal maintenance function for the storage system.
@@ -134,9 +134,11 @@ void  _TalStorage_ModulePresave();
 *
 * @author Talmud
 **/
-void _TalStorage_ModuleLoad();
+void TalStorage_ModuleLoad();
 
-/** @brief Put this on the first line in the void main() of your module script.
+/** @brief Put this on the first line in the void main() of your module script.                      
+*
+* ARCHID: This function is not used by the archid mod, instead it's contents are merged into the existing event handling blocks
 *
 *  Allows storage persistence. Without this function the storage objects are not saved with the game.
 *
@@ -911,7 +913,7 @@ void _TalSetStorageEffect(string sTag, effect eFect, int nLoadFactor = 0)
     Engine_ApplyEffectOnObject(EFFECT_DURATION_TYPE_PERMANENT, eFect, oCurrentCache , 0.0, oItem);
 }
 
-void _TalStorage_ModulePresave()
+void TalStorage_ModulePresave()
 {
     object oPC = GetPartyLeader();
     object oStorage = _TalGetStorageCache();
@@ -926,11 +928,11 @@ void _TalStorage_ModulePresave()
         }
     }
     #ifdef TALMUD_STORAGE_DEBUG_INTERNAL
-    PrintToLog("_TalStorage_ModulePresave, storage area: " + GetTag(GetArea(oStorage)));
+    PrintToLog("TalStorage_ModulePresave, storage area: " + GetTag(GetArea(oStorage)));
     #endif
 }
 
-void _TalStorage_ModuleLoad()
+void TalStorage_ModuleLoad()
 {
     object oPC = GetPartyLeader();
     object oStorage = _TalGetStorageCache();
@@ -946,7 +948,7 @@ void _TalStorage_ModuleLoad()
         }
     }
     #ifdef TALMUD_STORAGE_DEBUG_INTERNAL
-    PrintToLog("_TalStorage_ModuleLoad, storage area: " + GetTag(GetArea(oStorage)));
+    PrintToLog("TalStorage_ModuleLoad, storage area: " + GetTag(GetArea(oStorage)));
     #endif
 
 }
@@ -958,12 +960,12 @@ void Storage_HandleModuleEvents()
     {
         case EVENT_TYPE_MODULE_PRESAVE:
         {
-            _TalStorage_ModulePresave();
+            TalStorage_ModulePresave();
             break;
         }
         case EVENT_TYPE_MODULE_LOAD:
         {
-            _TalStorage_ModuleLoad();
+            TalStorage_ModuleLoad();
             break;
         }
         case EVENT_TYPE_GAMEMODE_CHANGE:
@@ -974,7 +976,7 @@ void Storage_HandleModuleEvents()
             if (nNewGameMode == GM_EXPLORE
                 && nOldGameMode == GM_LOADING)
             {
-                _TalStorage_ModuleLoad();
+                TalStorage_ModuleLoad();
             }
             break;
         }

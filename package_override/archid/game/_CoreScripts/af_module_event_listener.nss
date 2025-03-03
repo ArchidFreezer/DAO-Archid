@@ -11,9 +11,6 @@ void main()
     event ev = GetCurrentEvent();
     int nEventType = GetEventType(ev);
 
-    // Handle the Talmud storage
-    Storage_HandleModuleEvents();
-
     // We will watch for every event type and if the one we need
     // appears we will handle it as a special case. We will ignore the rest
     // of the events
@@ -28,6 +25,11 @@ void main()
             AF_CheckAlistairRose();
             AF_SpellShapingCheckConfig();
             AF_ExtraDogSlotCheckConfig();
+            TalStorage_ModuleLoad();
+            break;
+        }
+        case EVENT_TYPE_MODULE_PRESAVE: {
+            TalStorage_ModulePresave();
             break;
         }
         case EVENT_TYPE_GUI_OPENED: {
@@ -57,6 +59,7 @@ void main()
                     break;
                 case GM_LOADING:
                     AF_ExtraDogSlotLoadingInit();
+                    if (nNewGameMode == GM_EXPLORE) TalStorage_ModuleLoad();
                     break;
             }
             break;
