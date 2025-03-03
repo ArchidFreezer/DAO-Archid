@@ -1,0 +1,11 @@
+#!/bin/bash
+
+MODDIR='/c/Projects/DAO/archid'
+EXPORTDIR="${MODDIR}/addin/module/override/toolsetexport"
+OUTDIR="${MODDIR}/package_override/archid/game"
+
+for file in ${EXPORTDIR}/*; do
+	filename=${file##*/}
+	target=$(find $OUTDIR -name $filename)
+	mv $file $target
+done
