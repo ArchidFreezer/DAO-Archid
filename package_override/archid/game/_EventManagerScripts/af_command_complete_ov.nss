@@ -263,9 +263,9 @@ void _MK_AddSkills() {
     MK_PrintToLog("[Command Complete] Section: Add Skills");
     #endif
 
-    if (!HasAbility(OBJECT_SELF, AF_AF_ABILITY_POSSESSED))
-        AddAbility(OBJECT_SELF, AF_AF_ABILITY_POSSESSED);
+    if (!HasAbility(OBJECT_SELF, AF_AT_ABILITY_POSSESSED))
+        AddAbility(OBJECT_SELF, AF_AT_ABILITY_POSSESSED);
 
-    if (!HasAbility(OBJECT_SELF, AF_AF_ABILITY_TRAITORS))
-        AddAbility(OBJECT_SELF, AF_AF_ABILITY_TRAITORS);
+    if (!HasAbility(OBJECT_SELF, AF_AT_ABILITY_TRAITORS))
+        AddAbility(OBJECT_SELF, AF_AT_ABILITY_TRAITORS);
 }
