@@ -110,5 +110,5 @@ const float MK_RANGE_BOW = MAX_RANGED_COMBAT_DISTANCE;
 //==============================================================================
 //                               SKILLS
 //==============================================================================
-const int MK_ABILITY_SET_AS_TARGET =  60020;
+const int MK_ABILITY_SET_AS_TARGET =  6610021;
 #endif
