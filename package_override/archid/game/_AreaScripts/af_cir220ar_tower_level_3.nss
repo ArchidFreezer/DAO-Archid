@@ -47,10 +47,19 @@ void main() {
             oTemplar = GetObjectByTag("cir230cr_possessed_templar", 4);
             if (!IsDead(oTemplar)) {
                 UnequipItem(oTemplar, GetItemInEquipSlot(INVENTORY_SLOT_HEAD, oTemplar));
-            }
+            }     
+            
+            // Wings of Velvet
+            oContainer = GetObjectByTag("cir000ip_chest", 0);
+            if (IsObjectValid(oContainer)) {
+                if (!IsObjectValid(GetObjectByTag("af_boot_lgt_wings"))) CreateItemOnObject(R"af_boot_lgt_wings.uti", oContainer, 1, "", TRUE);
+                if (!IsObjectValid(GetObjectByTag("af_glove_lgt_wings"))) CreateItemOnObject(R"af_glove_lgt_wings.uti", oContainer, 1, "", TRUE);
+                if (!IsObjectValid(GetObjectByTag("af_helm_cth_wings"))) CreateItemOnObject(R"af_helm_cth_wings.uti", oContainer, 1, "", TRUE);
+                if (!IsObjectValid(GetObjectByTag("af_robe_wings"))) CreateItemOnObject(R"af_robe_wings.uti", oContainer, 1, "", TRUE);
+                if (!IsObjectValid(GetObjectByTag("af_staff_wings"))) CreateItemOnObject(R"af_staff_wings.uti", oContainer, 1, "", TRUE);
+            }            
 
             AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_CIR220AR);
         }
     }
-
 }

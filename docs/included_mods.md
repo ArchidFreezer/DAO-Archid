@@ -21,11 +21,11 @@ For mods where there are alternatives that provide similar functionality and one
 | [Army Golem March Bug Fix](https://www.nexusmods.com/dragonage/mods/5230) |  |
 | [Awakening Blackblade Armor Dragon Drop Fix](https://www.nexusmods.com/dragonage/mods/1112) |  |
 | [Awakening Encounters Renovation](https://www.nexusmods.com/dragonage/mods/5874) |  |
+| [Awakening endgame cutscene fixes](https://www.nexusmods.com/dragonage/mods/3009) |  |
 | [Awakening Fixes and Tweaks](https://www.nexusmods.com/dragonage/mods/5944) |  |
+| [Awakening in the OC - Expanded Integration](https://www.nexusmods.com/dragonage/mods/5181) |  |
 | [Awakening Messenger Bugfix](https://www.nexusmods.com/dragonage/mods/4983) |  |
 | [Awakening Silverite Mines Bugfix](https://www.nexusmods.com/dragonage/mods/1762) |  |
-| [Awakening endgame cutscene fixes](https://www.nexusmods.com/dragonage/mods/3009) |  |
-| [Awakening in the OC - Expanded Integration](https://www.nexusmods.com/dragonage/mods/5181) |  |
 | [Better Sex Cutscenes](https://www.nexusmods.com/dragonage/mods/548) | Zesty version |
 | [Blackmoon's Human Female Face Textures](https://www.nexusmods.com/dragonage/mods/5692) |  |
 | [Blood Retexture](https://www.nexusmods.com/dragonage/mods/5766) |  |
@@ -44,7 +44,6 @@ For mods where there are alternatives that provide similar functionality and one
 | [Clothed Prisoners](https://www.nexusmods.com/dragonage/mods/1682) |  |
 | [Clouds Retextured](https://www.nexusmods.com/dragonage/mods/5993) |  |
 | [Codex Fixes and Tweaks for Golems of Amgarrak and Witch Hunt](https://www.nexusmods.com/dragonage/mods/6246) |  |
-| [DLC Item Fixes](https://www.nexusmods.com/dragonage/mods/5490) |  |
 | [DahliaLynn's Sleep Until Dawn](https://www.nexusmods.com/dragonage/mods/3722) |  |
 | [Dain's Fixes](https://www.nexusmods.com/dragonage/mods/4384) |  |
 | [Dalishious Skin Tints](https://www.nexusmods.com/dragonage/mods/4619) |  |
@@ -52,6 +51,7 @@ For mods where there are alternatives that provide similar functionality and one
 | [Desire Demon HD Retexture Catachrism](https://www.nexusmods.com/dragonage/mods/4229) |  |
 | [Devour - STR Scaled](https://www.nexusmods.com/dragonage/mods/5815) |  |
 | [Dispel Magic - Lifeward - QoL](https://www.nexusmods.com/dragonage/mods/6198) |  |
+| [DLC Item Fixes](https://www.nexusmods.com/dragonage/mods/5490) |  |
 | [Dog Gift Tweaks](https://www.nexusmods.com/dragonage/mods/635) |  |
 | [Dragon Age BIK Improvement Konversion (DABIK)](https://www.nexusmods.com/dragonage/mods/5255) | Included, but not in git for size reasons |
 | [Dragon Age Redesigned](https://www.nexusmods.com/dragonage/mods/686) |  |
@@ -70,22 +70,22 @@ For mods where there are alternatives that provide similar functionality and one
 | [Gift Guide - Awakening](https://www.nexusmods.com/dragonage/mods/882) |  |
 | [Goblet De-Gobbler - a Joining chalice fix and more](https://www.nexusmods.com/dragonage/mods/5864) |  |
 | [Grey Wardens of Ferelden](https://www.nexusmods.com/dragonage/mods/3258) |  |
-| [HF apprentice robes fix](https://www.nexusmods.com/dragonage/mods/1075) |  |
-| [HQ Eyebrow Stubble and Scalp Hair Replacers](https://www.nexusmods.com/dragonage/mods/5528) |  |
 | [Heavy Dwarven Armor Retexture](https://www.nexusmods.com/dragonage/mods/5915) |  |
 | [Heavy Glove Compatibility](https://www.nexusmods.com/dragonage/mods/5868) |  |
 | [Herbs and Ores - DAO](https://www.nexusmods.com/dragonage/mods/5882) |  |
+| [HF apprentice robes fix](https://www.nexusmods.com/dragonage/mods/1075) |  |
 | [High Dragon Replacer](https://www.nexusmods.com/dragonage/mods/6258) |  |
 | [Higher Resolution Paintings](https://www.nexusmods.com/dragonage/mods/5934) |  |
+| [HQ Eyebrow Stubble and Scalp Hair Replacers](https://www.nexusmods.com/dragonage/mods/5528) |  |
 | [Immersive DLC Integration](https://www.nexusmods.com/dragonage/mods/6218) |  |
 | [Imposing Redcliffe Doors](https://www.nexusmods.com/dragonage/mods/6171) |  |
 | [Improved Companion Items](https://www.nexusmods.com/dragonage/mods/5213) |  |
 | [Improved Warden Oath](https://www.nexusmods.com/dragonage/mods/1619) |  |
 | [Inquisition Fade](https://www.nexusmods.com/dragonage/mods/6209) |  |
 | [Joining ritual fix for Awakening companions](https://www.nexusmods.com/dragonage/mods/2997) |  |
-| [LOD2 files for More Hairstyles no-earring Duncan style - human male only](https://www.nexusmods.com/dragonage/mods/4077) |  |
 | [Law and Order Fixes](https://www.nexusmods.com/dragonage/mods/3046) |  |
 | [Leliana Stories](https://www.nexusmods.com/dragonage/mods/4940) |  |
+| [LOD2 files for More Hairstyles no-earring Duncan style - human male only](https://www.nexusmods.com/dragonage/mods/4077) |  |
 | [Loghain - Proper Armor at Ostagar](https://www.nexusmods.com/dragonage/mods/6164) |  |
 | [Madd Gift Guide](https://www.nexusmods.com/dragonage/mods/385) |  |
 | [Mage Origin Dialogue Tweaks](https://www.nexusmods.com/dragonage/mods/5094) |  |
@@ -97,10 +97,11 @@ For mods where there are alternatives that provide similar functionality and one
 | [More Fancier Rugs](https://www.nexusmods.com/dragonage/mods/6196) |  |
 | [More Hairstyles](https://www.nexusmods.com/dragonage/mods/392) |  |
 | [Morrigan Restoration Patch](https://www.nexusmods.com/dragonage/mods/1120) |  |
-| [NPC equipment changes and fixes](https://www.nexusmods.com/dragonage/mods/5487) |  |
 | [Natural Bodies all in one](https://www.nexusmods.com/dragonage/mods/554) |  |
+| [natural lighting for the character creator](https://www.nexusmods.com/dragonage/mods/4869) |  |
 | [No Helmet Hack 1_6](https://www.nexusmods.com/dragonage/mods/202) |  |
 | [No Outsiders in Orzammar](https://www.nexusmods.com/dragonage/mods/6240) |  |
+| [NPC equipment changes and fixes](https://www.nexusmods.com/dragonage/mods/5487) |  |
 | [Ogre HD Retexture Catachrism](https://www.nexusmods.com/dragonage/mods/4226) |  |
 | [Old Gods](https://www.nexusmods.com/dragonage/mods/5800) |  |
 | [Open Lock Spells](https://www.nexusmods.com/dragonage/mods/3638) |  |
@@ -133,8 +134,13 @@ For mods where there are alternatives that provide similar functionality and one
 | [Sulcher's Pass consistency](https://www.nexusmods.com/dragonage/mods/6248) |  |
 | [Sun's Tints](https://www.nexusmods.com/dragonage/mods/6054) |  |
 | [Surana Dialogue Fixes](https://www.nexusmods.com/dragonage/mods/6405) |  |
+| [Templar Variety - DAO](https://www.nexusmods.com/dragonage/mods/6003) |  |
+| [The Deck of Many Mods](https://www.nexusmods.com/dragonage/mods/5625) |  |
+| [The Icons Project](https://www.nexusmods.com/dragonage/mods/826) |  |
 | [The Ivory Tower and Nightfall Bloom](https://www.nexusmods.com/dragonage/mods/645) |  |
 | [The Rescue at Ishal](https://www.nexusmods.com/dragonage/mods/4690) | Included 4k video, but not in git due to file size |
+| [Tranquil Brand 2.0](https://www.nexusmods.com/dragonage/mods/4505) |  |
+| [True Colours REDUX](https://www.nexusmods.com/dragonage/mods/4523) |  |
 | [TSM Alistair's Rose](https://www.nexusmods.com/dragonage/mods/4735) |  |
 | [TSM Awakening Goes BOOM](https://www.nexusmods.com/dragonage/mods/4708) |  |
 | [TSM Better Bannhammer](https://www.nexusmods.com/dragonage/mods/4100) |  |
@@ -163,12 +169,7 @@ For mods where there are alternatives that provide similar functionality and one
 | [TSM Vignette Be Gone](https://www.nexusmods.com/dragonage/mods/4904) |  |
 | [TSM Werewolf Fix](https://www.nexusmods.com/dragonage/mods/5229) |  |
 | [TSM Wynne Robe Fix Complete](https://www.nexusmods.com/dragonage/mods/4716) |  |
-| [Templar Variety - DAO](https://www.nexusmods.com/dragonage/mods/6003) |  |
-| [The Deck of Many Mods](https://www.nexusmods.com/dragonage/mods/5625) |  |
-| [The Icons Project](https://www.nexusmods.com/dragonage/mods/826) |  |
-| [The Rescue at Ishal](https://www.nexusmods.com/dragonage/mods/4690) |  |
-| [Tranquil Brand 2.0](https://www.nexusmods.com/dragonage/mods/4505) |  |
-| [True Colours REDUX](https://www.nexusmods.com/dragonage/mods/4523) |  |
+| [tucked hair chargenmorphcfg](https://www.nexusmods.com/dragonage/mods/5062) |  |
 | [Tucked Hair](https://www.moddb.com/mods/tmp7704/downloads/tucked-hair) |  |
 | [Two Moons Circle](https://www.nexusmods.com/dragonage/mods/5995) |  |
 | [Unique Face Textures for Companions DAO Edition](https://www.nexusmods.com/dragonage/mods/4666) |  |
@@ -178,9 +179,8 @@ For mods where there are alternatives that provide similar functionality and one
 | [Vigilance mesh fix](https://www.nexusmods.com/dragonage/mods/1168) |  |
 | [Water Barrels with Physics](https://www.nexusmods.com/dragonage/mods/6556) |  |
 | [Weapon Trails Reducer Remover](https://www.nexusmods.com/dragonage/mods/458) |  |
+| [Wings Of Velvet](https://www.nexusmods.com/dragonage/mods/712) |  |
 | [Wolf Replacers](https://www.nexusmods.com/dragonage/mods/6314) |  |
 | [World map icons redone](https://www.nexusmods.com/dragonage/mods/6478) |  |
 | [World map redone](https://www.nexusmods.com/dragonage/mods/6473) |  |
 | [YAHD - Yet Another HD Mod](https://www.nexusmods.com/dragonage/mods/6233) |  |
-| [natural lighting for the character creator](https://www.nexusmods.com/dragonage/mods/4869) |  |
-| [tucked hair chargenmorphcfg](https://www.nexusmods.com/dragonage/mods/5062) |  |
