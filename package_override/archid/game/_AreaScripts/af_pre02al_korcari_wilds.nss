@@ -13,14 +13,15 @@ void main() {
 
     object oArea=GetArea(OBJECT_SELF);
     string sAreaTag=GetTag(oArea);
-                              
-    if (sAreaTag == "pre200ar_korcari_wilds") {   
+
+    if (sAreaTag == "pre200ar_korcari_wilds") {
         if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_PRE200AR)) {
 
             // Add DLC item Feral Wolf Charm
             object oContainer = GetObjectByTag("pre200ip_iron_chest2");
             if (IsObjectValid(oContainer)) {
                 CreateItemOnObject(R"prm000im_wolf_charm.uti", oContainer, 1, "", TRUE);
+                CreateItemOnObject(R"af_ring_survival.uti", oContainer, 1, "", TRUE);
             }
 
             // Add DLC item Lion's Paw
@@ -33,7 +34,7 @@ void main() {
         }
     }
 
-    if (sAreaTag == "pre211ar_flemeths_hut_int") {   
+    if (sAreaTag == "pre211ar_flemeths_hut_int") {
         /* pre211ar (Hut) - run once */
         if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_PRE211AR)) {
 
