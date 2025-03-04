@@ -133,6 +133,7 @@ For mods where there are alternatives that provide similar functionality and one
 | [Sulcher's Pass consistency](https://www.nexusmods.com/dragonage/mods/6248) |  |
 | [Sun's Tints](https://www.nexusmods.com/dragonage/mods/6054) |  |
 | [Surana Dialogue Fixes](https://www.nexusmods.com/dragonage/mods/6405) |  |
+| [The Ivory Tower and Nightfall Bloom](https://www.nexusmods.com/dragonage/mods/645) |  |
 | [The Rescue at Ishal](https://www.nexusmods.com/dragonage/mods/4690) | Included 4k video, but not in git due to file size |
 | [TSM Alistair's Rose](https://www.nexusmods.com/dragonage/mods/4735) |  |
 | [TSM Awakening Goes BOOM](https://www.nexusmods.com/dragonage/mods/4708) |  |

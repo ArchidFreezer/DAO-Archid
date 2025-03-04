@@ -16,7 +16,8 @@
 #include "log_h"
 #include "effect_constants_h"
 #include "2da_data_h"
-#include "core_difficulty_h"
+#include "core_difficulty_h" 
+#include "af_ability_h"
 #include "af_option_h"
 
 const float AI_MELEE_RANGE = 3.5; // Any target within this range is considered a melee target
@@ -1517,6 +1518,15 @@ int GetExperience(object oPartyMember)
 int IsImmuneToEffectType(object oCreature, int nEffectType) ;
 int IsImmuneToEffectType(object oCreature, int nEffectType)
 {
+    // Shale's new Stone Will effects 
+    if (GetHasEffects(oCreature, EFFECT_TYPE_INVALID, AF_ABILITY_STONE_WILL)) 
+    {
+        if (nEffectType == EFFECT_TYPE_KNOCKDOWN || nEffectType == EFFECT_TYPE_SLIP) // knockdown / slip immunity
+        {
+            return 1; // "Immune" message
+        }
+    }    
+    
     // ABILITY_TALENT_INDOMITABLE grants immunity to knockdown and stun
     if (nEffectType == EFFECT_TYPE_KNOCKDOWN || nEffectType == EFFECT_TYPE_STUN || nEffectType == EFFECT_TYPE_SLIP)
     {

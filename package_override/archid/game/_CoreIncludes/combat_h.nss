@@ -25,7 +25,7 @@
 #include "ai_threat_h"
 #include "2da_constants_h"
 
-#include "stats_core_h"   
+#include "stats_core_h"
 #include "af_option_h"
 
 
@@ -113,7 +113,7 @@ int CheckForDeathblow(object oAttacker, object oTarget)
         fChance *= 1.5;
 
     // Messy kills doubles the chance
-    if (AF_IsOptionEnabled(AF_OPT_MESSY_KILLS) && GetHasEffects(oAttacker, 579873371))
+    if (AF_IsOptionEnabled(AF_OPT_MESSY_KILLS) && GetHasEffects(oAttacker, AF_EFFECT_TYPE_MESSY_KILLS))
         fChance *= 2.0;
 
     return (fChance > RandomFloat());

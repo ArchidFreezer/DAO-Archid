@@ -71,6 +71,7 @@
 #include "effect_swarm_h"
 #include "effect_mabari_dominance_h"
 
+#include "af_ability_h"
 
 effect EffectModifyMovementSpeed(float fPotency, int bHostile=FALSE)
 {
@@ -316,7 +317,15 @@ int Effects_HandleApplyEffect()
         {
             nReturnValue = TRUE;
         }
-
+        
+         // Shale's new Stone Will effects; immunity to knockback
+        if (GetHasEffects(OBJECT_SELF, EFFECT_TYPE_INVALID, AF_ABILITY_STONE_WILL) && nEffectType == EFFECT_TYPE_KNOCKBACK)
+        {
+            // knockback alone has to be handled here because of SimpleEffect flag...
+            UI_DisplayMessage(OBJECT_SELF, UI_MESSAGE_IMMUNE);
+            nReturnValue = FALSE;
+        }
+    
         if (nReturnValue == -1)
         {
 
