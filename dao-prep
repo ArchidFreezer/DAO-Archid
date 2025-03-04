@@ -1,6 +1,8 @@
 #!/bin/sh
 
 MODDIR='/c/Projects/DAO/archid'
+echo "Moving toolset export files..."
+./dao-emv
 echo "Processing GDA files ..."
 ./dao-gda
 

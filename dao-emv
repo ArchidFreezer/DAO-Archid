@@ -4,8 +4,14 @@ MODDIR='/c/Projects/DAO/archid'
 EXPORTDIR="${MODDIR}/addin/module/override/toolsetexport"
 OUTDIR="${MODDIR}/package_override/archid/game"
 
+moved_all_files="true"
 for file in ${EXPORTDIR}/*; do
 	filename=${file##*/}
 	target=$(find $OUTDIR -name $filename)
-	mv $file $target
+	if [[ -z $target ]]; then
+		moved_all_files=""
+	else
+		mv $file $target
+	fi
 done
+[[ -z $moved_all_files ]] && echo "*** Some exported files not moved ***"
