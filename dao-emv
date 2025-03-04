@@ -6,6 +6,7 @@ OUTDIR="${MODDIR}/package_override/archid/game"
 
 moved_all_files="true"
 for file in ${EXPORTDIR}/*; do
+	[[ ! -e $file ]] && continue
 	filename=${file##*/}
 	target=$(find $OUTDIR -name $filename)
 	if [[ -z $target ]]; then
