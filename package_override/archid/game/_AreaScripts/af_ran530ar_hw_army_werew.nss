@@ -9,14 +9,16 @@
 */
 void main() {
 
-    object oArea = GetArea(OBJECT_SELF);
+    object oArea=GetArea(OBJECT_SELF);
+    string sAreaTag=GetTag(oArea);
+                              
+    if (sAreaTag == "ran530ar_hw_army_werewolves") {   
+        if (!AF_IsModuleFlagSet(AF_DAOAREA3_FLAG, AF_DAOAREA3_RAN530AR)) {
 
-    /* ran530ar (Wooded Highway) - Run once */
-    if (!AF_IsModuleFlagSet(AF_DAOAREA3_FLAG, AF_DAOAREA3_RAN530AR)) {
+            // Deep Mushrooms
+            CreateObject(OBJECT_TYPE_PLACEABLE, R"genip_herb_deepmush1.utp", Location(oArea, Vector(351.523,145.262,17.7208), 0.0));
 
-        // Deep Mushrooms
-        CreateObject(OBJECT_TYPE_PLACEABLE, R"genip_herb_deepmush1.utp", Location(oArea, Vector(351.523,145.262,17.7208), 0.0));
-
-        AF_SetModuleFlag(AF_DAOAREA3_FLAG, AF_DAOAREA3_RAN530AR);
+            AF_SetModuleFlag(AF_DAOAREA3_FLAG, AF_DAOAREA3_RAN530AR);
+        }
     }
 }

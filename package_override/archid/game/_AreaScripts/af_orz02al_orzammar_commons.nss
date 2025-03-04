@@ -13,18 +13,21 @@
 */
 void main() {
 
-    /* orz200ar (Orzammar Commons) - run once */
-    if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_ORZ200AR)) {
-        object oContainer;
+    object oArea=GetArea(OBJECT_SELF);
+    string sAreaTag=GetTag(oArea);
+                              
+    if (sAreaTag == "orz200ar_commons") {   
+        if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_ORZ200AR)) {
 
-        // The Unobtainables
-        oContainer = GetObjectByTag("store_orz200cr_garin");
-        if (IsObjectValid(oContainer))
-        {
-            CreateItemOnObject(R"gem_im_gift_gar.uti", oContainer, 1, "", TRUE);
-            CreateItemOnObject(R"gen_im_gift_dia.uti", oContainer, 1, "", TRUE);
+            // The Unobtainables
+            object oContainer = GetObjectByTag("store_orz200cr_garin");
+            if (IsObjectValid(oContainer))
+            {
+                CreateItemOnObject(R"gem_im_gift_gar.uti", oContainer, 1, "", TRUE);
+                CreateItemOnObject(R"gen_im_gift_dia.uti", oContainer, 1, "", TRUE);
+            }
+
+            AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_ORZ200AR);
         }
-
-        AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_ORZ200AR);
     }
 }

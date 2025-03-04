@@ -9,16 +9,19 @@
 */
 void main() {
 
-    /* drk500ar (???) - Run once */
-    if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_DRK500AR)) {
-        object oContainer;
+    object oArea=GetArea(OBJECT_SELF);
+    string sAreaTag=GetTag(oArea);
 
-        // Add DLC item Darkspawn Chronicles
-        oContainer = GetObjectByTag("drk_riordan", 0);
-        if (IsObjectValid(oContainer)) {
-            CreateItemOnObject(R"prc_im_wep_mel_lsw_drk_dao.uti", oContainer, 1, "", TRUE);
+    if (sAreaTag == "drk500ar_fort") {
+        if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_DRK500AR)) {
+
+            // Add DLC item Darkspawn Chronicles
+            object oContainer = GetObjectByTag("drk_riordan", 0);
+            if (IsObjectValid(oContainer)) {
+                CreateItemOnObject(R"prc_im_wep_mel_lsw_drk_dao.uti", oContainer, 1, "", TRUE);
+            }
+
+            AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_DRK500AR);
         }
-
-        AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_DRK500AR);
     }
 }

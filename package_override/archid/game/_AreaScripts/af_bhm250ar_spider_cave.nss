@@ -9,14 +9,16 @@
 */
 void main() {
 
-    object oArea = GetArea(OBJECT_SELF);
+    object oArea=GetArea(OBJECT_SELF);
+    string sAreaTag=GetTag(oArea);
+                              
+    if (sAreaTag == "bhm250ar_spider_cave") {   
+        if (!AF_IsModuleFlagSet(AF_DAOAREA3_FLAG, AF_DAOAREA3_BHM250AR)) {
 
-    /* bhm250ar (Storage Caves) - Run once */
-    if (!AF_IsModuleFlagSet(AF_DAOAREA3_FLAG, AF_DAOAREA3_BHM250AR)) {
+            // Deep Mushrooms
+            CreateObject(OBJECT_TYPE_PLACEABLE, R"genip_herb_deepmush1.utp", Location(oArea, Vector(-6.58635,-94.841,-0.0596612), 0.0));
 
-        // Deep Mushrooms
-        CreateObject(OBJECT_TYPE_PLACEABLE, R"genip_herb_deepmush1.utp", Location(oArea, Vector(-6.58635,-94.841,-0.0596612), 0.0));
-
-        AF_SetModuleFlag(AF_DAOAREA3_FLAG, AF_DAOAREA3_BHM250AR);
+            AF_SetModuleFlag(AF_DAOAREA3_FLAG, AF_DAOAREA3_BHM250AR);
+        }
     }
 }

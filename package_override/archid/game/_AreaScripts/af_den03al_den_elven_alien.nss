@@ -13,16 +13,19 @@
 */
 void main() {
 
-    /* den960ar (Abandoned Orphanage) - Run once */
-    if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_DEN960AR)) {
-        object oContainer;
+    object oArea=GetArea(OBJECT_SELF);
+    string sAreaTag=GetTag(oArea);
 
-        // Add Feastday Cat Lady's Hobblestick
-        oContainer = GetObjectByTag("den960cr_rabid_wardog", 0);
-        if (IsObjectValid(oContainer)) {
-            CreateItemOnObject(R"val_im_gift_stick.uti", oContainer, 1, "", TRUE);
+    if (sAreaTag == "den960ar_orphanage") {
+        if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_DEN960AR)) {
+
+            // Add Feastday Cat Lady's Hobblestick
+            object oContainer = GetObjectByTag("den960cr_rabid_wardog", 0);
+            if (IsObjectValid(oContainer)) {
+                CreateItemOnObject(R"val_im_gift_stick.uti", oContainer, 1, "", TRUE);
+            }
+
+            AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_DEN960AR);
         }
-
-        AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_DEN960AR);
     }
 }

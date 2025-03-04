@@ -11,22 +11,25 @@
 */
 void main() {
 
-    /* ntb200ar (West Brecilian Forest) - Run once */
-    if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_NTB200AR)) {
-        object oContainer;
+    object oArea=GetArea(OBJECT_SELF);
+    string sAreaTag=GetTag(oArea);
+                              
+    if (sAreaTag == "ntb200ar_brecilian_forestnw") {   
+        if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_NTB200AR)) {
 
-        // Add Feastday Stick
-        oContainer = GetObjectByTag("ntb200ip_ironbark");
-        if (IsObjectValid(oContainer)) {
-            CreateItemOnObject(R"val_im_gift_ball.uti", oContainer, 1, "", TRUE);
+            // Add Feastday Stick
+            object oContainer = GetObjectByTag("ntb200ip_ironbark");
+            if (IsObjectValid(oContainer)) {
+                CreateItemOnObject(R"val_im_gift_ball.uti", oContainer, 1, "", TRUE);
+            }
+
+            // Add Uncrushable Pigeon
+            oContainer = GetObjectByTag("bear_great", 0);
+            if (IsObjectValid(oContainer)) {
+                CreateItemOnObject(R"val_im_gift_pigeon.uti", oContainer, 1, "", TRUE);
+            }
+
+            AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_NTB200AR);
         }
-
-        // Add Uncrushable Pigeon
-        oContainer = GetObjectByTag("bear_great", 0);
-        if (IsObjectValid(oContainer)) {
-            CreateItemOnObject(R"val_im_gift_pigeon.uti", oContainer, 1, "", TRUE);
-        }
-
-        AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_NTB200AR);
     }
 }

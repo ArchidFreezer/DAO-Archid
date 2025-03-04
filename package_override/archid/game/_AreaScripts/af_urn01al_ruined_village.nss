@@ -12,31 +12,33 @@
 */
 void main() {
 
-    /* urn110ar (Haven Chantry) - run once */
-    if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_URN110AR)) {
-        object oContainer;
+    object oArea=GetArea(OBJECT_SELF);
+    string sAreaTag=GetTag(oArea);
+                              
+    if (sAreaTag == "urn110ar_chantry") {   
+        if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_URN110AR)) {
 
-        // Add DLC item Pearl of the Anointed
-        oContainer = GetObjectByTag("urn110ip_chest");
-        if (IsObjectValid(oContainer)) {
-            CreateItemOnObject(R"prm000im_pearlan.uti", oContainer, 1, "", TRUE);
+            // Add DLC item Pearl of the Anointed
+            object oContainer = GetObjectByTag("urn110ip_chest");
+            if (IsObjectValid(oContainer)) {
+                CreateItemOnObject(R"prm000im_pearlan.uti", oContainer, 1, "", TRUE);
+            }
+
+            AF_SetModuleFlag(AF_DAOAREA2_FLAG, AF_DAOAREA2_URN110AR);
         }
-
-        AF_SetModuleFlag(AF_DAOAREA2_FLAG, AF_DAOAREA2_URN110AR);
     }
 
-    /* urn130ar (Village Store) - run once */
-    if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_URN130AR)) {
-        object oContainer;
+    if (sAreaTag == "urn130ar_village_shop") {   
+        if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_URN130AR)) {
 
-        // The Unobtainables
-        oContainer = GetObjectByTag("store_urn130cr_shopkeeper");
-        if (IsObjectValid(oContainer))
-        {
-            CreateItemOnObject(R"gen_im_cft_hrb_406.uti", oContainer, 1, "", TRUE);
-            CreateItemOnObject(R"gen_im_qck_book_attribute2.uti", oContainer, 1, "", TRUE);
+            // The Unobtainables
+            object oContainer = GetObjectByTag("store_urn130cr_shopkeeper");
+            if (IsObjectValid(oContainer)) {
+                CreateItemOnObject(R"gen_im_cft_hrb_406.uti", oContainer, 1, "", TRUE);
+                CreateItemOnObject(R"gen_im_qck_book_attribute2.uti", oContainer, 1, "", TRUE);
+            }
+
+            AF_SetModuleFlag(AF_DAOAREA2_FLAG, AF_DAOAREA2_URN130AR);
         }
-
-        AF_SetModuleFlag(AF_DAOAREA2_FLAG, AF_DAOAREA2_URN130AR);
     }
 }
