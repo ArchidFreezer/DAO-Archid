@@ -1,8 +1,20 @@
 #!/bin/sh
 
 MODDIR='/c/Projects/DAO/archid'
+
+while getopts gs flag
+do
+  case "${flag}" in
+    g) # Use alternative CFN stack, used for testing
+     emvflags="${emvflags}g";;
+    s) # Delete the stack and exit
+     emvflags="${emvflags}s";;
+  esac
+done
+
 echo "Moving toolset export files..."
-./dao-emv
+[[ ! -z $emvflags ]] && emvflags="-${emvflags}"
+./dao-emv ${emvflags}
 echo "Processing GDA files ..."
 ./dao-gda
 

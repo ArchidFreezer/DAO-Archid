@@ -1,11 +1,25 @@
 #!/bin/bash
 
 MODDIR='/c/Projects/DAO/archid'
-EXPORTDIR="${MODDIR}/addin/module/override/toolsetexport"
+COREEXPORTDIR="${MODDIR}/addin/core/override/toolsetexport"
+MODEXPORTDIR="${MODDIR}/addin/module/override/toolsetexport"
+GAMEEXPORTDIR="${MODDIR}/package_override/toolsetexport"
+SPEXPORTDIR='/c/Users/Jim/Documents/BioWare/Dragon Age/modules/Single Player/override/toolsetexport'
+
 OUTDIR="${MODDIR}/package_override/archid/game"
 
+while getopts gs flag
+do
+  case "${flag}" in
+    g) # Use alternative CFN stack, used for testing
+      game=1;;
+    s) # Delete the stack and exit
+      sp=1;;
+  esac
+done
+
 moved_all_files="true"
-for file in ${EXPORTDIR}/*; do
+for file in ${MODEXPORTDIR}/*; do
 	[[ ! -e $file ]] && continue
 	filename=${file##*/}
 	target=$(find $OUTDIR -name $filename)
@@ -15,4 +29,47 @@ for file in ${EXPORTDIR}/*; do
 		mv $file $target
 	fi
 done
-[[ -z $moved_all_files ]] && echo "*** Some exported files not moved ***"
+[[ -z $moved_all_files ]] && echo "*** Some mod exported files not moved ***"
+
+moved_all_files="true"
+for file in ${COREEXPORTDIR}/*; do
+	[[ ! -e $file ]] && continue
+	filename=${file##*/}
+	target=$(find $OUTDIR -name $filename)
+	if [[ -z $target ]]; then
+		moved_all_files=""
+	else
+		mv $file $target
+	fi
+done
+[[ -z $moved_all_files ]] && echo "*** Some core exported files not moved ***"
+
+if [[ ! -z $game ]]; then
+	moved_all_files="true"
+	for file in ${GAMEEXPORTDIR}/*; do
+		[[ ! -e $file ]] && continue
+		filename=${file##*/}
+		target=$(find $OUTDIR -name $filename)
+		if [[ -z $target ]]; then
+			moved_all_files=""
+		else
+			mv $file $target
+		fi
+	done
+	[[ -z $moved_all_files ]] && echo "*** Some game exported files not moved ***"
+fi
+
+if [[ ! -z $sp ]]; then
+	moved_all_files="true"
+	for file in "${SPEXPORTDIR}"/*; do
+		[[ ! -e "${file}" ]] && continue
+		filename="${file##*/}"
+		target=$(find $OUTDIR -name $filename)
+		if [[ -z $target ]]; then
+			moved_all_files=""
+		else
+			mv "${file}" "${target}"
+		fi
+	done
+	[[ -z $moved_all_files ]] && echo "*** Some single player exported files not moved ***"
+fi
