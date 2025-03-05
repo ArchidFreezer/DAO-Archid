@@ -108,6 +108,7 @@ For mods where there are alternatives that provide similar functionality and one
 | [Open Lock Spells](https://www.nexusmods.com/dragonage/mods/3638) |  |
 | [Performance and Memory Leak Fix](https://www.nexusmods.com/dragonage/mods/6435) | Included, but not in git as this is applied to the bin_folder |
 | [Pet Peeves Fix Patch](https://www.nexusmods.com/dragonage/mods/6017) |  |
+| [Phoenix Helmet and Armory Redux](https://www.nexusmods.com/dragonage/mods/6485) |  |
 | [Pixelated Shaders begone](https://www.nexusmods.com/dragonage/mods/3801) |  |
 | [Prison Clothes](https://www.nexusmods.com/dragonage/mods/5024) |  |
 | [Qwinn's Ultimate DAO Fixpack](https://www.nexusmods.com/dragonage/mods/4689) |  |
@@ -139,6 +140,7 @@ For mods where there are alternatives that provide similar functionality and one
 | [The Deck of Many Mods](https://www.nexusmods.com/dragonage/mods/5625) |  |
 | [The Icons Project](https://www.nexusmods.com/dragonage/mods/826) |  |
 | [The Ivory Tower and Nightfall Bloom](https://www.nexusmods.com/dragonage/mods/645) |  |
+| [The Phoenix Armory for Females](https://www.nexusmods.com/dragonage/mods/1660) |  |
 | [The Rescue at Ishal](https://www.nexusmods.com/dragonage/mods/4690) | Included 4k video, but not in git due to file size |
 | [Tranquil Brand 2.0](https://www.nexusmods.com/dragonage/mods/4505) |  |
 | [True Colours REDUX](https://www.nexusmods.com/dragonage/mods/4523) |  |

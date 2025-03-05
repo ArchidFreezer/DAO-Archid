@@ -1,7 +1,6 @@
 /**
-* Contains functions that are called forom more than one script
-*
-* These are functions that typically too small to warrant a script file of their own
+* Contains functions that are typically called from more than one script or are niche
+* but too small to warrant a script file of their own
 */
 #include "approval_h"
 #include "placeable_h"
@@ -11,6 +10,38 @@
 #include "af_constants_h"
 #include "af_log_h"
 
+//==============================================================================
+//                          DECLARATIONS
+//==============================================================================
+
+// Party functions
+object AF_GetPartyMemberByTag(string sTag);
+object AF_GetPartyPoolMemberByTag(string sTag);
+int AF_RemoveParyMember(object oMember);
+void AF_SetFollowerWarm(object oFollower);
+int AF_IsSummon(object oCreature);
+
+// Generic
+int AF_Range(int iVal, int iMax, int iMin = 0);
+
+// Item functions
+int AF_IsItemPrank(object oItem);
+void AF_CheckRuneSlots(object oItem);
+
+// Bit mask functions
+void AF_SetModuleFlag(string sVar, int nFlag, int bSet = TRUE);
+int AF_IsModuleFlagSet(string sVar, int nFlag);
+int AF_GetPartyMemberMask(object oCreature);
+
+// Niche
+void AF_CheckAlistairRose();
+void AF_AwakeningSpecFix();
+void AF_StockMerchant(object oMerchant, resource rItem, int iMax = 100, int iMin = 0, int iIncludeParty = TRUE);
+
+
+//==============================================================================
+//                          DEFINITIONS
+//==============================================================================
 /**
 * @brief Adds rune slots to items that should have them but don't
 *
@@ -238,7 +269,7 @@ void AF_CheckAlistairRose() {
     // Set the flag so we don;t give it again
     AF_SetModuleFlag(AF_GENERAL_FLAG, AF_GENERAL_ALISTAIR_ROSE);
 }
-                                            
+
 /**
 * @brief Get party pool member by their tag
 *
@@ -279,8 +310,7 @@ object AF_GetPartyMemberByTag(string sTag) {
 * @param    oCreature creature to check
 * @return   TRUE if the creature is a summon; FALSE otherwise
 */
-int AF_IsSummon(object oCreature)
-{
+int AF_IsSummon(object oCreature) {
     AF_LogDebug("eds_IsSummon called");
 
     // A different take. Instead of looking for a flag, we see if their
@@ -301,15 +331,14 @@ int AF_IsSummon(object oCreature)
     AF_LogDebug("eds_IsSummon: Creature tag did not match any party members. Returning true");
     return TRUE;
 }
-      
+
 /**
 * @brief remove a member from the party
 *
 * @param    oMember party member to remove
 * @return   TRUE if the party member was removed; FALSE otherwise
 */
-int AF_RemoveParyMember(object oMember)
-{
+int AF_RemoveParyMember(object oMember) {
     if (FALSE == AF_IsSummon(oMember)) {
         string sTag = GetTag(oMember);
         int nParty;
@@ -366,4 +395,50 @@ int AF_RemoveParyMember(object oMember)
         }
     }
     return FALSE;
+}
+
+/**
+* @brief    Ensure the number provided is within a given range
+*
+* Takes a number and if it is outside the given min and max values will return the closest value within the range
+
+* @return   Value that is within the range
+*/
+int AF_Range(int iVal, int iMax, int iMin = 0) {
+    if (iVal < iMin) return iMin;
+    else if (iVal > iMax) return iMax;
+    else return iVal;
+}
+
+/**
+* @brief    Stock a merchant with a number of an item
+*
+* Stocks a merchant store with an item, with the number in stock being within a given range, potentially including
+* the number of items held by the party being taken into account.
+*
+* This is typically used for items where it is not desirable for the party to carry large numbers such as powerful
+* arrows or bombs. This way there are always some available but the party can't carry hundreds. The check is not
+* foolproof as a player may dump the items in a chest before visiting the store, but that is up to the player.
+*
+* @param oStore merchant whose stock should be updated
+* @param rItem item to stock in the store
+* @param iMax maximum number of items
+* @param iMin minimum number of items
+* @param iIncludeParty whether to include the number of items held by the party in the max number
+*/
+void AF_StockMerchant(object oStore, resource rItem, int iMax = 100, int iMin = 0, int iIncludeParty = TRUE) {
+
+    int iCount = UT_CountItemInInventory(rItem ,oStore);
+    object[] arParty = GetPartyPoolList();
+
+    int i;
+    int nSize = GetArraySize(arParty);
+
+    for (i = 0; i < nSize; i++) {
+        iCount += UT_CountItemInInventory(rItem ,arParty[i]);
+        if (iCount >= iMax) break;
+    }
+
+    int iStock = AF_Range(iMax - iCount, iMax);
+    if (iStock > 0) CreateItemOnObject(rItem, oStore, iStock, "", TRUE);
 }

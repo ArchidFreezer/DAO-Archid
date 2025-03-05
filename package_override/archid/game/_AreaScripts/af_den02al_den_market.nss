@@ -20,7 +20,7 @@ void main() {
     object oArea=GetArea(OBJECT_SELF);
     string sAreaTag=GetTag(oArea);
 
-    if (sAreaTag == "den200ar_market") {
+    if (sAreaTag == "den200ar_market") { // (Denerim Market District)
         if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_DEN200AR)) {
 
             // Add DLC item Edge
@@ -36,7 +36,8 @@ void main() {
 
             AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_DEN200AR);
         }
-    } else if (sAreaTag == "den220ar_noble_tavern") {
+
+    } else if (sAreaTag == "den220ar_noble_tavern") { // (Gnawed Noble Tavern)
         if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_DEN220AR)) {
 
             // Add Feastday Sugar Cake
@@ -47,18 +48,33 @@ void main() {
 
             AF_SetModuleFlag(AF_DAOAREA2_FLAG, AF_DAOAREA2_DEN220AR);
         }
-    } else if (sAreaTag == "den230ar_wonders_of_thedas") {
+
+    } else if (sAreaTag == "den230ar_wonders_of_thedas") { // (Wonders of Thedas)
+
+        object oStore = GetObjectByTag("store_den230cr_proprietor");
+
+        // Only run this block of code once
         if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_DEN230AR)) {
 
-            // Add DLC item Band of Fire
-            object oContainer = GetObjectByTag("store_den230cr_proprietor");
-            if (IsObjectValid(oContainer)) {
-                CreateItemOnObject(R"prm000im_band_of_fire.uti", oContainer, 1, "", TRUE);
+            // Add DLC item Band of Fire & Phoenixheart Longbow
+            if (IsObjectValid(oStore)) {
+                CreateItemOnObject(R"prm000im_band_of_fire.uti", oStore, 1, "", TRUE);
+                CreateItemOnObject(R"af_lbow_pnx7.uti", oStore, 1, "", TRUE);
             }
 
             AF_SetModuleFlag(AF_DAOAREA2_FLAG, AF_DAOAREA2_DEN230AR);
         }
-    } else if (sAreaTag == "den250ar_leliana_plot") {
+
+        // Restock the store
+        if (IsObjectValid(oStore)) {
+            // Always have some phoenixheart arrows around
+            int iMax = AF_GetOptionValue(AF_OPT_MAX_PHOENIX_ARROWS);
+            AF_StockMerchant(oStore, R"af_ammo_pnxdisrupt.uti", iMax);
+            AF_StockMerchant(oStore, R"af_ammo_pnxflash.uti", iMax);
+            AF_StockMerchant(oStore, R"af_ammo_pnxthunder.uti", iMax);
+        }
+
+    } else if (sAreaTag == "den250ar_leliana_plot") { // (Marjolaine's House)
         if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_DEN250AR)) {
 
             // Add DLC item Battledress of the Provocateur
@@ -75,7 +91,8 @@ void main() {
 
             AF_SetModuleFlag(AF_DAOAREA2_FLAG, AF_DAOAREA2_DEN250AR);
         }
-    } else if (sAreaTag == "den260ar_warden_cache") {
+
+    } else if (sAreaTag == "den260ar_warden_cache") { // (Market Warehouse)
         if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_DEN260AR)) {
 
             // Add DLC item Guildmaster's Belt

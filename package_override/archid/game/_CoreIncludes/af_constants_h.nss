@@ -30,6 +30,7 @@ const int AF_OPT_ONHIT_IN_DAMAGE = 10;
 const int AF_OPT_FIX_DOT_DURATIONS = 11;
 const int AF_OPT_RECEIVED_ITEM_DURATION = 12;
 const int AF_OPT_RECEIVED_ITEM_COLOUR = 13;
+const int AF_OPT_MAX_PHOENIX_ARROWS = 14;
 
 /* M2DA Table IDs */
 // These are ones to be used across mulitple scripts

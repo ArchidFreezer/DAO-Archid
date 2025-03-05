@@ -12,8 +12,9 @@ void main() {
 
     object oArea=GetArea(OBJECT_SELF);
     string sAreaTag=GetTag(oArea);
-                              
-    if (sAreaTag == "cam110ar_camp_arch3") {   
+
+    if (sAreaTag == "cam110ar_camp_arch3") {
+        // Only run code in this block once
         if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_CAM110AR)) {
 
             // Respec Raven - Next to the fallen tree on top of a rock
@@ -25,6 +26,16 @@ void main() {
             CreateObject(OBJECT_TYPE_PLACEABLE, AF_IPR_CAMP_MERCH_CHEST, lSpawn);
 
             AF_SetModuleFlag(AF_DAOAREA2_FLAG, AF_DAOAREA2_CAM110AR);
+        }
+
+        // Bodahn Store
+        object oMerchant = GetObjectByTag("store_camp_bodahn");
+        if (IsObjectValid(oMerchant)) {
+            // Always have seom phoenixheart arrows around
+            int iMax = AF_GetOptionValue(AF_OPT_MAX_PHOENIX_ARROWS);
+            AF_StockMerchant(oMerchant, R"af_ammo_pnxdisrupt.uti", iMax);
+            AF_StockMerchant(oMerchant, R"af_ammo_pnxflash.uti", iMax);
+            AF_StockMerchant(oMerchant, R"af_ammo_pnxthunder.uti", iMax);
         }
     }
 }
