@@ -84,6 +84,7 @@ For mods where there are alternatives that provide similar functionality and one
 | [Inquisition Fade](https://www.nexusmods.com/dragonage/mods/6209) |  |
 | [Joining ritual fix for Awakening companions](https://www.nexusmods.com/dragonage/mods/2997) |  |
 | [Law and Order Fixes](https://www.nexusmods.com/dragonage/mods/3046) |  |
+| [Legacy of Sundown](https://www.nexusmods.com/dragonage/mods/829) |  |
 | [Leliana Stories](https://www.nexusmods.com/dragonage/mods/4940) |  |
 | [LOD2 files for More Hairstyles no-earring Duncan style - human male only](https://www.nexusmods.com/dragonage/mods/4077) |  |
 | [Loghain - Proper Armor at Ostagar](https://www.nexusmods.com/dragonage/mods/6164) |  |
