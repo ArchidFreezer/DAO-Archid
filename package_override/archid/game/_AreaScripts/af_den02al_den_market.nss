@@ -56,10 +56,11 @@ void main() {
         // Only run this block of code once
         if (!AF_IsModuleFlagSet(AF_DAOAREA2_FLAG, AF_DAOAREA2_DEN230AR)) {
 
-            // Add DLC item Band of Fire & Phoenixheart Longbow
+            // Add DLC item Band of Fire, Phoenixheart Longbow & Garahel Gloves
             if (IsObjectValid(oStore)) {
                 CreateItemOnObject(R"prm000im_band_of_fire.uti", oStore, 1, "", TRUE);
                 CreateItemOnObject(R"af_lbow_pnx7.uti", oStore, 1, "", TRUE);
+                CreateItemOnObject(R"af_glove_mas_gar.uti", oStore, 1, "", TRUE);
             }
 
             AF_SetModuleFlag(AF_DAOAREA2_FLAG, AF_DAOAREA2_DEN230AR);

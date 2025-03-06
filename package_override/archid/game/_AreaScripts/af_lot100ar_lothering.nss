@@ -28,8 +28,8 @@ void main() {
             SetPosition(oRaven, Vector(308.79, 254.4, 2.72), FALSE);
 
             // Deep Mushrooms
-            CreateObject(OBJECT_TYPE_PLACEABLE, R"genip_herb_deepmush1.utp", Location(oArea, Vector(384.065,304.404,1.02725), 0.0));   
-            
+            CreateObject(OBJECT_TYPE_PLACEABLE, R"genip_herb_deepmush1.utp", Location(oArea, Vector(384.065,304.404,1.02725), 0.0));
+
             // Phoenixheart Light armour
             oContainer = CreateObject(OBJECT_TYPE_PLACEABLE, R"genip_cocoon.utp", Location(oArea, Vector(380.692, 297.73, 0.49465), 0.0));
             if (IsObjectValid(oContainer)) {
@@ -45,6 +45,13 @@ void main() {
             if (IsObjectValid(oContainer)) {
                 CreateItemOnObject(R"af_lbow_pnx4.uti", oContainer, 1, "", TRUE);
                 CreateItemOnObject(R"af_ammo_pnxflash.uti", oContainer, 3, "", TRUE);
+            }
+            
+            // Equip Garahels Boots on entrance bandit leader
+            object oBandit = GetObjectByTag("lot100cr_bandit_leader");
+            if (IsObjectValid(oBandit)) {
+                object oBoots = CreateItemOnObject(R"af_boot_mas_gar.uti", oBandit, 1, "", TRUE, TRUE);
+                if (IsObjectValid(oBoots)) EquipItem(oBandit, oBoots);
             }
 
             AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_LOT100AR);

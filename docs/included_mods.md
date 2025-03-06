@@ -14,6 +14,7 @@ For mods where there are alternatives that provide similar functionality and one
 | [AlistairsRose](https://www.nexusmods.com/dragonage/mods/3401) |  |
 | [Alternative Default Eyes](https://www.nexusmods.com/dragonage/mods/5107) |  |
 | [Arcane Horror Replacer](https://www.nexusmods.com/dragonage/mods/6550) |  |
+| [Armor of Garahel](https://www.nexusmods.com/dragonage/mods/2091) |  |
 | [Armor Of The Divine Will Bug Fix](https://www.nexusmods.com/dragonage/mods/5720) |  |
 | [Armor of the Sten - Rebalanced](https://www.nexusmods.com/dragonage/mods/4260) |  |
 | [Armor of the Sten Retexture](https://www.nexusmods.com/dragonage/mods/6062) |  |
