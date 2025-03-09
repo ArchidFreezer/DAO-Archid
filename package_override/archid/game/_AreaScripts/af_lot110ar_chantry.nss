@@ -15,10 +15,11 @@ void main() {
     if (sAreaTag == "lot110ar_chantry") {
         if (!AF_IsModuleFlagSet(AF_DAOAREA1_FLAG, AF_DAOAREA1_LOT110AR)) {
 
-            // Add Feastday Chant of Light
+            // Add Feastday Chant of Light & DLC Formari Tome
             object oContainer = GetObjectByTag("lot100ip_holy_sym_chest");
             if (IsObjectValid(oContainer)) {
                 CreateItemOnObject(R"val_im_gift_chant.uti", oContainer, 1, "", TRUE);
+                CreateItemOnObject(R"gen_im_qck_book_skill.uti", oContainer, 1, "", TRUE);
             }
 
             AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_LOT110AR);
