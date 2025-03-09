@@ -12,11 +12,22 @@ const int AF_STR_MAGIC_UNLOCK_FAIL = 6610143;
 const int AF_STR_MAGIC_UNLOCK_INVALID = 6610144;
 const int AF_STR_MAGIC_UNLOCK_INVALID_PLACEABLE_TYPE = 6610145;
 const int AF_STR_MAGIC_UNLOCK_TARGET_UNLOCKED = 6610146;
-
+                                         
+// The base unlock level of the spell
 const float SPELL_UNLOCK_1_POWER = 10.0f;
 const float SPELL_UNLOCK_2_POWER = 20.0f;
 const float SPELL_UNLOCK_3_POWER = 30.0f;
+                                     
+// The modifier that is applied to the casters spellpower
+const float SPELL_UNLOCK_1_SP_MOD = 0.4f;
+const float SPELL_UNLOCK_2_SP_MOD = 0.5f;
+const float SPELL_UNLOCK_3_SP_MOD = 0.75f;
 
+// The maximum amount that the casters spellpower may add
+const int SPELL_UNLOCK_1_SP_CAP = 10;
+const int SPELL_UNLOCK_2_SP_CAP = 20;
+const int SPELL_UNLOCK_3_SP_CAP = 30;
+                                                         
 /**
  * @brief Attempt to unlock the container using the spell
  *
@@ -28,7 +39,7 @@ void _HandleImpact(struct EventSpellScriptImpactStruct stEvent) {
     object oCaster = stEvent.oCaster;
     float fSpellpower = GetCreatureProperty(oCaster, PROPERTY_ATTRIBUTE_SPELLPOWER, PROPERTY_VALUE_TOTAL);
 
-    AF_LogInfo("EVENT_TYPE_SPELLSCRIPT_IMPACT - Handling impact", AF_LOGGROUP_UNLOCK_SPELL);
+    AF_LogDebug("EVENT_TYPE_SPELLSCRIPT_IMPACT - Handling impact", AF_LOGGROUP_UNLOCK_SPELL);
 
     // make sure there is a location, just in case
     if (IsObjectValid(oTarget))
@@ -40,32 +51,35 @@ void _HandleImpact(struct EventSpellScriptImpactStruct stEvent) {
     float fCasterLevel;
     switch (stEvent.nAbility) {
         case AF_ABILITY_SPELL_UNLOCK_1: {
-            fCasterLevel = SPELL_UNLOCK_1_POWER + Min(10, FloatToInt(fSpellpower * 0.2f)); // This gives a max value of 20 - Very Easy Locks
-            AF_LogDebug("SPELL_UNLOCK_1 - Caster level: " + FloatToString(fCasterLevel), AF_LOGGROUP_UNLOCK_SPELL);
+            float fWorkingSpellpower = fSpellpower * SPELL_UNLOCK_1_SP_MOD;
+            fCasterLevel = SPELL_UNLOCK_1_POWER + Min(SPELL_UNLOCK_1_SP_CAP, FloatToInt(fWorkingSpellpower)); // This gives a max value of 20 - Very Easy Locks
+            AF_LogDebug("SPELL_UNLOCK_1 - Caster level: " + FloatToString(fCasterLevel, 3, 2) + " (" + FloatToString(fWorkingSpellpower, 3, 2) + ")", AF_LOGGROUP_UNLOCK_SPELL);
             break;
         }
         case AF_ABILITY_SPELL_UNLOCK_2: {
-            fCasterLevel = SPELL_UNLOCK_2_POWER + Min(20, FloatToInt(fSpellpower * 0.2f)); // This gives a max value of 40 - Medium Locks
-            AF_LogDebug("SPELL_UNLOCK_2 - Caster level: " + FloatToString(fCasterLevel), AF_LOGGROUP_UNLOCK_SPELL);
+            float fWorkingSpellpower = fSpellpower * SPELL_UNLOCK_2_SP_MOD;
+            fCasterLevel = SPELL_UNLOCK_2_POWER + Min(SPELL_UNLOCK_2_SP_CAP, FloatToInt(fWorkingSpellpower)); // This gives a max value of 40 - Medium Locks
+            AF_LogDebug("SPELL_UNLOCK_2 - Caster level: " + FloatToString(fCasterLevel, 3, 2) + " (" + FloatToString(fWorkingSpellpower, 3, 2) + ")", AF_LOGGROUP_UNLOCK_SPELL);
             break;
         }
         case AF_ABILITY_SPELL_UNLOCK_3: {
-            fCasterLevel = SPELL_UNLOCK_3_POWER + Min(30, FloatToInt(fSpellpower * 0.2f)); // This gives a max value of 40 - Very Hard Locks
-            AF_LogDebug("SPELL_UNLOCK_3 - Caster level: " + FloatToString(fCasterLevel), AF_LOGGROUP_UNLOCK_SPELL);
+            float fWorkingSpellpower = fSpellpower * SPELL_UNLOCK_3_SP_MOD;
+            fCasterLevel = SPELL_UNLOCK_3_POWER + Min(SPELL_UNLOCK_3_SP_CAP, FloatToInt(fWorkingSpellpower)); // This gives a max value of 60 - Very Hard Locks
+            AF_LogDebug("SPELL_UNLOCK_3 - Caster level: " + FloatToString(fCasterLevel, 3, 2) + " (" + FloatToString(fWorkingSpellpower, 3, 2) + ")", AF_LOGGROUP_UNLOCK_SPELL);
             break;
         }
     }
                    
     int nActionResult;
     float fLockLevel = IntToFloat(GetPlaceablePickLockLevel(oTarget));
-    AF_LogDebug("SPELL_UNLOCK - Lock level: " + FloatToString(fLockLevel), AF_LOGGROUP_UNLOCK_SPELL);
+    AF_LogDebug("SPELL_UNLOCK - Lock level: " + FloatToString(fLockLevel, 3, 0), AF_LOGGROUP_UNLOCK_SPELL);
     if (fCasterLevel >= fLockLevel) {
-        AF_LogDebug("Unlock success", AF_LOGGROUP_UNLOCK_SPELL);
+        AF_LogInfo("Unlock success", AF_LOGGROUP_UNLOCK_SPELL);
         nActionResult = TRUE;
         UI_DisplayMessage(oTarget, UI_MESSAGE_UNLOCKED);
         PlaySound(oTarget, GetM2DAString(TABLE_PLACEABLE_TYPES, "PickLockSuccess", GetAppearanceType(oTarget)));
     } else {
-        AF_LogDebug("Unlock fail", AF_LOGGROUP_UNLOCK_SPELL);
+        AF_LogInfo("Unlock fail", AF_LOGGROUP_UNLOCK_SPELL);
         nActionResult = FALSE;
         DisplayFloatyMessage(oTarget, GetStringByStringId(AF_STR_MAGIC_UNLOCK_FAIL));
         PlaySound(oTarget, GetM2DAString(TABLE_PLACEABLE_TYPES, "PickLockFailure", GetAppearanceType(oTarget)));
@@ -105,7 +119,9 @@ int checkTargetIsValid(event ev) {
         AF_LogDebug("checkTarget - target cannot be unlocked", AF_LOGGROUP_UNLOCK_SPELL);
         DisplayFloatyMessage(oTarget, GetStringByStringId(AF_STR_MAGIC_UNLOCK_INVALID));
         bTargetValid = FALSE;
-   }
+    } else {
+        AF_LogDebug("checkTarget - target valid", AF_LOGGROUP_UNLOCK_SPELL);
+    }
 
     return bTargetValid;
 }
@@ -117,8 +133,6 @@ void main()
 {
     event ev = GetCurrentEvent();
     int nEventType = GetEventType(ev);
-
-    AF_LogInfo("entered ability script", AF_LOGGROUP_UNLOCK_SPELL);
 
     switch(nEventType) {
         case EVENT_TYPE_SPELLSCRIPT_PENDING: {
