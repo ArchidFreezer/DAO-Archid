@@ -14,6 +14,7 @@ const int AF_POPUP_RESPEC_CHAR             = 5;   // Yes/No
 
 /* Log groups */
 const int AF_LOGGROUP_DLCINT = 1;
+const int AF_LOGGROUP_PRCSCR = 10;
 
 /** Options table constants */
 const int AF_OPT_INCLUDE_SCRIPT = 0;          // Should the script name be included in logging statements
