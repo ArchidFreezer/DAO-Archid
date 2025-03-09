@@ -9,6 +9,7 @@ For mods where there are alternatives that provide similar functionality and one
 | --- | --- |
 | [A Paragon of Her Kind Cutscene Fixes](https://www.nexusmods.com/dragonage/mods/5324) |  |
 | [A Priest - Not A Mage](https://www.nexusmods.com/dragonage/mods/5207) |  |
+| [AddItem with Console Improved - Script](https://www.nexusmods.com/dragonage/mods/3708) |  |
 | [Additional Clothing for Kids](https://www.nexusmods.com/dragonage/mods/4393) |  |
 | [Advanced Quickbar](https://www.nexusmods.com/dragonage/mods/706) |  |
 | [AlistairsRose](https://www.nexusmods.com/dragonage/mods/3401) |  |
