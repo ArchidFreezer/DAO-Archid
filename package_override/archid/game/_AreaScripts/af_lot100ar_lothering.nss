@@ -46,11 +46,11 @@ void main() {
                 CreateItemOnObject(R"af_lbow_pnx4.uti", oContainer, 1, "", TRUE);
                 CreateItemOnObject(R"af_ammo_pnxflash.uti", oContainer, 3, "", TRUE);
             }
-            
+
             // Equip Garahels Boots on entrance bandit leader
             object oBandit = GetObjectByTag("lot100cr_bandit_leader");
             if (IsObjectValid(oBandit)) {
-                object oBoots = CreateItemOnObject(R"af_boot_mas_gar.uti", oBandit, 1, "", TRUE, TRUE);
+                object oBoots = CreateItemOnObject(R"af_boot_hvy_gar.uti", oBandit, 1, "", TRUE, TRUE);
                 if (IsObjectValid(oBoots)) EquipItem(oBandit, oBoots);
             }
 

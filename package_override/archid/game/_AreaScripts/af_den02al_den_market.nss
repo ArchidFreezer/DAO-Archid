@@ -60,7 +60,7 @@ void main() {
             if (IsObjectValid(oStore)) {
                 CreateItemOnObject(R"prm000im_band_of_fire.uti", oStore, 1, "", TRUE);
                 CreateItemOnObject(R"af_lbow_pnx7.uti", oStore, 1, "", TRUE);
-                CreateItemOnObject(R"af_glove_mas_gar.uti", oStore, 1, "", TRUE);
+                CreateItemOnObject(R"af_glove_hvy_gar.uti", oStore, 1, "", TRUE);
             }
 
             AF_SetModuleFlag(AF_DAOAREA2_FLAG, AF_DAOAREA2_DEN230AR);

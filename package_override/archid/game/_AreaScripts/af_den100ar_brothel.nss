@@ -20,11 +20,11 @@ void main() {
             if (IsObjectValid(oContainer)) {
                 CreateItemOnObject(R"val_im_gift_chastity.uti", oContainer, 1, "", TRUE);
             }
-            
+
             // Add Garahels Armour on Paedan
             object oPaedan = GetObjectByTag("den100cr_paedan");
             if (IsObjectValid(oPaedan)) {
-                object oArmour = CreateItemOnObject(R"af_chest_mas_gar.uti", oPaedan, 1, "", TRUE, TRUE);
+                object oArmour = CreateItemOnObject(R"af_chest_hvy_gar.uti", oPaedan, 1, "", TRUE, TRUE);
                 if (IsObjectValid(oArmour)) EquipItem(oPaedan, oArmour);
             }
 
