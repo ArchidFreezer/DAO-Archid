@@ -20,12 +20,15 @@ void main()
 
         // Only add the items if they don't already exist
         if (IsObjectValid(oContainer)) {
-/*            if (!IsObjectValid(GetObjectByTag("af_boot_lgt_sdh"))) CreateItemOnObject(R"af_boot_lgt_sdh.uti", oContainer, 1, "", TRUE);
-            if (!IsObjectValid(GetObjectByTag("af_chest_lgt_sdh"))) CreateItemOnObject(R"af_chest_lgt_sdh.uti", oContainer, 1, "", TRUE);
-            if (!IsObjectValid(GetObjectByTag("af_glove_lgt_sdh"))) CreateItemOnObject(R"af_glove_lgt_sdh.uti", oContainer, 1, "", TRUE);
-            if (!IsObjectValid(GetObjectByTag("af_helm_lgt_sdh"))) CreateItemOnObject(R"af_helm_lgt_sdh.uti", oContainer, 1, "", TRUE);
-            if (!IsObjectValid(GetObjectByTag("af_dagg_sdh_sunrise"))) CreateItemOnObject(R"af_dagg_sdh_sunrise.uti", oContainer, 1, "", TRUE);
-            if (!IsObjectValid(GetObjectByTag("af_dagg_sdh_sunset"))) CreateItemOnObject(R"af_dagg_sdh_sunset.uti", oContainer, 1, "", TRUE);
+/*            if (!IsObjectValid(GetObjectByTag("af_boot_hvy_gar"))) CreateItemOnObject(R"af_boot_hvy_gar.uti", oContainer, 1, "", TRUE);
+            if (!IsObjectValid(GetObjectByTag("af_chest_hvy_gar"))) CreateItemOnObject(R"af_chest_hvy_gar.uti", oContainer, 1, "", TRUE);
+            if (!IsObjectValid(GetObjectByTag("af_glove_hvy_gar"))) CreateItemOnObject(R"af_glove_hvy_gar.uti", oContainer, 1, "", TRUE);
+            if (!IsObjectValid(GetObjectByTag("af_boot_hvy_pnx"))) CreateItemOnObject(R"af_boot_hvy_pnx.uti", oContainer, 1, "", TRUE);
+            if (!IsObjectValid(GetObjectByTag("af_chest_hvy_pnx"))) CreateItemOnObject(R"af_chest_hvy_pnx.uti", oContainer, 1, "", TRUE);
+            if (!IsObjectValid(GetObjectByTag("af_glove_hvy_pnx"))) CreateItemOnObject(R"af_glove_hvy_pnx.uti", oContainer, 1, "", TRUE);
+            if (!IsObjectValid(GetObjectByTag("af_boot_med_pnx"))) CreateItemOnObject(R"af_boot_med_pnx.uti", oContainer, 1, "", TRUE);
+            if (!IsObjectValid(GetObjectByTag("af_chest_med_pnx"))) CreateItemOnObject(R"af_chest_med_pnx.uti", oContainer, 1, "", TRUE);
+            if (!IsObjectValid(GetObjectByTag("af_glove_med_pnx"))) CreateItemOnObject(R"af_glove_med_pnx.uti", oContainer, 1, "", TRUE);
             if (!IsObjectValid(GetObjectByTag("af_lsword_sdh_daybreak"))) CreateItemOnObject(R"af_lsword_sdh_daybreak.uti", oContainer, 1, "", TRUE);
             if (!IsObjectValid(GetObjectByTag("af_lsword_sdh_nightfall"))) CreateItemOnObject(R"af_lsword_sdh_nightfall.uti", oContainer, 1, "", TRUE);
             if (!IsObjectValid(GetObjectByTag("af_lbow_sdh"))) CreateItemOnObject(R"af_lbow_sdh.uti", oContainer, 1, "", TRUE); */
