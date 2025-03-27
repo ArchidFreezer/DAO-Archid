@@ -16,7 +16,7 @@ void main() {
     object oArea=GetArea(OBJECT_SELF);
     string sAreaTag=GetTag(oArea);
 
-    if (sAreaTag == "orz200ar_commons") {      
+    if (sAreaTag == "orz200ar_commons") {
 
         object oStoreLegnar = GetObjectByTag("store_orz200cr_legnar");
 
@@ -33,7 +33,7 @@ void main() {
 
             // Add Phoenixheart Matriarch Longbow
             if (IsObjectValid(oStoreLegnar)) {
-                CreateItemOnObject(R"af_lbow_pnx7.uti", oStoreLegnar, 1, "", TRUE);
+                CreateItemOnObject(R"af_sbow_pnx7.uti", oStoreLegnar, 1, "", TRUE);
             }
 
             AF_SetModuleFlag(AF_DAOAREA1_FLAG, AF_DAOAREA1_ORZ200AR);
@@ -48,4 +48,4 @@ void main() {
             AF_StockMerchant(oStoreLegnar, R"af_ammo_pnxthunder.uti", iMax);
         }
     }
-} 
+}
